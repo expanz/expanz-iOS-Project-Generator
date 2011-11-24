@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Expanz iOS Code Generator copy.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>Expanz iOS Code Generator.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>6BC101881477A42F0055CF03</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6BDEA520147CFEA100844BE9</key>
 		<dict>
 			<key>primary</key>
 			<true/>

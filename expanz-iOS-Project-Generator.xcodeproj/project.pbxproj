@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6B105A011479C807002DEBCE /* Cedar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B105A001479C807002DEBCE /* Cedar.framework */; };
+		6B105A031479C85D002DEBCE /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B105A021479C85D002DEBCE /* OCHamcrest.framework */; };
+		6B105A081479CF9A002DEBCE /* README in Resources */ = {isa = PBXBuildFile; fileRef = 6B105A071479CF9A002DEBCE /* README */; };
+		6BC10165147775A40055CF03 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC10164147775A40055CF03 /* Cocoa.framework */; };
+		6BC1018C1477A42F0055CF03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC1018B1477A42F0055CF03 /* Foundation.framework */; };
+		6BDEA526147CFEA100844BE9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC10164147775A40055CF03 /* Cocoa.framework */; };
+		6BDEA52B147CFEA100844BE9 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 6B105A071479CF9A002DEBCE /* README */; };
+		6BE4B29D147E6B610059E44D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B289147E6B610059E44D /* AppDelegate.m */; };
+		6BE4B29E147E6B610059E44D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B289147E6B610059E44D /* AppDelegate.m */; };
+		6BE4B29F147E6B610059E44D /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 6BE4B28A147E6B610059E44D /* Credits.rtf */; };
+		6BE4B2A0147E6B610059E44D /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 6BE4B28A147E6B610059E44D /* Credits.rtf */; };
+		6BE4B2A1147E6B610059E44D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BE4B28C147E6B610059E44D /* InfoPlist.strings */; };
+		6BE4B2A2147E6B610059E44D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BE4B28C147E6B610059E44D /* InfoPlist.strings */; };
+		6BE4B2A3147E6B610059E44D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BE4B28E147E6B610059E44D /* MainMenu.xib */; };
+		6BE4B2A4147E6B610059E44D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BE4B28E147E6B610059E44D /* MainMenu.xib */; };
+		6BE4B2A5147E6B610059E44D /* Expanz iOS Code Generator-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BE4B290147E6B610059E44D /* Expanz iOS Code Generator-Info.plist */; };
+		6BE4B2A6147E6B610059E44D /* Expanz iOS Code Generator-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BE4B290147E6B610059E44D /* Expanz iOS Code Generator-Info.plist */; };
+		6BE4B2A7147E6B610059E44D /* expanz_codegen_ProjectEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B293147E6B610059E44D /* expanz_codegen_ProjectEditor.m */; };
+		6BE4B2A8147E6B610059E44D /* expanz_codegen_ProjectEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B293147E6B610059E44D /* expanz_codegen_ProjectEditor.m */; };
+		6BE4B2A9147E6B610059E44D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B294147E6B610059E44D /* main.m */; };
+		6BE4B2AA147E6B610059E44D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B294147E6B610059E44D /* main.m */; };
+		6BE4B2B1147E6B790059E44D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B296147E6B610059E44D /* main.m */; };
+		6BE4B2B2147E6B8C0059E44D /* ProjectEditorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B29A147E6B610059E44D /* ProjectEditorSpec.m */; };
+		6BE4B2B3147E6C930059E44D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B289147E6B610059E44D /* AppDelegate.m */; };
+		6BE4B2B4147E6D3C0059E44D /* expanz_codegen_ProjectEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B293147E6B610059E44D /* expanz_codegen_ProjectEditor.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6BDEA533147CFEC200844BE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6BC10157147775A40055CF03 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6BDEA520147CFEA100844BE9;
+			remoteInfo = Instrumented;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6BC101871477A42F0055CF03 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /Users/jblues/Library/Frameworks;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6B105A001479C807002DEBCE /* Cedar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cedar.framework; path = Dependencies/Frameworks/Cedar.framework; sourceTree = "<group>"; };
+		6B105A021479C85D002DEBCE /* OCHamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrest.framework; path = Dependencies/Frameworks/OCHamcrest.framework; sourceTree = "<group>"; };
+		6B105A061479CF9A002DEBCE /* Logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logging.h; sourceTree = "<group>"; };
+		6B105A071479CF9A002DEBCE /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		6BC10160147775A40055CF03 /* Expanz iOS Code Generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Expanz iOS Code Generator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BC10164147775A40055CF03 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		6BC10167147775A40055CF03 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		6BC10168147775A40055CF03 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		6BC10169147775A40055CF03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6BC101891477A42F0055CF03 /* Specs */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Specs; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BC1018B1477A42F0055CF03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6BDEA52F147CFEA100844BE9 /* Expanz iOS Code Generator copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Expanz iOS Code Generator copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BE4B288147E6B610059E44D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6BE4B289147E6B610059E44D /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6BE4B28B147E6B610059E44D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		6BE4B28D147E6B610059E44D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6BE4B28F147E6B610059E44D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		6BE4B290147E6B610059E44D /* Expanz iOS Code Generator-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Expanz iOS Code Generator-Info.plist"; sourceTree = "<group>"; };
+		6BE4B291147E6B610059E44D /* Expanz iOS Code Generator-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Expanz iOS Code Generator-Prefix.pch"; sourceTree = "<group>"; };
+		6BE4B292147E6B610059E44D /* expanz_codegen_ProjectEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_codegen_ProjectEditor.h; sourceTree = "<group>"; };
+		6BE4B293147E6B610059E44D /* expanz_codegen_ProjectEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_codegen_ProjectEditor.m; sourceTree = "<group>"; };
+		6BE4B294147E6B610059E44D /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6BE4B296147E6B610059E44D /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6BE4B297147E6B610059E44D /* Specs-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Specs-Prefix.pch"; sourceTree = "<group>"; };
+		6BE4B298147E6B610059E44D /* Specs.1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.man; path = Specs.1; sourceTree = "<group>"; };
+		6BE4B29A147E6B610059E44D /* ProjectEditorSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectEditorSpec.m; sourceTree = "<group>"; };
+		6BE4B29C147E6B610059E44D /* SpecHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecHelper.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6BC1015D147775A40055CF03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BC10165147775A40055CF03 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BC101861477A42F0055CF03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BC1018C1477A42F0055CF03 /* Foundation.framework in Frameworks */,
+				6B105A011479C807002DEBCE /* Cedar.framework in Frameworks */,
+				6B105A031479C85D002DEBCE /* OCHamcrest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BDEA525147CFEA100844BE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BDEA526147CFEA100844BE9 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6B105A041479CF9A002DEBCE /* External */ = {
+			isa = PBXGroup;
+			children = (
+				6B105A051479CF9A002DEBCE /* objective-loggerheads */,
+			);
+			name = External;
+			path = Dependencies/External;
+			sourceTree = "<group>";
+		};
+		6B105A051479CF9A002DEBCE /* objective-loggerheads */ = {
+			isa = PBXGroup;
+			children = (
+				6B105A061479CF9A002DEBCE /* Logging.h */,
+				6B105A071479CF9A002DEBCE /* README */,
+			);
+			path = "objective-loggerheads";
+			sourceTree = "<group>";
+		};
+		6BC10155147775A40055CF03 = {
+			isa = PBXGroup;
+			children = (
+				6BE4B285147E6B610059E44D /* Source */,
+				6BC10163147775A40055CF03 /* Frameworks */,
+				6B105A041479CF9A002DEBCE /* External */,
+				6BC10161147775A40055CF03 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6BC10161147775A40055CF03 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6BC10160147775A40055CF03 /* Expanz iOS Code Generator.app */,
+				6BC101891477A42F0055CF03 /* Specs */,
+				6BDEA52F147CFEA100844BE9 /* Expanz iOS Code Generator copy.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6BC10163147775A40055CF03 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6B105A021479C85D002DEBCE /* OCHamcrest.framework */,
+				6B105A001479C807002DEBCE /* Cedar.framework */,
+				6BC10164147775A40055CF03 /* Cocoa.framework */,
+				6BC1018B1477A42F0055CF03 /* Foundation.framework */,
+				6BC10166147775A40055CF03 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6BC10166147775A40055CF03 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6BC10167147775A40055CF03 /* AppKit.framework */,
+				6BC10168147775A40055CF03 /* CoreData.framework */,
+				6BC10169147775A40055CF03 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		6BE4B285147E6B610059E44D /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				6BE4B286147E6B610059E44D /* Main */,
+				6BE4B295147E6B610059E44D /* Specs */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		6BE4B286147E6B610059E44D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				6BE4B287147E6B610059E44D /* expanz_ios_project_generator */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		6BE4B287147E6B610059E44D /* expanz_ios_project_generator */ = {
+			isa = PBXGroup;
+			children = (
+				6BE4B288147E6B610059E44D /* AppDelegate.h */,
+				6BE4B289147E6B610059E44D /* AppDelegate.m */,
+				6BE4B28A147E6B610059E44D /* Credits.rtf */,
+				6BE4B28C147E6B610059E44D /* InfoPlist.strings */,
+				6BE4B28E147E6B610059E44D /* MainMenu.xib */,
+				6BE4B290147E6B610059E44D /* Expanz iOS Code Generator-Info.plist */,
+				6BE4B291147E6B610059E44D /* Expanz iOS Code Generator-Prefix.pch */,
+				6BE4B292147E6B610059E44D /* expanz_codegen_ProjectEditor.h */,
+				6BE4B293147E6B610059E44D /* expanz_codegen_ProjectEditor.m */,
+				6BE4B294147E6B610059E44D /* main.m */,
+			);
+			path = expanz_ios_project_generator;
+			sourceTree = "<group>";
+		};
+		6BE4B295147E6B610059E44D /* Specs */ = {
+			isa = PBXGroup;
+			children = (
+				6BE4B296147E6B610059E44D /* main.m */,
+				6BE4B297147E6B610059E44D /* Specs-Prefix.pch */,
+				6BE4B298147E6B610059E44D /* Specs.1 */,
+				6BE4B299147E6B610059E44D /* Unit */,
+				6BE4B29B147E6B610059E44D /* Utils */,
+			);
+			path = Specs;
+			sourceTree = "<group>";
+		};
+		6BE4B299147E6B610059E44D /* Unit */ = {
+			isa = PBXGroup;
+			children = (
+				6BE4B29A147E6B610059E44D /* ProjectEditorSpec.m */,
+			);
+			path = Unit;
+			sourceTree = "<group>";
+		};
+		6BE4B29B147E6B610059E44D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6BE4B29C147E6B610059E44D /* SpecHelper.h */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6BC1015F147775A40055CF03 /* Expanz iOS Code Generator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BC1017E147775A40055CF03 /* Build configuration list for PBXNativeTarget "Expanz iOS Code Generator" */;
+			buildPhases = (
+				6BC1015C147775A40055CF03 /* Sources */,
+				6BC1015D147775A40055CF03 /* Frameworks */,
+				6BC1015E147775A40055CF03 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Expanz iOS Code Generator";
+			productName = "Expanz iOS Code Generator";
+			productReference = 6BC10160147775A40055CF03 /* Expanz iOS Code Generator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6BC101881477A42F0055CF03 /* Specs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BC101961477A42F0055CF03 /* Build configuration list for PBXNativeTarget "Specs" */;
+			buildPhases = (
+				6BC101851477A42F0055CF03 /* Sources */,
+				6BC101861477A42F0055CF03 /* Frameworks */,
+				6BC101871477A42F0055CF03 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6BDEA534147CFEC200844BE9 /* PBXTargetDependency */,
+			);
+			name = Specs;
+			productName = Specs;
+			productReference = 6BC101891477A42F0055CF03 /* Specs */;
+			productType = "com.apple.product-type.tool";
+		};
+		6BDEA520147CFEA100844BE9 /* Instrumented */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BDEA52C147CFEA100844BE9 /* Build configuration list for PBXNativeTarget "Instrumented" */;
+			buildPhases = (
+				6BDEA521147CFEA100844BE9 /* Sources */,
+				6BDEA525147CFEA100844BE9 /* Frameworks */,
+				6BDEA527147CFEA100844BE9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Instrumented;
+			productName = "Expanz iOS Code Generator";
+			productReference = 6BDEA52F147CFEA100844BE9 /* Expanz iOS Code Generator copy.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6BC10157147775A40055CF03 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = EXPANZ;
+			};
+			buildConfigurationList = 6BC1015A147775A40055CF03 /* Build configuration list for PBXProject "expanz-iOS-Project-Generator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6BC10155147775A40055CF03;
+			productRefGroup = 6BC10161147775A40055CF03 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6BC1015F147775A40055CF03 /* Expanz iOS Code Generator */,
+				6BDEA520147CFEA100844BE9 /* Instrumented */,
+				6BC101881477A42F0055CF03 /* Specs */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6BC1015E147775A40055CF03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B105A081479CF9A002DEBCE /* README in Resources */,
+				6BE4B29F147E6B610059E44D /* Credits.rtf in Resources */,
+				6BE4B2A1147E6B610059E44D /* InfoPlist.strings in Resources */,
+				6BE4B2A3147E6B610059E44D /* MainMenu.xib in Resources */,
+				6BE4B2A5147E6B610059E44D /* Expanz iOS Code Generator-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BDEA527147CFEA100844BE9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BDEA52B147CFEA100844BE9 /* README in Resources */,
+				6BE4B2A0147E6B610059E44D /* Credits.rtf in Resources */,
+				6BE4B2A2147E6B610059E44D /* InfoPlist.strings in Resources */,
+				6BE4B2A4147E6B610059E44D /* MainMenu.xib in Resources */,
+				6BE4B2A6147E6B610059E44D /* Expanz iOS Code Generator-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6BC1015C147775A40055CF03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BE4B29D147E6B610059E44D /* AppDelegate.m in Sources */,
+				6BE4B2A7147E6B610059E44D /* expanz_codegen_ProjectEditor.m in Sources */,
+				6BE4B2A9147E6B610059E44D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BC101851477A42F0055CF03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BE4B2B1147E6B790059E44D /* main.m in Sources */,
+				6BE4B2B2147E6B8C0059E44D /* ProjectEditorSpec.m in Sources */,
+				6BE4B2B3147E6C930059E44D /* AppDelegate.m in Sources */,
+				6BE4B2B4147E6D3C0059E44D /* expanz_codegen_ProjectEditor.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BDEA521147CFEA100844BE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BE4B29E147E6B610059E44D /* AppDelegate.m in Sources */,
+				6BE4B2A8147E6B610059E44D /* expanz_codegen_ProjectEditor.m in Sources */,
+				6BE4B2AA147E6B610059E44D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6BDEA534147CFEC200844BE9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6BDEA520147CFEA100844BE9 /* Instrumented */;
+			targetProxy = 6BDEA533147CFEC200844BE9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6BE4B28A147E6B610059E44D /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6BE4B28B147E6B610059E44D /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		6BE4B28C147E6B610059E44D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6BE4B28D147E6B610059E44D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6BE4B28E147E6B610059E44D /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6BE4B28F147E6B610059E44D /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6BC1017C147775A40055CF03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		6BC1017D147775A40055CF03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		6BC1017F147775A40055CF03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Source/Main/expanz_ios_project_generator/Expanz iOS Code Generator-Prefix.pch";
+				INFOPLIST_FILE = "Source/Main/expanz_ios_project_generator/Expanz iOS Code Generator-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6BC10180147775A40055CF03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Source/Main/expanz_ios_project_generator/Expanz iOS Code Generator-Prefix.pch";
+				INFOPLIST_FILE = "Source/Main/expanz_ios_project_generator/Expanz iOS Code Generator-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		6BC101941477A42F0055CF03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Dependencies/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Source/Specs/Specs-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/lib,
+				);
+				OTHER_CFLAGS = "--coverage";
+				OTHER_LDFLAGS = "-lprofile_rt";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6BC101951477A42F0055CF03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Dependencies/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Source/Specs/Specs-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/lib,
+				);
+				OTHER_CFLAGS = "--coverage";
+				OTHER_LDFLAGS = "-lprofile_rt";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		6BDEA52D147CFEA100844BE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Source/Main/expanz_ios_project_generator/Expanz iOS Code Generator-Prefix.pch";
+				INFOPLIST_FILE = "Source/Main/expanz_ios_project_generator/Expanz iOS Code Generator-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/lib,
+				);
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "Expanz iOS Code Generator copy";
+				VALID_ARCHS = "i386 x86_64";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6BDEA52E147CFEA100844BE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Source/Main/expanz_ios_project_generator/Expanz iOS Code Generator-Prefix.pch";
+				INFOPLIST_FILE = "Source/Main/expanz_ios_project_generator/Expanz iOS Code Generator-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/lib,
+				);
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "Expanz iOS Code Generator copy";
+				VALID_ARCHS = "i386 x86_64";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6BC1015A147775A40055CF03 /* Build configuration list for PBXProject "expanz-iOS-Project-Generator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BC1017C147775A40055CF03 /* Debug */,
+				6BC1017D147775A40055CF03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6BC1017E147775A40055CF03 /* Build configuration list for PBXNativeTarget "Expanz iOS Code Generator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BC1017F147775A40055CF03 /* Debug */,
+				6BC10180147775A40055CF03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6BC101961477A42F0055CF03 /* Build configuration list for PBXNativeTarget "Specs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BC101941477A42F0055CF03 /* Debug */,
+				6BC101951477A42F0055CF03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6BDEA52C147CFEA100844BE9 /* Build configuration list for PBXNativeTarget "Instrumented" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BDEA52D147CFEA100844BE9 /* Debug */,
+				6BDEA52E147CFEA100844BE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6BC10157147775A40055CF03 /* Project object */;
+}

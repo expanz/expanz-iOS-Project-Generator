@@ -10,17 +10,19 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-#import "SpecHelper.h" 
+#import "SpecHelper.h"
+#import "expanz_codegen_ProjectEditor.h"
 
 SPEC_BEGIN(FooSpec)
-describe(@"Foo", ^{
-    beforeEach(^{
-        
+
+    describe(@"Object creation", ^{
+
+        it(@"should allow initialization with a file path to an XCode project", ^{
+            ProjectEditor* projectEditor = [[ProjectEditor alloc]
+                initWithFilePath:@"/Users/jblues/ExpanzProjects/expanz-iOS-Project-Generator/Expanz iOS Code Generator.xcodeproj"];
+
+        });
     });
-    
-    it(@"should do something", ^{
-        LogDebug(@"Hello");
-        assertThatInt(1, equalToInt(2));
-    });
-});
+
+
 SPEC_END
