@@ -9,20 +9,19 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-
-#import "SpecHelper.h"
 #import "expanz_codegen_ProjectEditor.h"
 
-SPEC_BEGIN(FooSpec)
 
-    describe(@"Object creation", ^{
+@implementation expanz_codegen_ProjectEditor
 
-        it(@"should allow initialization with a file path to an XCode project", ^{
-            ProjectEditor* projectEditor = [[ProjectEditor alloc]
-                initWithFilePath:@"/Users/jblues/ExpanzProjects/expanz-iOS-Project-Generator/Expanz iOS Code Generator.xcodeproj"];
+- (id)initWithFilePath:(NSString*)filePath {
+    if (self) {
+        NSString* projectFilePath = [filePath stringByAppendingString:@"/project.pbxproj"];
+        _project = [[NSMutableDictionary alloc] initWithContentsOfFile:projectFilePath];        
+            LogDebug(@"Here be yer dictionary: %@", _project);
+    }
+    return self;
+}
 
-        });
-    });
 
-
-SPEC_END
+@end
