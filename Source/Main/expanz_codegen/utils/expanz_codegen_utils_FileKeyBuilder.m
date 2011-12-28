@@ -16,8 +16,7 @@
 /* ================================================= Class Methods ================================================== */
 + (expanz_codegen_utils_FileKeyBuilder*) forFileName:(NSString*)fileName {
     NSData* data = [fileName dataUsingEncoding:NSUTF8StringEncoding];
-    return [[[expanz_codegen_utils_FileKeyBuilder alloc] initHashValueMD5HashWithBytes:[data bytes] length:[data length]]
-        autorelease];
+    return [[expanz_codegen_utils_FileKeyBuilder alloc] initHashValueMD5HashWithBytes:[data bytes] length:[data length]];
 }
 
 /* ================================================== Initializers ================================================== */

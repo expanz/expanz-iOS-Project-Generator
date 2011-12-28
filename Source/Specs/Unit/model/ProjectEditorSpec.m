@@ -22,9 +22,9 @@ SPEC_BEGIN(FooSpec)
     });
 
 
-    describe(@"Listing headers", ^{
+    describe(@"Listing source files", ^{
 
-        it(@"should be able to list all the files in a project.", ^{
+        it(@"should be able to list all the header files in a project.", ^{
 
             NSArray* headers = [projectEditor headerFiles];
             LogDebug(@"Headers: %@", headers);
@@ -32,7 +32,16 @@ SPEC_BEGIN(FooSpec)
             assertThat([headers objectAtIndex:0], equalTo(@"AppDelegate.h"));
             assertThat([headers objectAtIndex:9], equalTo(@"Specs-Prefix.pch"));
             assertThatInteger([headers count], equalToInteger(10));
+        });
 
+        it(@"should be able to list all the implementation files in a project", ^{
+
+            NSArray* implementationFiles = [projectEditor implementationFiles];
+            LogDebug(@"Implementation Files: %@", implementationFiles);
+
+            assertThat([implementationFiles objectAtIndex:0], equalTo(@"AppDelegate.m"));
+            assertThat([implementationFiles objectAtIndex:10], equalTo(@"ProjectNodeType.m"));
+            assertThatInteger([implementationFiles count], equalToInteger(11));
         });
 
 

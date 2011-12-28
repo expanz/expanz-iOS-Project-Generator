@@ -13,6 +13,12 @@
 #import "ProjectNodeType.h"
 #import "FileReferenceType.h"
 
+@interface expanz_codegen_model_ProjectEditor (private)
+
+- (NSArray*) fileReferencesOfType:(FileReferenceType)type;
+
+@end
+
 
 @implementation expanz_codegen_model_ProjectEditor
 
@@ -26,7 +32,16 @@
 
 /* ================================================ Interface Methods =============================================== */
 - (NSArray*) headerFiles {
-    NSMutableArray* results = [[[NSMutableArray alloc] init] autorelease];
+    return [self fileReferencesOfType:SourceCodeHeader];
+}
+
+- (NSArray*) implementationFiles {
+    return [self fileReferencesOfType:SourceCodeObjC];
+}
+
+/* ================================================== Private Methods =============================================== */
+- (NSArray*) fileReferencesOfType:(FileReferenceType)fileReferenceType {
+    NSMutableArray* results = [[NSMutableArray alloc] init];
 
     NSMutableDictionary* objects = [_project objectForKey:@"objects"];
 
@@ -34,26 +49,14 @@
         NSDictionary* obj = [objects objectForKey:keyName];
 
         ProjectNodeType nodeType = [[obj valueForKey:@"isa"] asProjectNodeType];
-        FileReferenceType fileReferenceType = [[obj valueForKey:@"lastKnownFileType"] asFileReferenceType];
 
-        if (nodeType == PBXFileReference && fileReferenceType == SourceCodeHeader) {
+        if (nodeType == PBXFileReference && fileReferenceType ==
+            [[obj valueForKey:@"lastKnownFileType"] asFileReferenceType]) {
             [results addObject:[obj valueForKey:@"path"]];
         }
     }
     return [results sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];;
 }
 
-- (NSArray*) implementationFiles {
-    return nil;
-    //To change the template use AppCode | Preferences | File Templates.
-
-}
-
-
-/* ================================================== Utility Methods =============================================== */
-- (void) dealloc {
-    [_project release];
-    [super dealloc];
-}
 
 @end

@@ -13,7 +13,6 @@
 		6B4A654C1499AB2C008E585A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A653B1499AB2C008E585A /* AppDelegate.m */; };
 		6B4A654D1499AB2C008E585A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A653B1499AB2C008E585A /* AppDelegate.m */; };
 		6B4A65571499AB2C008E585A /* (null) in Sources */ = {isa = PBXBuildFile; };
-		6B4A65591499AB2C008E585A /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6B4A655A1499AB2C008E585A /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6B4A655B1499AB2C008E585A /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6B4A655D1499AB2C008E585A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A65481499AB2C008E585A /* main.m */; };
@@ -493,7 +492,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BE4B2B1147E6B790059E44D /* main.m in Sources */,
-				6B4A65591499AB2C008E585A /* (null) in Sources */,
 				6B4A65621499AB2C008E585A /* expanz_codegen_utils_FileKeyBuilder.m in Sources */,
 				6BE4B2B4147E6D3C0059E46E /* FileKeyBuilderSpec.m in Sources */,
 				6BE4B2B4147E6D3C0059E474 /* expanz_codegen_model_ProjectEditor.m in Sources */,
@@ -624,6 +622,7 @@
 		6BC101941477A42F0055CF03 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies/Frameworks\"",
@@ -643,6 +642,7 @@
 		6BC101951477A42F0055CF03 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Dependencies/Frameworks\"",
@@ -664,6 +664,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Main/Resources/Prefix.pch;
 				INFOPLIST_FILE = Source/Main/Resources/Info.plist;
@@ -683,6 +684,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Main/Resources/Prefix.pch;
 				INFOPLIST_FILE = Source/Main/Resources/Info.plist;

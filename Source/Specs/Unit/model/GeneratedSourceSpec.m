@@ -18,7 +18,7 @@ SPEC_BEGIN(GeneratedSourceSpec)
     __block GeneratedSource* sourceFile;
 
     beforeEach(^{
-        sourceFile = [[[GeneratedSource alloc] initWithFileName:@"ESA_Sales_Browse_ViewController.h"] autorelease];
+        sourceFile = [[GeneratedSource alloc] initWithFileName:@"ESA_Sales_Browse_ViewController.h"];
     });
 
     describe(@"Object creation", ^{

@@ -13,7 +13,7 @@
 
 @interface expanz_codegen_model_GeneratedSource : NSObject
 
-@property (nonatomic, readonly) NSString* fileName;
+@property (strong, nonatomic, readonly) NSString* fileName;
 
 - (id) initWithFileName:(NSString*)fileName; 
 

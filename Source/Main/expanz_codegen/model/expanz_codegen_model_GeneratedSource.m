@@ -31,10 +31,5 @@
     return [[FileKeyBuilder forFileName:_fileName] build];
 }
 
-/* ================================================== Utility Methods =============================================== */
-- (void) dealloc {
-    [_fileName release];
-    [super dealloc];
-}
 
 @end
