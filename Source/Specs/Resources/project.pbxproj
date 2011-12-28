@@ -23,7 +23,6 @@
 		6B4A65621499AB2C008E585A /* expanz_codegen_utils_FileKeyBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A654B1499AB2C008E585A /* expanz_codegen_utils_FileKeyBuilder.m */; };
 		6B559AFF14995EAC009564B7 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6B559B0014995EAC009564B7 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		6BB3DEF5149B544F00DEF1CD /* project.pbxproj in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E495 /* project.pbxproj */; };
 		6BC10165147775A40055CF03 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC10164147775A40055CF03 /* Cocoa.framework */; };
 		6BC1018C1477A42F0055CF03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC1018B1477A42F0055CF03 /* Foundation.framework */; };
 		6BDEA526147CFEA100844BE9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC10164147775A40055CF03 /* Cocoa.framework */; };
@@ -44,16 +43,16 @@
 		6BE4B2B4147E6D3C0059E479 /* expanz_codegen_model_GeneratedSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E476 /* expanz_codegen_model_GeneratedSource.m */; };
 		6BE4B2B4147E6D3C0059E47C /* ProjectEditorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E47B /* ProjectEditorSpec.m */; };
 		6BE4B2B4147E6D3C0059E47E /* GeneratedSourceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E47D /* GeneratedSourceSpec.m */; };
-		6BE4B2B4147E6D3C0059E481 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		6BE4B2B4147E6D3C0059E481 /* XCodeProjectNode in Resources */ = {isa = PBXBuildFile; };
 		6BE4B2B4147E6D3C0059E483 /* ProjectNodeType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E482 /* ProjectNodeType.m */; };
 		6BE4B2B4147E6D3C0059E484 /* ProjectNodeType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E482 /* ProjectNodeType.m */; };
 		6BE4B2B4147E6D3C0059E485 /* ProjectNodeType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E482 /* ProjectNodeType.m */; };
-		6BE4B2B4147E6D3C0059E487 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		6BE4B2B4147E6D3C0059E488 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		6BE4B2B4147E6D3C0059E48A /* (null) in Sources */ = {isa = PBXBuildFile; };
-		6BE4B2B4147E6D3C0059E48B /* (null) in Sources */ = {isa = PBXBuildFile; };
-		6BE4B2B4147E6D3C0059E48D /* (null) in Sources */ = {isa = PBXBuildFile; };
-		6BE4B2B4147E6D3C0059E48E /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BE4B2B4147E6D3C0059E487 /* NSString+Expan.m in Sources */ = {isa = PBXBuildFile; };
+		6BE4B2B4147E6D3C0059E488 /* NSString+Expan.m in Sources */ = {isa = PBXBuildFile; };
+		6BE4B2B4147E6D3C0059E48A /* NSString+ExpanzProjectNode.m in Sources */ = {isa = PBXBuildFile; };
+		6BE4B2B4147E6D3C0059E48B /* NSString+ExpanzProjectNode.m in Sources */ = {isa = PBXBuildFile; };
+		6BE4B2B4147E6D3C0059E48D /* NSString+ExpanzFileReferenceType.m in Sources */ = {isa = PBXBuildFile; };
+		6BE4B2B4147E6D3C0059E48E /* NSString+ExpanzFileReferenceType.m in Sources */ = {isa = PBXBuildFile; };
 		6BE4B2B4147E6D3C0059E491 /* FileReferenceType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E490 /* FileReferenceType.m */; };
 		6BE4B2B4147E6D3C0059E492 /* FileReferenceType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E490 /* FileReferenceType.m */; };
 		6BE4B2B4147E6D3C0059E493 /* FileReferenceType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E490 /* FileReferenceType.m */; };
@@ -72,13 +71,12 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		6BC101871477A42F0055CF03 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 12;
-			dstPath = /tmp;
+			buildActionMask = 2147483647;
+			dstPath = /Users/jblues/Library/Frameworks;
 			dstSubfolderSpec = 0;
 			files = (
-				6BB3DEF5149B544F00DEF1CD /* project.pbxproj in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -120,7 +118,6 @@
 		6BE4B2B4147E6D3C0059E482 /* ProjectNodeType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectNodeType.m; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E48F /* FileReferenceType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileReferenceType.h; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E490 /* FileReferenceType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileReferenceType.m; sourceTree = "<group>"; };
-		6BE4B2B4147E6D3C0059E495 /* project.pbxproj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.pbxproject; path = project.pbxproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,7 +258,6 @@
 				6BE4B298147E6B610059E44D /* Specs.1 */,
 				6BE4B299147E6B610059E44D /* Unit */,
 				6BE4B29B147E6B610059E44D /* Utils */,
-				6BE4B2B4147E6D3C0059E494 /* Resources */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -348,14 +344,6 @@
 				6BE4B2B4147E6D3C0059E47B /* ProjectEditorSpec.m */,
 			);
 			path = model;
-			sourceTree = "<group>";
-		};
-		6BE4B2B4147E6D3C0059E494 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				6BE4B2B4147E6D3C0059E495 /* project.pbxproj */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -450,7 +438,7 @@
 				6BE4B2B4147E6D3C0059E459 /* Credits.rtf in Resources */,
 				6BE4B2B4147E6D3C0059E45D /* InfoPlist.strings in Resources */,
 				6BE4B2B4147E6D3C0059E46A /* MainMenu.xib in Resources */,
-				6BE4B2B4147E6D3C0059E481 /* (null) in Resources */,
+				6BE4B2B4147E6D3C0059E481 /* XCodeProjectNode in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,9 +469,9 @@
 				6BE4B2B4147E6D3C0059E472 /* expanz_codegen_model_ProjectEditor.m in Sources */,
 				6BE4B2B4147E6D3C0059E477 /* expanz_codegen_model_GeneratedSource.m in Sources */,
 				6BE4B2B4147E6D3C0059E483 /* ProjectNodeType.m in Sources */,
-				6BE4B2B4147E6D3C0059E487 /* (null) in Sources */,
-				6BE4B2B4147E6D3C0059E48A /* (null) in Sources */,
-				6BE4B2B4147E6D3C0059E48D /* (null) in Sources */,
+				6BE4B2B4147E6D3C0059E487 /* NSString+Expan.m in Sources */,
+				6BE4B2B4147E6D3C0059E48A /* NSString+ExpanzProjectNode.m in Sources */,
+				6BE4B2B4147E6D3C0059E48D /* NSString+ExpanzFileReferenceType.m in Sources */,
 				6BE4B2B4147E6D3C0059E491 /* FileReferenceType.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -517,9 +505,9 @@
 				6BE4B2B4147E6D3C0059E473 /* expanz_codegen_model_ProjectEditor.m in Sources */,
 				6BE4B2B4147E6D3C0059E478 /* expanz_codegen_model_GeneratedSource.m in Sources */,
 				6BE4B2B4147E6D3C0059E484 /* ProjectNodeType.m in Sources */,
-				6BE4B2B4147E6D3C0059E488 /* (null) in Sources */,
-				6BE4B2B4147E6D3C0059E48B /* (null) in Sources */,
-				6BE4B2B4147E6D3C0059E48E /* (null) in Sources */,
+				6BE4B2B4147E6D3C0059E488 /* NSString+Expan.m in Sources */,
+				6BE4B2B4147E6D3C0059E48B /* NSString+ExpanzProjectNode.m in Sources */,
+				6BE4B2B4147E6D3C0059E48E /* NSString+ExpanzFileReferenceType.m in Sources */,
 				6BE4B2B4147E6D3C0059E492 /* FileReferenceType.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

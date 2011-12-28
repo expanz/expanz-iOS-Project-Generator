@@ -11,18 +11,32 @@
 
 
 #import "SpecHelper.h"
-#import "expanz_codegen_ProjectEditor.h"
+#import "expanz_codegen_model_ProjectEditor.h"
 
 SPEC_BEGIN(FooSpec)
 
-    describe(@"Object creation", ^{
+    __block ProjectEditor* projectEditor;
 
-        it(@"should allow initialization with a file path to an XCode project", ^{
-            ProjectEditor* projectEditor = [[ProjectEditor alloc]
-                initWithFilePath:@"/Users/jblues/ExpanzProjects/expanz-iOS-Project-Generator/expanz-iOS-Project-Generator.xcodeproj"];
-
-        });
+    beforeEach(^{
+        projectEditor = [[ProjectEditor alloc] initWithFilePath:@"/tmp/project.pbxproj"];
     });
 
 
-SPEC_END
+    describe(@"Listing headers", ^{
+
+        it(@"should be able to list all the files in a project.", ^{
+
+            NSArray* headers = [projectEditor headerFiles];
+            LogDebug(@"Headers: %@", headers);
+
+            assertThat([headers objectAtIndex:0], equalTo(@"AppDelegate.h"));
+            assertThat([headers objectAtIndex:9], equalTo(@"Specs-Prefix.pch"));
+            assertThatInteger([headers count], equalToInteger(10));
+
+        });
+
+
+    });
+
+
+    SPEC_END

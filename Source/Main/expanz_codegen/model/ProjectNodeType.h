@@ -8,19 +8,18 @@
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
-#import <Foundation/Foundation.h>
 
 
-@interface expanz_codegen_ProjectEditor : NSObject  {
+typedef enum {
+    PBXBuildFile, PBXContainerItemProxy, PBXCopyFilesBuildPhase, PBXFileReference, PBXFrameworksBuildPhase, PBXGroup,
+    PBXNativeTarget, PBXProject, PBXResourcesBuildPhase, PBXSourcesBuildPhase, PBXTargetDependency, PBXVariantGroup,
+    XCBuildConfiguration, XCConfigurationList
+} ProjectNodeType;
 
-@private
-    NSMutableDictionary* _project;
+@interface NSString (ExpanzProjectNode)
 
-}
-
-- (id) initWithFilePath:(NSString*)filePath;
+- (ProjectNodeType) asProjectNodeType;
 
 @end
 
-/* ================================================================================================================== */
-@compatibility_alias ProjectEditor expanz_codegen_ProjectEditor;
+
