@@ -11,7 +11,7 @@
 
 
 #import "SpecHelper.h"
-#import "expanz_codegen_model_ProjectEditor.h"
+#import "../../../Main/expanz_codegen/model/xcode_ProjectEditor.h"
 
 SPEC_BEGIN(FooSpec)
 

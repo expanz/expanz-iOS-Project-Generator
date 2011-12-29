@@ -9,10 +9,10 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "expanz_codegen_model_GeneratedSource.h"
+#import "xcode_SourceFile.h"
 #import "expanz_codegen_utils_FileKeyBuilder.h"
 
-@implementation expanz_codegen_model_GeneratedSource
+@implementation xcode_SourceFile
 
 
 @synthesize fileName = _fileName;

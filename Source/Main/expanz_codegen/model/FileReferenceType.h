@@ -10,7 +10,9 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 typedef enum {
-    FileReferenceTypeOther, SourceCodeHeader, SourceCodeObjC,
+    FileReferenceTypeOther,
+    SourceCodeHeader,
+    SourceCodeObjC,
 } FileReferenceType;
 
 @interface NSString (FileReferenceType)

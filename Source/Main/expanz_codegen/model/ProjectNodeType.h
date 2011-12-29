@@ -11,12 +11,23 @@
 
 
 typedef enum {
-    PBXBuildFile, PBXContainerItemProxy, PBXCopyFilesBuildPhase, PBXFileReference, PBXFrameworksBuildPhase, PBXGroup,
-    PBXNativeTarget, PBXProject, PBXResourcesBuildPhase, PBXSourcesBuildPhase, PBXTargetDependency, PBXVariantGroup,
-    XCBuildConfiguration, XCConfigurationList
+    PBXBuildFile,
+    PBXContainerItemProxy,
+    PBXCopyFilesBuildPhase,
+    PBXFileReference,
+    PBXFrameworksBuildPhase,
+    PBXGroup,
+    PBXNativeTarget,
+    PBXProject,
+    PBXResourcesBuildPhase,
+    PBXSourcesBuildPhase,
+    PBXTargetDependency,
+    PBXVariantGroup,
+    XCBuildConfiguration,
+    XCConfigurationList
 } ProjectNodeType;
 
-@interface NSString (ExpanzProjectNode)
+@interface NSString (XcodeProjectNode)
 
 - (ProjectNodeType) asProjectNodeType;
 

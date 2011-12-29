@@ -11,7 +11,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface expanz_codegen_model_ProjectEditor : NSObject  {
+@interface xcode_ProjectEditor : NSObject  {
 
 @private
     NSMutableDictionary* _project;
@@ -27,4 +27,4 @@
 @end
 
 /* ================================================================================================================== */
-@compatibility_alias ProjectEditor expanz_codegen_model_ProjectEditor;
+@compatibility_alias ProjectEditor xcode_ProjectEditor;

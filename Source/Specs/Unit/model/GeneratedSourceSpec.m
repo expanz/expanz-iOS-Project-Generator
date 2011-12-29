@@ -11,14 +11,14 @@
 
 
 #import "SpecHelper.h"
-#import "expanz_codegen_model_GeneratedSource.h"
+#import "../../../Main/expanz_codegen/model/xcode_SourceFile.h"
 
 SPEC_BEGIN(GeneratedSourceSpec)
 
-    __block GeneratedSource* sourceFile;
+    __block SourceFile* sourceFile;
 
     beforeEach(^{
-        sourceFile = [[GeneratedSource alloc] initWithFileName:@"ESA_Sales_Browse_ViewController.h"];
+        sourceFile = [[SourceFile alloc] initWithFileName:@"ESA_Sales_Browse_ViewController.h"];
     });
 
     describe(@"Object creation", ^{

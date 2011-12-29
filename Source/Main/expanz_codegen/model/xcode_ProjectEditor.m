@@ -9,18 +9,18 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "expanz_codegen_model_ProjectEditor.h"
+#import "xcode_ProjectEditor.h"
 #import "ProjectNodeType.h"
 #import "FileReferenceType.h"
 
-@interface expanz_codegen_model_ProjectEditor (private)
+@interface xcode_ProjectEditor (private)
 
 - (NSArray*) fileReferencesOfType:(FileReferenceType)type;
 
 @end
 
 
-@implementation expanz_codegen_model_ProjectEditor
+@implementation xcode_ProjectEditor
 
 /* ================================================== Initializers ================================================== */
 - (id) initWithFilePath:(NSString*)filePath {

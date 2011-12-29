@@ -11,7 +11,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface expanz_codegen_model_GeneratedSource : NSObject
+@interface xcode_SourceFile : NSObject
 
 @property (strong, nonatomic, readonly) NSString* fileName;
 
@@ -22,4 +22,4 @@
 @end
 
 /* ================================================================================================================== */
-@compatibility_alias GeneratedSource expanz_codegen_model_GeneratedSource;
+@compatibility_alias SourceFile xcode_SourceFile;
