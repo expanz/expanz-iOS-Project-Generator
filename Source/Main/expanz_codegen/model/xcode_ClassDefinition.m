@@ -9,26 +9,42 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "xcode_SourceFile.h"
+#import "xcode_ClassDefinition.h"
 #import "expanz_codegen_utils_FileKeyBuilder.h"
 
-@implementation xcode_SourceFile
+@implementation xcode_ClassDefinition
 
 
-@synthesize fileName = _fileName;
+@synthesize className = _className;
+@synthesize language = _language;
+@synthesize header = _header;
+@synthesize source = _source;
 
 /* ================================================== Initializers ================================================== */
-- (id) initWithFileName:(NSString*)fileName {
+- (id) initWithName:(NSString*)fileName {
     self = [super init];
     if (self) {
-        _fileName = [fileName copy];
+        _className = [fileName copy];
     }
     return self;
 }
 
 /* ================================================ Interface Methods =============================================== */
-- (NSString*) fileKey {
-    return [[FileKeyBuilder forFileName:_fileName] build];
+
+- (void) setLanguage:(ClassDefinitionLanguage)language {
+    if (!(language == ObjectiveC || language == ObjectiveCPlusPlus)) {
+        [NSException raise:NSInvalidArgumentException format:@"Language must be one of ObjectiveC, ObjectiveCPlusPlus"];
+    }
+    _language = language;
+}
+
+- (BOOL) isObjectiveC {
+    return _language == ObjectiveC;
+
+}
+
+- (BOOL) isObjectiveCPlusPlus {
+    return _language == ObjectiveCPlusPlus;
 }
 
 

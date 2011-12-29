@@ -11,15 +11,25 @@
 
 #import <Foundation/Foundation.h>
 
-@interface xcode_SourceFile : NSObject
+typedef enum {
+    ObjectiveC,
+    ObjectiveCPlusPlus
+} ClassDefinitionLanguage;
 
-@property (strong, nonatomic, readonly) NSString* fileName;
+@interface xcode_ClassDefinition : NSObject
 
-- (id) initWithFileName:(NSString*)fileName; 
+@property (strong, nonatomic, readonly) NSString* className;
+@property (nonatomic, readwrite) ClassDefinitionLanguage language;
+@property (nonatomic, strong, readwrite) NSString* header;
+@property (nonatomic, strong, readwrite) NSString* source;
 
-- (NSString*) fileKey;
+- (id) initWithName:(NSString*)fileName;
+
+- (BOOL) isObjectiveC;
+
+- (BOOL) isObjectiveCPlusPlus;
 
 @end
 
 /* ================================================================================================================== */
-@compatibility_alias SourceFile xcode_SourceFile;
+@compatibility_alias ClassDefinition xcode_ClassDefinition;
