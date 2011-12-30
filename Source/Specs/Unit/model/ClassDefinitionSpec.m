@@ -15,19 +15,35 @@
 
 SPEC_BEGIN(ClassDefinitionSpec)
 
-    __block ClassDefinition* sourceFile;
+    __block ClassDefinition* classDefinition;
 
     beforeEach(^{
-        sourceFile = [[ClassDefinition alloc] initWithName:@"ESA_Sales_Browse_ViewController.h"];
+        classDefinition = [[ClassDefinition alloc] initWithName:@"ESA_Sales_Browse_ViewController"];
+        LogDebug(@"Before");
     });
 
     describe(@"Object creation", ^{
 
         it(@"should allow initialization with a fileName attribute", ^{
 
-            assertThat(sourceFile.className, notNilValue());
-            assertThat(sourceFile.className, equalTo(@"ESA_Sales_Browse_ViewController.h"));
+            assertThat(classDefinition.className, notNilValue());
+            assertThat(classDefinition.className, equalTo(@"ESA_Sales_Browse_ViewController"));
 
+        });
+
+    });
+
+
+    describe(@"Setting content", ^{
+
+        it(@"should allow setting language to Objective-C", ^{
+            [classDefinition setHeader:@"@interface ESA_Sales_Browse_ViewController @end"];
+            assertThat(classDefinition.header, equalTo(@"@interface ESA_Sales_Browse_ViewController @end"));
+        });
+
+        it(@"should allow setting language to Objective-C", ^{
+            [classDefinition setSource:@"@implementation ESA_Sales_Browse_ViewController @end"];
+            assertThat(classDefinition.source, equalTo(@"@implementation ESA_Sales_Browse_ViewController @end"));
         });
 
     });
@@ -35,31 +51,30 @@ SPEC_BEGIN(ClassDefinitionSpec)
     describe(@"Setting language", ^{
 
         it(@"should allow setting language to Objective-C", ^{
-            
-            [sourceFile setLanguage:ObjectiveC];
-            assertThatBool([sourceFile isObjectiveC], equalToBool(YES));
-            assertThatBool([sourceFile isObjectiveCPlusPlus], equalToBool(NO));
+
+            [classDefinition setLanguage:ObjectiveC];
+            assertThatBool([classDefinition isObjectiveC], equalToBool(YES));
+            assertThatBool([classDefinition isObjectiveCPlusPlus], equalToBool(NO));
         });
-        
+
         it(@"should allow setting language to Objective-C++", ^{
-            
-            [sourceFile setLanguage:ObjectiveCPlusPlus];
-            assertThatBool([sourceFile isObjectiveCPlusPlus], equalToBool(YES));
-            assertThatBool([sourceFile isObjectiveC], equalToBool(NO));
-            
+
+            [classDefinition setLanguage:ObjectiveCPlusPlus];
+            assertThatBool([classDefinition isObjectiveCPlusPlus], equalToBool(YES));
+            assertThatBool([classDefinition isObjectiveC], equalToBool(NO));
+
         });
-        
+
         it(@"should throw an exception of one of the above languages isn't supplied to setLanguage method", ^{
             @try {
-                [sourceFile setLanguage:999];
+                [classDefinition setLanguage:999];
                 [NSException raise:@"Test fails." format:@"Expected exception to be thrown"];
             }
             @catch (NSException* e) {
                 assertThat(e.reason, equalTo(@"Language must be one of ObjectiveC, ObjectiveCPlusPlus"));
             }
-            
-        });
 
+        });
 
     });
 

@@ -47,5 +47,8 @@
     return _language == ObjectiveCPlusPlus;
 }
 
-
+/* ================================================== Utility Methods =============================================== */
+- (void) dealloc {
+    LogDebug(@"Bye bye now");
+}
 @end

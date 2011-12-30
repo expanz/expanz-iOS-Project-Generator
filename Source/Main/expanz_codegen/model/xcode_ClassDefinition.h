@@ -20,8 +20,8 @@ typedef enum {
 
 @property (strong, nonatomic, readonly) NSString* className;
 @property (nonatomic, readwrite) ClassDefinitionLanguage language;
-@property (nonatomic, strong, readwrite) NSString* header;
-@property (nonatomic, strong, readwrite) NSString* source;
+@property (nonatomic, strong) NSString* header;
+@property (nonatomic, strong) NSString* source;
 
 - (id) initWithName:(NSString*)fileName;
 

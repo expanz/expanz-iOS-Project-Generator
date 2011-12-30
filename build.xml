@@ -67,7 +67,7 @@
         <exec executable="${basedir}/build/Release/${tests.target.name}" outputproperty="tests.output" failonerror="false"
               failifexecutionfails="true">
             <env key="PATH" path="${env.PATH}:${basedir}/bin"/>
-            <arg line="--setenv CEDAR_HEADLESS_SPECS=1"/>
+            <env key="CEDAR_REPORTER_OPTS" value="nested"/>
         </exec>
 
         <!-- Write report to disk -->
