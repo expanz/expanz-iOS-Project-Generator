@@ -19,6 +19,7 @@
 @interface xcode_ProjectEditor (private)
 
 - (NSArray*) fileReferencesOfType:(XcodeFileReferenceType)type;
+
 - (NSMutableDictionary*) objects;
 
 @end
@@ -44,8 +45,14 @@
 }
 
 - (void) addClass:(xcode_ClassDefinition*)classDefinition {
-    //NSString* headerKey = [FileKeyBuilder]
+    NSString* headerKey = [[FileKeyBuilder forFileName:[classDefinition headerFileName]] build];
 
+    NSDictionary* header = [NSDictionary dictionaryWithObjectsAndKeys:
+        [NSNumber numberWithInteger:PBXBuildFile], @"PBXBuildFile",
+        [NSNumber numberWithInteger:PBXContainerItemProxy], @"PBXContainerItemProxy",
+        [NSNumber numberWithInteger:PBXCopyFilesBuildPhase], @"PBXCopyFilesBuildPhase",
+        [NSNumber numberWithInteger:PBXFileReference], @"PBXFileReference",
+        nil];
 
     //[[self objects] setObject:<#(id)anObject#> forKey:<#(id)aKey#>];
 
@@ -59,7 +66,7 @@
     for (NSString* obj in [[self objects] allValues]) {
 
         if ([[obj valueForKey:@"isa"] asProjectNodeType] == PBXFileReference &&
-            [[obj valueForKey:@"lastKnownFileType"] asFileReferenceType] == fileReferenceType) {
+            [[obj valueForKey:@"lastKnownFileType"] asXCodeFileReferenceType] == fileReferenceType) {
             [results addObject:[obj valueForKey:@"path"]];
         }
     }

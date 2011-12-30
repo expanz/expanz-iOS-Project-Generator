@@ -45,6 +45,7 @@
 		6BE4B2B4147E6D3C0059E48A /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BE4B2B4147E6D3C0059E48D /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BE4B2B4147E6D3C0059E498 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6BE4B2B4147E6D3C0059E49B /* XcodeFileReferenceTypeSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E49A /* XcodeFileReferenceTypeSpec.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -103,6 +104,7 @@
 		6BC10169147775A40055CF03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6BC101891477A42F0055CF03 /* Specs */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Specs; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC1018B1477A42F0055CF03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6BE4B2B4147E6D3C0059E49A /* XcodeFileReferenceTypeSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XcodeFileReferenceTypeSpec.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,27 +173,20 @@
 		6B783BC114AD8CF90087E522 /* Unit */ = {
 			isa = PBXGroup;
 			children = (
-				6B783BC214AD8CF90087E522 /* model */,
-				6B783BC514AD8CF90087E522 /* utils */,
+				6B783BC214AD8CF90087E522 /* xcode_project_editor */,
 			);
 			path = Unit;
 			sourceTree = "<group>";
 		};
-		6B783BC214AD8CF90087E522 /* model */ = {
+		6B783BC214AD8CF90087E522 /* xcode_project_editor */ = {
 			isa = PBXGroup;
 			children = (
+				6BE4B2B4147E6D3C0059E49A /* XcodeFileReferenceTypeSpec.m */,
+				6B783BC614AD8CF90087E522 /* FileKeyBuilderSpec.m */,
 				6B783BC314AD8CF90087E522 /* ClassDefinitionSpec.m */,
 				6B783BC414AD8CF90087E522 /* ProjectEditorSpec.m */,
 			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		6B783BC514AD8CF90087E522 /* utils */ = {
-			isa = PBXGroup;
-			children = (
-				6B783BC614AD8CF90087E522 /* FileKeyBuilderSpec.m */,
-			);
-			path = utils;
+			path = xcode_project_editor;
 			sourceTree = "<group>";
 		};
 		6B783BC714AD8CF90087E522 /* Utils */ = {
@@ -433,6 +428,7 @@
 				6B783BF814AD8D190087E522 /* xcode_ClassDefinition.m in Sources */,
 				6B783BFB14AD8D190087E522 /* xcode_ProjectEditor.m in Sources */,
 				6B783C0014AD8D190087E522 /* xcode_FileKeyBuilder.m in Sources */,
+				6BE4B2B4147E6D3C0059E49B /* XcodeFileReferenceTypeSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

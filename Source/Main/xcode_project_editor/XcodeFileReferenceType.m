@@ -11,25 +11,40 @@
 
 #import "XcodeFileReferenceType.h"
 
-@implementation NSString (FileReferenceType)
 
-- (XcodeFileReferenceType) asFileReferenceType {
-    NSDictionary* nodes = [NSDictionary dictionaryWithObjectsAndKeys:
+@implementation NSDictionary (XCodeFileReferenceType)
+
++ (NSDictionary*) dictionaryWithFileReferenceTypesAsStrings {
+    return [NSDictionary dictionaryWithObjectsAndKeys:
         [NSNumber numberWithInteger:SourceCodeHeader], @"sourcecode.c.h",
         [NSNumber numberWithInteger:SourceCodeObjC], @"sourcecode.c.objc",
         nil];
+}
+
+@end
+
+@implementation NSString (FileReferenceType)
+
++ (NSString*) stringFromXcodeFileReferenceType:(XcodeFileReferenceType)type {
+    return [[[NSDictionary dictionaryWithFileReferenceTypesAsStrings]
+        allKeysForObject:[NSNumber numberWithInteger:type]]
+        objectAtIndex:0];
+}
 
 
-    XcodeFileReferenceType referenceType;
+- (XcodeFileReferenceType) asXCodeFileReferenceType {
+    NSDictionary* typeStrings = [NSDictionary dictionaryWithFileReferenceTypesAsStrings];
 
-    if ([nodes objectForKey:self] != nil) {
-        referenceType = (XcodeFileReferenceType) [[nodes objectForKey:self] intValue];
+    if ([typeStrings objectForKey:self] != nil) {
+        return (XcodeFileReferenceType) [[typeStrings objectForKey:self] intValue];
     }
     else {
-        referenceType = FileReferenceTypeOther;
+        return FileReferenceTypeOther;
     }
-    return referenceType;
 }
+
+/* ================================================== Private Methods =============================================== */
+
 
 
 @end

@@ -17,6 +17,7 @@ typedef enum {
 
 @interface NSString (FileReferenceType)
 
-- (XcodeFileReferenceType) asFileReferenceType;
++ (NSString*) stringFromXcodeFileReferenceType:(XcodeFileReferenceType)type;
+- (XcodeFileReferenceType) asXCodeFileReferenceType;
 
 @end
