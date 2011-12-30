@@ -25,11 +25,11 @@ typedef enum {
     PBXVariantGroup,
     XCBuildConfiguration,
     XCConfigurationList
-} ProjectNodeType;
+} XcodeProjectNodeType;
 
 @interface NSString (XcodeProjectNode)
 
-- (ProjectNodeType) asProjectNodeType;
+- (XcodeProjectNodeType) asProjectNodeType;
 
 @end
 

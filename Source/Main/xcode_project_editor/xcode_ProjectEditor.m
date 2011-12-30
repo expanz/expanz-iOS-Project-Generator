@@ -10,12 +10,16 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "xcode_ProjectEditor.h"
-#import "ProjectNodeType.h"
-#import "FileReferenceType.h"
+#import "XcodeProjectNodeType.h"
+#import "XcodeFileReferenceType.h"
+#import "xcode_ClassDefinition.h"
+#import "xcode_FileKeyBuilder.h"
+
 
 @interface xcode_ProjectEditor (private)
 
-- (NSArray*) fileReferencesOfType:(FileReferenceType)type;
+- (NSArray*) fileReferencesOfType:(XcodeFileReferenceType)type;
+- (NSMutableDictionary*) objects;
 
 @end
 
@@ -39,23 +43,31 @@
     return [self fileReferencesOfType:SourceCodeObjC];
 }
 
+- (void) addClass:(xcode_ClassDefinition*)classDefinition {
+    //NSString* headerKey = [FileKeyBuilder]
+
+
+    //[[self objects] setObject:<#(id)anObject#> forKey:<#(id)aKey#>];
+
+}
+
+
 /* ================================================== Private Methods =============================================== */
-- (NSArray*) fileReferencesOfType:(FileReferenceType)fileReferenceType {
+- (NSArray*) fileReferencesOfType:(XcodeFileReferenceType)fileReferenceType {
     NSMutableArray* results = [[NSMutableArray alloc] init];
 
-    NSMutableDictionary* objects = [_project objectForKey:@"objects"];
+    for (NSString* obj in [[self objects] allValues]) {
 
-    for (NSString* keyName in [objects allKeys]) {
-        NSDictionary* obj = [objects objectForKey:keyName];
-
-        ProjectNodeType nodeType = [[obj valueForKey:@"isa"] asProjectNodeType];
-
-        if (nodeType == PBXFileReference && fileReferenceType ==
-            [[obj valueForKey:@"lastKnownFileType"] asFileReferenceType]) {
+        if ([[obj valueForKey:@"isa"] asProjectNodeType] == PBXFileReference &&
+            [[obj valueForKey:@"lastKnownFileType"] asFileReferenceType] == fileReferenceType) {
             [results addObject:[obj valueForKey:@"path"]];
         }
     }
     return [results sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];;
+}
+
+- (NSMutableDictionary*) objects {
+    return [_project objectForKey:@"objects"];
 }
 
 

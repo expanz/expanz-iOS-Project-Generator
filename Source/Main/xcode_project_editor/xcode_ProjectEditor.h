@@ -10,6 +10,8 @@
 ////////////////////////////////////////////////////////////////////////////////
 #import <Foundation/Foundation.h>
 
+@class xcode_ClassDefinition;
+
 
 @interface xcode_ProjectEditor : NSObject  {
 
@@ -23,6 +25,8 @@
 - (NSArray*) headerFiles;
 
 - (NSArray*) implementationFiles;
+
+- (void) addClass:(xcode_ClassDefinition*)classDefinition;
 
 @end
 

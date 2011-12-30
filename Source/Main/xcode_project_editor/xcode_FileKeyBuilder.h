@@ -10,26 +10,26 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
+#import <CommonCrypto/CommonDigest.h>
 
-typedef enum {
-    ObjectiveC,
-    ObjectiveCPlusPlus
-} ClassDefinitionLanguage;
+#define HASH_VALUE_STORAGE_SIZE 48
 
-@interface xcode_ClassDefinition : NSObject
+typedef struct {
+    char value[CC_MD5_DIGEST_LENGTH];
+} HashValueMD5Hash;
 
-@property (strong, nonatomic, readonly) NSString* className;
-@property (nonatomic, readwrite) ClassDefinitionLanguage language;
-@property (nonatomic, strong) NSString* header;
-@property (nonatomic, strong) NSString* source;
 
-- (id) initWithName:(NSString*)fileName;
+@interface xcode_FileKeyBuilder : NSObject {
+    unsigned char _value[HASH_VALUE_STORAGE_SIZE];
+}
 
-- (BOOL) isObjectiveC;
++ (xcode_FileKeyBuilder*) forFileName:(NSString*)fileName;
 
-- (BOOL) isObjectiveCPlusPlus;
+- (id) initHashValueMD5HashWithBytes:(const void*)bytes length:(NSUInteger)length;
+
+- (NSString*) build;
 
 @end
 
 /* ================================================================================================================== */
-@compatibility_alias ClassDefinition xcode_ClassDefinition;
+@compatibility_alias FileKeyBuilder xcode_FileKeyBuilder;

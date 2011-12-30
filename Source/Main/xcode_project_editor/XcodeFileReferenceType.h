@@ -13,10 +13,10 @@ typedef enum {
     FileReferenceTypeOther,
     SourceCodeHeader,
     SourceCodeObjC,
-} FileReferenceType;
+} XcodeFileReferenceType;
 
 @interface NSString (FileReferenceType)
 
-- (FileReferenceType) asFileReferenceType;
+- (XcodeFileReferenceType) asFileReferenceType;
 
 @end

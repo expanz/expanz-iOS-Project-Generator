@@ -20,17 +20,17 @@
 		6B783BEA14AD8D190087E522 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B783BD214AD8D190087E522 /* AppDelegate.m */; };
 		6B783BEC14AD8D190087E522 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B783BD214AD8D190087E522 /* AppDelegate.m */; };
 		6B783BED14AD8D190087E522 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B783BD314AD8D190087E522 /* main.m */; };
-		6B783BF014AD8D190087E522 /* FileReferenceType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B783BD614AD8D190087E522 /* FileReferenceType.m */; };
-		6B783BF214AD8D190087E522 /* FileReferenceType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B783BD614AD8D190087E522 /* FileReferenceType.m */; };
-		6B783BF314AD8D190087E522 /* ProjectNodeType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B783BD814AD8D190087E522 /* ProjectNodeType.m */; };
-		6B783BF514AD8D190087E522 /* ProjectNodeType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B783BD814AD8D190087E522 /* ProjectNodeType.m */; };
+		6B783BF014AD8D190087E522 /* XcodeFileReferenceType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B783BD614AD8D190087E522 /* XcodeFileReferenceType.m */; };
+		6B783BF214AD8D190087E522 /* XcodeFileReferenceType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B783BD614AD8D190087E522 /* XcodeFileReferenceType.m */; };
+		6B783BF314AD8D190087E522 /* XcodeProjectNodeType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B783BD814AD8D190087E522 /* XcodeProjectNodeType.m */; };
+		6B783BF514AD8D190087E522 /* XcodeProjectNodeType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B783BD814AD8D190087E522 /* XcodeProjectNodeType.m */; };
 		6B783BF614AD8D190087E522 /* xcode_ClassDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B783BDA14AD8D190087E522 /* xcode_ClassDefinition.m */; };
 		6B783BF814AD8D190087E522 /* xcode_ClassDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B783BDA14AD8D190087E522 /* xcode_ClassDefinition.m */; };
 		6B783BF914AD8D190087E522 /* xcode_ProjectEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B783BDC14AD8D190087E522 /* xcode_ProjectEditor.m */; };
 		6B783BFB14AD8D190087E522 /* xcode_ProjectEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B783BDC14AD8D190087E522 /* xcode_ProjectEditor.m */; };
 		6B783BFC14AD8D190087E522 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B783BDF14AD8D190087E522 /* MainMenu.xib */; };
-		6B783BFE14AD8D190087E522 /* expanz_codegen_utils_FileKeyBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B783BE214AD8D190087E522 /* expanz_codegen_utils_FileKeyBuilder.m */; };
-		6B783C0014AD8D190087E522 /* expanz_codegen_utils_FileKeyBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B783BE214AD8D190087E522 /* expanz_codegen_utils_FileKeyBuilder.m */; };
+		6B783BFE14AD8D190087E522 /* xcode_FileKeyBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B783BE214AD8D190087E522 /* xcode_FileKeyBuilder.m */; };
+		6B783C0014AD8D190087E522 /* xcode_FileKeyBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B783BE214AD8D190087E522 /* xcode_FileKeyBuilder.m */; };
 		6B783C0114AD8D190087E522 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 6B783BE414AD8D190087E522 /* Credits.rtf */; };
 		6B783C0314AD8D190087E522 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B783BE614AD8D190087E522 /* InfoPlist.strings */; };
 		6B783C0514AD8D190087E522 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B783BE814AD8D190087E522 /* Info.plist */; };
@@ -81,17 +81,17 @@
 		6B783BD114AD8D190087E522 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6B783BD214AD8D190087E522 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6B783BD314AD8D190087E522 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6B783BD514AD8D190087E522 /* FileReferenceType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileReferenceType.h; sourceTree = "<group>"; };
-		6B783BD614AD8D190087E522 /* FileReferenceType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileReferenceType.m; sourceTree = "<group>"; };
-		6B783BD714AD8D190087E522 /* ProjectNodeType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectNodeType.h; sourceTree = "<group>"; };
-		6B783BD814AD8D190087E522 /* ProjectNodeType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectNodeType.m; sourceTree = "<group>"; };
+		6B783BD514AD8D190087E522 /* XcodeFileReferenceType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XcodeFileReferenceType.h; sourceTree = "<group>"; };
+		6B783BD614AD8D190087E522 /* XcodeFileReferenceType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XcodeFileReferenceType.m; sourceTree = "<group>"; };
+		6B783BD714AD8D190087E522 /* XcodeProjectNodeType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XcodeProjectNodeType.h; sourceTree = "<group>"; };
+		6B783BD814AD8D190087E522 /* XcodeProjectNodeType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XcodeProjectNodeType.m; sourceTree = "<group>"; };
 		6B783BD914AD8D190087E522 /* xcode_ClassDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xcode_ClassDefinition.h; sourceTree = "<group>"; };
 		6B783BDA14AD8D190087E522 /* xcode_ClassDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xcode_ClassDefinition.m; sourceTree = "<group>"; };
 		6B783BDB14AD8D190087E522 /* xcode_ProjectEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xcode_ProjectEditor.h; sourceTree = "<group>"; };
 		6B783BDC14AD8D190087E522 /* xcode_ProjectEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xcode_ProjectEditor.m; sourceTree = "<group>"; };
 		6B783BDF14AD8D190087E522 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
-		6B783BE114AD8D190087E522 /* expanz_codegen_utils_FileKeyBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_codegen_utils_FileKeyBuilder.h; sourceTree = "<group>"; };
-		6B783BE214AD8D190087E522 /* expanz_codegen_utils_FileKeyBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_codegen_utils_FileKeyBuilder.m; sourceTree = "<group>"; };
+		6B783BE114AD8D190087E522 /* xcode_FileKeyBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xcode_FileKeyBuilder.h; sourceTree = "<group>"; };
+		6B783BE214AD8D190087E522 /* xcode_FileKeyBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xcode_FileKeyBuilder.m; sourceTree = "<group>"; };
 		6B783BE514AD8D190087E522 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		6B783BE714AD8D190087E522 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6B783BE814AD8D190087E522 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -205,38 +205,27 @@
 		6B783BCF14AD8D190087E522 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				6B783BD014AD8D190087E522 /* expanz_codegen */,
-				6B783BE314AD8D190087E522 /* Resources */,
+				6B783BD014AD8D190087E522 /* xcode_project_editor */,
+				6BE4B2B4147E6D3C0059E499 /* expanz_codegen */,
 			);
 			path = Main;
 			sourceTree = "<group>";
 		};
-		6B783BD014AD8D190087E522 /* expanz_codegen */ = {
+		6B783BD014AD8D190087E522 /* xcode_project_editor */ = {
 			isa = PBXGroup;
 			children = (
-				6B783BD114AD8D190087E522 /* AppDelegate.h */,
-				6B783BD214AD8D190087E522 /* AppDelegate.m */,
-				6B783BD314AD8D190087E522 /* main.m */,
-				6B783BD414AD8D190087E522 /* model */,
-				6B783BDD14AD8D190087E522 /* ui */,
-				6B783BE014AD8D190087E522 /* utils */,
-			);
-			path = expanz_codegen;
-			sourceTree = "<group>";
-		};
-		6B783BD414AD8D190087E522 /* model */ = {
-			isa = PBXGroup;
-			children = (
-				6B783BD514AD8D190087E522 /* FileReferenceType.h */,
-				6B783BD614AD8D190087E522 /* FileReferenceType.m */,
-				6B783BD714AD8D190087E522 /* ProjectNodeType.h */,
-				6B783BD814AD8D190087E522 /* ProjectNodeType.m */,
-				6B783BD914AD8D190087E522 /* xcode_ClassDefinition.h */,
-				6B783BDA14AD8D190087E522 /* xcode_ClassDefinition.m */,
-				6B783BDB14AD8D190087E522 /* xcode_ProjectEditor.h */,
+				6B783BD814AD8D190087E522 /* XcodeProjectNodeType.m */,
+				6B783BD714AD8D190087E522 /* XcodeProjectNodeType.h */,
+				6B783BD614AD8D190087E522 /* XcodeFileReferenceType.m */,
+				6B783BD514AD8D190087E522 /* XcodeFileReferenceType.h */,
 				6B783BDC14AD8D190087E522 /* xcode_ProjectEditor.m */,
+				6B783BDB14AD8D190087E522 /* xcode_ProjectEditor.h */,
+				6B783BE214AD8D190087E522 /* xcode_FileKeyBuilder.m */,
+				6B783BE114AD8D190087E522 /* xcode_FileKeyBuilder.h */,
+				6B783BDA14AD8D190087E522 /* xcode_ClassDefinition.m */,
+				6B783BD914AD8D190087E522 /* xcode_ClassDefinition.h */,
 			);
-			path = model;
+			path = xcode_project_editor;
 			sourceTree = "<group>";
 		};
 		6B783BDD14AD8D190087E522 /* ui */ = {
@@ -253,15 +242,6 @@
 				6B783BDF14AD8D190087E522 /* MainMenu.xib */,
 			);
 			path = Assets;
-			sourceTree = "<group>";
-		};
-		6B783BE014AD8D190087E522 /* utils */ = {
-			isa = PBXGroup;
-			children = (
-				6B783BE114AD8D190087E522 /* expanz_codegen_utils_FileKeyBuilder.h */,
-				6B783BE214AD8D190087E522 /* expanz_codegen_utils_FileKeyBuilder.m */,
-			);
-			path = utils;
 			sourceTree = "<group>";
 		};
 		6B783BE314AD8D190087E522 /* Resources */ = {
@@ -323,6 +303,18 @@
 				6B783BB914AD8CF90087E522 /* Specs */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		6BE4B2B4147E6D3C0059E499 /* expanz_codegen */ = {
+			isa = PBXGroup;
+			children = (
+				6B783BE314AD8D190087E522 /* Resources */,
+				6B783BDD14AD8D190087E522 /* ui */,
+				6B783BD314AD8D190087E522 /* main.m */,
+				6B783BD214AD8D190087E522 /* AppDelegate.m */,
+				6B783BD114AD8D190087E522 /* AppDelegate.h */,
+			);
+			path = expanz_codegen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -419,11 +411,11 @@
 				6BE4B2B4147E6D3C0059E498 /* (null) in Sources */,
 				6B783BEA14AD8D190087E522 /* AppDelegate.m in Sources */,
 				6B783BED14AD8D190087E522 /* main.m in Sources */,
-				6B783BF014AD8D190087E522 /* FileReferenceType.m in Sources */,
-				6B783BF314AD8D190087E522 /* ProjectNodeType.m in Sources */,
+				6B783BF014AD8D190087E522 /* XcodeFileReferenceType.m in Sources */,
+				6B783BF314AD8D190087E522 /* XcodeProjectNodeType.m in Sources */,
 				6B783BF614AD8D190087E522 /* xcode_ClassDefinition.m in Sources */,
 				6B783BF914AD8D190087E522 /* xcode_ProjectEditor.m in Sources */,
-				6B783BFE14AD8D190087E522 /* expanz_codegen_utils_FileKeyBuilder.m in Sources */,
+				6B783BFE14AD8D190087E522 /* xcode_FileKeyBuilder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,11 +428,11 @@
 				6B783BCC14AD8CF90087E522 /* ProjectEditorSpec.m in Sources */,
 				6B783BCD14AD8CF90087E522 /* FileKeyBuilderSpec.m in Sources */,
 				6B783BEC14AD8D190087E522 /* AppDelegate.m in Sources */,
-				6B783BF214AD8D190087E522 /* FileReferenceType.m in Sources */,
-				6B783BF514AD8D190087E522 /* ProjectNodeType.m in Sources */,
+				6B783BF214AD8D190087E522 /* XcodeFileReferenceType.m in Sources */,
+				6B783BF514AD8D190087E522 /* XcodeProjectNodeType.m in Sources */,
 				6B783BF814AD8D190087E522 /* xcode_ClassDefinition.m in Sources */,
 				6B783BFB14AD8D190087E522 /* xcode_ProjectEditor.m in Sources */,
-				6B783C0014AD8D190087E522 /* expanz_codegen_utils_FileKeyBuilder.m in Sources */,
+				6B783C0014AD8D190087E522 /* xcode_FileKeyBuilder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

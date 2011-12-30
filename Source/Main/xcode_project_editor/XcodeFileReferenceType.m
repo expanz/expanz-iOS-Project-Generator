@@ -9,21 +9,21 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "FileReferenceType.h"
+#import "XcodeFileReferenceType.h"
 
 @implementation NSString (FileReferenceType)
 
-- (FileReferenceType) asFileReferenceType {
+- (XcodeFileReferenceType) asFileReferenceType {
     NSDictionary* nodes = [NSDictionary dictionaryWithObjectsAndKeys:
         [NSNumber numberWithInteger:SourceCodeHeader], @"sourcecode.c.h",
         [NSNumber numberWithInteger:SourceCodeObjC], @"sourcecode.c.objc",
         nil];
 
 
-    FileReferenceType referenceType;
+    XcodeFileReferenceType referenceType;
 
     if ([nodes objectForKey:self] != nil) {
-        referenceType = (FileReferenceType) [[nodes objectForKey:self] intValue];
+        referenceType = (XcodeFileReferenceType) [[nodes objectForKey:self] intValue];
     }
     else {
         referenceType = FileReferenceTypeOther;

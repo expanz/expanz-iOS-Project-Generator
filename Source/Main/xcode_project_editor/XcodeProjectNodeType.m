@@ -10,11 +10,11 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-#import "ProjectNodeType.h"
+#import "XcodeProjectNodeType.h"
 
 @implementation NSString (ProjectNode)
 
-- (ProjectNodeType)asProjectNodeType {
+- (XcodeProjectNodeType)asProjectNodeType {
 
     NSDictionary *nodes = [NSDictionary dictionaryWithObjectsAndKeys:
             [NSNumber numberWithInteger:PBXBuildFile], @"PBXBuildFile",
@@ -33,7 +33,7 @@
             [NSNumber numberWithInteger:XCConfigurationList], @"XCConfigurationList",
             nil];
 
-    return (ProjectNodeType) [[nodes objectForKey:self] intValue];
+    return (XcodeProjectNodeType) [[nodes objectForKey:self] intValue];
 }
 
 

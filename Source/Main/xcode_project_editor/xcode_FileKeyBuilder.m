@@ -9,14 +9,14 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "expanz_codegen_utils_FileKeyBuilder.h"
+#import "xcode_FileKeyBuilder.h"
 
-@implementation expanz_codegen_utils_FileKeyBuilder
+@implementation xcode_FileKeyBuilder
 
 /* ================================================= Class Methods ================================================== */
-+ (expanz_codegen_utils_FileKeyBuilder*) forFileName:(NSString*)fileName {
++ (xcode_FileKeyBuilder*) forFileName:(NSString*)fileName {
     NSData* data = [fileName dataUsingEncoding:NSUTF8StringEncoding];
-    return [[expanz_codegen_utils_FileKeyBuilder alloc] initHashValueMD5HashWithBytes:[data bytes] length:[data length]];
+    return [[xcode_FileKeyBuilder alloc] initHashValueMD5HashWithBytes:[data bytes] length:[data length]];
 }
 
 /* ================================================== Initializers ================================================== */

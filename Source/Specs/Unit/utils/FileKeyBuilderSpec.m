@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "SpecHelper.h"
-#import "expanz_codegen_utils_FileKeyBuilder.h"
+#import "xcode_FileKeyBuilder.h"
 
 SPEC_BEGIN(FileKeyBuilderSpec)
 
