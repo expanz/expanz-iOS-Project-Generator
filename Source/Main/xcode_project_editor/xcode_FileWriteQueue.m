@@ -9,10 +9,10 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "xcode_FileWriteCache.h"
+#import "xcode_FileWriteQueue.h"
 
 
-@implementation xcode_FileWriteCache
+@implementation xcode_FileWriteQueue
 
 /* ================================================== Initializers ================================================== */
 - (id) initWithBaseDirectory:(NSString*)baseDirectory {
@@ -25,7 +25,7 @@
 }
 
 /* ================================================ Interface Methods =============================================== */
-- (void) spool:(NSString*)fileName inDirectory:(NSString*)directory contents:(NSString*)contents {
+- (void) queueFile:(NSString*)fileName inDirectory:(NSString*)directory withContents:(NSString*)contents {
     [_data setObject:contents forKey:[[_baseDirectory stringByAppendingPathComponent:directory]
                                            stringByAppendingPathComponent:fileName]];
 }
@@ -38,12 +38,7 @@
             LogDebug(@"Error writing file: %@", error);
         }
     }];
-    [self discardAll];
-}
-
-- (void) discardAll {
     [_data removeAllObjects];
-
 }
 
 

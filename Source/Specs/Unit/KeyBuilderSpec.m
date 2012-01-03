@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "SpecHelper.h"
-#import "../../../Main/xcode_project_editor/xcode_KeyBuilder.h"
+#import "xcode_KeyBuilder.h"
 
 SPEC_BEGIN(KeyBuilderSpec)
 

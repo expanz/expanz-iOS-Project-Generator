@@ -10,27 +10,16 @@
 ////////////////////////////////////////////////////////////////////////////////
 #import <Foundation/Foundation.h>
 
+/**
+* Represents a target in an xcode project.
+*/
+@interface xcode_Target : NSObject
 
-@interface xcode_FileWriteCache : NSObject {
+@property (nonatomic, strong, readonly) NSString* name;
 
-@private
-
-    NSString* _baseDirectory;
-    NSMutableDictionary* _data;
-}
-
-- (id) initWithBaseDirectory:(NSString*)baseDirectory;
-
-- (void) queueString:(NSString*)string withFileName:(NSString*)fileName inDirectory:(NSString*)directory;
-
-- (void) spool:(NSString*)fileName inDirectory:(NSString*)directory contents:(NSString*)contents;
-
-- (void) writePendingFilesToDisk;
-
-- (void) discardAll;
-
+- (id) initWithName:(NSString*)name;
 
 @end
 
 /* ================================================================================================================== */
-@compatibility_alias FileWriteCache xcode_FileWriteCache;
+@compatibility_alias Target xcode_Target;

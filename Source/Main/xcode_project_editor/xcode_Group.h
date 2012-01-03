@@ -11,6 +11,7 @@
 #import <Foundation/Foundation.h>
 
 @class xcode_Project;
+@class xcode_ClassDefinition;
 
 /**
 * Represents a group in an Xcode project.
@@ -21,6 +22,7 @@
     NSMutableArray* _children;
 }
 
+@property(nonatomic, weak) xcode_Project* project;
 @property(nonatomic, strong, readonly) NSString* name;
 @property(nonatomic, strong, readonly) NSString* path;
 @property(nonatomic, strong, readonly) NSString* key;
@@ -28,8 +30,7 @@
 
 - (id) initWithKey:(NSString*) key name:(NSString*)name path:(NSString*)path children:(NSArray*)children;
 
-- (void) addChildWithKey:(NSString*)key;
-
+- (void) addClass:(xcode_ClassDefinition*)classDefinition;
 
 @end
 

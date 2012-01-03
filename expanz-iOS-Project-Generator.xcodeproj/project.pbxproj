@@ -48,8 +48,11 @@
 		6BE4B2B4147E6D3C0059E49B /* XcodeFileReferenceTypeSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E49A /* XcodeFileReferenceTypeSpec.m */; };
 		6BE4B2B4147E6D3C0059E49D /* xcode_Group.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E49C /* xcode_Group.m */; };
 		6BE4B2B4147E6D3C0059E49E /* xcode_Group.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E49C /* xcode_Group.m */; };
-		6BE4B2B4147E6D3C0059E4A1 /* xcode_FileWriteCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E4A0 /* xcode_FileWriteCache.m */; };
-		6BE4B2B4147E6D3C0059E4A2 /* xcode_FileWriteCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E4A0 /* xcode_FileWriteCache.m */; };
+		6BE4B2B4147E6D3C0059E4A1 /* xcode_FileWriteQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E4A0 /* xcode_FileWriteQueue.m */; };
+		6BE4B2B4147E6D3C0059E4A2 /* xcode_FileWriteQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E4A0 /* xcode_FileWriteQueue.m */; };
+		6BE4B2B4147E6D3C0059E4A5 /* xcode_Target.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E4A4 /* xcode_Target.m */; };
+		6BE4B2B4147E6D3C0059E4A6 /* xcode_Target.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E4A4 /* xcode_Target.m */; };
+		6BE4B2B4147E6D3C0059E4A9 /* GroupSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E4A8 /* GroupSpec.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -111,8 +114,11 @@
 		6BE4B2B4147E6D3C0059E49A /* XcodeFileReferenceTypeSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XcodeFileReferenceTypeSpec.m; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E49C /* xcode_Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xcode_Group.m; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E49F /* xcode_Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xcode_Group.h; sourceTree = "<group>"; };
-		6BE4B2B4147E6D3C0059E4A0 /* xcode_FileWriteCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xcode_FileWriteCache.m; sourceTree = "<group>"; };
-		6BE4B2B4147E6D3C0059E4A3 /* xcode_FileWriteCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xcode_FileWriteCache.h; sourceTree = "<group>"; };
+		6BE4B2B4147E6D3C0059E4A0 /* xcode_FileWriteQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xcode_FileWriteQueue.m; sourceTree = "<group>"; };
+		6BE4B2B4147E6D3C0059E4A3 /* xcode_FileWriteQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xcode_FileWriteQueue.h; sourceTree = "<group>"; };
+		6BE4B2B4147E6D3C0059E4A4 /* xcode_Target.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xcode_Target.m; sourceTree = "<group>"; };
+		6BE4B2B4147E6D3C0059E4A7 /* xcode_Target.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xcode_Target.h; sourceTree = "<group>"; };
+		6BE4B2B4147E6D3C0059E4A8 /* GroupSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupSpec.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,20 +187,13 @@
 		6B783BC114AD8CF90087E522 /* Unit */ = {
 			isa = PBXGroup;
 			children = (
-				6B783BC214AD8CF90087E522 /* xcode_project_editor */,
-			);
-			path = Unit;
-			sourceTree = "<group>";
-		};
-		6B783BC214AD8CF90087E522 /* xcode_project_editor */ = {
-			isa = PBXGroup;
-			children = (
+				6BE4B2B4147E6D3C0059E4A8 /* GroupSpec.m */,
 				6BE4B2B4147E6D3C0059E49A /* XcodeFileReferenceTypeSpec.m */,
+				6B783BC414AD8CF90087E522 /* ProjectSpec.m */,
 				6B783BC614AD8CF90087E522 /* KeyBuilderSpec.m */,
 				6B783BC314AD8CF90087E522 /* ClassDefinitionSpec.m */,
-				6B783BC414AD8CF90087E522 /* ProjectSpec.m */,
 			);
-			path = xcode_project_editor;
+			path = Unit;
 			sourceTree = "<group>";
 		};
 		6B783BC714AD8CF90087E522 /* Utils */ = {
@@ -217,8 +216,10 @@
 		6B783BD014AD8D190087E522 /* xcode_project_editor */ = {
 			isa = PBXGroup;
 			children = (
-				6BE4B2B4147E6D3C0059E4A3 /* xcode_FileWriteCache.h */,
-				6BE4B2B4147E6D3C0059E4A0 /* xcode_FileWriteCache.m */,
+				6BE4B2B4147E6D3C0059E4A7 /* xcode_Target.h */,
+				6BE4B2B4147E6D3C0059E4A4 /* xcode_Target.m */,
+				6BE4B2B4147E6D3C0059E4A3 /* xcode_FileWriteQueue.h */,
+				6BE4B2B4147E6D3C0059E4A0 /* xcode_FileWriteQueue.m */,
 				6BE4B2B4147E6D3C0059E49F /* xcode_Group.h */,
 				6BE4B2B4147E6D3C0059E49C /* xcode_Group.m */,
 				6B783BD814AD8D190087E522 /* XcodeProjectNodeType.m */,
@@ -424,7 +425,8 @@
 				6B783BF914AD8D190087E522 /* xcode_Project.m in Sources */,
 				6B783BFE14AD8D190087E522 /* xcode_KeyBuilder.m in Sources */,
 				6BE4B2B4147E6D3C0059E49D /* xcode_Group.m in Sources */,
-				6BE4B2B4147E6D3C0059E4A1 /* xcode_FileWriteCache.m in Sources */,
+				6BE4B2B4147E6D3C0059E4A1 /* xcode_FileWriteQueue.m in Sources */,
+				6BE4B2B4147E6D3C0059E4A5 /* xcode_Target.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,7 +446,9 @@
 				6B783C0014AD8D190087E522 /* xcode_KeyBuilder.m in Sources */,
 				6BE4B2B4147E6D3C0059E49B /* XcodeFileReferenceTypeSpec.m in Sources */,
 				6BE4B2B4147E6D3C0059E49E /* xcode_Group.m in Sources */,
-				6BE4B2B4147E6D3C0059E4A2 /* xcode_FileWriteCache.m in Sources */,
+				6BE4B2B4147E6D3C0059E4A2 /* xcode_FileWriteQueue.m in Sources */,
+				6BE4B2B4147E6D3C0059E4A6 /* xcode_Target.m in Sources */,
+				6BE4B2B4147E6D3C0059E4A9 /* GroupSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

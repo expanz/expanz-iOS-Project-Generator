@@ -10,16 +10,14 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "SpecHelper.h"
-#import "../../../Main/xcode_project_editor/xcode_Project.h"
-#import "xcode_ClassDefinition.h"
-#import "xcode_Group.h"
+#import "xcode_Project.h"
 
 SPEC_BEGIN(FooSpec)
 
-    __block Project* projectEditor;
+    __block Project* project;
 
     beforeEach(^{
-        projectEditor = [[Project alloc] initWithFilePath:@"/tmp"];
+        project = [[Project alloc] initWithFilePath:@"/tmp"];
     });
 
 
@@ -27,7 +25,7 @@ SPEC_BEGIN(FooSpec)
 
         it(@"should be able to list all the header files in a project.", ^{
 
-            NSArray* headers = [projectEditor headerFiles];
+            NSArray* headers = [project headerFiles];
             LogDebug(@"Headers: %@", headers);
 
             assertThat([headers objectAtIndex:0], equalTo(@"AppDelegate.h"));
@@ -37,7 +35,7 @@ SPEC_BEGIN(FooSpec)
 
         it(@"should be able to list all the implementation files in a project", ^{
 
-            NSArray* implementationFiles = [projectEditor implementationFiles];
+            NSArray* implementationFiles = [project implementationFiles];
             LogDebug(@"Implementation Files: %@", implementationFiles);
 
             assertThat([implementationFiles objectAtIndex:0], equalTo(@"AppDelegate.m"));
@@ -50,7 +48,7 @@ SPEC_BEGIN(FooSpec)
     describe(@"Groups", ^{
 
         it(@"should be able to list all of the groups in a project", ^{
-            NSArray* groups = [projectEditor groups];
+            NSArray* groups = [project groups];
             assertThat(groups, notNilValue());
             assertThat(groups, isNot(empty()));
             LogDebug(@"Groups: %@", groups);
@@ -58,33 +56,19 @@ SPEC_BEGIN(FooSpec)
 
     });
 
-    describe(@"Adding a source file.", ^{
+    describe(@"Targets", ^{
 
-        it(@"should allow adding a source file to the project.", ^{
+        it(@"should be able to list the targets in an xcode project", ^{
 
-            projectEditor = [[Project alloc]
-                initWithFilePath:@"/Users/jblues/ExpanzProjects/expanz-iOS-SDK/expanz-iOS-SDK.xcodeproj"];
-
-            ClassDefinition* classDefinition = [[ClassDefinition alloc] initWithName:@"ESA_Foobar_ViewController"];
-            [classDefinition setHeader:@"@interface ESA_Foobar_ViewController @end"];
-            [classDefinition setSource:@"@implementation ESA_Foobar_ViewController @end"];
-
-            Group* group = [projectEditor groupWithName:@"Main"];
-            NSArray* groups = [projectEditor groups];
-            LogDebug(@"%@", groups);
-
-
-            assertThat(group, notNilValue());
-            [projectEditor addClass:classDefinition toGroup:group];
-            [projectEditor save];
-
-            LogDebug(@"Done");
+            NSArray* targets = [project targets];
+            assertThat(targets, notNilValue());
+            assertThat(targets, isNot(empty()));
 
         });
 
 
-
     });
+
 
 
     SPEC_END
