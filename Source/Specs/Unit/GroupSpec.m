@@ -25,6 +25,23 @@ SPEC_BEGIN(GroupSpec)
         group = [project groupWithName:@"Main"];
     });
 
+    describe(@"Object creation", ^{
+
+        it(@"should allow initialization with ", ^{
+            Group* group = [[Group alloc] initWithKey:@"abcd1234" name:@"Main" path:@"Source/Main" children:nil];
+            assertThat(group, notNilValue());
+            assertThat(group.key, equalTo(@"abcd1234"));
+            assertThat(group.name, equalTo(@"Main"));
+            assertThat(group.path, equalTo(@"Source/Main"));
+            assertThat(group.children, is(empty()));
+        });
+
+        it(@"should be able to describe itself.", ^{
+            assertThat([group description], equalTo(@"Group: key=6BD47C341484703F000ECE52, name=Main"));
+        });
+
+    });
+
 
     describe(@"Source files.", ^{
 
@@ -42,8 +59,6 @@ SPEC_BEGIN(GroupSpec)
             LogDebug(@"Done");
 
         });
-
-
     });
 
 
