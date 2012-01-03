@@ -9,16 +9,17 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-
 #import "SpecHelper.h"
-#import "xcode_ProjectEditor.h"
+#import "../../../Main/xcode_project_editor/xcode_Project.h"
+#import "xcode_ClassDefinition.h"
+#import "xcode_Group.h"
 
 SPEC_BEGIN(FooSpec)
 
-    __block ProjectEditor* projectEditor;
+    __block Project* projectEditor;
 
     beforeEach(^{
-        projectEditor = [[ProjectEditor alloc] initWithFilePath:@"/tmp/project.pbxproj"];
+        projectEditor = [[Project alloc] initWithFilePath:@"/tmp"];
     });
 
 
@@ -43,6 +44,44 @@ SPEC_BEGIN(FooSpec)
             assertThat([implementationFiles objectAtIndex:10], equalTo(@"ProjectNodeType.m"));
             assertThatInteger([implementationFiles count], equalToInteger(11));
         });
+
+    });
+
+    describe(@"Groups", ^{
+
+        it(@"should be able to list all of the groups in a project", ^{
+            NSArray* groups = [projectEditor groups];
+            assertThat(groups, notNilValue());
+            assertThat(groups, isNot(empty()));
+            LogDebug(@"Groups: %@", groups);
+        });
+
+    });
+
+    describe(@"Adding a source file.", ^{
+
+        it(@"should allow adding a source file to the project.", ^{
+
+            projectEditor = [[Project alloc]
+                initWithFilePath:@"/Users/jblues/ExpanzProjects/expanz-iOS-SDK/expanz-iOS-SDK.xcodeproj"];
+
+            ClassDefinition* classDefinition = [[ClassDefinition alloc] initWithName:@"ESA_Foobar_ViewController"];
+            [classDefinition setHeader:@"@interface ESA_Foobar_ViewController @end"];
+            [classDefinition setSource:@"@implementation ESA_Foobar_ViewController @end"];
+
+            Group* group = [projectEditor groupWithName:@"Main"];
+            NSArray* groups = [projectEditor groups];
+            LogDebug(@"%@", groups);
+
+
+            assertThat(group, notNilValue());
+            [projectEditor addClass:classDefinition toGroup:group];
+            [projectEditor save];
+
+            LogDebug(@"Done");
+
+        });
+
 
 
     });

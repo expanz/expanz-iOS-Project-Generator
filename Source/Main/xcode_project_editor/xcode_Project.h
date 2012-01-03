@@ -11,24 +11,51 @@
 #import <Foundation/Foundation.h>
 
 @class xcode_ClassDefinition;
+@class xcode_Group;
+@class xcode_FileWriteCache;
 
 
-@interface xcode_ProjectEditor : NSObject  {
+@interface xcode_Project : NSObject {
 
 @private
+    NSString* _filePath;
     NSMutableDictionary* _project;
-
+    xcode_FileWriteCache* _fileCache;
 }
 
+/**
+* Creates a new project editor instance with the specified project.pbxproj file.
+*/
 - (id) initWithFilePath:(NSString*)filePath;
 
+/**
+* Lists the header files in an xcode project.
+*/
 - (NSArray*) headerFiles;
 
+/**
+* Lists the implementation files in an xcode project.
+*/
 - (NSArray*) implementationFiles;
 
-- (void) addClass:(xcode_ClassDefinition*)classDefinition;
+/**
+* Lists the groups in an xcode project.
+*/
+- (NSArray*) groups;
+
+/**
+* Returns the file key for the group with the specified name.
+*/
+- (xcode_Group*) groupWithName:(NSString*)name;
+
+- (void) addClass:(xcode_ClassDefinition*)classDefinition toGroup:(xcode_Group*)group;
+
+/**
+* Saves a project after editing.
+*/
+- (void) save;
 
 @end
 
 /* ================================================================================================================== */
-@compatibility_alias ProjectEditor xcode_ProjectEditor;
+@compatibility_alias Project xcode_Project;

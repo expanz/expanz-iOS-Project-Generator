@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "xcode_ClassDefinition.h"
-#import "xcode_FileKeyBuilder.h"
+#import "xcode_KeyBuilder.h"
 
 @implementation xcode_ClassDefinition
 

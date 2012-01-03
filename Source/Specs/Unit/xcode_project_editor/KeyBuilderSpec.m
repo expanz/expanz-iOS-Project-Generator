@@ -10,9 +10,10 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "SpecHelper.h"
-#import "xcode_FileKeyBuilder.h"
+#import "../../../Main/xcode_project_editor/xcode_KeyBuilder.h"
 
-SPEC_BEGIN(FileKeyBuilderSpec)
+SPEC_BEGIN(KeyBuilderSpec)
+
 
     describe(@"md5sum hash", ^{
         
@@ -20,11 +21,11 @@ SPEC_BEGIN(FileKeyBuilderSpec)
             
             NSString* toBeHashed = @"ESA_Sales_Customer_Browse_ViewController.h";
 
-            FileKeyBuilder* hashValue = [FileKeyBuilder forFileName:toBeHashed];
+            KeyBuilder* hashValue = [KeyBuilder forFileName:toBeHashed];
             NSString* key = [hashValue build];
             LogDebug(@"Hash value: %@", key);
             assertThat(key, notNilValue());
-            assertThatInteger([key length], equalToInteger(25));
+            assertThatInteger([key length], equalToInteger(24));
         });
         
     

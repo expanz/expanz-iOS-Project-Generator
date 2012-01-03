@@ -9,14 +9,14 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "xcode_FileKeyBuilder.h"
+#import "xcode_KeyBuilder.h"
 
-@implementation xcode_FileKeyBuilder
+@implementation xcode_KeyBuilder
 
 /* ================================================= Class Methods ================================================== */
-+ (xcode_FileKeyBuilder*) forFileName:(NSString*)fileName {
++ (xcode_KeyBuilder*) forFileName:(NSString*)fileName {
     NSData* data = [fileName dataUsingEncoding:NSUTF8StringEncoding];
-    return [[xcode_FileKeyBuilder alloc] initHashValueMD5HashWithBytes:[data bytes] length:[data length]];
+    return [[xcode_KeyBuilder alloc] initHashValueMD5HashWithBytes:[data bytes] length:[data length]];
 }
 
 /* ================================================== Initializers ================================================== */
@@ -36,7 +36,7 @@
     for (i = 0; i < byteLength; i++) {
         [stringValue appendFormat:@"%02x", _value[i]];
     }
-    return [stringValue substringToIndex:25];
+    return [stringValue substringToIndex:24];
 }
 
 

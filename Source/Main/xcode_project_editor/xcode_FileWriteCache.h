@@ -8,28 +8,29 @@
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
-
 #import <Foundation/Foundation.h>
-#import <CommonCrypto/CommonDigest.h>
-
-#define HASH_VALUE_STORAGE_SIZE 48
-
-typedef struct {
-    char value[CC_MD5_DIGEST_LENGTH];
-} HashValueMD5Hash;
 
 
-@interface xcode_FileKeyBuilder : NSObject {
-    unsigned char _value[HASH_VALUE_STORAGE_SIZE];
+@interface xcode_FileWriteCache : NSObject {
+
+@private
+
+    NSString* _baseDirectory;
+    NSMutableDictionary* _data;
 }
 
-+ (xcode_FileKeyBuilder*) forFileName:(NSString*)fileName;
+- (id) initWithBaseDirectory:(NSString*)baseDirectory;
 
-- (id) initHashValueMD5HashWithBytes:(const void*)bytes length:(NSUInteger)length;
+- (void) queueString:(NSString*)string withFileName:(NSString*)fileName inDirectory:(NSString*)directory;
 
-- (NSString*) build;
+- (void) spool:(NSString*)fileName inDirectory:(NSString*)directory contents:(NSString*)contents;
+
+- (void) writePendingFilesToDisk;
+
+- (void) discardAll;
+
 
 @end
 
 /* ================================================================================================================== */
-@compatibility_alias FileKeyBuilder xcode_FileKeyBuilder;
+@compatibility_alias FileWriteCache xcode_FileWriteCache;
