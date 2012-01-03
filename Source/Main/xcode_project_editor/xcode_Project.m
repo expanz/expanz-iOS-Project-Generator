@@ -67,6 +67,7 @@
             NSArray* children = [obj valueForKey:@"children"];
 
             Group* group = [[Group alloc] initWithKey:key name:name path:path children:children];
+            [group setProject:self];
             [results addObject:group];
         }
     }];
