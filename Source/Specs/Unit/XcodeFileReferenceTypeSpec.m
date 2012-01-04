@@ -11,19 +11,19 @@
 
 
 #import "SpecHelper.h"
-#import "XcodeFileReferenceType.h"
+#import "../../Main/xcode_project_editor/XcodeProjectFileType.h"
 
 SPEC_BEGIN(XCodeFileReferenceSpec)
 
     
     it(@"should return a file reference type from a string", ^{
-        assertThatInt([@"sourcecode.c.h" asXCodeFileReferenceType], equalToInt(SourceCodeHeader));
-        assertThatInt([@"sourcecode.c.objc" asXCodeFileReferenceType], equalToInt(SourceCodeObjC));
+        assertThatInt([@"sourcecode.c.h" asProjectFileType], equalToInt(SourceCodeHeader));
+        assertThatInt([@"sourcecode.c.objc" asProjectFileType], equalToInt(SourceCodeObjC));
     });
     
     it(@"should create a string from a file reference type", ^{
-        assertThat([NSString stringFromXcodeFileReferenceType:SourceCodeHeader], equalTo(@"sourcecode.c.h"));
-        assertThat([NSString stringFromXcodeFileReferenceType:SourceCodeObjC], equalTo(@"sourcecode.c.objc"));        
+        assertThat([NSString stringFromProjectFileType:SourceCodeHeader], equalTo(@"sourcecode.c.h"));
+        assertThat([NSString stringFromProjectFileType:SourceCodeObjC], equalTo(@"sourcecode.c.objc"));
     });
     
     

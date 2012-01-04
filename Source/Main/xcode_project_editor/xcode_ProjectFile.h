@@ -9,19 +9,21 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 #import <Foundation/Foundation.h>
+#import "XcodeProjectFileType.h"
+
 
 /**
-* Represents a target in an xcode project.
+* Represents a file resource in an xcode project.
 */
-@interface xcode_Target : NSObject
+@interface xcode_ProjectFile : NSObject
 
-@property (nonatomic, strong, readonly) NSString* name;
+@property (nonatomic, strong, readonly) NSString* key;
+@property (nonatomic, readonly) XcodeProjectFileType type;
+@property (nonatomic, strong, readonly) NSString* path; 
 
-
-
-- (id) initWithName:(NSString*)name;
+- (id) initWithKey:(NSString*)key type:(XcodeProjectFileType)type path:(NSString*)path;
 
 @end
 
 /* ================================================================================================================== */
-@compatibility_alias Target xcode_Target;
+@compatibility_alias ProjectFile xcode_ProjectFile;

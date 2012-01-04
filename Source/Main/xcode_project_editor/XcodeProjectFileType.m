@@ -9,15 +9,17 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "XcodeFileReferenceType.h"
+#import "XcodeProjectFileType.h"
 
 
-@implementation NSDictionary (XCodeFileReferenceType)
+@implementation NSDictionary (XCodeProjectFileType)
 
 + (NSDictionary*) dictionaryWithFileReferenceTypesAsStrings {
     return [NSDictionary dictionaryWithObjectsAndKeys:
         [NSNumber numberWithInteger:SourceCodeHeader], @"sourcecode.c.h",
         [NSNumber numberWithInteger:SourceCodeObjC], @"sourcecode.c.objc",
+        [NSNumber numberWithInteger:Framework], @"wrapper.framework", 
+        [NSNumber numberWithInteger:PropertyList], @"text.plist.strings",
         nil];
 }
 
@@ -25,18 +27,18 @@
 
 @implementation NSString (FileReferenceType)
 
-+ (NSString*) stringFromXcodeFileReferenceType:(XcodeFileReferenceType)type {
++ (NSString*) stringFromProjectFileType:(XcodeProjectFileType)type {
     return [[[NSDictionary dictionaryWithFileReferenceTypesAsStrings]
         allKeysForObject:[NSNumber numberWithInteger:type]]
         objectAtIndex:0];
 }
 
 
-- (XcodeFileReferenceType) asXCodeFileReferenceType {
+- (XcodeProjectFileType) asProjectFileType {
     NSDictionary* typeStrings = [NSDictionary dictionaryWithFileReferenceTypesAsStrings];
 
-    if ([typeStrings objectForKey:self] != nil) {
-        return (XcodeFileReferenceType) [[typeStrings objectForKey:self] intValue];
+    if ([typeStrings objectForKey:self]) {
+        return (XcodeProjectFileType) [[typeStrings objectForKey:self] intValue];
     }
     else {
         return FileReferenceTypeOther;

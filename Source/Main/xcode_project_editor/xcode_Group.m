@@ -12,7 +12,7 @@
 #import "xcode_Group.h"
 #import "xcode_Project.h"
 #import "xcode_ClassDefinition.h"
-#import "XcodeFileReferenceType.h"
+#import "XcodeProjectFileType.h"
 #import "xcode_KeyBuilder.h"
 #import "xcode_FileWriteQueue.h"
 
@@ -20,7 +20,7 @@
 
 - (void) addChildWithKey:(NSString*)key;
 
-- (NSDictionary*) makeFileReference:(NSString*)name type:(XcodeFileReferenceType)type;
+- (NSDictionary*) makeFileReference:(NSString*)name type:(XcodeProjectFileType)type;
 
 @end
 
@@ -85,11 +85,11 @@
     }
 }
 
-- (NSDictionary*) makeFileReference:(NSString*)name type:(XcodeFileReferenceType)type {
+- (NSDictionary*) makeFileReference:(NSString*)name type:(XcodeProjectFileType)type {
     NSMutableDictionary* reference = [[NSMutableDictionary alloc] init];
     [reference setObject:@"PBXFileReference" forKey:@"isa"];
     [reference setObject:@"4" forKey:@"FileEncoding"];
-    [reference setObject:[NSString stringFromXcodeFileReferenceType:type] forKey:@"lastKnownFileType"];
+    [reference setObject:[NSString stringFromProjectFileType:type] forKey:@"lastKnownFileType"];
     [reference setObject:name forKey:@"path"];
     [reference setObject:@"<group>" forKey:@"sourceTree"];
     return reference;

@@ -9,17 +9,19 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
+
 #import "xcode_Project.h"
 #import "XcodeProjectNodeType.h"
-#import "XcodeFileReferenceType.h"
+#import "XcodeProjectFileType.h"
 #import "xcode_Group.h"
 #import "xcode_FileWriteQueue.h"
 #import "xcode_Target.h"
+#import "xcode_ProjectFile.h"
 
 
 @interface xcode_Project (private)
 
-- (NSArray*) fileReferencesOfType:(XcodeFileReferenceType)type;
+- (NSArray*) projectFilesOfType:(XcodeProjectFileType)fileReferenceType;
 
 @end
 
@@ -48,12 +50,24 @@
     return [_project objectForKey:@"objects"];
 }
 
+- (NSArray*) files {
+    NSMutableArray* results = [[NSMutableArray alloc] init];
+    [[self objects] enumerateKeysAndObjectsUsingBlock:^(NSString* key, NSDictionary* obj, BOOL* stop) {
+        XcodeProjectFileType fileType = [[obj valueForKey:@"lastKnownFileType"] asProjectFileType];
+        NSString* path = [obj valueForKey:@"path"];
+        [results addObject:[[ProjectFile alloc] initWithKey:key type:fileType path:path]];
+    }];
+    NSSortDescriptor* sorter = [NSSortDescriptor sortDescriptorWithKey:@"path" ascending:YES];
+    return [results sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];
+}
+
+
 - (NSArray*) headerFiles {
-    return [self fileReferencesOfType:SourceCodeHeader];
+    return [self projectFilesOfType:SourceCodeHeader];
 }
 
 - (NSArray*) implementationFiles {
-    return [self fileReferencesOfType:SourceCodeObjC];
+    return [self projectFilesOfType:SourceCodeObjC];
 }
 
 - (NSArray*) groups {
@@ -79,7 +93,7 @@
 
     NSMutableArray* results = [[NSMutableArray alloc] init];
     [[self objects] enumerateKeysAndObjectsUsingBlock:^(NSString* key, NSDictionary* obj, BOOL* stop) {
-        
+
         if ([[obj valueForKey:@"isa"] asProjectNodeType] == PBXNativeTarget) {
             Target* target = [[Target alloc] initWithName:[obj valueForKey:@"name"]];
             [results addObject:target];
@@ -105,17 +119,14 @@
 }
 
 /* ================================================== Private Methods =============================================== */
-- (NSArray*) fileReferencesOfType:(XcodeFileReferenceType)fileReferenceType {
+- (NSArray*) projectFilesOfType:(XcodeProjectFileType)projectFileType {
     NSMutableArray* results = [[NSMutableArray alloc] init];
-
-    for (NSDictionary* obj in [[self objects] allValues]) {
-
-        if ([[obj valueForKey:@"isa"] asProjectNodeType] == PBXFileReference &&
-            [[obj valueForKey:@"lastKnownFileType"] asXCodeFileReferenceType] == fileReferenceType) {
-            [results addObject:[obj valueForKey:@"path"]];
+    for (ProjectFile* file in [self files]) {
+        if ([file type] == projectFileType) {
+            [results addObject:file];
         }
     }
-    return [results sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];;
+    return results;
 }
 
 

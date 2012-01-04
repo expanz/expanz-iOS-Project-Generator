@@ -34,6 +34,8 @@
 */
 - (NSMutableDictionary*) objects;
 
+- (NSArray*) files;
+
 /**
 * Lists the header files in an xcode project.
 */

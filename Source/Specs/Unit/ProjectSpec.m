@@ -11,6 +11,7 @@
 
 #import "SpecHelper.h"
 #import "xcode_Project.h"
+#import "xcode_ProjectFile.h"
 
 SPEC_BEGIN(FooSpec)
 
@@ -28,8 +29,8 @@ SPEC_BEGIN(FooSpec)
             NSArray* headers = [project headerFiles];
             LogDebug(@"Headers: %@", headers);
 
-            assertThat([headers objectAtIndex:0], equalTo(@"AppDelegate.h"));
-            assertThat([headers objectAtIndex:9], equalTo(@"Specs-Prefix.pch"));
+            assertThat([[headers objectAtIndex:0] path], equalTo(@"AppDelegate.h"));
+            assertThat([[headers objectAtIndex:9] path], equalTo(@"expanz_codegen_utils_FileKeyBuilder.h"));
             assertThatInteger([headers count], equalToInteger(10));
         });
 
@@ -38,8 +39,8 @@ SPEC_BEGIN(FooSpec)
             NSArray* implementationFiles = [project implementationFiles];
             LogDebug(@"Implementation Files: %@", implementationFiles);
 
-            assertThat([implementationFiles objectAtIndex:0], equalTo(@"AppDelegate.m"));
-            assertThat([implementationFiles objectAtIndex:10], equalTo(@"ProjectNodeType.m"));
+            assertThat([[implementationFiles objectAtIndex:0] path], equalTo(@"AppDelegate.m"));
+            assertThat([[implementationFiles objectAtIndex:10] path], equalTo(@"main.m"));
             assertThatInteger([implementationFiles count], equalToInteger(11));
         });
 
