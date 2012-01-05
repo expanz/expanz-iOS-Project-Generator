@@ -12,15 +12,15 @@
 #import "xcode_BuildFile.h"
 #import "xcode_ProjectFile.h"
 
-
 @implementation xcode_BuildFile
 
 @synthesize project = _project;
 @synthesize key = _key;
 
-- (id) initWithKey:(NSString*)key projectFileKey:(NSString*)projectFileKey {
+- (id) initWithProject:(xcode_Project*)project key:(NSString*)key projectFileKey:(NSString*)projectFileKey {
     self = [super init];
     if (self) {
+        _project = project;
         _key = [key copy];
         _projectFileKey = [projectFileKey copy];
     }

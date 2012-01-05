@@ -22,13 +22,14 @@
     NSMutableArray* _children;
 }
 
-@property(nonatomic, weak) xcode_Project* project;
+@property(nonatomic, weak, readonly) xcode_Project* project;
 @property(nonatomic, strong, readonly) NSString* name;
 @property(nonatomic, strong, readonly) NSString* path;
 @property(nonatomic, strong, readonly) NSString* key;
 @property(nonatomic, strong, readonly) NSArray* children;
 
-- (id) initWithKey:(NSString*) key name:(NSString*)name path:(NSString*)path children:(NSArray*)children;
+- (id) initWithProject:(xcode_Project*)project key:(NSString*)key name:(NSString*)name path:(NSString*)path
+              children:(NSArray*)children;
 
 - (void) addClass:(xcode_ClassDefinition*)classDefinition;
 

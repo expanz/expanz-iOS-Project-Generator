@@ -11,7 +11,6 @@
 
 #import <Foundation/Foundation.h>
 #import "xcode_Project.h"
-
 @class xcode_ProjectFile;
 
 /**
@@ -23,10 +22,10 @@
     NSString* _projectFileKey;
 }
 
-@property (nonatomic, weak) xcode_Project* project; 
+@property (nonatomic, weak, readonly) xcode_Project* project;
 @property (nonatomic, strong, readonly) NSString* key;
 
-- (id) initWithKey:(NSString*)key projectFileKey:(NSString*)projectFileKey;
+- (id) initWithProject:(xcode_Project*)project key:(NSString*)key projectFileKey:(NSString*)projectFileKey;
 
 - (xcode_ProjectFile*) file; 
 

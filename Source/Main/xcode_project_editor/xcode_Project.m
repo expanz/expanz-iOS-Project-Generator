@@ -60,7 +60,7 @@
     [[self objects] enumerateKeysAndObjectsUsingBlock:^(NSString* key, NSDictionary* obj, BOOL* stop) {
         XcodeProjectFileType fileType = [[obj valueForKey:@"lastKnownFileType"] asProjectFileType];
         NSString* path = [obj valueForKey:@"path"];
-        [results addObject:[[ProjectFile alloc] initWithKey:key type:fileType path:path]];
+        [results addObject:[[ProjectFile alloc] initWithProject:self key:key type:fileType path:path]];
     }];
     NSSortDescriptor* sorter = [NSSortDescriptor sortDescriptorWithKey:@"path" ascending:YES];
     return [results sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];
@@ -94,8 +94,7 @@
             NSString* path = [obj valueForKey:@"path"];
             NSArray* children = [obj valueForKey:@"children"];
 
-            Group* group = [[Group alloc] initWithKey:key name:name path:path children:children];
-            [group setProject:self];
+            Group* group = [[Group alloc] initWithProject:self key:key name:name path:path children:children];
             [results addObject:group];
         }
     }];
@@ -157,12 +156,12 @@
     NSMutableArray* results = [[NSMutableArray alloc] init];
     [[self objects] enumerateKeysAndObjectsUsingBlock:^(NSString* key, NSDictionary* obj, BOOL* stop) {
         if ([[obj valueForKey:@"isa"] asProjectNodeType] == PBXBuildFile) {
-            BuildFile* buildFile = [[BuildFile alloc] initWithKey:key projectFileKey:[obj valueForKey:@"fileRef"]];
-            [buildFile setProject:self];
+            BuildFile* buildFile =
+                [[BuildFile alloc] initWithProject:self key:key projectFileKey:[obj valueForKey:@"fileRef"]];
             [results addObject:buildFile];
         }
     }];
-    return results; 
+    return results;
 }
 
 - (BuildFile*) buildFileWithKey:(NSString*)key {

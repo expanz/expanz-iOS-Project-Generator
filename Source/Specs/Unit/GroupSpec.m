@@ -28,7 +28,8 @@ SPEC_BEGIN(GroupSpec)
     describe(@"Object creation", ^{
 
         it(@"should allow initialization with ", ^{
-            Group* group = [[Group alloc] initWithKey:@"abcd1234" name:@"Main" path:@"Source/Main" children:nil];
+            Group* group =
+                [[Group alloc] initWithProject:project key:@"abcd1234" name:@"Main" path:@"Source/Main" children:nil];
             assertThat(group, notNilValue());
             assertThat(group.key, equalTo(@"abcd1234"));
             assertThat(group.name, equalTo(@"Main"));

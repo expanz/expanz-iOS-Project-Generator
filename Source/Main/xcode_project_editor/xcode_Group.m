@@ -34,9 +34,10 @@
 
 
 /* ================================================== Initializers ================================================== */
-- (id) initWithKey:(NSString*)key name:(NSString*)name path:(NSString*)path children:(NSArray*)children {
+- (id) initWithProject:(xcode_Project*)project key:(NSString*)key name:(NSString*)name path:(NSString*)path children:(NSArray*)children {
     self = [super init];
     if (self) {
+        _project = project;
         _key = [key copy];
         _name = [name copy];
         _path = [path copy];

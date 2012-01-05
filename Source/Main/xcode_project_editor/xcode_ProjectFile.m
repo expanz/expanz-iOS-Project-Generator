@@ -10,25 +10,41 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "xcode_ProjectFile.h"
+#import "xcode_Project.h"
 
 
 @implementation xcode_ProjectFile
 
+@synthesize project = _project;
 @synthesize key = _key;
 @synthesize type = _type;
 @synthesize path = _path;
 
 
 /* ================================================== Initializers ================================================== */
-- (id) initWithKey:(NSString*)key type:(XcodeProjectFileType)type path:(NSString*)path {
+- (id) initWithProject:(xcode_Project*)project key:(NSString*)key type:(XcodeProjectFileType)type path:(NSString*)path {
     self = [super init];
     if (self) {
+        _project = project;
         _key = [key copy];
         _type = type;
         _path = [path copy];
     }
     return self;
 }
+
+/* ================================================ Interface Methods =============================================== */
+- (BOOL) isBuildFile {
+    return NO;
+    //To change the template use AppCode | Preferences | File Templates.
+
+}
+
+- (void) setAsBuildFile {
+    //To change the template use AppCode | Preferences | File Templates.
+
+}
+
 
 /* ================================================== Utility Methods =============================================== */
 - (NSString*) description {
