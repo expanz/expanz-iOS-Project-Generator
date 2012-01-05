@@ -16,6 +16,7 @@
 #import "xcode_KeyBuilder.h"
 #import "xcode_FileWriteQueue.h"
 #import "xcode_ProjectFile.h"
+#import "XcodeProjectNodeType.h"
 
 @interface xcode_Group (private)
 
@@ -54,15 +55,15 @@
 /* ================================================ Interface Methods =============================================== */
 - (void) addClass:(ClassDefinition*)classDefinition {
     NSDictionary* header = [self makeFileReference:[classDefinition headerFileName] type:SourceCodeHeader];
-    NSString* headerKey = [[KeyBuilder forFileName:[classDefinition headerFileName]] build];
+    NSString* headerKey = [[KeyBuilder forItemNamed:[classDefinition headerFileName]] build];
     [[_project objects] setObject:header forKey:headerKey];
 
     NSDictionary* source = [self makeFileReference:[classDefinition sourceFileName] type:SourceCodeObjC];
-    NSString* sourceKey = [[KeyBuilder forFileName:[classDefinition sourceFileName]] build];
+    NSString* sourceKey = [[KeyBuilder forItemNamed:[classDefinition sourceFileName]] build];
     [[_project objects] setObject:source forKey:sourceKey];
 
     ProjectFile* sourceFile = [_project projectFileWithKey:sourceKey];
-    LogDebug(@"Source File: %@, isBuildFile: %@", sourceFile, [sourceFile isBuildFile] ? @"YES" : @"NO");
+    [sourceFile becomeBuildFile];
 
     [self addChildWithKey:headerKey];
     [self addChildWithKey:sourceKey];
@@ -79,7 +80,7 @@
 
 /* ================================================== Utility Methods =============================================== */
 - (NSString*) description {
-    return [NSString stringWithFormat:@"Group: key=%@, name=%@", _key, _name];
+    return [NSString stringWithFormat:@"Group: key=%@, path=%@", _key, _path];
 }
 
 /* ================================================== Private Methods =============================================== */
@@ -91,7 +92,7 @@
 
 - (NSDictionary*) makeFileReference:(NSString*)name type:(XcodeProjectFileType)type {
     NSMutableDictionary* reference = [[NSMutableDictionary alloc] init];
-    [reference setObject:@"PBXFileReference" forKey:@"isa"];
+    [reference setObject:[NSString stringFromProjectNodeType:PBXFileReference] forKey:@"isa"];
     [reference setObject:@"4" forKey:@"FileEncoding"];
     [reference setObject:[NSString stringFromProjectFileType:type] forKey:@"lastKnownFileType"];
     [reference setObject:name forKey:@"path"];
@@ -101,7 +102,7 @@
 
 - (NSDictionary*) asDictionary {
     NSMutableDictionary* groupData = [[NSMutableDictionary alloc] init];
-    [groupData setObject:@"PBXGroup" forKey:@"isa"];
+    [groupData setObject:[NSString stringFromProjectNodeType:PBXGroup] forKey:@"isa"];
     [groupData setObject:@"<group>" forKey:@"sourceTree"];
     [groupData setObject:_name forKey:@"name"];
     [groupData setObject:_path forKey:@"path"];

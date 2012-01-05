@@ -12,7 +12,7 @@
 #import "XcodeProjectFileType.h"
 
 
-@implementation NSDictionary (XCodeProjectFileType)
+@implementation NSDictionary (XProjectFileType)
 
 + (NSDictionary*) dictionaryWithFileReferenceTypesAsStrings {
     return [NSDictionary dictionaryWithObjectsAndKeys:
@@ -25,7 +25,7 @@
 
 @end
 
-@implementation NSString (FileReferenceType)
+@implementation NSString (XProjectFileType)
 
 + (NSString*) stringFromProjectFileType:(XcodeProjectFileType)type {
     return [[[NSDictionary dictionaryWithFileReferenceTypesAsStrings]

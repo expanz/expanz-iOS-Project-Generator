@@ -12,6 +12,7 @@
 #import "xcode_ProjectFile.h"
 #import "xcode_Project.h"
 #import "XcodeProjectNodeType.h"
+#import "xcode_KeyBuilder.h"
 
 @implementation xcode_ProjectFile
 
@@ -51,17 +52,14 @@
     return isBuildFile;
 }
 
-- (void) setAsBuildFile {
+- (void) becomeBuildFile {
     if (![self isBuildFile]) {
-        [[_project objects] enumerateKeysAndObjectsUsingBlock:^(NSString* key, NSDictionary* obj, BOOL* stop) {
-            if ([[obj valueForKey:@"isa"] asProjectNodeType] == PBXBuildFile) {
-                if ([[obj valueForKey:@"fileRef"] isEqualToString:_key]) {
-
-                }
-            }
-        }];
+        NSMutableDictionary* buildFile = [[NSMutableDictionary alloc] init];
+        [buildFile setObject:[NSString stringFromProjectNodeType:PBXBuildFile] forKey:@"isa"];
+        [buildFile setObject:_key forKey:@"fileRef"];
+        NSString* buildFileKey = [[KeyBuilder forItemNamed:[_path stringByAppendingString:@".buildFile"]] build];
+        [[_project objects] setObject:buildFile forKey:buildFileKey];
     }
-
 }
 
 

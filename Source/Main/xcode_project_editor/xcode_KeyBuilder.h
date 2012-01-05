@@ -23,7 +23,7 @@ typedef struct {
     unsigned char _value[HASH_VALUE_STORAGE_SIZE];
 }
 
-+ (xcode_KeyBuilder*) forFileName:(NSString*)fileName;
++ (xcode_KeyBuilder*) forItemNamed:(NSString*)name;
 
 - (id) initHashValueMD5HashWithBytes:(const void*)bytes length:(NSUInteger)length;
 

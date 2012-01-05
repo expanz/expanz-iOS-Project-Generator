@@ -19,11 +19,11 @@ SPEC_BEGIN(KeyBuilderSpec)
         
         it(@"Should return an md5 hash for an NSData instnace.", ^{
             
-            NSString* toBeHashed = @"ESA_Sales_Customer_Browse_ViewController.h";
+            NSString* requiresKey = @"ESA_Sales_Customer_Browse_ViewController.h";
 
-            KeyBuilder* hashValue = [KeyBuilder forFileName:toBeHashed];
-            NSString* key = [hashValue build];
-            LogDebug(@"Hash value: %@", key);
+            KeyBuilder* builtKey = [KeyBuilder forItemNamed:requiresKey];
+            NSString* key = [builtKey build];
+            LogDebug(@"Key: %@", key);
             assertThat(key, notNilValue());
             assertThatInteger([key length], equalToInteger(24));
         });

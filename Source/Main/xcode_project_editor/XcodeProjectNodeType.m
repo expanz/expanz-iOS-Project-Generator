@@ -12,11 +12,10 @@
 
 #import "XcodeProjectNodeType.h"
 
-@implementation NSString (ProjectNode)
+@implementation NSDictionary (ProjectNodeType)
 
-- (XcodeProjectNodeType)asProjectNodeType {
-
-    NSDictionary *nodes = [NSDictionary dictionaryWithObjectsAndKeys:
++ (NSDictionary*) dictionaryWithProjectNodeTypesAsStrings {
+    return [NSDictionary dictionaryWithObjectsAndKeys:
             [NSNumber numberWithInteger:PBXBuildFile], @"PBXBuildFile",
             [NSNumber numberWithInteger:PBXContainerItemProxy], @"PBXContainerItemProxy",
             [NSNumber numberWithInteger:PBXCopyFilesBuildPhase], @"PBXCopyFilesBuildPhase",
@@ -31,9 +30,22 @@
             [NSNumber numberWithInteger:PBXVariantGroup], @"PBXVariantGroup",
             [NSNumber numberWithInteger:XCBuildConfiguration], @"XCBuildConfiguration",
             [NSNumber numberWithInteger:XCConfigurationList], @"XCConfigurationList",
-            nil];
+            nil];    
+}
 
-    return (XcodeProjectNodeType) [[nodes objectForKey:self] intValue];
+@end
+
+@implementation NSString (ProjectNodeType)
+
++ (NSString*) stringFromProjectNodeType:(XcodeProjectNodeType)nodeType {
+    NSDictionary* nodeTypesToString = [NSDictionary dictionaryWithProjectNodeTypesAsStrings];
+    return [[nodeTypesToString allKeysForObject:[NSNumber numberWithInt:nodeType]] objectAtIndex:0];
+}
+
+
+- (XcodeProjectNodeType)asProjectNodeType {
+    NSDictionary* nodeTypesToString = [NSDictionary dictionaryWithProjectNodeTypesAsStrings];
+    return (XcodeProjectNodeType) [[nodeTypesToString objectForKey:self] intValue];
 }
 
 

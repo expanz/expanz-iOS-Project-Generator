@@ -27,8 +27,9 @@ typedef enum {
     XCConfigurationList
 } XcodeProjectNodeType;
 
-@interface NSString (XcodeProjectNode)
+@interface NSString (ProjectNodeType)
 
++ (NSString*) stringFromProjectNodeType:(XcodeProjectNodeType)nodeType;
 - (XcodeProjectNodeType) asProjectNodeType;
 
 @end

@@ -68,8 +68,6 @@ SPEC_BEGIN(FooSpec)
             assertThat(targets, isNot(empty()));
 
         });
-
-
     });
 
 

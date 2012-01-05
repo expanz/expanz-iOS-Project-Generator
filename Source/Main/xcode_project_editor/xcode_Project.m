@@ -55,9 +55,11 @@
 - (NSArray*) projectFiles {
     NSMutableArray* results = [[NSMutableArray alloc] init];
     [[self objects] enumerateKeysAndObjectsUsingBlock:^(NSString* key, NSDictionary* obj, BOOL* stop) {
-        XcodeProjectFileType fileType = [[obj valueForKey:@"lastKnownFileType"] asProjectFileType];
-        NSString* path = [obj valueForKey:@"path"];
-        [results addObject:[[ProjectFile alloc] initWithProject:self key:key type:fileType path:path]];
+        if ([[obj valueForKey:@"isa"] asProjectNodeType] == PBXFileReference) {
+            XcodeProjectFileType fileType = [[obj valueForKey:@"lastKnownFileType"] asProjectFileType];
+            NSString* path = [obj valueForKey:@"path"];
+            [results addObject:[[ProjectFile alloc] initWithProject:self key:key type:fileType path:path]];
+        }
     }];
     NSSortDescriptor* sorter = [NSSortDescriptor sortDescriptorWithKey:@"path" ascending:YES];
     return [results sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];

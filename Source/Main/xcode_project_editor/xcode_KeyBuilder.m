@@ -14,8 +14,8 @@
 @implementation xcode_KeyBuilder
 
 /* ================================================= Class Methods ================================================== */
-+ (xcode_KeyBuilder*) forFileName:(NSString*)fileName {
-    NSData* data = [fileName dataUsingEncoding:NSUTF8StringEncoding];
++ (xcode_KeyBuilder*) forItemNamed:(NSString*)name {
+    NSData* data = [name dataUsingEncoding:NSUTF8StringEncoding];
     return [[xcode_KeyBuilder alloc] initHashValueMD5HashWithBytes:[data bytes] length:[data length]];
 }
 

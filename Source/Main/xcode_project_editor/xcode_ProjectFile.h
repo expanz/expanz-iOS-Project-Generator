@@ -34,7 +34,7 @@
 /**
 * Adds this file to the project as an `xcode_BuildFile`, ready to be included in targets.
 */
-- (void) setAsBuildFile;
+- (void) becomeBuildFile;
 
 @end
 

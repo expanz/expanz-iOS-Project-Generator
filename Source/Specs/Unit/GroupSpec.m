@@ -38,13 +38,13 @@ SPEC_BEGIN(GroupSpec)
         });
 
         it(@"should be able to describe itself.", ^{
-            assertThat([group description], equalTo(@"Group: key=6BD47C341484703F000ECE52, name=Main"));
+            assertThat([group description], equalTo(@"Group: key=6BD47C341484703F000ECE52, path=Source/Main"));
         });
 
     });
 
 
-    describe(@"Source files.", ^{
+    fdescribe(@"Source files.", ^{
 
         it(@"should allow adding a source file.", ^{
 
