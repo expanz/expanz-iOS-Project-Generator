@@ -26,12 +26,12 @@ SPEC_BEGIN(FooSpec)
 
         it(@"should be able to list all the header files in a project.", ^{
 
-            NSArray* headers = [project headerFiles];
-            LogDebug(@"Headers: %@", headers);
+            NSArray* headerFiles = [project headerFiles];
+            LogDebug(@"Headers: %@", headerFiles);
 
-            assertThat([[headers objectAtIndex:0] path], equalTo(@"AppDelegate.h"));
-            assertThat([[headers objectAtIndex:9] path], equalTo(@"expanz_codegen_utils_FileKeyBuilder.h"));
-            assertThatInteger([headers count], equalToInteger(10));
+            assertThat([[headerFiles objectAtIndex:0] path], equalTo(@"AppDelegate.h"));
+            assertThat([[headerFiles objectAtIndex:9] path], equalTo(@"expanz_codegen_utils_FileKeyBuilder.h"));
+            assertThatInteger([headerFiles count], equalToInteger(10));
         });
 
         it(@"should be able to list all the implementation files in a project", ^{
@@ -43,7 +43,6 @@ SPEC_BEGIN(FooSpec)
             assertThat([[implementationFiles objectAtIndex:10] path], equalTo(@"main.m"));
             assertThatInteger([implementationFiles count], equalToInteger(11));
         });
-
     });
 
     describe(@"Groups", ^{

@@ -11,7 +11,7 @@
 
 #import "xcode_ProjectFile.h"
 #import "xcode_Project.h"
-
+#import "XcodeProjectNodeType.h"
 
 @implementation xcode_ProjectFile
 
@@ -34,14 +34,33 @@
 }
 
 /* ================================================ Interface Methods =============================================== */
-- (BOOL) isBuildFile {
-    return NO;
-    //To change the template use AppCode | Preferences | File Templates.
 
+
+- (BOOL) isBuildFile {
+
+    __block BOOL isBuildFile = NO;
+    if (_type == SourceCodeObjC) {
+        [[_project objects] enumerateKeysAndObjectsUsingBlock:^(NSString* key, NSDictionary* obj, BOOL* stop) {
+            if ([[obj valueForKey:@"isa"] asProjectNodeType] == PBXBuildFile) {
+                if ([[obj valueForKey:@"fileRef"] isEqualToString:_key]) {
+                    isBuildFile = YES;
+                }
+            }
+        }];
+    }
+    return isBuildFile;
 }
 
 - (void) setAsBuildFile {
-    //To change the template use AppCode | Preferences | File Templates.
+    if (![self isBuildFile]) {
+        [[_project objects] enumerateKeysAndObjectsUsingBlock:^(NSString* key, NSDictionary* obj, BOOL* stop) {
+            if ([[obj valueForKey:@"isa"] asProjectNodeType] == PBXBuildFile) {
+                if ([[obj valueForKey:@"fileRef"] isEqualToString:_key]) {
+
+                }
+            }
+        }];
+    }
 
 }
 
@@ -50,8 +69,6 @@
 - (NSString*) description {
     return [NSString stringWithFormat:@"Project file: key=%@, path=%@", _key, _path];
 }
-
-
 
 
 @end

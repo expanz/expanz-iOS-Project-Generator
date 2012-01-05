@@ -15,12 +15,15 @@
 #import "XcodeProjectFileType.h"
 #import "xcode_KeyBuilder.h"
 #import "xcode_FileWriteQueue.h"
+#import "xcode_ProjectFile.h"
 
 @interface xcode_Group (private)
 
 - (void) addChildWithKey:(NSString*)key;
 
 - (NSDictionary*) makeFileReference:(NSString*)name type:(XcodeProjectFileType)type;
+
+- (NSDictionary*) asDictionary;
 
 @end
 
@@ -34,7 +37,8 @@
 
 
 /* ================================================== Initializers ================================================== */
-- (id) initWithProject:(xcode_Project*)project key:(NSString*)key name:(NSString*)name path:(NSString*)path children:(NSArray*)children {
+- (id) initWithProject:(xcode_Project*)project key:(NSString*)key name:(NSString*)name path:(NSString*)path
+              children:(NSArray*)children {
     self = [super init];
     if (self) {
         _project = project;
@@ -57,16 +61,15 @@
     NSString* sourceKey = [[KeyBuilder forFileName:[classDefinition sourceFileName]] build];
     [[_project objects] setObject:source forKey:sourceKey];
 
+    ProjectFile* sourceFile = [_project projectFileWithKey:sourceKey];
+    LogDebug(@"Source File: %@, isBuildFile: %@", sourceFile, [sourceFile isBuildFile] ? @"YES" : @"NO");
+
     [self addChildWithKey:headerKey];
     [self addChildWithKey:sourceKey];
 
-    NSMutableDictionary* groupData = [[NSMutableDictionary alloc] init];
-    [groupData setObject:@"PBXGroup" forKey:@"isa"];
-    [groupData setObject:@"<group>" forKey:@"sourceTree"];
-    [groupData setObject:_name forKey:@"name"];
-    [groupData setObject:_path forKey:@"path"];
-    [groupData setObject:_children forKey:@"children"];
-    [[_project objects] setObject:groupData forKey:_key];
+    [[_project objects] setObject:[self asDictionary] forKey:_key];
+
+
 
     [_project.fileWriteQueue
         queueFile:[classDefinition headerFileName] inDirectory:_path withContents:[classDefinition header]];
@@ -94,6 +97,16 @@
     [reference setObject:name forKey:@"path"];
     [reference setObject:@"<group>" forKey:@"sourceTree"];
     return reference;
+}
+
+- (NSDictionary*) asDictionary {
+    NSMutableDictionary* groupData = [[NSMutableDictionary alloc] init];
+    [groupData setObject:@"PBXGroup" forKey:@"isa"];
+    [groupData setObject:@"<group>" forKey:@"sourceTree"];
+    [groupData setObject:_name forKey:@"name"];
+    [groupData setObject:_path forKey:@"path"];
+    [groupData setObject:_children forKey:@"children"];
+    return groupData;
 }
 
 

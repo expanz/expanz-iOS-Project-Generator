@@ -16,21 +16,21 @@
 @implementation xcode_Target
 
 @synthesize name = _name;
-@synthesize buildFiles = _buildFiles;
+@synthesize members = _members;
 
 /* ================================================== Initializers ================================================== */
-- (id) initWithName:(NSString*)name buildFiles:(NSArray*)buildFiles {
+- (id) initWithName:(NSString*)name members:(NSArray*)buildFiles {
     self = [super init]; 
     if (self) {
         _name = [name copy];
-        _buildFiles = [NSArray arrayWithArray:buildFiles];
+        _members = [NSArray arrayWithArray:buildFiles];
     }
     return self;
 }
 
 /* ================================================== Utility Methods =============================================== */
 - (NSString*) description {
-    return [NSString stringWithFormat:@"Target: name=%@, files=%@", _name, _buildFiles];
+    return [NSString stringWithFormat:@"Target: name=%@, files=%@", _name, _members];
 }
 
 @end

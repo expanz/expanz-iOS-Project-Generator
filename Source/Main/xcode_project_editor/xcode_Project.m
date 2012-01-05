@@ -17,16 +17,13 @@
 #import "xcode_FileWriteQueue.h"
 #import "xcode_Target.h"
 #import "xcode_ProjectFile.h"
-#import "xcode_BuildFile.h"
 
 
 @interface xcode_Project (private)
 
 - (NSArray*) projectFilesOfType:(XcodeProjectFileType)fileReferenceType;
 
-- (NSArray*) buildFiles;
-
-- (BuildFile*) buildFileWithKey:(NSString*)key;
+- (ProjectFile*) buildFileWithKey:(NSString*)key;
 
 @end
 
@@ -113,12 +110,15 @@
             for (NSString* buildPhaseKey in [obj objectForKey:@"buildPhases"]) {
                 NSDictionary* buildPhase = [[self objects] objectForKey:buildPhaseKey];
                 if ([[buildPhase valueForKey:@"isa"] asProjectNodeType] == PBXSourcesBuildPhase) {
-                    for (NSString* buildFileKey in [buildPhase objectForKey:@"files"]) {
-                        [buildFiles addObject:[self buildFileWithKey:buildFileKey]];
+                    for (NSString* buildFileKey in [buildPhase objectForKey:@"files"]) {  
+                        ProjectFile* targetMember = [self buildFileWithKey:buildFileKey];
+                        if (targetMember) {
+                            [buildFiles addObject:[self buildFileWithKey:buildFileKey]];
+                        }
                     }
                 }
             }
-            Target* target = [[Target alloc] initWithName:[obj valueForKey:@"name"] buildFiles:buildFiles];
+            Target* target = [[Target alloc] initWithName:[obj valueForKey:@"name"] members:buildFiles];
             [results addObject:target];
         }
     }];
@@ -152,25 +152,15 @@
     return results;
 }
 
-- (NSArray*) buildFiles {
-    NSMutableArray* results = [[NSMutableArray alloc] init];
+
+- (ProjectFile*) buildFileWithKey:(NSString*)theKey {
+    __block ProjectFile* projectFile;
     [[self objects] enumerateKeysAndObjectsUsingBlock:^(NSString* key, NSDictionary* obj, BOOL* stop) {
-        if ([[obj valueForKey:@"isa"] asProjectNodeType] == PBXBuildFile) {
-            BuildFile* buildFile =
-                [[BuildFile alloc] initWithProject:self key:key projectFileKey:[obj valueForKey:@"fileRef"]];
-            [results addObject:buildFile];
+        if ([[obj valueForKey:@"isa"] asProjectNodeType] == PBXBuildFile && [key isEqualToString:theKey]) {
+            projectFile = [self projectFileWithKey:[obj valueForKey:@"fileRef"]];
         }
     }];
-    return results;
-}
-
-- (BuildFile*) buildFileWithKey:(NSString*)key {
-    for (BuildFile* buildFile in [self buildFiles]) {
-        if ([[buildFile key] isEqualToString:key]) {
-            return buildFile;
-        }
-    }
-    return nil;
+    return projectFile;
 }
 
 

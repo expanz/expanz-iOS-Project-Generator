@@ -18,9 +18,9 @@
 @interface xcode_Target : NSObject
 
 @property (nonatomic, strong, readonly) NSString* name;
-@property (nonatomic, strong, readonly) NSArray* buildFiles; 
+@property (nonatomic, strong, readonly) NSArray* members;
 
-- (id) initWithName:(NSString*)name buildFiles:(NSArray*)buildFiles;
+- (id) initWithName:(NSString*)name members:(NSArray*)buildFiles;
 
 
 @end

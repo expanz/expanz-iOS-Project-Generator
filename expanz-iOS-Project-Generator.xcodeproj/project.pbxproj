@@ -58,8 +58,7 @@
 		6BE4B2B4147E6D3C0059E4B0 /* xcode_ProjectFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E4AE /* xcode_ProjectFile.m */; };
 		6BE4B2B4147E6D3C0059E4B4 /* xcode_BuildFile+Protected+protected.m in Sources */ = {isa = PBXBuildFile; };
 		6BE4B2B4147E6D3C0059E4B8 /* xcode_BuildFile+Protected.m in Sources */ = {isa = PBXBuildFile; };
-		6BE4B2B4147E6D3C0059E4BB /* xcode_BuildFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E4BA /* xcode_BuildFile.m */; };
-		6BE4B2B4147E6D3C0059E4BC /* xcode_BuildFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E4BA /* xcode_BuildFile.m */; };
+		6BE4B2B4147E6D3C0059E4BC /* xcode_BuildFile.m in Sources */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -128,8 +127,6 @@
 		6BE4B2B4147E6D3C0059E4A8 /* GroupSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupSpec.m; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E4AE /* xcode_ProjectFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xcode_ProjectFile.m; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E4B1 /* xcode_ProjectFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xcode_ProjectFile.h; sourceTree = "<group>"; };
-		6BE4B2B4147E6D3C0059E4BA /* xcode_BuildFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xcode_BuildFile.m; sourceTree = "<group>"; };
-		6BE4B2B4147E6D3C0059E4BD /* xcode_BuildFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xcode_BuildFile.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,8 +224,6 @@
 		6B783BD014AD8D190087E522 /* xcode_project_editor */ = {
 			isa = PBXGroup;
 			children = (
-				6BE4B2B4147E6D3C0059E4BD /* xcode_BuildFile.h */,
-				6BE4B2B4147E6D3C0059E4BA /* xcode_BuildFile.m */,
 				6BE4B2B4147E6D3C0059E4B1 /* xcode_ProjectFile.h */,
 				6BE4B2B4147E6D3C0059E4AE /* xcode_ProjectFile.m */,
 				6BE4B2B4147E6D3C0059E4A7 /* xcode_Target.h */,
@@ -444,7 +439,6 @@
 				6BE4B2B4147E6D3C0059E4A5 /* xcode_Target.m in Sources */,
 				6BE4B2B4147E6D3C0059E4AF /* xcode_ProjectFile.m in Sources */,
 				6BE4B2B4147E6D3C0059E4B4 /* xcode_BuildFile+Protected+protected.m in Sources */,
-				6BE4B2B4147E6D3C0059E4BB /* xcode_BuildFile.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
