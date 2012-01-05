@@ -8,19 +8,23 @@
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
-#import <Foundation/Foundation.h>
 
+#import <Foundation/Foundation.h>
 @class xcode_Project;
+@class xcode_ProjectFile;
 
 /**
 * Represents a target in an xcode project.
 */
 @interface xcode_Target : NSObject
 
+@property (nonatomic, weak, readonly) xcode_Project* project;
 @property (nonatomic, strong, readonly) NSString* name;
 @property (nonatomic, strong, readonly) NSArray* members;
 
-- (id) initWithName:(NSString*)name members:(NSArray*)buildFiles;
+- (id) initWithProject:(xcode_Project*)project name:(NSString*)name members:(NSArray*)members;
+
+- (void) addMember:(xcode_ProjectFile*)member;
 
 
 @end

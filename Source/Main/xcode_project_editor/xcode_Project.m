@@ -120,7 +120,7 @@
                     }
                 }
             }
-            Target* target = [[Target alloc] initWithName:[obj valueForKey:@"name"] members:buildFiles];
+            Target* target = [[Target alloc] initWithProject:self name:[obj valueForKey:@"name"] members:buildFiles];
             [results addObject:target];
         }
     }];

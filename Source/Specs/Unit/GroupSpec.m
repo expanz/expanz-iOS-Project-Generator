@@ -13,6 +13,7 @@
 #import "xcode_Group.h"
 #import "xcode_Project.h"
 #import "xcode_ClassDefinition.h"
+#import "NSString+TestResource.h"
 
 SPEC_BEGIN(GroupSpec)
 
@@ -44,14 +45,14 @@ SPEC_BEGIN(GroupSpec)
     });
 
 
-    fdescribe(@"Source files.", ^{
+    describe(@"Source files.", ^{
 
         it(@"should allow adding a source file.", ^{
 
             ClassDefinition* classDefinition = [[ClassDefinition alloc] initWithName:@"ESA_Foobar_ViewController"];
-            [classDefinition setHeader:@"@interface ESA_Foobar_ViewController @end"];
-            [classDefinition setSource:@"@implementation ESA_Foobar_ViewController @end"];
 
+            [classDefinition setHeader:[NSString stringWithTestResource:@"ESA_Sales_Calc_ViewController.h"]];
+            [classDefinition setSource:[NSString stringWithTestResource:@"ESA_Sales_Calc_ViewController.h"]];
 
             assertThat(group, notNilValue());
             [group addClass:classDefinition];

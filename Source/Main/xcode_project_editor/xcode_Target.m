@@ -10,23 +10,33 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "xcode_Target.h"
+#import "xcode_ProjectFile.h"
 #import "xcode_Project.h"
-
 
 @implementation xcode_Target
 
+@synthesize project = _project;
 @synthesize name = _name;
 @synthesize members = _members;
 
 /* ================================================== Initializers ================================================== */
-- (id) initWithName:(NSString*)name members:(NSArray*)buildFiles {
+- (id) initWithProject:(xcode_Project*)project name:(NSString*)name members:(NSArray*)members {
     self = [super init]; 
     if (self) {
+        _project = project;
         _name = [name copy];
-        _members = [NSArray arrayWithArray:buildFiles];
+        _members = [NSArray arrayWithArray:members];
     }
     return self;
 }
+
+/* ================================================ Interface Methods =============================================== */
+- (void) addMember:(xcode_ProjectFile*)member {
+    [member becomeBuildFile];
+    //NSDictionary* target = [[_project objects] objectForKey:<#(id)aKey#>];
+
+}
+
 
 /* ================================================== Utility Methods =============================================== */
 - (NSString*) description {

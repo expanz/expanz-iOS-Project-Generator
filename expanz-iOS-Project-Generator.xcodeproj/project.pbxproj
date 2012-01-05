@@ -59,6 +59,7 @@
 		6BE4B2B4147E6D3C0059E4B4 /* xcode_BuildFile+Protected+protected.m in Sources */ = {isa = PBXBuildFile; };
 		6BE4B2B4147E6D3C0059E4B8 /* xcode_BuildFile+Protected.m in Sources */ = {isa = PBXBuildFile; };
 		6BE4B2B4147E6D3C0059E4BC /* xcode_BuildFile.m in Sources */ = {isa = PBXBuildFile; };
+		6BE4B2B4147E6D3C0059E4BE /* NSString+TestResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E4BD /* NSString+TestResource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -127,6 +128,8 @@
 		6BE4B2B4147E6D3C0059E4A8 /* GroupSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupSpec.m; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E4AE /* xcode_ProjectFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xcode_ProjectFile.m; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E4B1 /* xcode_ProjectFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xcode_ProjectFile.h; sourceTree = "<group>"; };
+		6BE4B2B4147E6D3C0059E4BD /* NSString+TestResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TestResource.m"; sourceTree = "<group>"; };
+		6BE4B2B4147E6D3C0059E4BF /* NSString+TestResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TestResource.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +210,8 @@
 		6B783BC714AD8CF90087E522 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				6BE4B2B4147E6D3C0059E4BF /* NSString+TestResource.h */,
+				6BE4B2B4147E6D3C0059E4BD /* NSString+TestResource.m */,
 				6B783BC814AD8CF90087E522 /* SpecHelper.h */,
 			);
 			path = Utils;
@@ -465,6 +470,7 @@
 				6BE4B2B4147E6D3C0059E4B0 /* xcode_ProjectFile.m in Sources */,
 				6BE4B2B4147E6D3C0059E4B8 /* xcode_BuildFile+Protected.m in Sources */,
 				6BE4B2B4147E6D3C0059E4BC /* xcode_BuildFile.m in Sources */,
+				6BE4B2B4147E6D3C0059E4BE /* NSString+TestResource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

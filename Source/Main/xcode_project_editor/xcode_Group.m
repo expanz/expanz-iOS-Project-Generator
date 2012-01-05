@@ -62,15 +62,10 @@
     NSString* sourceKey = [[KeyBuilder forItemNamed:[classDefinition sourceFileName]] build];
     [[_project objects] setObject:source forKey:sourceKey];
 
-    ProjectFile* sourceFile = [_project projectFileWithKey:sourceKey];
-    [sourceFile becomeBuildFile];
-
     [self addChildWithKey:headerKey];
     [self addChildWithKey:sourceKey];
 
     [[_project objects] setObject:[self asDictionary] forKey:_key];
-
-
 
     [_project.fileWriteQueue
         queueFile:[classDefinition headerFileName] inDirectory:_path withContents:[classDefinition header]];

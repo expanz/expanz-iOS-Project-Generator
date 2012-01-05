@@ -54,11 +54,21 @@
 
 - (void) becomeBuildFile {
     if (![self isBuildFile]) {
-        NSMutableDictionary* buildFile = [[NSMutableDictionary alloc] init];
-        [buildFile setObject:[NSString stringFromProjectNodeType:PBXBuildFile] forKey:@"isa"];
-        [buildFile setObject:_key forKey:@"fileRef"];
-        NSString* buildFileKey = [[KeyBuilder forItemNamed:[_path stringByAppendingString:@".buildFile"]] build];
-        [[_project objects] setObject:buildFile forKey:buildFileKey];
+        if (_type == SourceCodeObjC) {
+            NSMutableDictionary* sourceBuildFile = [[NSMutableDictionary alloc] init];
+            [sourceBuildFile setObject:[NSString stringFromProjectNodeType:PBXBuildFile] forKey:@"isa"];
+            [sourceBuildFile setObject:_key forKey:@"fileRef"];
+            NSString* buildFileKey = [[KeyBuilder forItemNamed:[_path stringByAppendingString:@".buildFile"]] build];
+            [[_project objects] setObject:sourceBuildFile forKey:buildFileKey];
+        }
+        else if (_type == Framework) {
+            [NSException raise:NSInvalidArgumentException format:@"Add framework to target not implemented yet."];
+        }
+        else {
+            [NSException raise:NSInvalidArgumentException format:@"Project file of type %@ can't become a build file.",
+                                                                 [NSString stringFromProjectFileType:_type]];
+        }
+
     }
 }
 
