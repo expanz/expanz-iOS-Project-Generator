@@ -14,7 +14,9 @@
 
 @class xcode_ProjectFile;
 
-
+/**
+* Marks an `xcode_ProjectFile` as a build resource.
+*/
 @interface xcode_BuildFile : NSObject {
 
 @private
@@ -29,3 +31,6 @@
 - (xcode_ProjectFile*) file; 
 
 @end
+
+/* ================================================================================================================== */
+@compatibility_alias BuildFile xcode_BuildFile;

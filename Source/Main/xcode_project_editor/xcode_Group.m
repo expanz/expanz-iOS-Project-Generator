@@ -67,9 +67,9 @@
     [groupData setObject:_children forKey:@"children"];
     [[_project objects] setObject:groupData forKey:_key];
 
-    [_project.pendingFiles
+    [_project.fileWriteQueue
         queueFile:[classDefinition headerFileName] inDirectory:_path withContents:[classDefinition header]];
-    [_project.pendingFiles
+    [_project.fileWriteQueue
         queueFile:[classDefinition sourceFileName] inDirectory:_path withContents:[classDefinition source]];
 }
 

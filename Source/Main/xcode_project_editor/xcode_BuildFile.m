@@ -28,9 +28,12 @@
 }
 
 - (xcode_ProjectFile*) file {
-    return nil;
-    //To change the template use AppCode | Preferences | File Templates.
+    return [_project projectFileWithKey:_projectFileKey];
+}
 
+/* ================================================== Utility Methods =============================================== */
+- (NSString*) description {
+    return [NSString stringWithFormat:@"Build file: %@", [[self file] path]];
 }
 
 

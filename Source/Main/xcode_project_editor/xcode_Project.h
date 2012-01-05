@@ -13,6 +13,7 @@
 @class xcode_ClassDefinition;
 @class xcode_Group;
 @class xcode_FileWriteQueue;
+@class xcode_ProjectFile;
 
 
 @interface xcode_Project : NSObject {
@@ -22,7 +23,7 @@
     NSMutableDictionary* _project;
 }
 
-@property (nonatomic, strong, readonly) xcode_FileWriteQueue* pendingFiles;
+@property (nonatomic, strong, readonly) xcode_FileWriteQueue* fileWriteQueue;
 
 /**
 * Creates a new project editor instance with the specified project.pbxproj file.
@@ -34,15 +35,23 @@
 */
 - (NSMutableDictionary*) objects;
 
-- (NSArray*) files;
+/**
+* Returns all file resources in the project, as an array of `xcode_ProjectFile` objects.
+*/
+- (NSArray*) projectFiles;
 
 /**
-* Lists the header files in an xcode project.
+* Returns the project file with the specified key.
+*/
+- (xcode_ProjectFile*) projectFileWithKey:(NSString*)key;
+
+/**
+* Returns all header files in the project, as an array of `xcode_ProjectFile` objects.
 */
 - (NSArray*) headerFiles;
 
 /**
-* Lists the implementation files in an xcode project.
+* Returns all implementation (source) files in the project, as an array of `xcode_ProjectFile` objects.
 */
 - (NSArray*) implementationFiles;
 

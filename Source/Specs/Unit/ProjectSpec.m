@@ -11,7 +11,7 @@
 
 #import "SpecHelper.h"
 #import "xcode_Project.h"
-#import "xcode_ProjectFile.h"
+#import "xcode_Target.h"
 
 SPEC_BEGIN(FooSpec)
 
@@ -62,6 +62,9 @@ SPEC_BEGIN(FooSpec)
         it(@"should be able to list the targets in an xcode project", ^{
 
             NSArray* targets = [project targets];
+            for (Target* target in [project targets]) {
+                LogDebug(@"%@", target);
+            }
             assertThat(targets, notNilValue());
             assertThat(targets, isNot(empty()));
 

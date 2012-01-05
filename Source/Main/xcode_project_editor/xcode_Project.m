@@ -17,11 +17,16 @@
 #import "xcode_FileWriteQueue.h"
 #import "xcode_Target.h"
 #import "xcode_ProjectFile.h"
+#import "xcode_BuildFile.h"
 
 
 @interface xcode_Project (private)
 
 - (NSArray*) projectFilesOfType:(XcodeProjectFileType)fileReferenceType;
+
+- (NSArray*) buildFiles;
+
+- (BuildFile*) buildFileWithKey:(NSString*)key;
 
 @end
 
@@ -29,7 +34,7 @@
 @implementation xcode_Project
 
 
-@synthesize pendingFiles = _pendingFiles;
+@synthesize fileWriteQueue = _fileWriteQueue;
 
 /* ================================================== Initializers ================================================== */
 - (id) initWithFilePath:(NSString*)filePath {
@@ -40,7 +45,7 @@
         if (!_project) {
             [NSException raise:NSInvalidArgumentException format:@"Project file not found at file path %@", _filePath];
         }
-        _pendingFiles = [[FileWriteQueue alloc] initWithBaseDirectory:[_filePath stringByDeletingLastPathComponent]];
+        _fileWriteQueue = [[FileWriteQueue alloc] initWithBaseDirectory:[_filePath stringByDeletingLastPathComponent]];
     }
     return self;
 }
@@ -50,7 +55,7 @@
     return [_project objectForKey:@"objects"];
 }
 
-- (NSArray*) files {
+- (NSArray*) projectFiles {
     NSMutableArray* results = [[NSMutableArray alloc] init];
     [[self objects] enumerateKeysAndObjectsUsingBlock:^(NSString* key, NSDictionary* obj, BOOL* stop) {
         XcodeProjectFileType fileType = [[obj valueForKey:@"lastKnownFileType"] asProjectFileType];
@@ -59,6 +64,15 @@
     }];
     NSSortDescriptor* sorter = [NSSortDescriptor sortDescriptorWithKey:@"path" ascending:YES];
     return [results sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];
+}
+
+- (xcode_ProjectFile*) projectFileWithKey:(NSString*)key {
+    for (ProjectFile* projectFile in [self projectFiles]) {
+        if ([[projectFile key] isEqualToString:key]) {
+            return projectFile;
+        }
+    }
+    return nil;
 }
 
 
@@ -95,7 +109,17 @@
     [[self objects] enumerateKeysAndObjectsUsingBlock:^(NSString* key, NSDictionary* obj, BOOL* stop) {
 
         if ([[obj valueForKey:@"isa"] asProjectNodeType] == PBXNativeTarget) {
-            Target* target = [[Target alloc] initWithName:[obj valueForKey:@"name"]];
+
+            NSMutableArray* buildFiles = [[NSMutableArray alloc] init];
+            for (NSString* buildPhaseKey in [obj objectForKey:@"buildPhases"]) {
+                NSDictionary* buildPhase = [[self objects] objectForKey:buildPhaseKey];
+                if ([[buildPhase valueForKey:@"isa"] asProjectNodeType] == PBXSourcesBuildPhase) {
+                    for (NSString* buildFileKey in [buildPhase objectForKey:@"files"]) {
+                        [buildFiles addObject:[self buildFileWithKey:buildFileKey]];
+                    }
+                }
+            }
+            Target* target = [[Target alloc] initWithName:[obj valueForKey:@"name"] buildFiles:buildFiles];
             [results addObject:target];
         }
     }];
@@ -114,19 +138,40 @@
 
 
 - (void) save {
-    [_pendingFiles writePendingFilesToDisk];
+    [_fileWriteQueue writePendingFilesToDisk];
     [_project writeToFile:[_filePath stringByAppendingPathComponent:@"project.pbxproj"] atomically:YES];
 }
 
 /* ================================================== Private Methods =============================================== */
 - (NSArray*) projectFilesOfType:(XcodeProjectFileType)projectFileType {
     NSMutableArray* results = [[NSMutableArray alloc] init];
-    for (ProjectFile* file in [self files]) {
+    for (ProjectFile* file in [self projectFiles]) {
         if ([file type] == projectFileType) {
             [results addObject:file];
         }
     }
     return results;
+}
+
+- (NSArray*) buildFiles {
+    NSMutableArray* results = [[NSMutableArray alloc] init];
+    [[self objects] enumerateKeysAndObjectsUsingBlock:^(NSString* key, NSDictionary* obj, BOOL* stop) {
+        if ([[obj valueForKey:@"isa"] asProjectNodeType] == PBXBuildFile) {
+            BuildFile* buildFile = [[BuildFile alloc] initWithKey:key projectFileKey:[obj valueForKey:@"fileRef"]];
+            [buildFile setProject:self];
+            [results addObject:buildFile];
+        }
+    }];
+    return results; 
+}
+
+- (BuildFile*) buildFileWithKey:(NSString*)key {
+    for (BuildFile* buildFile in [self buildFiles]) {
+        if ([[buildFile key] isEqualToString:key]) {
+            return buildFile;
+        }
+    }
+    return nil;
 }
 
 

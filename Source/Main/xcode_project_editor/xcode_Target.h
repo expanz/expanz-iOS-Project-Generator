@@ -10,16 +10,18 @@
 ////////////////////////////////////////////////////////////////////////////////
 #import <Foundation/Foundation.h>
 
+@class xcode_Project;
+
 /**
 * Represents a target in an xcode project.
 */
 @interface xcode_Target : NSObject
 
 @property (nonatomic, strong, readonly) NSString* name;
+@property (nonatomic, strong, readonly) NSArray* buildFiles; 
 
+- (id) initWithName:(NSString*)name buildFiles:(NSArray*)buildFiles;
 
-
-- (id) initWithName:(NSString*)name;
 
 @end
 
