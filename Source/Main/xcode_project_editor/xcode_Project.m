@@ -66,8 +66,18 @@
 }
 
 - (xcode_ProjectFile*) projectFileWithKey:(NSString*)key {
+    NSDictionary* obj = [[self objects] valueForKey:key];
+    if (obj) {
+        XcodeProjectFileType fileType = [[obj valueForKey:@"lastKnownFileType"] asProjectFileType];
+        NSString* path = [obj valueForKey:@"path"];
+        return [[ProjectFile alloc] initWithProject:self key:key type:fileType path:path];
+    }
+    return nil;
+}
+
+- (xcode_ProjectFile*) projectFileWithPath:(NSString*)path {
     for (ProjectFile* projectFile in [self projectFiles]) {
-        if ([[projectFile key] isEqualToString:key]) {
+        if ([[projectFile path] isEqualToString:path]) {
             return projectFile;
         }
     }
@@ -112,7 +122,7 @@
             for (NSString* buildPhaseKey in [obj objectForKey:@"buildPhases"]) {
                 NSDictionary* buildPhase = [[self objects] objectForKey:buildPhaseKey];
                 if ([[buildPhase valueForKey:@"isa"] asProjectNodeType] == PBXSourcesBuildPhase) {
-                    for (NSString* buildFileKey in [buildPhase objectForKey:@"files"]) {  
+                    for (NSString* buildFileKey in [buildPhase objectForKey:@"files"]) {
                         ProjectFile* targetMember = [self buildFileWithKey:buildFileKey];
                         if (targetMember) {
                             [buildFiles addObject:[self buildFileWithKey:buildFileKey]];
@@ -120,11 +130,21 @@
                     }
                 }
             }
-            Target* target = [[Target alloc] initWithProject:self name:[obj valueForKey:@"name"] members:buildFiles];
+            Target* target =
+                [[Target alloc] initWithProject:self key:key name:[obj valueForKey:@"name"] members:buildFiles];
             [results addObject:target];
         }
     }];
     return results;
+}
+
+- (Target*) targetWithName:(NSString*)name {
+    for (Target* target in [self targets]) {
+        if ([[target name] isEqualToString:name]) {
+            return target;
+        }
+    }
+    return nil;
 }
 
 
@@ -155,14 +175,14 @@
 }
 
 
-- (ProjectFile*) buildFileWithKey:(NSString*)theKey {
-    __block ProjectFile* projectFile;
-    [[self objects] enumerateKeysAndObjectsUsingBlock:^(NSString* key, NSDictionary* obj, BOOL* stop) {
-        if ([[obj valueForKey:@"isa"] asProjectNodeType] == PBXBuildFile && [key isEqualToString:theKey]) {
-            projectFile = [self projectFileWithKey:[obj valueForKey:@"fileRef"]];
+- (ProjectFile*) buildFileWithKey:(NSString*)theKey {    
+    NSDictionary* obj = [[self objects] valueForKey:theKey];
+    if (obj) {
+        if ([[obj valueForKey:@"isa"] asProjectNodeType] == PBXBuildFile) {
+            return [self projectFileWithKey:[obj valueForKey:@"fileRef"]];
         }
-    }];
-    return projectFile;
+    }
+    return nil;
 }
 
 

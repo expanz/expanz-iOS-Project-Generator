@@ -38,7 +38,6 @@
 
 
 - (BOOL) isBuildFile {
-
     __block BOOL isBuildFile = NO;
     if (_type == SourceCodeObjC) {
         [[_project objects] enumerateKeysAndObjectsUsingBlock:^(NSString* key, NSDictionary* obj, BOOL* stop) {
@@ -51,6 +50,22 @@
     }
     return isBuildFile;
 }
+
+- (NSString*) buildFileKey {
+    __block NSString* buildFileKey;
+    if (_type == SourceCodeObjC) {
+        [[_project objects] enumerateKeysAndObjectsUsingBlock:^(NSString* key, NSDictionary* obj, BOOL* stop) {
+            if ([[obj valueForKey:@"isa"] asProjectNodeType] == PBXBuildFile) {
+                if ([[obj valueForKey:@"fileRef"] isEqualToString:_key]) {
+                    buildFileKey = key;
+                }
+            }
+        }];
+    }
+    return buildFileKey;
+
+}
+
 
 - (void) becomeBuildFile {
     if (![self isBuildFile]) {

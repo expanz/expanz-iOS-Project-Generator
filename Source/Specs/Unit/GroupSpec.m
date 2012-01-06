@@ -14,6 +14,8 @@
 #import "xcode_Project.h"
 #import "xcode_ClassDefinition.h"
 #import "NSString+TestResource.h"
+#import "xcode_ProjectFile.h"
+#import "xcode_Target.h"
 
 SPEC_BEGIN(GroupSpec)
 
@@ -49,15 +51,23 @@ SPEC_BEGIN(GroupSpec)
 
         it(@"should allow adding a source file.", ^{
 
-            ClassDefinition* classDefinition = [[ClassDefinition alloc] initWithName:@"ESA_Foobar_ViewController"];
+            ClassDefinition
+                * classDefinition = [[ClassDefinition alloc] initWithName:@"ESA_Sales_Foobar_ViewController"];
 
             [classDefinition setHeader:[NSString stringWithTestResource:@"ESA_Sales_Calc_ViewController.h"]];
-            [classDefinition setSource:[NSString stringWithTestResource:@"ESA_Sales_Calc_ViewController.h"]];
+            [classDefinition setSource:[NSString stringWithTestResource:@"ESA_Sales_Calc_ViewController.m"]];
 
             assertThat(group, notNilValue());
             [group addClass:classDefinition];
             [project save];
 
+            ProjectFile* projectFile = [project projectFileWithPath:@"ESA_Sales_Foobar_ViewController.m"];
+            assertThat(projectFile, notNilValue());
+
+            Target* examples = [project targetWithName:@"Examples"];
+            [examples addMember:projectFile];
+
+            [project save];
             LogDebug(@"Done");
 
         });

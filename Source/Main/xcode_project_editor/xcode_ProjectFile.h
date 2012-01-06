@@ -31,6 +31,8 @@
 */
 - (BOOL) isBuildFile;
 
+- (NSString*)buildFileKey;
+
 /**
 * Adds this file to the project as an `xcode_BuildFile`, ready to be included in targets.
 */

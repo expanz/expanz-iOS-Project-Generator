@@ -14,6 +14,7 @@
 @class xcode_Group;
 @class xcode_FileWriteQueue;
 @class xcode_ProjectFile;
+@class xcode_Target;
 
 
 @interface xcode_Project : NSObject {
@@ -41,9 +42,14 @@
 - (NSArray*) projectFiles;
 
 /**
-* Returns the project file with the specified key.
+* Returns the project file with the specified key, or nil.
 */
 - (xcode_ProjectFile*) projectFileWithKey:(NSString*)key;
+
+/**
+* Returns the project file with the specified name, or nil.
+*/
+- (xcode_ProjectFile*) projectFileWithPath:(NSString*)path;
 
 /**
 * Returns all header files in the project, as an array of `xcode_ProjectFile` objects.
@@ -64,6 +70,11 @@
 * Lists the targets in an xcode project, returning an array of `xcode_Target` objects.
 */
 - (NSArray*) targets;
+
+/**
+* Returns the target with the specified name, or nil. 
+*/
+- (xcode_Target*) targetWithName:(NSString*)name;
 
 /**
 * Returns the file key for the group with the specified name.

@@ -11,7 +11,7 @@
 
 #import "expanz_ui_ActivityInstanceViewController.h"
 
-@interface ESA_Sales_Calc_ViewController : expanz_ui_ActivityInstanceViewController
+@interface ESA_Sales_Foobar_ViewController : expanz_ui_ActivityInstanceViewController
 
 @property(nonatomic, strong) IBOutlet UILabel* ResultLabel;
 @property(nonatomic, strong) IBOutlet UILabel* Op1Label;

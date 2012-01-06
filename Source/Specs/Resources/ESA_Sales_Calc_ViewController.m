@@ -9,9 +9,9 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "ESA_Sales_Calc_ViewController.h"
+#import "ESA_Sales_Foobar_ViewController.h"
 
-@implementation ESA_Sales_Calc_ViewController
+@implementation ESA_Sales_Foobar_ViewController
 
 @synthesize ResultLabel = _ResultLabel;
 @synthesize Op1Label = _Op1Label;
