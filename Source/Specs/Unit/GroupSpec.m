@@ -47,7 +47,7 @@ SPEC_BEGIN(GroupSpec)
     });
 
 
-    describe(@"Source files.", ^{
+    fdescribe(@"Source files.", ^{
 
         it(@"should allow adding a source file.", ^{
 
@@ -57,7 +57,6 @@ SPEC_BEGIN(GroupSpec)
             [classDefinition setHeader:[NSString stringWithTestResource:@"ESA_Sales_Calc_ViewController.h"]];
             [classDefinition setSource:[NSString stringWithTestResource:@"ESA_Sales_Calc_ViewController.m"]];
 
-            assertThat(group, notNilValue());
             [group addClass:classDefinition];
             [project save];
 
