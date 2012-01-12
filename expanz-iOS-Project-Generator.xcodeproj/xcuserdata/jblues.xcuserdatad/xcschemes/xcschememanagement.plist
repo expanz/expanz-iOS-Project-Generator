@@ -4,10 +4,10 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Expanz iOS Code Generator.xcscheme</key>
+		<key>Model-Object-Explorer.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>3</integer>
 		</dict>
 		<key>Specs.xcscheme</key>
 		<dict>
@@ -22,6 +22,21 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>6B9FD26414BEF008006F8D04</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6BB72D7214BEF7AE005A5961</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6BB72D9414BEF8EF005A5961</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>6BC1015F147775A40055CF03</key>
 		<dict>
 			<key>primary</key>

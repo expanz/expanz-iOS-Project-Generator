@@ -1,9 +1,9 @@
 //
 //  AppDelegate.h
-//  Expanz iOS Code Generator
+//  Model-Object-Explorer
 //
-//  Created by Jasper Blues on 11/19/11.
-//  Copyright (c) 2011 EXPANZ. All rights reserved.
+//  Created by Jasper Blues on 1/12/12.
+//  Copyright (c) 2012 expanz. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>

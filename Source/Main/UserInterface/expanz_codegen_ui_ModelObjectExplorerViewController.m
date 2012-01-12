@@ -9,15 +9,13 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "AppDelegate.h"
-
-@implementation AppDelegate
-
-@synthesize window = _window;
+#import "expanz_codegen_ui_ModelObjectExplorerViewController.h"
 
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    // Insert code here to initialize your application
-}
+@implementation expanz_codegen_ui_ModelObjectExplorerViewController
+
+@synthesize environmentSelector = _environmentSelector;
+@synthesize locateEnvironmentButton = _locateEnvironmentButton;
+
 
 @end

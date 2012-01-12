@@ -11,7 +11,9 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface expanz_xcode_PluginLoader : NSObject
+static NSBundle* pluginBundle;
+
+@interface expanz_codegen_PluginLoader : NSObject
 
 + (void) pluginDidLoad:(NSBundle*)plugin;
 

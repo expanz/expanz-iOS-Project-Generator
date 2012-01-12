@@ -11,7 +11,7 @@
 
 
 #import "SpecHelper.h"
-#import "../../Main/xcode_project_editor/XcodeProjectFileType.h"
+#import "XcodeProjectFileType.h"
 
 SPEC_BEGIN(XCodeFileReferenceSpec)
 

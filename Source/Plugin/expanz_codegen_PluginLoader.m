@@ -10,9 +10,11 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <objc/runtime.h>
-#import "expanz_xcode_PluginLoader.h"
+#import "expanz_codegen_PluginLoader.h"
+#import "expanz_codegen_ui_ModelObjectExplorerViewController.h"
 
-@implementation expanz_xcode_PluginLoader
+@implementation expanz_codegen_PluginLoader
+
 
 
 + (void) pluginDidLoad:(NSBundle*)bundle {
@@ -22,6 +24,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationFinishedLaunching:)
                                                  name:NSApplicationDidFinishLaunchingNotification object:nil];
 
+    pluginBundle = bundle;
     NSLog(@"%@ complete!", NSStringFromClass([self class]));
     return;
 }
@@ -47,15 +50,20 @@
     NSString* className = @"IDEDocumentController";
     id clazz = objc_getClass([className cStringUsingEncoding:NSASCIIStringEncoding]);
     id documentController = [clazz sharedDocumentController];
+    NSString* projectDirectory = [documentController currentDirectory];
+    LogDebug(@"Project directory: %@", projectDirectory);
+    
 
+    ModelObjectExplorerViewController* controller = [[ModelObjectExplorerViewController alloc]
+        initWithNibName:@"ModelObjectExplorerWindow" bundle:pluginBundle];
 
-    id delegate = [activeWindow delegate];
-    LogDebug(@"Delegate class: %@", [delegate class]);
+    [NSApp beginSheet:[controller view] modalForWindow:activeWindow modalDelegate:self
+       didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:) contextInfo:nil];
 
-    NSAlert* alert = [[NSAlert alloc] init];
-    [alert setMessageText:[documentController currentDirectory]];
-    [alert beginSheetModalForWindow:activeWindow modalDelegate:self
-                     didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:) contextInfo:nil];
+//    NSAlert* alert = [[NSAlert alloc] init];
+//    [alert setMessageText:[documentController currentDirectory]];
+//    [alert beginSheetModalForWindow:activeWindow modalDelegate:self
+//                     didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:) contextInfo:nil];
 }
 
 + (void) alertDidEnd:(NSAlert*)a returnCode:(NSInteger)rc contextInfo:(void*)ci {
