@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		6B105A011479C807002DEBCE /* Cedar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B105A001479C807002DEBCE /* Cedar.framework */; };
 		6B105A031479C85D002DEBCE /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B105A021479C85D002DEBCE /* OCHamcrest.framework */; };
-		6B2B052F14BEDA1A0051760D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BCEC02B14BBD9D600538D1D /* Info.plist */; };
 		6B783BC914AD8CF90087E522 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B783BBA14AD8CF90087E522 /* main.m */; };
 		6B783BCB14AD8CF90087E522 /* ClassDefinitionSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B783BC314AD8CF90087E522 /* ClassDefinitionSpec.m */; };
 		6B783BCC14AD8CF90087E522 /* ProjectSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B783BC414AD8CF90087E522 /* ProjectSpec.m */; };
@@ -356,19 +355,11 @@
 		6BE4B2B4147E6D3C0059E4D2 /* Plugin */ = {
 			isa = PBXGroup;
 			children = (
+				6BCEC02B14BBD9D600538D1D /* Info.plist */,
 				6BE4B2B4147E6D3C0059E4CB /* expanz_codegen_PluginLoader.m */,
 				6BE4B2B4147E6D3C0059E4CE /* expanz_codegen_PluginLoader.h */,
-				6BE4B2B4147E6D3C0059E4D3 /* Resources */,
 			);
 			path = Plugin;
-			sourceTree = "<group>";
-		};
-		6BE4B2B4147E6D3C0059E4D3 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				6BCEC02B14BBD9D600538D1D /* Info.plist */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -468,7 +459,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BCEC03014BBD9D600538D1D /* InfoPlist.strings in Resources */,
-				6B2B052F14BEDA1A0051760D /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,10 +549,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				DEPLOYMENT_LOCATION = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Main/Resources/Prefix.pch;
 				INFOPLIST_FILE = Source/Main/Resources/Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRIP_INSTALLED_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -571,10 +564,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				DEPLOYMENT_LOCATION = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Main/Resources/Prefix.pch;
 				INFOPLIST_FILE = Source/Main/Resources/Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRIP_INSTALLED_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -675,7 +671,7 @@
 				GCC_ENABLE_OBJC_GC = supported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Main/Resources/Prefix.pch;
-				INFOPLIST_FILE = Source/Main/Resources/Info.plist;
+				INFOPLIST_FILE = Source/Plugin/Info.plist;
 				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
 				PRODUCT_NAME = "expanz-$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = YES;
@@ -693,7 +689,7 @@
 				GCC_ENABLE_OBJC_GC = supported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Main/Resources/Prefix.pch;
-				INFOPLIST_FILE = Source/Main/Resources/Info.plist;
+				INFOPLIST_FILE = Source/Plugin/Info.plist;
 				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
 				PRODUCT_NAME = "expanz-$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = YES;

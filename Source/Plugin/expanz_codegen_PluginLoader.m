@@ -16,7 +16,6 @@
 @implementation expanz_codegen_PluginLoader
 
 
-
 + (void) pluginDidLoad:(NSBundle*)bundle {
 
     NSLog(@"%@ initializing...", NSStringFromClass([self class]));
@@ -52,13 +51,19 @@
     id documentController = [clazz sharedDocumentController];
     NSString* projectDirectory = [documentController currentDirectory];
     LogDebug(@"Project directory: %@", projectDirectory);
-    
 
-    ModelObjectExplorerViewController* controller = [[ModelObjectExplorerViewController alloc]
-        initWithNibName:@"ModelObjectExplorerWindow" bundle:pluginBundle];
+    NSURL* appUrl =
+        [[NSWorkspace sharedWorkspace] URLForApplicationWithBundleIdentifier:@"expanz.Model-Object-Explorer"];
+    NSWorkspace* ws = [NSWorkspace sharedWorkspace];
 
-    [NSApp beginSheet:[controller view] modalForWindow:activeWindow modalDelegate:self
-       didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:) contextInfo:nil];
+    // find the parameter
+    NSString* f = @"foo.txt";
+    NSArray* myArray2 = [NSArray arrayWithObjects:f, nil];
+
+    NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
+    [dict setObject:myArray2 forKey:NSWorkspaceLaunchConfigurationArguments];
+
+    [ws launchApplicationAtURL:appUrl options:NSWorkspaceLaunchDefault configuration:dict error:nil];
 
 //    NSAlert* alert = [[NSAlert alloc] init];
 //    [alert setMessageText:[documentController currentDirectory]];
