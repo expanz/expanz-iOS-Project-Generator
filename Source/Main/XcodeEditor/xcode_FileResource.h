@@ -17,12 +17,15 @@
 /**
 * Represents a file resource in an xcode project.
 */
-@interface xcode_ProjectFile : NSObject
+@interface xcode_FileResource : NSObject {
 
-@property (nonatomic, weak, readonly) xcode_Project* project;
-@property (nonatomic, strong, readonly) NSString* key;
-@property (nonatomic, readonly) XcodeProjectFileType type;
-@property (nonatomic, strong, readonly) NSString* path; 
+@private
+    __weak xcode_Project* _project;
+    __strong NSString* _key;
+}
+
+@property(nonatomic, readonly) XcodeProjectFileType type;
+@property(nonatomic, strong, readonly) NSString* path;
 
 - (id) initWithProject:(xcode_Project*)project key:(NSString*)key type:(XcodeProjectFileType)type path:(NSString*)path;
 
@@ -31,7 +34,7 @@
 */
 - (BOOL) isBuildFile;
 
-- (NSString*)buildFileKey;
+- (NSString*) buildFileKey;
 
 /**
 * Adds this file to the project as an `xcode_BuildFile`, ready to be included in targets.
@@ -41,4 +44,4 @@
 @end
 
 /* ================================================================================================================== */
-@compatibility_alias ProjectFile xcode_ProjectFile;
+@compatibility_alias FileResource xcode_FileResource;

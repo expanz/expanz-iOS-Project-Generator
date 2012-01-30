@@ -26,7 +26,6 @@
 		6B9FD26F14BEF008006F8D04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9FD26E14BEF008006F8D04 /* main.m */; };
 		6B9FD27614BEF008006F8D04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9FD27514BEF008006F8D04 /* AppDelegate.m */; };
 		6BB72DCD14BEF9A9005A5961 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BB72DB614BEF9A9005A5961 /* MainMenu.xib */; };
-		6BB72DCE14BEF9A9005A5961 /* ModelObjectExplorerWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BB72DB714BEF9A9005A5961 /* ModelObjectExplorerWindow.xib */; };
 		6BB72DCF14BEF9A9005A5961 /* expanz_codegen_ui_ModelObjectExplorerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB72DB914BEF9A9005A5961 /* expanz_codegen_ui_ModelObjectExplorerViewController.m */; };
 		6BB72DD014BEF9A9005A5961 /* expanz_codegen_ui_ModelObjectExplorerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB72DB914BEF9A9005A5961 /* expanz_codegen_ui_ModelObjectExplorerViewController.m */; };
 		6BB72DD114BEF9A9005A5961 /* xcode_ClassDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB72DBC14BEF9A9005A5961 /* xcode_ClassDefinition.m */; };
@@ -39,8 +38,8 @@
 		6BB72DD814BEF9A9005A5961 /* xcode_KeyBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB72DC214BEF9A9005A5961 /* xcode_KeyBuilder.m */; };
 		6BB72DD914BEF9A9005A5961 /* xcode_Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB72DC414BEF9A9005A5961 /* xcode_Project.m */; };
 		6BB72DDA14BEF9A9005A5961 /* xcode_Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB72DC414BEF9A9005A5961 /* xcode_Project.m */; };
-		6BB72DDB14BEF9A9005A5961 /* xcode_ProjectFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB72DC614BEF9A9005A5961 /* xcode_ProjectFile.m */; };
-		6BB72DDC14BEF9A9005A5961 /* xcode_ProjectFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB72DC614BEF9A9005A5961 /* xcode_ProjectFile.m */; };
+		6BB72DDB14BEF9A9005A5961 /* xcode_FileResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB72DC614BEF9A9005A5961 /* xcode_FileResource.m */; };
+		6BB72DDC14BEF9A9005A5961 /* xcode_FileResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB72DC614BEF9A9005A5961 /* xcode_FileResource.m */; };
 		6BB72DDD14BEF9A9005A5961 /* xcode_Target.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB72DC814BEF9A9005A5961 /* xcode_Target.m */; };
 		6BB72DDE14BEF9A9005A5961 /* xcode_Target.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB72DC814BEF9A9005A5961 /* xcode_Target.m */; };
 		6BB72DDF14BEF9A9005A5961 /* XcodeProjectFileType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB72DCA14BEF9A9005A5961 /* XcodeProjectFileType.m */; };
@@ -51,6 +50,7 @@
 		6BC1018C1477A42F0055CF03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC1018B1477A42F0055CF03 /* Foundation.framework */; };
 		6BCEC01914BBD88700538D1D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC10164147775A40055CF03 /* Cocoa.framework */; };
 		6BCEC03014BBD9D600538D1D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BCEC02914BBD9D600538D1D /* InfoPlist.strings */; };
+		6BCEDDF014C034D40089804B /* ModelObjectExplorer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BCEDDEF14C034D40089804B /* ModelObjectExplorer.xib */; };
 		6BE4B2B4147E6D3C0059E49B /* XcodeFileReferenceTypeSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E49A /* XcodeFileReferenceTypeSpec.m */; };
 		6BE4B2B4147E6D3C0059E4A9 /* GroupSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E4A8 /* GroupSpec.m */; };
 		6BE4B2B4147E6D3C0059E4BE /* NSString+TestResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E4BD /* NSString+TestResource.m */; };
@@ -97,7 +97,6 @@
 		6B9FD27414BEF008006F8D04 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6B9FD27514BEF008006F8D04 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6BB72DB614BEF9A9005A5961 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
-		6BB72DB714BEF9A9005A5961 /* ModelObjectExplorerWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModelObjectExplorerWindow.xib; sourceTree = "<group>"; };
 		6BB72DB814BEF9A9005A5961 /* expanz_codegen_ui_ModelObjectExplorerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_codegen_ui_ModelObjectExplorerViewController.h; sourceTree = "<group>"; };
 		6BB72DB914BEF9A9005A5961 /* expanz_codegen_ui_ModelObjectExplorerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_codegen_ui_ModelObjectExplorerViewController.m; sourceTree = "<group>"; };
 		6BB72DBB14BEF9A9005A5961 /* xcode_ClassDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xcode_ClassDefinition.h; sourceTree = "<group>"; };
@@ -110,8 +109,8 @@
 		6BB72DC214BEF9A9005A5961 /* xcode_KeyBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xcode_KeyBuilder.m; sourceTree = "<group>"; };
 		6BB72DC314BEF9A9005A5961 /* xcode_Project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xcode_Project.h; sourceTree = "<group>"; };
 		6BB72DC414BEF9A9005A5961 /* xcode_Project.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xcode_Project.m; sourceTree = "<group>"; };
-		6BB72DC514BEF9A9005A5961 /* xcode_ProjectFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xcode_ProjectFile.h; sourceTree = "<group>"; };
-		6BB72DC614BEF9A9005A5961 /* xcode_ProjectFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xcode_ProjectFile.m; sourceTree = "<group>"; };
+		6BB72DC514BEF9A9005A5961 /* xcode_FileResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xcode_FileResource.h; sourceTree = "<group>"; };
+		6BB72DC614BEF9A9005A5961 /* xcode_FileResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xcode_FileResource.m; sourceTree = "<group>"; };
 		6BB72DC714BEF9A9005A5961 /* xcode_Target.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xcode_Target.h; sourceTree = "<group>"; };
 		6BB72DC814BEF9A9005A5961 /* xcode_Target.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xcode_Target.m; sourceTree = "<group>"; };
 		6BB72DC914BEF9A9005A5961 /* XcodeProjectFileType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XcodeProjectFileType.h; sourceTree = "<group>"; };
@@ -129,6 +128,7 @@
 		6BCEC02A14BBD9D600538D1D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6BCEC02B14BBD9D600538D1D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6BCEC02C14BBD9D600538D1D /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+		6BCEDDEF14C034D40089804B /* ModelObjectExplorer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModelObjectExplorer.xib; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E49A /* XcodeFileReferenceTypeSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XcodeFileReferenceTypeSpec.m; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E4A8 /* GroupSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupSpec.m; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E4BD /* NSString+TestResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TestResource.m"; sourceTree = "<group>"; };
@@ -236,10 +236,8 @@
 			children = (
 				6BB72DB414BEF9A9005A5961 /* UserInterface */,
 				6BB72DBA14BEF9A9005A5961 /* XcodeEditor */,
-				6B9FD26E14BEF008006F8D04 /* main.m */,
-				6B9FD27514BEF008006F8D04 /* AppDelegate.m */,
-				6B9FD27414BEF008006F8D04 /* AppDelegate.h */,
 				6BCEC02614BBD9D600538D1D /* Resources */,
+				6BE4B2B4147E6D3C0059E4D3 /* Assembly */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -258,7 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				6BB72DB614BEF9A9005A5961 /* MainMenu.xib */,
-				6BB72DB714BEF9A9005A5961 /* ModelObjectExplorerWindow.xib */,
+				6BCEDDEF14C034D40089804B /* ModelObjectExplorer.xib */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -276,8 +274,8 @@
 				6BB72DC214BEF9A9005A5961 /* xcode_KeyBuilder.m */,
 				6BB72DC314BEF9A9005A5961 /* xcode_Project.h */,
 				6BB72DC414BEF9A9005A5961 /* xcode_Project.m */,
-				6BB72DC514BEF9A9005A5961 /* xcode_ProjectFile.h */,
-				6BB72DC614BEF9A9005A5961 /* xcode_ProjectFile.m */,
+				6BB72DC514BEF9A9005A5961 /* xcode_FileResource.h */,
+				6BB72DC614BEF9A9005A5961 /* xcode_FileResource.m */,
 				6BB72DC714BEF9A9005A5961 /* xcode_Target.h */,
 				6BB72DC814BEF9A9005A5961 /* xcode_Target.m */,
 				6BB72DC914BEF9A9005A5961 /* XcodeProjectFileType.h */,
@@ -360,6 +358,16 @@
 				6BE4B2B4147E6D3C0059E4CE /* expanz_codegen_PluginLoader.h */,
 			);
 			path = Plugin;
+			sourceTree = "<group>";
+		};
+		6BE4B2B4147E6D3C0059E4D3 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				6B9FD26E14BEF008006F8D04 /* main.m */,
+				6B9FD27514BEF008006F8D04 /* AppDelegate.m */,
+				6B9FD27414BEF008006F8D04 /* AppDelegate.h */,
+			);
+			path = Assembly;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -450,7 +458,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BB72DCD14BEF9A9005A5961 /* MainMenu.xib in Resources */,
-				6BB72DCE14BEF9A9005A5961 /* ModelObjectExplorerWindow.xib in Resources */,
+				6BCEDDF014C034D40089804B /* ModelObjectExplorer.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,7 +485,7 @@
 				6BB72DD614BEF9A9005A5961 /* xcode_Group.m in Sources */,
 				6BB72DD814BEF9A9005A5961 /* xcode_KeyBuilder.m in Sources */,
 				6BB72DDA14BEF9A9005A5961 /* xcode_Project.m in Sources */,
-				6BB72DDC14BEF9A9005A5961 /* xcode_ProjectFile.m in Sources */,
+				6BB72DDC14BEF9A9005A5961 /* xcode_FileResource.m in Sources */,
 				6BB72DDE14BEF9A9005A5961 /* xcode_Target.m in Sources */,
 				6BB72DE014BEF9A9005A5961 /* XcodeProjectFileType.m in Sources */,
 				6BB72DE214BEF9A9005A5961 /* XcodeProjectNodeType.m in Sources */,
@@ -508,7 +516,7 @@
 				6BB72DD514BEF9A9005A5961 /* xcode_Group.m in Sources */,
 				6BB72DD714BEF9A9005A5961 /* xcode_KeyBuilder.m in Sources */,
 				6BB72DD914BEF9A9005A5961 /* xcode_Project.m in Sources */,
-				6BB72DDB14BEF9A9005A5961 /* xcode_ProjectFile.m in Sources */,
+				6BB72DDB14BEF9A9005A5961 /* xcode_FileResource.m in Sources */,
 				6BB72DDD14BEF9A9005A5961 /* xcode_Target.m in Sources */,
 				6BB72DDF14BEF9A9005A5961 /* XcodeProjectFileType.m in Sources */,
 				6BB72DE114BEF9A9005A5961 /* XcodeProjectNodeType.m in Sources */,
@@ -549,6 +557,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				DEPLOYMENT_LOCATION = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Main/Resources/Prefix.pch;
@@ -564,6 +573,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				DEPLOYMENT_LOCATION = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Main/Resources/Prefix.pch;

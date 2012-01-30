@@ -9,15 +9,13 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "xcode_ProjectFile.h"
+#import "xcode_FileResource.h"
 #import "xcode_Project.h"
 #import "XcodeProjectNodeType.h"
 #import "xcode_KeyBuilder.h"
 
-@implementation xcode_ProjectFile
+@implementation xcode_FileResource
 
-@synthesize project = _project;
-@synthesize key = _key;
 @synthesize type = _type;
 @synthesize path = _path;
 

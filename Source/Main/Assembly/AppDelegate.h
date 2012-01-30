@@ -9,14 +9,10 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "AppDelegate.h"
+#import <Cocoa/Cocoa.h>
 
-@implementation AppDelegate
+@interface AppDelegate : NSObject <NSApplicationDelegate>
 
-@synthesize window = _window;
-
-- (void) applicationDidFinishLaunching:(NSNotification*)aNotification {
-    // Insert code here to initialize your application
-}
+@property (assign) IBOutlet NSWindow *window;
 
 @end

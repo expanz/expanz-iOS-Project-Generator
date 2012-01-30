@@ -15,7 +15,7 @@
 #import "XcodeProjectFileType.h"
 #import "xcode_KeyBuilder.h"
 #import "xcode_FileWriteQueue.h"
-#import "xcode_ProjectFile.h"
+#import "xcode_FileResource.h"
 #import "XcodeProjectNodeType.h"
 
 @interface xcode_Group (private)
@@ -75,7 +75,7 @@
 
 /* ================================================== Utility Methods =============================================== */
 - (NSString*) description {
-    return [NSString stringWithFormat:@"Group: key=%@, path=%@", _key, _path];
+    return [NSString stringWithFormat:@"Group: name = %@, key=%@, path=%@", _name, _key, _path];
 }
 
 /* ================================================== Private Methods =============================================== */
@@ -99,7 +99,9 @@
     NSMutableDictionary* groupData = [[NSMutableDictionary alloc] init];
     [groupData setObject:[NSString stringFromProjectNodeType:PBXGroup] forKey:@"isa"];
     [groupData setObject:@"<group>" forKey:@"sourceTree"];
-    [groupData setObject:_name forKey:@"name"];
+    if (_name != nil) {
+        [groupData setObject:_name forKey:@"name"];
+    }
     [groupData setObject:_path forKey:@"path"];
     [groupData setObject:_children forKey:@"children"];
     return groupData;

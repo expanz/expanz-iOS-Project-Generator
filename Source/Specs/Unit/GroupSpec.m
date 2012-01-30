@@ -14,7 +14,7 @@
 #import "xcode_Project.h"
 #import "xcode_ClassDefinition.h"
 #import "NSString+TestResource.h"
-#import "xcode_ProjectFile.h"
+#import "xcode_FileResource.h"
 #import "xcode_Target.h"
 
 SPEC_BEGIN(GroupSpec)
@@ -23,9 +23,9 @@ SPEC_BEGIN(GroupSpec)
     __block Group* group;
 
     beforeEach(^{
-        project =
-            [[Project alloc] initWithFilePath:@"/Users/jblues/ExpanzProjects/expanz-iOS-SDK/expanz-iOS-SDK.xcodeproj"];
-        group = [project groupWithName:@"Main"];
+        project = [[Project alloc] initWithFilePath:@"/tmp"];
+        group = [project groupWithPath:@"Main"];
+        assertThat(group, notNilValue());
     });
 
     describe(@"Object creation", ^{
@@ -41,13 +41,13 @@ SPEC_BEGIN(GroupSpec)
         });
 
         it(@"should be able to describe itself.", ^{
-            assertThat([group description], equalTo(@"Group: key=6BD47C341484703F000ECE52, path=Source/Main"));
+            assertThat([group description], equalTo(@"Group: name = (null), key=6B783BCF14AD8D190087E522, path=Main"));
         });
 
     });
 
 
-    fdescribe(@"Source files.", ^{
+    describe(@"Source files.", ^{
 
         it(@"should allow adding a source file.", ^{
 
@@ -57,14 +57,22 @@ SPEC_BEGIN(GroupSpec)
             [classDefinition setHeader:[NSString stringWithTestResource:@"ESA_Sales_Calc_ViewController.h"]];
             [classDefinition setSource:[NSString stringWithTestResource:@"ESA_Sales_Calc_ViewController.m"]];
 
+            LogDebug(@"Class definition: %@", classDefinition);
+
             [group addClass:classDefinition];
             [project save];
 
-            ProjectFile* projectFile = [project projectFileWithPath:@"ESA_Sales_Foobar_ViewController.m"];
-            assertThat(projectFile, notNilValue());
+            LogDebug(@"Files: %@", [project files]);
 
-            Target* examples = [project targetWithName:@"Examples"];
-            [examples addMember:projectFile];
+            FileResource* fileResource = [project projectFileWithPath:@"ESA_Sales_Foobar_ViewController.m"];
+            assertThat(fileResource, notNilValue());
+
+            Target* examples = [project targetWithName:@"Model-Object-Explorer"];
+            assertThat(examples, notNilValue());
+            [examples addMember:fileResource];
+
+            fileResource = [project projectFileWithPath:@"ESA_Sales_Foobar_ViewController.m"];
+            assertThatBool([fileResource isBuildFile], equalToBool(YES));
 
             [project save];
             LogDebug(@"Done");
