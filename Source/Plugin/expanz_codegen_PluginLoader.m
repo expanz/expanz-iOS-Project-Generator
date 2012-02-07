@@ -44,8 +44,6 @@
 
 
 + (void) showExplorer:(id)sender {
-    NSWindow* activeWindow = [NSApp keyWindow];
-
     NSString* className = @"IDEDocumentController";
     id clazz = objc_getClass([className cStringUsingEncoding:NSASCIIStringEncoding]);
     id documentController = [clazz sharedDocumentController];
@@ -56,31 +54,12 @@
         [[NSWorkspace sharedWorkspace] URLForApplicationWithBundleIdentifier:@"expanz.Model-Object-Explorer"];
     NSWorkspace* ws = [NSWorkspace sharedWorkspace];
 
-    // find the parameter
-    NSString* f = @"foo.txt";
-    NSArray* myArray2 = [NSArray arrayWithObjects:f, nil];
+    NSArray* initParams = [NSArray arrayWithObjects:projectDirectory, nil];
 
     NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
-    [dict setObject:myArray2 forKey:NSWorkspaceLaunchConfigurationArguments];
+    [dict setObject:initParams forKey:NSWorkspaceLaunchConfigurationArguments];
 
     [ws launchApplicationAtURL:appUrl options:NSWorkspaceLaunchDefault configuration:dict error:nil];
-
-//    NSAlert* alert = [[NSAlert alloc] init];
-//    [alert setMessageText:[documentController currentDirectory]];
-//    [alert beginSheetModalForWindow:activeWindow modalDelegate:self
-//                     didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:) contextInfo:nil];
-}
-
-+ (void) alertDidEnd:(NSAlert*)a returnCode:(NSInteger)rc contextInfo:(void*)ci {
-    switch (rc) {
-        case NSAlertFirstButtonReturn:
-            // "First" pressed
-            break;
-        case NSAlertSecondButtonReturn:
-            // "Second" pressed
-            break;
-            // ...
-    }
 }
 
 

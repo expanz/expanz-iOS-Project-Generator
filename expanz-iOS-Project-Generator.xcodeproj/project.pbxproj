@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6B105A011479C807002DEBCE /* Cedar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B105A001479C807002DEBCE /* Cedar.framework */; };
 		6B105A031479C85D002DEBCE /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B105A021479C85D002DEBCE /* OCHamcrest.framework */; };
+		6B225D9C14E0B43500B0F735 /* expanz.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B225D9B14E0B43500B0F735 /* expanz.png */; };
 		6B783BC914AD8CF90087E522 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B783BBA14AD8CF90087E522 /* main.m */; };
 		6B783BCB14AD8CF90087E522 /* ClassDefinitionSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B783BC314AD8CF90087E522 /* ClassDefinitionSpec.m */; };
 		6B783BCC14AD8CF90087E522 /* ProjectSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B783BC414AD8CF90087E522 /* ProjectSpec.m */; };
@@ -81,6 +82,7 @@
 		6B105A061479CF9A002DEBCE /* Logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logging.h; sourceTree = "<group>"; };
 		6B105A071479CF9A002DEBCE /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		6B17B89814BDAE3700F53089 /* IDEKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDEKit.framework; path = Library/PrivateFrameworks/IDEKit.framework; sourceTree = DEVELOPER_DIR; };
+		6B225D9B14E0B43500B0F735 /* expanz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = expanz.png; sourceTree = "<group>"; };
 		6B783BBA14AD8CF90087E522 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6B783BBC14AD8CF90087E522 /* ESA_Sales_Calc_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESA_Sales_Calc_ViewController.h; sourceTree = "<group>"; };
 		6B783BBD14AD8CF90087E522 /* ESA_Sales_Calc_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESA_Sales_Calc_ViewController.m; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 		6BB72DB514BEF9A9005A5961 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				6B225D9B14E0B43500B0F735 /* expanz.png */,
 				6BB72DB614BEF9A9005A5961 /* MainMenu.xib */,
 				6BCEDDEF14C034D40089804B /* ModelObjectExplorer.xib */,
 			);
@@ -459,6 +462,7 @@
 			files = (
 				6BB72DCD14BEF9A9005A5961 /* MainMenu.xib in Resources */,
 				6BCEDDF014C034D40089804B /* ModelObjectExplorer.xib in Resources */,
+				6B225D9C14E0B43500B0F735 /* expanz.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,7 +567,7 @@
 				GCC_PREFIX_HEADER = Source/Main/Resources/Prefix.pch;
 				INFOPLIST_FILE = Source/Main/Resources/Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				STRIP_INSTALLED_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -579,7 +583,7 @@
 				GCC_PREFIX_HEADER = Source/Main/Resources/Prefix.pch;
 				INFOPLIST_FILE = Source/Main/Resources/Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				STRIP_INSTALLED_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};

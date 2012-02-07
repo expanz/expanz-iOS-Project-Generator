@@ -12,10 +12,16 @@
 #import <Foundation/Foundation.h>
 #import <Cocoa/Cocoa.h>
 
-@interface expanz_codegen_ui_ModelObjectExplorerViewController : NSViewController
+@interface expanz_codegen_ui_ModelObjectExplorerViewController : NSWindowController
 
-@property (nonatomic, strong) IBOutlet NSComboBox* environmentSelector;
-@property (nonatomic, strong) IBOutlet NSButton* locateEnvironmentButton;
+@property (nonatomic, strong) NSString* projectFilePath;
+@property (nonatomic, strong) IBOutlet NSComboBox* projectCombo;
+@property (nonatomic, strong) IBOutlet NSButton* browseProject;
+@property (nonatomic, strong) IBOutlet NSComboBox* environmentCombo;
+@property (nonatomic, strong) IBOutlet NSButton* locateEnvironment;
+
+
+- (id) initWithProjectFilePath:(NSString*)projectFilePath;
 
 @end
 

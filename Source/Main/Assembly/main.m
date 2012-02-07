@@ -1,14 +1,20 @@
+////////////////////////////////////////////////////////////////////////////////
 //
-//  main.m
-//  Model-Object-Explorer
+//  EXPANZ
+//  Copyright 2008-2011 EXPANZ
+//  All Rights Reserved.
 //
-//  Created by Jasper Blues on 1/12/12.
-//  Copyright (c) 2012 expanz. All rights reserved.
+//  NOTICE: Expanz permits you to use, modify, and distribute this file
+//  in accordance with the terms of the license agreement accompanying it.
 //
+////////////////////////////////////////////////////////////////////////////////
 
 #import <Cocoa/Cocoa.h>
+#import "Logging.h"
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
+    for (int i = 0; i < argc; i++) {
+        LogDebug(@"Arg: %s", argv[i]);
+    }
     return NSApplicationMain(argc, (const char **)argv);
 }

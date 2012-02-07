@@ -14,8 +14,33 @@
 
 @implementation expanz_codegen_ui_ModelObjectExplorerViewController
 
-@synthesize environmentSelector = _environmentSelector;
-@synthesize locateEnvironmentButton = _locateEnvironmentButton;
+
+@synthesize projectFilePath = _projectFilePath;
+@synthesize projectCombo = _projectCombo;
+@synthesize browseProject = _browseProject;
+@synthesize environmentCombo = _environmentCombo;
+@synthesize locateEnvironment = _locateEnvironment;
+
+/* ================================================== Initializers ================================================== */
+- (id) initWithProjectFilePath:(NSString*)projectFilePath {
+    //self = [super initWithNibName:@"ModelObjectExplorer" bundle:[NSBundle mainBundle]];
+    if (self) {
+        _projectFilePath = projectFilePath;
+    }
+    return self;
+}
+
+/* ================================================ Interface Methods =============================================== */
+- (void) awakeFromNib {
+    [super awakeFromNib];
+    LogDebug(@"Awoke from nib!");
+}
+
+- (IBAction) showWindow:(id)sender {
+    [super showWindow:sender];
+    LogDebug(@"Finished show window");
+    [NSThread sleepForTimeInterval:10000000];
+}
 
 
 @end

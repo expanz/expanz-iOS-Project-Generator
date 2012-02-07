@@ -16,24 +16,29 @@
 
 @synthesize window = _window;
 
+/* ================================================ Interface Methods =============================================== */
 - (void) applicationDidFinishLaunching:(NSNotification*)aNotification {
+    LogDebug(@"Hello?");
     NSConnection* connection = [[NSConnection alloc] init];
     [connection registerName:@"expanz.Model-Object-Explorer"];
 
-    ModelObjectExplorerViewController* viewController =
-        [[ModelObjectExplorerViewController alloc] initWithNibName:@"ModelObjectExplorer" bundle:[NSBundle mainBundle]];
+    NSArray* args = [[NSProcessInfo processInfo] arguments];
 
-    NSView* superView = self.window.contentView;
-    [superView setAutoresizesSubviews:YES];
-    [viewController.view setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable];
-    
-//    NSLog(@"subview's frame before resizing: %@", NSStringFromRect([viewController.view frame]));
-//    [superView setFrame:NSMakeRect(0, 0, 200, 100)];
-//    NSLog(@"subview's frame after  resizing: %@", NSStringFromRect([viewController.view frame]));
-    
-    [self.window.contentView addSubview:viewController.view];
+    NSString* projectFilePath;
+    if ([args count] >= 2) {
+        projectFilePath = [args objectAtIndex:1];
+    }
+
+    ModelObjectExplorerViewController* explorerViewController =
+        [[ModelObjectExplorerViewController alloc] initWithWindowNibName:@"ModelObjectExplorer"];
+    self.window = [explorerViewController window];
 
 
+
+}
+
+- (BOOL) applicationShouldTerminateAfterLastWindowClosed:(NSApplication*)sender {
+    return YES;
 }
 
 @end

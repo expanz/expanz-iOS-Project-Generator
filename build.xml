@@ -23,7 +23,12 @@
     --tests.run,
     --assemble.coverage.data,
     --coverage.report,
-    --api.report"/>
+    --api.report,
+    install"/>
+
+    <target name="install" depends="
+    --application.build,
+    --application.install"/>
 
     <target name="clean" depends="--clean"/>
 
@@ -61,6 +66,25 @@
     <target name="--unit.tests.build">
         <exec executable="xcodebuild" failonerror="true">
             <arg line="-target ${tests.target.name}"/>
+        </exec>
+    </target>
+
+    <target name="--application.build">
+        <exec executable="xcodebuild" failonerror="true">
+            <arg line="-target ${application.target.name}"/>
+        </exec>
+    </target>
+
+    <target name="--application.install">
+        <echo file="${temp.dir}/install.sh">
+            #!/bin/sh
+            cp -fr ${target.dir}/Release/${application.target.name}.app /Applications
+        </echo>
+        <exec executable="sh" failonerror="true" failifexecutionfails="true">
+            <arg line="${temp.dir}/install.sh"/>
+        </exec>
+        <exec executable="sh">
+            <arg line=""/>
         </exec>
     </target>
 
