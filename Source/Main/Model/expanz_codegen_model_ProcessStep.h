@@ -8,23 +8,21 @@
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
-
 #import <Foundation/Foundation.h>
-#import <Cocoa/Cocoa.h>
 
-@interface expanz_codegen_ui_ModelObjectExplorerViewController : NSWindowController<NSTableViewDataSource,
-    NSTableViewDelegate> {
 
-@private
-    NSArray* _processSteps;
-}
+@interface expanz_codegen_model_ProcessStep : NSObject
 
-@property(nonatomic, strong) IBOutlet NSTableView* processStepsTableView;
-@property(nonatomic, strong, readonly) NSString* projectFilePath;
+@property(nonatomic, strong, readonly) NSString* stepName;
+@property(nonatomic, strong, readonly) NSString* imageResourceName;
 
-- (id) initWithProjectFilePath:(NSString*)projectFilePath processSteps:(NSArray*)processSteps;
++ (id) fromPlistRepresentation:(NSDictionary*)plistRepresentation;
+
+- (id) initWithStepName:(NSString*)stepName imageResourceName:(NSString*)imageResourceName;
+
+- (NSDictionary*)plistRepresentation;
+
 
 @end
-
 /* ================================================================================================================== */
-@compatibility_alias ModelObjectExplorerViewController expanz_codegen_ui_ModelObjectExplorerViewController;
+@compatibility_alias ProcessStep expanz_codegen_model_ProcessStep;

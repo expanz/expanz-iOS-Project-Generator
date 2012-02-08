@@ -10,37 +10,46 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "expanz_codegen_ui_ModelObjectExplorerViewController.h"
+#import "expanz_codegen_model_ProcessStep.h"
 
 
 @implementation expanz_codegen_ui_ModelObjectExplorerViewController
 
-
+@synthesize processStepsTableView = _processStepsTableView;
 @synthesize projectFilePath = _projectFilePath;
-@synthesize projectCombo = _projectCombo;
-@synthesize browseProject = _browseProject;
-@synthesize environmentCombo = _environmentCombo;
-@synthesize locateEnvironment = _locateEnvironment;
 
 /* ================================================== Initializers ================================================== */
-- (id) initWithProjectFilePath:(NSString*)projectFilePath {
-    //self = [super initWithNibName:@"ModelObjectExplorer" bundle:[NSBundle mainBundle]];
+- (id) initWithProjectFilePath:(NSString*)projectFilePath processSteps:(NSArray*)processSteps {
+    self = [super initWithWindowNibName:@"ModelObjectExplorer"];
     if (self) {
-        _projectFilePath = projectFilePath;
-    }
+        _projectFilePath = [projectFilePath copy];
+        _processSteps = processSteps;
+    }    
     return self;
 }
 
 /* ================================================ Interface Methods =============================================== */
-- (void) awakeFromNib {
-    [super awakeFromNib];
-    LogDebug(@"Awoke from nib!");
+- (void) windowDidLoad {
+    [super windowDidLoad];    
+    [_processStepsTableView reloadData];
 }
 
-- (IBAction) showWindow:(id)sender {
-    [super showWindow:sender];
-    LogDebug(@"Finished show window");
-    [NSThread sleepForTimeInterval:10000000];
+
+- (NSInteger) numberOfRowsInTableView:(NSTableView*)tableView {
+    return [_processSteps count];
 }
 
+- (NSView*) tableView:(NSTableView*)tableView viewForTableColumn:(NSTableColumn*)tableColumn row:(NSInteger)row {    
+    ProcessStep* processStep = [_processSteps objectAtIndex:row];
+    NSString* identifier = [tableColumn identifier];
+
+    NSTableCellView* cellView;
+    if ([identifier isEqualToString:@"MainCell"]) {       
+        cellView = [tableView makeViewWithIdentifier:identifier owner:self];        
+        cellView.textField.stringValue = processStep.stepName;
+        cellView.imageView.objectValue = [[NSBundle mainBundle] imageForResource:processStep.imageResourceName];
+    }
+    return cellView;
+}
 
 @end

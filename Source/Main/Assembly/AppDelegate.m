@@ -11,6 +11,7 @@
 
 #import "AppDelegate.h"
 #import "expanz_codegen_ui_ModelObjectExplorerViewController.h"
+#import "expanz_codegen_utils_ConfigFileParser.h"
 
 @implementation AppDelegate
 
@@ -18,23 +19,22 @@
 
 /* ================================================ Interface Methods =============================================== */
 - (void) applicationDidFinishLaunching:(NSNotification*)aNotification {
-    LogDebug(@"Hello?");
     NSConnection* connection = [[NSConnection alloc] init];
     [connection registerName:@"expanz.Model-Object-Explorer"];
 
     NSArray* args = [[NSProcessInfo processInfo] arguments];
-
     NSString* projectFilePath;
     if ([args count] >= 2) {
         projectFilePath = [args objectAtIndex:1];
     }
 
-    ModelObjectExplorerViewController* explorerViewController =
-        [[ModelObjectExplorerViewController alloc] initWithWindowNibName:@"ModelObjectExplorer"];
-    self.window = [explorerViewController window];
+    NSString* configFilePath = [[NSBundle mainBundle] pathForResource:@"ToolConfiguration" ofType:@"plist"];
+    ConfigFileParser* parser = [[ConfigFileParser alloc] initWithFilePath:configFilePath];
+    NSArray* processSteps = [parser processSteps];
 
-
-
+    _explorerController =
+        [[ModelObjectExplorerViewController alloc] initWithProjectFilePath:projectFilePath processSteps:processSteps];
+    [_explorerController showWindow:self];
 }
 
 - (BOOL) applicationShouldTerminateAfterLastWindowClosed:(NSApplication*)sender {
