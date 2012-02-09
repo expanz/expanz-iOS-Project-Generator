@@ -21,21 +21,21 @@ static ProcessStep* globalActivitiesStep;
 @synthesize imageResourceName = _imageResourceName;
 
 /* ================================================= Class Methods ================================================== */
-+ (expanz_codegen_model_ProcessStep*) projectLocationStep {
++ (expanz_codegen_model_ProcessStep*) projectLocation {
     if (globalProjectLocationStep == nil) {
         globalProjectLocationStep = [[ProcessStep alloc] initWithStepName:@"Project Location" imageResourceName:nil];
     }
     return globalProjectLocationStep;
 }
 
-+ (expanz_codegen_model_ProcessStep*) expanzSettingsStep {
++ (expanz_codegen_model_ProcessStep*) expanzSettings {
     if (globalExpanzSettingsStep == nil) {
         globalExpanzSettingsStep = [[ProcessStep alloc] initWithStepName:@"expanz Settings" imageResourceName:nil];
     }
     return globalExpanzSettingsStep;
 }
 
-+ (expanz_codegen_model_ProcessStep*) activitiesStep {
++ (expanz_codegen_model_ProcessStep*) activities {
     if (globalActivitiesStep == nil) {
         globalActivitiesStep = [[ProcessStep alloc] initWithStepName:@"Activities" imageResourceName:nil];
     }
@@ -43,8 +43,8 @@ static ProcessStep* globalActivitiesStep;
 }
 
 + (NSArray*) allSteps {
-    return [NSArray arrayWithObjects:[ProcessStep projectLocationStep], [ProcessStep expanzSettingsStep],
-                                     [ProcessStep activitiesStep], nil];
+    return [NSArray arrayWithObjects:[ProcessStep projectLocation], [ProcessStep expanzSettings],
+                                     [ProcessStep activities], nil];
 }
 
 

@@ -12,17 +12,17 @@
 #import <Foundation/Foundation.h>
 #import <Cocoa/Cocoa.h>
 
-@interface expanz_codegen_ui_ModelObjectExplorerViewController : NSWindowController<NSTableViewDataSource,
-    NSTableViewDelegate> {
+@class expanz_codegen_model_ProcessStep;
 
-@private
-    NSArray* _processSteps;
-}
+@interface expanz_codegen_ui_ModelObjectExplorerViewController : NSWindowController<NSTableViewDataSource,
+    NSTableViewDelegate>
 
 @property(nonatomic, strong) IBOutlet NSTableView* processStepsTableView;
 @property(nonatomic, strong, readonly) NSString* projectFilePath;
 
-- (id) initWithProjectFilePath:(NSString*)projectFilePath processSteps:(NSArray*)processSteps;
+- (id) initWithProjectFilePath:(NSString*)projectFilePath;
+
+- (void) setStep:(expanz_codegen_model_ProcessStep*)processStep;
 
 @end
 

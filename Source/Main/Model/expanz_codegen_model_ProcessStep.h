@@ -16,11 +16,11 @@
 @property(nonatomic, strong, readonly) NSString* stepName;
 @property(nonatomic, strong, readonly) NSString* imageResourceName;
 
-+ (expanz_codegen_model_ProcessStep*) projectLocationStep;
++ (expanz_codegen_model_ProcessStep*) projectLocation;
 
-+ (expanz_codegen_model_ProcessStep*) expanzSettingsStep;
++ (expanz_codegen_model_ProcessStep*) expanzSettings;
 
-+ (expanz_codegen_model_ProcessStep*) activitiesStep;
++ (expanz_codegen_model_ProcessStep*) activities;
 
 + (NSArray*) allSteps;
 

@@ -10,7 +10,6 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "AppDelegate.h"
-#import "expanz_codegen_model_ProcessStep.h"
 #import "expanz_codegen_ui_ModelObjectExplorerViewController.h"
 
 @implementation AppDelegate
@@ -28,8 +27,7 @@
         projectFilePath = [args objectAtIndex:1];
     }
 
-    _explorerController = [[ModelObjectExplorerViewController alloc]
-        initWithProjectFilePath:projectFilePath processSteps:[ProcessStep allSteps]];
+    _explorerController = [[ModelObjectExplorerViewController alloc] initWithProjectFilePath:projectFilePath];
     [_explorerController showWindow:self];
 }
 
