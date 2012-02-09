@@ -49,8 +49,6 @@
 		6BB72DE214BEF9A9005A5961 /* XcodeProjectNodeType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB72DCC14BEF9A9005A5961 /* XcodeProjectNodeType.m */; };
 		6BB72DEF14BEFB80005A5961 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC10164147775A40055CF03 /* Cocoa.framework */; };
 		6BC1018C1477A42F0055CF03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC1018B1477A42F0055CF03 /* Foundation.framework */; };
-		6BCCD77F14E27C19006A3D34 /* expanz_codegen_utils_ConfigFileParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E4E0 /* expanz_codegen_utils_ConfigFileParser.m */; };
-		6BCCD78814E28683006A3D34 /* ToolConfiguration.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E4DB /* ToolConfiguration.plist */; };
 		6BCEC01914BBD88700538D1D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC10164147775A40055CF03 /* Cocoa.framework */; };
 		6BCEC03014BBD9D600538D1D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BCEC02914BBD9D600538D1D /* InfoPlist.strings */; };
 		6BCEDDF014C034D40089804B /* ModelObjectExplorer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BCEDDEF14C034D40089804B /* ModelObjectExplorer.xib */; };
@@ -60,11 +58,10 @@
 		6BE4B2B4147E6D3C0059E4C2 /* (null) in Sources */ = {isa = PBXBuildFile; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BE4B2B4147E6D3C0059E4CA /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6BE4B2B4147E6D3C0059E4CD /* expanz_codegen_PluginLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E4CB /* expanz_codegen_PluginLoader.m */; };
-		6BE4B2B4147E6D3C0059E4D5 /* ConfigFileParserSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E4D4 /* ConfigFileParserSpec.m */; };
 		6BE4B2B4147E6D3C0059E4D8 /* expanz_codegen_model_ProcessStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E4D7 /* expanz_codegen_model_ProcessStep.m */; };
 		6BE4B2B4147E6D3C0059E4D9 /* expanz_codegen_model_ProcessStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E4D7 /* expanz_codegen_model_ProcessStep.m */; };
-		6BE4B2B4147E6D3C0059E4DC /* ToolConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E4DB /* ToolConfiguration.plist */; };
-		6BE4B2B4147E6D3C0059E4E1 /* expanz_codegen_utils_ConfigFileParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E4E0 /* expanz_codegen_utils_ConfigFileParser.m */; };
+		6BE4B2B4147E6D3C0059E4DC /* ToolConfiguration.plist in Resources */ = {isa = PBXBuildFile; };
+		6BE4B2B4147E6D3C0059E4E1 /* expanz_codegen_utils_ConfigFileParser.m in Sources */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -74,7 +71,6 @@
 			dstPath = /tmp;
 			dstSubfolderSpec = 0;
 			files = (
-				6BCCD78814E28683006A3D34 /* ToolConfiguration.plist in CopyFiles */,
 				6B783C0714AD8DF20087E522 /* ESA_Sales_Calc_ViewController.h in CopyFiles */,
 				6B783C0814AD8DF20087E522 /* ESA_Sales_Calc_ViewController.m in CopyFiles */,
 				6B783C0914AD8DF20087E522 /* Prefix.pch in CopyFiles */,
@@ -145,12 +141,8 @@
 		6BE4B2B4147E6D3C0059E4BF /* NSString+TestResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TestResource.h"; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E4CB /* expanz_codegen_PluginLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_codegen_PluginLoader.m; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E4CE /* expanz_codegen_PluginLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_codegen_PluginLoader.h; sourceTree = "<group>"; };
-		6BE4B2B4147E6D3C0059E4D4 /* ConfigFileParserSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigFileParserSpec.m; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E4D7 /* expanz_codegen_model_ProcessStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_codegen_model_ProcessStep.m; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E4DA /* expanz_codegen_model_ProcessStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_codegen_model_ProcessStep.h; sourceTree = "<group>"; };
-		6BE4B2B4147E6D3C0059E4DB /* ToolConfiguration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = ToolConfiguration.plist; sourceTree = "<group>"; };
-		6BE4B2B4147E6D3C0059E4E0 /* expanz_codegen_utils_ConfigFileParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_codegen_utils_ConfigFileParser.m; sourceTree = "<group>"; };
-		6BE4B2B4147E6D3C0059E4E2 /* expanz_codegen_utils_ConfigFileParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_codegen_utils_ConfigFileParser.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -348,7 +340,6 @@
 		6BCEC02614BBD9D600538D1D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				6BE4B2B4147E6D3C0059E4DB /* ToolConfiguration.plist */,
 				6B9FD26A14BEF008006F8D04 /* Info.plist */,
 				6BCEC02714BBD9D600538D1D /* Credits.rtf */,
 				6BCEC02914BBD9D600538D1D /* InfoPlist.strings */,
@@ -411,7 +402,6 @@
 		6BE4B2B4147E6D3C0059E4DE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				6BE4B2B4147E6D3C0059E4D4 /* ConfigFileParserSpec.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -419,8 +409,6 @@
 		6BE4B2B4147E6D3C0059E4DF /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				6BE4B2B4147E6D3C0059E4E2 /* expanz_codegen_utils_ConfigFileParser.h */,
-				6BE4B2B4147E6D3C0059E4E0 /* expanz_codegen_utils_ConfigFileParser.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -547,7 +535,6 @@
 				6BB72DE014BEF9A9005A5961 /* XcodeProjectFileType.m in Sources */,
 				6BB72DE214BEF9A9005A5961 /* XcodeProjectNodeType.m in Sources */,
 				6BE4B2B4147E6D3C0059E4D9 /* expanz_codegen_model_ProcessStep.m in Sources */,
-				6BCCD77F14E27C19006A3D34 /* expanz_codegen_utils_ConfigFileParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,7 +566,6 @@
 				6BB72DDD14BEF9A9005A5961 /* xcode_Target.m in Sources */,
 				6BB72DDF14BEF9A9005A5961 /* XcodeProjectFileType.m in Sources */,
 				6BB72DE114BEF9A9005A5961 /* XcodeProjectNodeType.m in Sources */,
-				6BE4B2B4147E6D3C0059E4D5 /* ConfigFileParserSpec.m in Sources */,
 				6BE4B2B4147E6D3C0059E4D8 /* expanz_codegen_model_ProcessStep.m in Sources */,
 				6BE4B2B4147E6D3C0059E4E1 /* expanz_codegen_utils_ConfigFileParser.m in Sources */,
 			);

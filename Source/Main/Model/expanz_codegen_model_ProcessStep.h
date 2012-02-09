@@ -16,11 +16,15 @@
 @property(nonatomic, strong, readonly) NSString* stepName;
 @property(nonatomic, strong, readonly) NSString* imageResourceName;
 
-+ (id) fromPlistRepresentation:(NSDictionary*)plistRepresentation;
++ (expanz_codegen_model_ProcessStep*) projectLocationStep;
+
++ (expanz_codegen_model_ProcessStep*) expanzSettingsStep;
+
++ (expanz_codegen_model_ProcessStep*) activitiesStep;
+
++ (NSArray*) allSteps;
 
 - (id) initWithStepName:(NSString*)stepName imageResourceName:(NSString*)imageResourceName;
-
-- (NSDictionary*)plistRepresentation;
 
 
 @end

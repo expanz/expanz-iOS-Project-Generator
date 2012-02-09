@@ -10,8 +10,8 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "AppDelegate.h"
+#import "expanz_codegen_model_ProcessStep.h"
 #import "expanz_codegen_ui_ModelObjectExplorerViewController.h"
-#import "expanz_codegen_utils_ConfigFileParser.h"
 
 @implementation AppDelegate
 
@@ -28,12 +28,8 @@
         projectFilePath = [args objectAtIndex:1];
     }
 
-    NSString* configFilePath = [[NSBundle mainBundle] pathForResource:@"ToolConfiguration" ofType:@"plist"];
-    ConfigFileParser* parser = [[ConfigFileParser alloc] initWithFilePath:configFilePath];
-    NSArray* processSteps = [parser processSteps];
-
-    _explorerController =
-        [[ModelObjectExplorerViewController alloc] initWithProjectFilePath:projectFilePath processSteps:processSteps];
+    _explorerController = [[ModelObjectExplorerViewController alloc]
+        initWithProjectFilePath:projectFilePath processSteps:[ProcessStep allSteps]];
     [_explorerController showWindow:self];
 }
 

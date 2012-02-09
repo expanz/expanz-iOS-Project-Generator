@@ -13,15 +13,40 @@
 
 @implementation expanz_codegen_model_ProcessStep
 
+static ProcessStep* globalProjectLocationStep;
+static ProcessStep* globalExpanzSettingsStep;
+static ProcessStep* globalActivitiesStep;
 
 @synthesize stepName = _stepName;
 @synthesize imageResourceName = _imageResourceName;
 
 /* ================================================= Class Methods ================================================== */
-+ (id) fromPlistRepresentation:(NSDictionary*)plistRepresentation {
-    return [[ProcessStep alloc] initWithStepName:[plistRepresentation valueForKey:@"stepName"]
-                               imageResourceName:[plistRepresentation valueForKey:@"imageResourceName"]];
++ (expanz_codegen_model_ProcessStep*) projectLocationStep {
+    if (globalProjectLocationStep == nil) {
+        globalProjectLocationStep = [[ProcessStep alloc] initWithStepName:@"Project Location" imageResourceName:nil];
+    }
+    return globalProjectLocationStep;
 }
+
++ (expanz_codegen_model_ProcessStep*) expanzSettingsStep {
+    if (globalExpanzSettingsStep == nil) {
+        globalExpanzSettingsStep = [[ProcessStep alloc] initWithStepName:@"expanz Settings" imageResourceName:nil];
+    }
+    return globalExpanzSettingsStep;
+}
+
++ (expanz_codegen_model_ProcessStep*) activitiesStep {
+    if (globalActivitiesStep == nil) {
+        globalActivitiesStep = [[ProcessStep alloc] initWithStepName:@"Activities" imageResourceName:nil];
+    }
+    return globalActivitiesStep;
+}
+
++ (NSArray*) allSteps {
+    return [NSArray arrayWithObjects:[ProcessStep projectLocationStep], [ProcessStep expanzSettingsStep],
+                                     [ProcessStep activitiesStep], nil];
+}
+
 
 /* ================================================== Initializers ================================================== */
 - (id) initWithStepName:(NSString*)stepName imageResourceName:(NSString*)imageResourceName {
@@ -36,10 +61,8 @@
 
 /* ================================================ Interface Methods =============================================== */
 - (NSDictionary*) plistRepresentation {
-    return [NSDictionary dictionaryWithObjectsAndKeys:
-        _stepName, @"stepName",
-        _imageResourceName, @"imageResourceName",
-        nil];
+    return [NSDictionary dictionaryWithObjectsAndKeys:_stepName, @"stepName", _imageResourceName, @"imageResourceName",
+                                                      nil];
 }
 
 /* ================================================== Utility Methods =============================================== */
