@@ -11,7 +11,7 @@
 
 #import <objc/runtime.h>
 #import "expanz_codegen_PluginLoader.h"
-#import "expanz_codegen_ui_ModelObjectExplorerViewController.h"
+#import "../Main/UserInterface/expanz_codegen_ui_MainWindowController.h"
 
 @implementation expanz_codegen_PluginLoader
 
@@ -54,7 +54,8 @@
         [[NSWorkspace sharedWorkspace] URLForApplicationWithBundleIdentifier:@"expanz.Model-Object-Explorer"];
     NSWorkspace* ws = [NSWorkspace sharedWorkspace];
 
-    NSArray* initParams = [NSArray arrayWithObjects:projectDirectory, nil];
+    NSArray* initParams =
+        [NSArray arrayWithObjects:[NSString stringWithFormat:@"-expanzProjectDirectory \"%@\"", projectDirectory], nil];
 
     NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
     [dict setObject:initParams forKey:NSWorkspaceLaunchConfigurationArguments];

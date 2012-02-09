@@ -11,12 +11,12 @@
 
 #import <Cocoa/Cocoa.h>
 
-@class expanz_codegen_ui_ModelObjectExplorerViewController;
+@class expanz_codegen_ui_MainWindowController;
 
 @interface AppDelegate : NSObject<NSApplicationDelegate> {
 
 @private
-    expanz_codegen_ui_ModelObjectExplorerViewController* _explorerController;
+    expanz_codegen_ui_MainWindowController* _windowController;
 }
 
 @property(nonatomic, strong) NSWindow* window;

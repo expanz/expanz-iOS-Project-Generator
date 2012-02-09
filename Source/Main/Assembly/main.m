@@ -13,8 +13,5 @@
 #import "Logging.h"
 
 int main(int argc, char *argv[]) {
-    for (int i = 0; i < argc; i++) {
-        LogDebug(@"Arg: %s", argv[i]);
-    }
     return NSApplicationMain(argc, (const char **)argv);
 }
