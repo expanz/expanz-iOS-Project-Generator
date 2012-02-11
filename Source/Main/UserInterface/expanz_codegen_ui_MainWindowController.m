@@ -13,6 +13,15 @@
 #import "expanz_codegen_ui_MainWindowController.h"
 #import "expanz_codegen_model_ProcessStep.h"
 #import "expanz_codegen_ui_ProjectLocationViewController.h"
+#import "expanz_codegen_ui_ExpanzSettingsViewController.h"
+
+@interface expanz_codegen_ui_MainWindowController (private)
+
+- (void) setContentView:(NSView*)view;
+
+@end
+/* ================================================================================================================== */
+
 
 @implementation expanz_codegen_ui_MainWindowController
 
@@ -21,7 +30,6 @@
 @synthesize nextStepButton = _nextStepButton;
 @synthesize previousStepButton = _previousStepButton;
 @synthesize projectFilePath = _projectFilePath;
-@synthesize projectLocationViewController = _projectLocationViewController;
 
 
 /* ================================================== Initializers ================================================== */
@@ -31,6 +39,8 @@
         _projectFilePath = [projectFilePath copy];
         _projectLocationViewController =
             [[ProjectLocationViewController alloc] initWithNibName:@"ProjectLocation" bundle:[NSBundle mainBundle]];
+        _expanzSettingsViewController =
+            [[ExpanzSettingsViewController alloc] initWithNibName:@"expanzSettings" bundle:[NSBundle mainBundle]];
     }
     return self;
 }
@@ -44,14 +54,20 @@
 - (void) setCurrentStep:(expanz_codegen_model_ProcessStep*)currentStep {
     _currentStep = currentStep;
     if (_currentStep == [ProcessStep projectLocation]) {
+        [_previousStepButton setEnabled:NO];
+        [_nextStepButton setEnabled:YES];
         [_processStepsTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:0] byExtendingSelection:NO];
-        [_currentStepViewContainer setDocumentView:_projectLocationViewController.view];
+        [self setContentView:_projectLocationViewController.view];
     }
     else if (_currentStep == [ProcessStep expanzSettings]) {
+        [_previousStepButton setEnabled:YES];
+        [_nextStepButton setEnabled:YES];
         [_processStepsTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:1] byExtendingSelection:NO];
-        [_projectLocationViewController setSelectedProjectFilePath:_projectFilePath];
+        [self setContentView:_expanzSettingsViewController.view];
     }
     else if (_currentStep == [ProcessStep activities]) {
+        [_previousStepButton setEnabled:YES];
+        [_nextStepButton setEnabled:NO];
         [_processStepsTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:2] byExtendingSelection:NO];
     }
 }
@@ -79,6 +95,7 @@
     [_processStepsTableView reloadData];
     if (_projectFilePath.length > 0) {
         [self setCurrentStep:[ProcessStep expanzSettings]];
+        [_projectLocationViewController setSelectedProjectFilePath:_projectFilePath];
     }
     else {
         [self setCurrentStep:[ProcessStep projectLocation]];
@@ -104,5 +121,20 @@
     return cellView;
 }
 
+
+/* ================================================== Private Methods =============================================== */
+- (void) setContentView:(NSView*)view {
+    LogDebug(@"Removing old content view.");
+    [_currentContentView removeFromSuperview];
+    [_currentStepViewContainer addSubview:view];
+    _currentContentView = view;
+
+    CALayer* viewLayer = [CALayer layer];
+    [viewLayer setBackgroundColor:CGColorCreateGenericRGB(1.0, 1.0, 1.0, 1.0)];
+    [viewLayer setBorderWidth:1.0];
+    [viewLayer setBorderColor:CGColorCreateGenericRGB(0.694, 0.694, 0.694, 1.0)];
+    [view setWantsLayer:YES];
+    [view setLayer:viewLayer];
+}
 
 @end

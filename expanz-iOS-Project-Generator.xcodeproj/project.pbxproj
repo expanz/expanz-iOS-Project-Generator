@@ -55,6 +55,11 @@
 		6BCEC01914BBD88700538D1D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC10164147775A40055CF03 /* Cocoa.framework */; };
 		6BCEC03014BBD9D600538D1D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BCEC02914BBD9D600538D1D /* InfoPlist.strings */; };
 		6BCEDDF014C034D40089804B /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BCEDDEF14C034D40089804B /* MainWindow.xib */; };
+		6BD5341E14E61DAA0009196B /* expanzSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD5341D14E61DAA0009196B /* expanzSettings.xib */; };
+		6BD5342214E668090009196B /* expanz_codegen_ui_ExpanzSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD5342114E668090009196B /* expanz_codegen_ui_ExpanzSettingsViewController.m */; };
+		6BD5342314E668090009196B /* expanz_codegen_ui_ExpanzSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD5342114E668090009196B /* expanz_codegen_ui_ExpanzSettingsViewController.m */; };
+		6BD5342414E68A070009196B /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B789B7C14E37ACB00DAA872 /* Quartz.framework */; };
+		6BD5342514E68A070009196B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B789B7D14E37ACB00DAA872 /* QuartzCore.framework */; };
 		6BE4B2B4147E6D3C0059E49B /* XcodeFileReferenceTypeSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E49A /* XcodeFileReferenceTypeSpec.m */; };
 		6BE4B2B4147E6D3C0059E4A9 /* GroupSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E4A8 /* GroupSpec.m */; };
 		6BE4B2B4147E6D3C0059E4BE /* NSString+TestResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E4BD /* NSString+TestResource.m */; };
@@ -143,6 +148,9 @@
 		6BCEC02B14BBD9D600538D1D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6BCEC02C14BBD9D600538D1D /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		6BCEDDEF14C034D40089804B /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		6BD5341D14E61DAA0009196B /* expanzSettings.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = expanzSettings.xib; sourceTree = "<group>"; };
+		6BD5342014E668090009196B /* expanz_codegen_ui_ExpanzSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_codegen_ui_ExpanzSettingsViewController.h; sourceTree = "<group>"; };
+		6BD5342114E668090009196B /* expanz_codegen_ui_ExpanzSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_codegen_ui_ExpanzSettingsViewController.m; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E49A /* XcodeFileReferenceTypeSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XcodeFileReferenceTypeSpec.m; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E4A8 /* GroupSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupSpec.m; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E4BD /* NSString+TestResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TestResource.m"; sourceTree = "<group>"; };
@@ -170,6 +178,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BD5342414E68A070009196B /* Quartz.framework in Frameworks */,
+				6BD5342514E68A070009196B /* QuartzCore.framework in Frameworks */,
 				6BB72DEF14BEFB80005A5961 /* Cocoa.framework in Frameworks */,
 				6BC1018C1477A42F0055CF03 /* Foundation.framework in Frameworks */,
 				6B105A011479C807002DEBCE /* Cedar.framework in Frameworks */,
@@ -263,6 +273,8 @@
 		6BB72DB414BEF9A9005A5961 /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
+				6BD5342014E668090009196B /* expanz_codegen_ui_ExpanzSettingsViewController.h */,
+				6BD5342114E668090009196B /* expanz_codegen_ui_ExpanzSettingsViewController.m */,
 				6BE4B2B4147E6D3C0059E4E5 /* expanz_codegen_ui_ProjectLocationViewController.h */,
 				6BE4B2B4147E6D3C0059E4E2 /* expanz_codegen_ui_ProjectLocationViewController.m */,
 				6BB72DB514BEF9A9005A5961 /* Assets */,
@@ -279,6 +291,7 @@
 				6BB72DB614BEF9A9005A5961 /* MainMenu.xib */,
 				6BCEDDEF14C034D40089804B /* MainWindow.xib */,
 				6B789B7914E3656300DAA872 /* ProjectLocation.xib */,
+				6BD5341D14E61DAA0009196B /* expanzSettings.xib */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -514,6 +527,7 @@
 				6B225D9C14E0B43500B0F735 /* expanz.png in Resources */,
 				6BE4B2B4147E6D3C0059E4DC /* (null) in Resources */,
 				6B789B7A14E3656300DAA872 /* ProjectLocation.xib in Resources */,
+				6BD5341E14E61DAA0009196B /* expanzSettings.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,6 +560,7 @@
 				6BB72DE214BEF9A9005A5961 /* XcodeProjectNodeType.m in Sources */,
 				6BE4B2B4147E6D3C0059E4D9 /* expanz_codegen_model_ProcessStep.m in Sources */,
 				6BE4B2B4147E6D3C0059E4E4 /* expanz_codegen_ui_ProjectLocationViewController.m in Sources */,
+				6BD5342314E668090009196B /* expanz_codegen_ui_ExpanzSettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,6 +595,7 @@
 				6BE4B2B4147E6D3C0059E4D8 /* expanz_codegen_model_ProcessStep.m in Sources */,
 				6BE4B2B4147E6D3C0059E4E1 /* (null) in Sources */,
 				6BE4B2B4147E6D3C0059E4E3 /* expanz_codegen_ui_ProjectLocationViewController.m in Sources */,
+				6BD5342214E668090009196B /* expanz_codegen_ui_ExpanzSettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

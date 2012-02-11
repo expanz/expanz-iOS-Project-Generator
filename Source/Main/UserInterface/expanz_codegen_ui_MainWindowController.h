@@ -14,21 +14,23 @@
 
 @class expanz_codegen_model_ProcessStep;
 @class expanz_codegen_ui_ProjectLocationViewController;
+@class expanz_codegen_ui_ExpanzSettingsViewController;
 
 @interface expanz_codegen_ui_MainWindowController : NSWindowController<NSTableViewDataSource,
     NSTableViewDelegate> {
 
 @private
+    NSView* _currentContentView;
     expanz_codegen_model_ProcessStep* _currentStep;
+    expanz_codegen_ui_ProjectLocationViewController* _projectLocationViewController;
+    expanz_codegen_ui_ExpanzSettingsViewController* _expanzSettingsViewController;
 }
 
 @property(nonatomic, weak) IBOutlet NSTableView* processStepsTableView;
-@property(nonatomic, weak) IBOutlet NSScrollView* currentStepViewContainer;
+@property(nonatomic, weak) IBOutlet NSView* currentStepViewContainer;
 @property(nonatomic, weak) IBOutlet NSButton* nextStepButton;
 @property(nonatomic, weak) IBOutlet NSButton* previousStepButton;
 @property(nonatomic, strong, readonly) NSString* projectFilePath;
-@property(nonatomic, strong, readonly) expanz_codegen_ui_ProjectLocationViewController* projectLocationViewController;
-
 
 - (id) initWithProjectFilePath:(NSString*)projectFilePath;
 

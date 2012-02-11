@@ -26,6 +26,8 @@
     for (NSString* arg in args) {
         if ([arg hasPrefix:@"-expanzProjectDirectory"]) {
             projectFilePath = [arg stringByReplacingOccurrencesOfString:@"-expanzProjectDirectory" withString:@""];
+            projectFilePath =
+                [projectFilePath stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
             projectFilePath = [projectFilePath stringByReplacingOccurrencesOfString:@"\"" withString:@""];
             LogDebug(@"Project file path is: %@", projectFilePath);
         }
