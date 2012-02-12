@@ -55,7 +55,7 @@
     NSWorkspace* ws = [NSWorkspace sharedWorkspace];
 
     NSArray* initParams =
-        [NSArray arrayWithObjects:[NSString stringWithFormat:@"-expanzProjectDirectory \"%@\"", projectDirectory], nil];
+        [NSArray arrayWithObjects:[NSString stringWithFormat:@"-expanzProjectDirectory=\"%@\"", projectDirectory], nil];
 
     NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
     [dict setObject:initParams forKey:NSWorkspaceLaunchConfigurationArguments];

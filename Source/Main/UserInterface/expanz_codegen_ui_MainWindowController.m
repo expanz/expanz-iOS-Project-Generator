@@ -39,8 +39,10 @@
         _projectFilePath = [projectFilePath copy];
         _projectLocationViewController =
             [[ProjectLocationViewController alloc] initWithNibName:@"ProjectLocation" bundle:[NSBundle mainBundle]];
+        [_projectLocationViewController view];
         _expanzSettingsViewController =
             [[ExpanzSettingsViewController alloc] initWithNibName:@"expanzSettings" bundle:[NSBundle mainBundle]];
+        [_expanzSettingsViewController view];
     }
     return self;
 }
@@ -63,6 +65,9 @@
         [_previousStepButton setEnabled:YES];
         [_nextStepButton setEnabled:YES];
         [_processStepsTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:1] byExtendingSelection:NO];
+        [_expanzSettingsViewController
+            setProjectFilePath:[_projectLocationViewController.projectLocationCombo objectValueOfSelectedItem]];
+        [_expanzSettingsViewController populateExpanzBackendCombo];
         [self setContentView:_expanzSettingsViewController.view];
     }
     else if (_currentStep == [ProcessStep activities]) {
@@ -94,8 +99,8 @@
     [_nextStepButton setAction:@selector(nextStep)];
     [_processStepsTableView reloadData];
     if (_projectFilePath.length > 0) {
-        [self setCurrentStep:[ProcessStep expanzSettings]];
         [_projectLocationViewController setSelectedProjectFilePath:_projectFilePath];
+        [self setCurrentStep:[ProcessStep expanzSettings]];
     }
     else {
         [self setCurrentStep:[ProcessStep projectLocation]];
@@ -124,7 +129,6 @@
 
 /* ================================================== Private Methods =============================================== */
 - (void) setContentView:(NSView*)view {
-    LogDebug(@"Removing old content view.");
     [_currentContentView removeFromSuperview];
     [_currentStepViewContainer addSubview:view];
     _currentContentView = view;

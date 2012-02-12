@@ -11,8 +11,16 @@
 #import <Foundation/Foundation.h>
 #import <Cocoa/Cocoa.h>
 
-
 @interface expanz_codegen_ui_ExpanzSettingsViewController : NSViewController
+
+@property(nonatomic, weak) IBOutlet NSComboBox* expanzBackendCombo;
+@property(nonatomic, strong) NSString* projectFilePath;
+
+- (NSString*) supportingFilesPath;
+
+- (void) populateExpanzBackendCombo;
+
+- (void) populateSiteList;
 
 @end
 /* ================================================================================================================== */

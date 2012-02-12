@@ -15,8 +15,8 @@
 
 @interface expanz_codegen_ui_ProjectLocationViewController : NSViewController
 
-@property(nonatomic, weak) IBOutlet NSComboBox* projectLocationCombo;
-@property(nonatomic, weak) IBOutlet NSButton* browseForProjectButton;
+@property(nonatomic, strong) IBOutlet NSComboBox* projectLocationCombo;
+@property(nonatomic, strong) IBOutlet NSButton* browseForProjectButton;
 
 - (void) browseForProject;
 

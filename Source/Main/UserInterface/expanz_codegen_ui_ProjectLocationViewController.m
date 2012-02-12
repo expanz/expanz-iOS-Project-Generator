@@ -25,13 +25,12 @@
     NSInteger indexOfSelectedFilePath = [_projectLocationCombo indexOfItemWithObjectValue:selectedProjectFilePath];
     if (indexOfSelectedFilePath == NSNotFound) {
         [_projectLocationCombo addItemWithObjectValue:selectedProjectFilePath];
-        [_projectLocationCombo selectItemAtIndex:[[_projectLocationCombo objectValues] count]];
+        [_projectLocationCombo selectItemAtIndex:[[_projectLocationCombo objectValues] count] -1];
     }
     else {
-        [_projectLocationCombo selectItemAtIndex:[[_projectLocationCombo objectValues] count]];
+        [_projectLocationCombo selectItemAtIndex:indexOfSelectedFilePath];
     }
 }
-
 
 - (void) awakeFromNib {
     [super awakeFromNib];
