@@ -1019,8 +1019,6 @@
 		6BC10155147775A40055CF03 = {
 			isa = PBXGroup;
 			children = (
-				6BD1B48414EBC40E00F5AD1C /* libprofile_rt.dylib */,
-				6BD1B48214EBC3C000F5AD1C /* libprofile_rt.dylib */,
 				6BE4B285147E6B610059E44D /* Source */,
 				6BB4D87614EB61E000DC153B /* LRResty */,
 				6BB4D8F014EB630400DC153B /* Kiwi */,
@@ -1045,6 +1043,8 @@
 		6BC10163147775A40055CF03 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6BD1B48414EBC40E00F5AD1C /* libprofile_rt.dylib */,
+				6BD1B48214EBC3C000F5AD1C /* libprofile_rt.dylib */,
 				6B789B7D14E37ACB00DAA872 /* QuartzCore.framework */,
 				6B789B7C14E37ACB00DAA872 /* Quartz.framework */,
 				6B17B89814BDAE3700F53089 /* IDEKit.framework */,

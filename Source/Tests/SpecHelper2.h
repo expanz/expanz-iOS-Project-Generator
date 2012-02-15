@@ -14,6 +14,9 @@
 #import "Logging.h"
 
 #define assertWillHappen(expression) \
-[[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:7]];\
+[[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:1]];\
+if (!expression) [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:1]];\
+if (!expression) [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:1]];\
+if (!expression) [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:1]];\
 if (!expression) [NSException raise:NSInternalInconsistencyException \
-format:@"Expression %@ did not occur before timeout."];
+format:@"Expression did not occur before timeout."];
