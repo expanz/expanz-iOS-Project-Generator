@@ -8,18 +8,20 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
-@interface HCIsIn : HCBaseMatcher
-{
+@interface HCIsIn : HCBaseMatcher {
     id collection;
 }
 
-+ (id)isInCollection:(id)aCollection;
-- (id)initWithCollection:(id)aCollection;
++ (id) isInCollection:(id)aCollection;
+
+- (id) initWithCollection:(id)aCollection;
 
 @end
 
 
-OBJC_EXPORT id<HCMatcher> HC_isIn(id aCollection);
+OBJC_EXPORT
+
+id<HCMatcher> HC_isIn(id aCollection);
 
 /**
     isIn(aCollection) -

@@ -8,18 +8,20 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
-@interface HCIs : HCBaseMatcher
-{
+@interface HCIs : HCBaseMatcher {
     id<HCMatcher> matcher;
 }
 
-+ (id)is:(id<HCMatcher>)aMatcher;
-- (id)initWithMatcher:(id<HCMatcher>)aMatcher;
++ (id) is:(id<HCMatcher>)aMatcher;
+
+- (id) initWithMatcher:(id<HCMatcher>)aMatcher;
 
 @end
 
 
-OBJC_EXPORT id<HCMatcher> HC_is(id match);
+OBJC_EXPORT
+
+id<HCMatcher> HC_is(id match);
 
 /**
     is(aMatcher) -

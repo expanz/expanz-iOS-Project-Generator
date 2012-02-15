@@ -19,7 +19,6 @@
 }
 
 
-
 - (id) initWithBaseDirectory:(NSString*)baseDirectory;
 
 - (void) queueFile:(NSString*)fileName inDirectory:(NSString*)directory withContents:(NSString*)contents;

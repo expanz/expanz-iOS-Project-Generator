@@ -10,12 +10,14 @@
 
 @interface HCStringStartsWith : HCSubstringMatcher
 
-+ (id)stringStartsWith:(NSString *)aSubstring;
++ (id) stringStartsWith:(NSString*)aSubstring;
 
 @end
 
 
-OBJC_EXPORT id<HCMatcher> HC_startsWith(NSString *aSubstring);
+OBJC_EXPORT
+
+id<HCMatcher> HC_startsWith(NSString* aSubstring);
 
 /**
     startsWith(aString) -

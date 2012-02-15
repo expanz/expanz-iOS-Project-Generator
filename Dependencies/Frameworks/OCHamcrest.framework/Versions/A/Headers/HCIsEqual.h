@@ -8,18 +8,20 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
-@interface HCIsEqual : HCBaseMatcher
-{
+@interface HCIsEqual : HCBaseMatcher {
     id object;
 }
 
-+ (id)isEqualTo:(id)anObject;
-- (id)initEqualTo:(id)anObject;
++ (id) isEqualTo:(id)anObject;
+
+- (id) initEqualTo:(id)anObject;
 
 @end
 
 
-OBJC_EXPORT id<HCMatcher> HC_equalTo(id object);
+OBJC_EXPORT
+
+id<HCMatcher> HC_equalTo(id object);
 
 /**
     equalTo(anObject) -

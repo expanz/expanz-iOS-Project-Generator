@@ -17,4 +17,6 @@
     
     @ingroup helpers
  */
-OBJC_EXPORT id<HCMatcher> HCWrapInMatcher(id matcherOrValue);
+OBJC_EXPORT
+
+id<HCMatcher> HCWrapInMatcher(id matcherOrValue);

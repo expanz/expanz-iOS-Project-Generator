@@ -91,7 +91,8 @@
     <target name="--tests.run">
         <mkdir dir="${reports.dir}/tests"/>
         <property name="tests.report" value="${reports.dir}/tests/test-results.txt"/>
-        <exec executable="${basedir}/build/Release/${tests.target.name}" outputproperty="tests.output" failonerror="false"
+        <exec executable="${basedir}/build/Release/${tests.target.name}" outputproperty="tests.output"
+              failonerror="false"
               failifexecutionfails="true">
             <env key="PATH" path="${env.PATH}:${basedir}/bin"/>
         </exec>
@@ -164,7 +165,8 @@
 
         <echo file="${temp.dir}/genhtml.sh">
             #!/bin/sh
-            genhtml -p ${source.main.dir} --no-function-coverage --no-branch-coverage -o ${coverage.reports.dir} ${temp.dir}/coverage.info
+            genhtml -p ${source.main.dir} --no-function-coverage --no-branch-coverage -o ${coverage.reports.dir}
+            ${temp.dir}/coverage.info
         </echo>
         <chmod perm="+x" file="${temp.dir}/genhtml.sh"/>
         <exec executable="${temp.dir}/genhtml.sh" failonerror="true" failifexecutionfails="true"/>

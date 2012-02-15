@@ -8,7 +8,9 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
-OBJC_EXPORT id<HCMatcher> HC_equalToBool(BOOL value);
+OBJC_EXPORT
+
+id<HCMatcher> HC_equalToBool(BOOL value);
 
 /**
     equalToBool(value) -
@@ -29,7 +31,9 @@ OBJC_EXPORT id<HCMatcher> HC_equalToBool(BOOL value);
 #endif
 
 
-OBJC_EXPORT id<HCMatcher> HC_equalToChar(char value);
+OBJC_EXPORT
+
+id<HCMatcher> HC_equalToChar(char value);
 
 /**
     equalToChar(value) -
@@ -50,7 +54,9 @@ OBJC_EXPORT id<HCMatcher> HC_equalToChar(char value);
 #endif
 
 
-OBJC_EXPORT id<HCMatcher> HC_equalToDouble(double value);
+OBJC_EXPORT
+
+id<HCMatcher> HC_equalToDouble(double value);
 
 /**
     equalToDouble(value) -
@@ -71,7 +77,9 @@ OBJC_EXPORT id<HCMatcher> HC_equalToDouble(double value);
 #endif
 
 
-OBJC_EXPORT id<HCMatcher> HC_equalToFloat(float value);
+OBJC_EXPORT
+
+id<HCMatcher> HC_equalToFloat(float value);
 
 /**
     equalToFloat(value) -
@@ -92,7 +100,9 @@ OBJC_EXPORT id<HCMatcher> HC_equalToFloat(float value);
 #endif
 
 
-OBJC_EXPORT id<HCMatcher> HC_equalToInt(int value);
+OBJC_EXPORT
+
+id<HCMatcher> HC_equalToInt(int value);
 
 /**
     equalToInt(value) -
@@ -113,7 +123,9 @@ OBJC_EXPORT id<HCMatcher> HC_equalToInt(int value);
 #endif
 
 
-OBJC_EXPORT id<HCMatcher> HC_equalToLong(long value);
+OBJC_EXPORT
+
+id<HCMatcher> HC_equalToLong(long value);
 
 /**
     equalToLong(value) -
@@ -134,7 +146,9 @@ OBJC_EXPORT id<HCMatcher> HC_equalToLong(long value);
 #endif
 
 
-OBJC_EXPORT id<HCMatcher> HC_equalToLongLong(long long value);
+OBJC_EXPORT
+
+id<HCMatcher> HC_equalToLongLong(long long value);
 
 /**
     equalToLongLong(value) -
@@ -155,7 +169,9 @@ OBJC_EXPORT id<HCMatcher> HC_equalToLongLong(long long value);
 #endif
 
 
-OBJC_EXPORT id<HCMatcher> HC_equalToShort(short value);
+OBJC_EXPORT
+
+id<HCMatcher> HC_equalToShort(short value);
 
 /**
     equalToShort(value) -
@@ -176,7 +192,9 @@ OBJC_EXPORT id<HCMatcher> HC_equalToShort(short value);
 #endif
 
 
-OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedChar(unsigned char value);
+OBJC_EXPORT
+
+id<HCMatcher> HC_equalToUnsignedChar(unsigned char value);
 
 /**
     equalToUnsignedChar(value) -
@@ -197,7 +215,9 @@ OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedChar(unsigned char value);
 #endif
 
 
-OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedInt(unsigned int value);
+OBJC_EXPORT
+
+id<HCMatcher> HC_equalToUnsignedInt(unsigned int value);
 
 /**
     equalToUnsignedInt(value) -
@@ -218,7 +238,9 @@ OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedInt(unsigned int value);
 #endif
 
 
-OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedLong(unsigned long value);
+OBJC_EXPORT
+
+id<HCMatcher> HC_equalToUnsignedLong(unsigned long value);
 
 /**
     equalToUnsignedLong(value) -
@@ -239,7 +261,9 @@ OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedLong(unsigned long value);
 #endif
 
 
-OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedLongLong(unsigned long long value);
+OBJC_EXPORT
+
+id<HCMatcher> HC_equalToUnsignedLongLong(unsigned long long value);
 
 /**
     equalToUnsignedLongLong(value) -
@@ -260,7 +284,9 @@ OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedLongLong(unsigned long long value);
 #endif
 
 
-OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedShort(unsigned short value);
+OBJC_EXPORT
+
+id<HCMatcher> HC_equalToUnsignedShort(unsigned short value);
 
 /**
     equalToUnsignedShort(value) -
@@ -281,7 +307,9 @@ OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedShort(unsigned short value);
 #endif
 
 
-OBJC_EXPORT id<HCMatcher> HC_equalToInteger(NSInteger value);
+OBJC_EXPORT
+
+id<HCMatcher> HC_equalToInteger(NSInteger value);
 
 /**
     equalToInteger(value) -
@@ -302,7 +330,9 @@ OBJC_EXPORT id<HCMatcher> HC_equalToInteger(NSInteger value);
 #endif
 
 
-OBJC_EXPORT id<HCMatcher> HC_equalToUnsignedInteger(NSUInteger value);
+OBJC_EXPORT
+
+id<HCMatcher> HC_equalToUnsignedInteger(NSUInteger value);
 
 /**
     equalToUnsignedInteger(value) -

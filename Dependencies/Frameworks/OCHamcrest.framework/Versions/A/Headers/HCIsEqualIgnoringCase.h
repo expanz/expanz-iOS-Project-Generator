@@ -8,18 +8,20 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
-@interface HCIsEqualIgnoringCase : HCBaseMatcher
-{
-    NSString *string;
+@interface HCIsEqualIgnoringCase : HCBaseMatcher {
+    NSString* string;
 }
 
-+ (id)isEqualIgnoringCase:(NSString *)aString;
-- (id)initWithString:(NSString *)aString;
++ (id) isEqualIgnoringCase:(NSString*)aString;
+
+- (id) initWithString:(NSString*)aString;
 
 @end
 
 
-OBJC_EXPORT id<HCMatcher> HC_equalToIgnoringCase(NSString *aString);
+OBJC_EXPORT
+
+id<HCMatcher> HC_equalToIgnoringCase(NSString* aString);
 
 /**
     equalToIgnoringCase(aString) -

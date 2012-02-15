@@ -1,0 +1,19 @@
+//
+// Prefix header for all source files of the 'Tests2' target in the 'Tests2' project
+//
+
+#ifdef __OBJC__
+#define HC_SHORTHAND
+#import <Cocoa/Cocoa.h>
+
+#import "Kiwi.h"
+#import "KiwiMacros.h"
+#import "KWExample.h"
+#import "LRRestyResponse.h"
+#import "LRResty.h"
+#import "SpecHelper2.h"
+#import "KWSpec.h"
+#import "KWCallSite.h"
+#import "NSObject+KiwiVerifierAdditions.h"
+
+#endif

@@ -12,6 +12,6 @@
 #import <Cocoa/Cocoa.h>
 #import "Logging.h"
 
-int main(int argc, char *argv[]) {
-    return NSApplicationMain(argc, (const char **)argv);
+int main(int argc, char* argv[]) {
+    return NSApplicationMain(argc, (const char**) argv);
 }

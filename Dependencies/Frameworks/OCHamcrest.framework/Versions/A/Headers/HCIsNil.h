@@ -10,12 +10,14 @@
 
 @interface HCIsNil : HCBaseMatcher
 
-+ (id)isNil;
++ (id) isNil;
 
 @end
 
 
-OBJC_EXPORT id<HCMatcher> HC_nilValue();
+OBJC_EXPORT
+
+id<HCMatcher> HC_nilValue();
 
 /**
     Matches if object is @c nil.
@@ -30,7 +32,9 @@ OBJC_EXPORT id<HCMatcher> HC_nilValue();
 #endif
 
 
-OBJC_EXPORT id<HCMatcher> HC_notNilValue();
+OBJC_EXPORT
+
+id<HCMatcher> HC_notNilValue();
 
 /**
     Matches if object is not @c nil.

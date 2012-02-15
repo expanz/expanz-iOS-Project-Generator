@@ -4,25 +4,60 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Kiwi.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>LRResty.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>Model-Object-Explorer.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
-		</dict>
-		<key>Specs.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
-		<key>xcodePlugin.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>Tests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>xcodePlugin.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>6B55221414EA713D00494CF3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6B55223514EA723700494CF3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6B5523C714EA798D00494CF3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>6B9FD26414BEF008006F8D04</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6BB4D87314EB61E000DC153B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6BB4D8ED14EB630400DC153B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -48,6 +83,16 @@
 			<true/>
 		</dict>
 		<key>6BCEC01714BBD88700538D1D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6BD8982B14EA2441007875F4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6BD8985814EA2AAC007875F4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

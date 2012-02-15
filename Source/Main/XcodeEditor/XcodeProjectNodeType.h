@@ -30,6 +30,7 @@ typedef enum {
 @interface NSString (ProjectNodeType)
 
 + (NSString*) stringFromProjectNodeType:(XcodeProjectNodeType)nodeType;
+
 - (XcodeProjectNodeType) asProjectNodeType;
 
 @end

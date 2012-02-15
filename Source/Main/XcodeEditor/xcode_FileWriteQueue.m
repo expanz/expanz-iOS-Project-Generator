@@ -27,7 +27,7 @@
 /* ================================================ Interface Methods =============================================== */
 - (void) queueFile:(NSString*)fileName inDirectory:(NSString*)directory withContents:(NSString*)contents {
     [_data setObject:contents forKey:[[_baseDirectory stringByAppendingPathComponent:directory]
-                                           stringByAppendingPathComponent:fileName]];
+                                         stringByAppendingPathComponent:fileName]];
 }
 
 - (void) writePendingFilesToDisk {

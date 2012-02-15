@@ -15,9 +15,8 @@
 
     @ingroup core
  */
-@interface HCStringDescription : HCBaseDescription
-{
-    NSMutableString *accumulator;
+@interface HCStringDescription : HCBaseDescription {
+    NSMutableString* accumulator;
 }
 
 /**
@@ -26,16 +25,16 @@
     @param selfDescribing  The object to be described.
     @return The description of the object.
  */
-+ (NSString *)stringFrom:(id<HCSelfDescribing>)selfDescribing;
++ (NSString*) stringFrom:(id<HCSelfDescribing>)selfDescribing;
 
 /**
     Returns an empty description.
  */
-+ (HCStringDescription *)stringDescription;
++ (HCStringDescription*) stringDescription;
 
 /**
     Returns an initialized HCStringDescription object that is empty.
  */
-- (id)init;
+- (id) init;
 
 @end

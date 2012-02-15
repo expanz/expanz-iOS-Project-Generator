@@ -47,6 +47,13 @@
     return self;
 }
 
+- (id) initWithString:(NSString*)string {
+    return nil;
+    //To change the template use AppCode | Preferences | File Templates.
+
+}
+
+
 /* ================================================ Interface Methods =============================================== */
 - (NSMutableDictionary*) objects {
     return [_project objectForKey:@"objects"];

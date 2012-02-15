@@ -24,12 +24,14 @@
     NSMutableDictionary* _project;
 }
 
-@property (nonatomic, strong, readonly) xcode_FileWriteQueue* fileWriteQueue;
+@property(nonatomic, strong, readonly) xcode_FileWriteQueue* fileWriteQueue;
 
 /**
 * Creates a new project editor instance with the specified project.pbxproj file.
 */
 - (id) initWithFilePath:(NSString*)filePath;
+
+- (id) initWithString:(NSString*)string;
 
 /**
 * Raw project data.

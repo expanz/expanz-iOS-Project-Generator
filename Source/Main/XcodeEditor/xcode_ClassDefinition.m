@@ -41,7 +41,6 @@
 /* ================================================ Interface Methods =============================================== */
 - (BOOL) isObjectiveC {
     return _language == ObjectiveC;
-
 }
 
 - (BOOL) isObjectiveCPlusPlus {

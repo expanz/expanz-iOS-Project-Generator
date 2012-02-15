@@ -8,19 +8,21 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
-@interface HCHasProperty : HCBaseMatcher
-{
-    NSString *propertyName;
+@interface HCHasProperty : HCBaseMatcher {
+    NSString* propertyName;
     id<HCMatcher> valueMatcher;
 }
 
-+ (id)hasProperty:(NSString *)property value:(id<HCMatcher>)aValueMatcher;
-- (id)initWithProperty:(NSString *)property value:(id<HCMatcher>)aValueMatcher;
++ (id) hasProperty:(NSString*)property value:(id<HCMatcher>)aValueMatcher;
+
+- (id) initWithProperty:(NSString*)property value:(id<HCMatcher>)aValueMatcher;
 
 @end
 
 
-OBJC_EXPORT id<HCMatcher> HC_hasProperty(NSString *name, id valueMatch);
+OBJC_EXPORT
+
+id<HCMatcher> HC_hasProperty(NSString* name, id valueMatch);
 
 /**
     hasProperty(name, valueMatcher) -

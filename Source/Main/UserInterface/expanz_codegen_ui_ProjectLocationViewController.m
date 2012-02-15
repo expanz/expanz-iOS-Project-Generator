@@ -25,7 +25,7 @@
     NSInteger indexOfSelectedFilePath = [_projectLocationCombo indexOfItemWithObjectValue:selectedProjectFilePath];
     if (indexOfSelectedFilePath == NSNotFound) {
         [_projectLocationCombo addItemWithObjectValue:selectedProjectFilePath];
-        [_projectLocationCombo selectItemAtIndex:[[_projectLocationCombo objectValues] count] -1];
+        [_projectLocationCombo selectItemAtIndex:[[_projectLocationCombo objectValues] count] - 1];
     }
     else {
         [_projectLocationCombo selectItemAtIndex:indexOfSelectedFilePath];

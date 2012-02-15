@@ -8,19 +8,21 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
-@interface HCIsEqualIgnoringWhiteSpace : HCBaseMatcher
-{
-    NSString *originalString;
-    NSString *strippedString;
+@interface HCIsEqualIgnoringWhiteSpace : HCBaseMatcher {
+    NSString* originalString;
+    NSString* strippedString;
 }
 
-+ (id)isEqualIgnoringWhiteSpace:(NSString *)aString;
-- (id)initWithString:(NSString *)aString;
++ (id) isEqualIgnoringWhiteSpace:(NSString*)aString;
+
+- (id) initWithString:(NSString*)aString;
 
 @end
 
 
-OBJC_EXPORT id<HCMatcher> HC_equalToIgnoringWhiteSpace(NSString *aString);
+OBJC_EXPORT
+
+id<HCMatcher> HC_equalToIgnoringWhiteSpace(NSString* aString);
 
 /**
     equalToIgnoringWhiteSpace(aString) -

@@ -16,4 +16,6 @@
     
     @ingroup helpers
 */
-OBJC_EXPORT void HCRequireNonNilString(NSString *string)    __attribute__((deprecated));
+OBJC_EXPORT
+
+void HCRequireNonNilString(NSString* string)    __attribute__((deprecated));

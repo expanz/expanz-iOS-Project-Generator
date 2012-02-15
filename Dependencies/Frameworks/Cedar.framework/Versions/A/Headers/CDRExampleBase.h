@@ -16,29 +16,34 @@ enum CDRExampleState {
 typedef enum CDRExampleState CDRExampleState;
 
 @interface CDRExampleBase : NSObject {
-  NSString *text_;
-  id<CDRExampleParent> parent_;
-  BOOL focused_;
+    NSString* text_;
+    id<CDRExampleParent> parent_;
+    BOOL focused_;
 }
 
-@property (nonatomic, readonly) NSString *text;
-@property (nonatomic, assign) id<CDRExampleParent> parent;
-@property (nonatomic, assign, getter=isFocused) BOOL focused;
+@property(nonatomic, readonly) NSString* text;
+@property(nonatomic, assign) id<CDRExampleParent> parent;
+@property(nonatomic, assign, getter=isFocused) BOOL focused;
 
-- (id)initWithText:(NSString *)text;
+- (id) initWithText:(NSString*)text;
 
-- (void)run;
-- (BOOL)shouldRun;
+- (void) run;
 
-- (BOOL)hasChildren;
-- (BOOL)hasFocusedExamples;
+- (BOOL) shouldRun;
 
-- (NSString *)message;
-- (NSString *)fullText;
-- (NSMutableArray *)fullTextInPieces;
+- (BOOL) hasChildren;
+
+- (BOOL) hasFocusedExamples;
+
+- (NSString*) message;
+
+- (NSString*) fullText;
+
+- (NSMutableArray*) fullTextInPieces;
 @end
 
 @interface CDRExampleBase (RunReporting)
-- (CDRExampleState)state;
-- (float)progress;
+- (CDRExampleState) state;
+
+- (float) progress;
 @end

@@ -15,9 +15,8 @@
 
     @ingroup helpers
  */
-@interface HCInvocationMatcher : HCBaseMatcher
-{
-    NSInvocation *invocation;
+@interface HCInvocationMatcher : HCBaseMatcher {
+    NSInvocation* invocation;
     id<HCMatcher> subMatcher;
     BOOL shortMismatchDescription;
 }
@@ -35,28 +34,28 @@
 
     A class is specified only so we can determine the method signature.
  */
-+ (NSInvocation *)invocationForSelector:(SEL)selector onClass:(Class)aClass;
++ (NSInvocation*) invocationForSelector:(SEL)selector onClass:(Class)aClass;
 
 /**
     Helper method for creating an invocation.
  
     @b Deprecated: Use new name +invocationForSelector:onClass:
  */
-+ (NSInvocation *)createInvocationForSelector:(SEL)selector onClass:(Class)aClass   __attribute__((deprecated));
++ (NSInvocation*) createInvocationForSelector:(SEL)selector onClass:(Class)aClass   __attribute__((deprecated));
 
 /**
     Returns an HCInvocationMatcher object initialized with an invocation and a matcher.
  */
-- (id)initWithInvocation:(NSInvocation *)anInvocation matching:(id<HCMatcher>)aMatcher;
+- (id) initWithInvocation:(NSInvocation*)anInvocation matching:(id<HCMatcher>)aMatcher;
 
 /**
     Invokes stored invocation on given item and returns the result.
  */
-- (id)invokeOn:(id)item;
+- (id) invokeOn:(id)item;
 
 /**
     Returns string representation of the invocation's selector.
  */
-- (NSString *)stringFromSelector;
+- (NSString*) stringFromSelector;
 
 @end

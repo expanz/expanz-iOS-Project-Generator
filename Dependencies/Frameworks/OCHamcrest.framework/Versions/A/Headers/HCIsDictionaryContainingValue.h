@@ -8,18 +8,20 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
-@interface HCIsDictionaryContainingValue : HCBaseMatcher
-{
+@interface HCIsDictionaryContainingValue : HCBaseMatcher {
     id<HCMatcher> valueMatcher;
 }
 
-+ (id)isDictionaryContainingValue:(id<HCMatcher>)theValueMatcher;
-- (id)initWithValueMatcher:(id<HCMatcher>)theValueMatcher;
++ (id) isDictionaryContainingValue:(id<HCMatcher>)theValueMatcher;
+
+- (id) initWithValueMatcher:(id<HCMatcher>)theValueMatcher;
 
 @end
 
 
-OBJC_EXPORT id<HCMatcher> HC_hasValue(id valueMatch);
+OBJC_EXPORT
+
+id<HCMatcher> HC_hasValue(id valueMatch);
 
 /**
     hasValue(valueMatcher) -

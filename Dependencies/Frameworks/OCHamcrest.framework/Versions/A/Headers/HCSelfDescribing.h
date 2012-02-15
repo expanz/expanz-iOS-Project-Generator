@@ -15,7 +15,7 @@
 
     @ingroup core
  */
-@protocol HCSelfDescribing <NSObject>
+@protocol HCSelfDescribing<NSObject>
 
 /**
     Generates a description of the object.
@@ -25,6 +25,6 @@
     
     @param description  The description to be built or appended to.
  */
-- (void)describeTo:(id<HCDescription>)description;
+- (void) describeTo:(id<HCDescription>)description;
 
 @end

@@ -16,8 +16,7 @@
 @class expanz_codegen_ui_ProjectLocationViewController;
 @class expanz_codegen_ui_ExpanzSettingsViewController;
 
-@interface expanz_codegen_ui_MainWindowController : NSWindowController<NSTableViewDataSource,
-    NSTableViewDelegate> {
+@interface expanz_codegen_ui_MainWindowController : NSWindowController<NSTableViewDataSource, NSTableViewDelegate> {
 
 @private
     NSView* _currentContentView;

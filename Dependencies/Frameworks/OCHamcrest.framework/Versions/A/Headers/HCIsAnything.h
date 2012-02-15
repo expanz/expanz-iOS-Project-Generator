@@ -8,21 +8,24 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
-@interface HCIsAnything : HCBaseMatcher
-{
-    NSString *description;
+@interface HCIsAnything : HCBaseMatcher {
+    NSString* description;
 }
 
-+ (id)isAnything;
-+ (id)isAnythingWithDescription:(NSString *)aDescription;
++ (id) isAnything;
 
-- (id)init;
-- (id)initWithDescription:(NSString *)aDescription;
++ (id) isAnythingWithDescription:(NSString*)aDescription;
+
+- (id) init;
+
+- (id) initWithDescription:(NSString*)aDescription;
 
 @end
 
 
-OBJC_EXPORT id<HCMatcher> HC_anything();
+OBJC_EXPORT
+
+id<HCMatcher> HC_anything();
 
 /**
     Matches anything.
@@ -40,7 +43,9 @@ OBJC_EXPORT id<HCMatcher> HC_anything();
 #endif
 
 
-OBJC_EXPORT id<HCMatcher> HC_anythingWithDescription(NSString *aDescription);
+OBJC_EXPORT
+
+id<HCMatcher> HC_anythingWithDescription(NSString* aDescription);
 
 /**
     anythingWithDescription(description) -

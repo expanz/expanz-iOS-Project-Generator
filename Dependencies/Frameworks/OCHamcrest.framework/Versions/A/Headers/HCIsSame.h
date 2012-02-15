@@ -8,18 +8,20 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
-@interface HCIsSame : HCBaseMatcher
-{
+@interface HCIsSame : HCBaseMatcher {
     id object;
 }
 
-+ (id)isSameAs:(id)anObject;
-- (id)initSameAs:(id)anObject;
++ (id) isSameAs:(id)anObject;
+
+- (id) initSameAs:(id)anObject;
 
 @end
 
 
-OBJC_EXPORT id<HCMatcher> HC_sameInstance(id object);
+OBJC_EXPORT
+
+id<HCMatcher> HC_sameInstance(id object);
 
 /**
     sameInstance(anObject) -

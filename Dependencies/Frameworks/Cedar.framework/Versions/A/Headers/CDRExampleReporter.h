@@ -1,9 +1,11 @@
 #import <Foundation/Foundation.h>
 
-@protocol CDRExampleReporter <NSObject>
+@protocol CDRExampleReporter<NSObject>
 
-- (void)runWillStartWithGroups:(NSArray *)groups;
-- (void)runDidComplete;
-- (int)result;
+- (void) runWillStartWithGroups:(NSArray*)groups;
+
+- (void) runDidComplete;
+
+- (int) result;
 
 @end

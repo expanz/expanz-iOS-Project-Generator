@@ -11,6 +11,8 @@
 
 #import "AppDelegate.h"
 #import "../UserInterface/expanz_codegen_ui_MainWindowController.h"
+#import "LRRestyResponse.h"
+#import "LRResty.h"
 
 @implementation AppDelegate
 
@@ -25,14 +27,21 @@
     NSArray* args = [[NSProcessInfo processInfo] arguments];
     for (NSString* arg in args) {
         if ([arg hasPrefix:@"-expanzProjectDirectory"]) {
-            projectFilePath = [[[arg
-                stringByReplacingOccurrencesOfString:@"-expanzProjectDirectory=" withString:@""]
+            projectFilePath = [[[arg stringByReplacingOccurrencesOfString:@"-expanzProjectDirectory=" withString:@""]
                 stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]
                 stringByReplacingOccurrencesOfString:@"\"" withString:@""];
 
             LogDebug(@"Project file path is: %@", projectFilePath);
         }
     }
+
+    [[LRResty client] get:@"http://www.google.com" withBlock:^(LRRestyResponse* response) {
+
+        if (response.status == 200) {
+            NSLog(@"Successful response %@", [response asString]);
+        }
+    }];
+
     _windowController = [[MainWindowController alloc] initWithProjectFilePath:projectFilePath];
     [_windowController showWindow:self];
 }

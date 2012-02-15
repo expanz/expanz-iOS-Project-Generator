@@ -22,9 +22,9 @@ typedef enum {
     ClassDefinitionLanguage _language;
 }
 
-@property (strong, nonatomic, readonly) NSString* className;
-@property (nonatomic, strong) NSString* header;
-@property (nonatomic, strong) NSString* source;
+@property(strong, nonatomic, readonly) NSString* className;
+@property(nonatomic, strong) NSString* header;
+@property(nonatomic, strong) NSString* source;
 
 /**
 * Initializes a new objective-c class definition.
@@ -40,7 +40,7 @@ typedef enum {
 
 - (BOOL) isObjectiveCPlusPlus;
 
-- (NSString*) headerFileName; 
+- (NSString*) headerFileName;
 
 - (NSString*) sourceFileName;
 

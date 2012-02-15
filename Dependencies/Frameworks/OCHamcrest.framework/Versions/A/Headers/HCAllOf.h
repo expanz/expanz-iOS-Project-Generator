@@ -8,18 +8,20 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
-@interface HCAllOf : HCBaseMatcher
-{
-    NSArray *matchers;
+@interface HCAllOf : HCBaseMatcher {
+    NSArray* matchers;
 }
 
-+ (id)allOf:(NSArray *)theMatchers;
-- (id)initWithMatchers:(NSArray *)theMatchers;
++ (id) allOf:(NSArray*)theMatchers;
+
+- (id) initWithMatchers:(NSArray*)theMatchers;
 
 @end
 
 
-OBJC_EXPORT id<HCMatcher> HC_allOf(id match, ...) NS_REQUIRES_NIL_TERMINATION;
+OBJC_EXPORT
+
+id<HCMatcher> HC_allOf(id match, ...) NS_REQUIRES_NIL_TERMINATION;
 
 /**
     allOf(firstMatcher, ...) -

@@ -8,18 +8,20 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
-@interface HCIsInstanceOf : HCBaseMatcher
-{
+@interface HCIsInstanceOf : HCBaseMatcher {
     Class theClass;
 }
 
-+ (id)isInstanceOf:(Class)type;
-- (id)initWithType:(Class)type;
++ (id) isInstanceOf:(Class)type;
+
+- (id) initWithType:(Class)type;
 
 @end
 
 
-OBJC_EXPORT id<HCMatcher> HC_instanceOf(Class aClass);
+OBJC_EXPORT
+
+id<HCMatcher> HC_instanceOf(Class aClass);
 
 /**
     instanceOf(aClass) -

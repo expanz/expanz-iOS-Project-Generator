@@ -14,4 +14,6 @@
     
     @ingroup helpers
 */
-OBJC_EXPORT void HCRequireNonNilObject(id obj);
+OBJC_EXPORT
+
+void HCRequireNonNilObject(id obj);

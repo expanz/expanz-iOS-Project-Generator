@@ -8,11 +8,10 @@
 #import <OCHamcrest/HCBaseMatcher.h>
 
 
-@interface HCSubstringMatcher : HCBaseMatcher
-{
-    NSString *substring;
+@interface HCSubstringMatcher : HCBaseMatcher {
+    NSString* substring;
 }
 
-- (id)initWithSubstring:(NSString *)aString;
+- (id) initWithSubstring:(NSString*)aString;
 
 @end

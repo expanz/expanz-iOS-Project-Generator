@@ -18,4 +18,6 @@
     
     @ingroup helpers
 */
-OBJC_EXPORT NSMutableArray *HCCollectMatchers(id item1, va_list args);
+OBJC_EXPORT
+
+NSMutableArray* HCCollectMatchers(id item1, va_list args);

@@ -20,6 +20,7 @@ typedef enum {
 @interface NSString (XCodeProjectFileType)
 
 + (NSString*) stringFromProjectFileType:(XcodeProjectFileType)type;
+
 - (XcodeProjectFileType) asProjectFileType;
 
 @end
