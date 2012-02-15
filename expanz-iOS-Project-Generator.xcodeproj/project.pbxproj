@@ -263,11 +263,12 @@
 		6BD1B47314EBB10B00F5AD1C /* KeyBuilderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B783BC614AD8CF90087E522 /* KeyBuilderSpec.m */; };
 		6BD1B47514EBB6D900F5AD1C /* XcodeFileReferenceTypeSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E49A /* XcodeFileReferenceTypeSpec.m */; };
 		6BD1B47614EBB6FA00F5AD1C /* ProjectSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B783BC414AD8CF90087E522 /* ProjectSpec.m */; };
+		6BD1B48514EBC40E00F5AD1C /* libprofile_rt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD1B48414EBC40E00F5AD1C /* libprofile_rt.dylib */; };
+		6BD1B48714EBC86600F5AD1C /* libLRResty.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB4D87414EB61E000DC153B /* libLRResty.a */; };
 		6BD5341E14E61DAA0009196B /* expanzSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD5341D14E61DAA0009196B /* expanzSettings.xib */; };
 		6BD5342314E668090009196B /* expanz_codegen_ui_ExpanzSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD5342114E668090009196B /* expanz_codegen_ui_ExpanzSettingsViewController.m */; };
 		6BE4B2B4147E6D3C0059E4CD /* expanz_codegen_PluginLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E4CB /* expanz_codegen_PluginLoader.m */; };
 		6BE4B2B4147E6D3C0059E4D9 /* expanz_codegen_model_ProcessStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E4D7 /* expanz_codegen_model_ProcessStep.m */; };
-		6BE4B2B4147E6D3C0059E4DC /* (null) in Resources */ = {isa = PBXBuildFile; };
 		6BE4B2B4147E6D3C0059E4E4 /* expanz_codegen_ui_ProjectLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E4E2 /* expanz_codegen_ui_ProjectLocationViewController.m */; };
 		6BE4B2B4147E6D3C0059E4EF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E4EE /* InfoPlist.strings */; };
 		6BE4B2B4147E6D3C0059E4F1 /* ServiceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E4F0 /* ServiceSpec.m */; };
@@ -287,6 +288,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 6BB4D8ED14EB630400DC153B;
 			remoteInfo = Kiwi;
+		};
+		6BD1B48814EBC8E700F5AD1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6BC10157147775A40055CF03 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6BB4D87314EB61E000DC153B;
+			remoteInfo = LRResty;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -566,6 +574,8 @@
 		6BCEC02C14BBD9D600538D1D /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		6BCEDDEF14C034D40089804B /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		6BD1B46114EBABB000F5AD1C /* project.pbxproj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = project.pbxproj; sourceTree = "<group>"; };
+		6BD1B48214EBC3C000F5AD1C /* libprofile_rt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libprofile_rt.dylib; path = usr/local/lib/libprofile_rt.dylib; sourceTree = SDKROOT; };
+		6BD1B48414EBC40E00F5AD1C /* libprofile_rt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libprofile_rt.dylib; path = usr/lib/libprofile_rt.dylib; sourceTree = DEVELOPER_DIR; };
 		6BD5341D14E61DAA0009196B /* expanzSettings.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = expanzSettings.xib; sourceTree = "<group>"; };
 		6BD5342014E668090009196B /* expanz_codegen_ui_ExpanzSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_codegen_ui_ExpanzSettingsViewController.h; sourceTree = "<group>"; };
 		6BD5342114E668090009196B /* expanz_codegen_ui_ExpanzSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_codegen_ui_ExpanzSettingsViewController.m; sourceTree = "<group>"; };
@@ -592,6 +602,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BD1B48514EBC40E00F5AD1C /* libprofile_rt.dylib in Frameworks */,
 				6BB4DA2D14EB637E00DC153B /* libKiwi.a in Frameworks */,
 				6BB4D8E914EB623500DC153B /* libLRResty.a in Frameworks */,
 				6B55223714EA723700494CF3 /* SenTestingKit.framework in Frameworks */,
@@ -603,6 +614,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BD1B48714EBC86600F5AD1C /* libLRResty.a in Frameworks */,
 				6B789B7E14E37ACB00DAA872 /* Quartz.framework in Frameworks */,
 				6B789B7F14E37ACB00DAA872 /* QuartzCore.framework in Frameworks */,
 				6B9FD26714BEF008006F8D04 /* Cocoa.framework in Frameworks */,
@@ -1007,6 +1019,8 @@
 		6BC10155147775A40055CF03 = {
 			isa = PBXGroup;
 			children = (
+				6BD1B48414EBC40E00F5AD1C /* libprofile_rt.dylib */,
+				6BD1B48214EBC3C000F5AD1C /* libprofile_rt.dylib */,
 				6BE4B285147E6B610059E44D /* Source */,
 				6BB4D87614EB61E000DC153B /* LRResty */,
 				6BB4D8F014EB630400DC153B /* Kiwi */,
@@ -1279,8 +1293,8 @@
 				6B55223114EA723700494CF3 /* Sources */,
 				6B55223214EA723700494CF3 /* Frameworks */,
 				6B55223314EA723700494CF3 /* Resources */,
-				6B55223414EA723700494CF3 /* ShellScript */,
 				6BD1B46314EBAD0E00F5AD1C /* CopyFiles */,
+				6B55223414EA723700494CF3 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1304,6 +1318,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				6BD1B48914EBC8E700F5AD1C /* PBXTargetDependency */,
 			);
 			name = "Model-Object-Explorer";
 			productName = "Model-Object-Explorer";
@@ -1411,7 +1426,6 @@
 				6BB72DCD14BEF9A9005A5961 /* MainMenu.xib in Resources */,
 				6BCEDDF014C034D40089804B /* MainWindow.xib in Resources */,
 				6B225D9C14E0B43500B0F735 /* expanz.png in Resources */,
-				6BE4B2B4147E6D3C0059E4DC /* (null) in Resources */,
 				6B789B7A14E3656300DAA872 /* ProjectLocation.xib in Resources */,
 				6BD5341E14E61DAA0009196B /* expanzSettings.xib in Resources */,
 				6B5522D714EA725400494CF3 /* README in Resources */,
@@ -1617,6 +1631,11 @@
 			target = 6BB4D8ED14EB630400DC153B /* Kiwi */;
 			targetProxy = 6BB4DA2B14EB637700DC153B /* PBXContainerItemProxy */;
 		};
+		6BD1B48914EBC8E700F5AD1C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6BB4D87314EB61E000DC153B /* LRResty */;
+			targetProxy = 6BD1B48814EBC8E700F5AD1C /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -1655,6 +1674,7 @@
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
 					"\"$(SRCROOT)/Dependencies/Frameworks\"",
 				);
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Source/Tests/Tests-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -1664,6 +1684,14 @@
 					"\"$(SRCROOT)/Dependencies/External/LRResty\"",
 				);
 				INFOPLIST_FILE = "Source/Tests/Tests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_DIR)/usr/lib\"",
+				);
+				OTHER_CFLAGS = (
+					"-ftest-coverage",
+					"-fprofile-arcs",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
@@ -1681,6 +1709,7 @@
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
 					"\"$(SRCROOT)/Dependencies/Frameworks\"",
 				);
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Source/Tests/Tests-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -1690,6 +1719,14 @@
 					"\"$(SRCROOT)/Dependencies/External/LRResty\"",
 				);
 				INFOPLIST_FILE = "Source/Tests/Tests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_DIR)/usr/lib\"",
+				);
+				OTHER_CFLAGS = (
+					"-ftest-coverage",
+					"-fprofile-arcs",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
@@ -1712,9 +1749,16 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Main/Resources/Prefix.pch;
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Dependencies/Libraries/LRResty";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/Dependencies/External/LRResty\"",
+					"\"$(SRCROOT)/Dependencies/External/LRResty/Categories\"",
+				);
 				INFOPLIST_FILE = Source/Main/Resources/Info.plist;
 				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = NO;
 				STRIP_INSTALLED_PRODUCT = YES;
@@ -1735,9 +1779,16 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Main/Resources/Prefix.pch;
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Dependencies/Libraries/LRResty";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/Dependencies/External/LRResty\"",
+					"\"$(SRCROOT)/Dependencies/External/LRResty/Categories\"",
+				);
 				INFOPLIST_FILE = Source/Main/Resources/Info.plist;
 				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = NO;
 				STRIP_INSTALLED_PRODUCT = YES;

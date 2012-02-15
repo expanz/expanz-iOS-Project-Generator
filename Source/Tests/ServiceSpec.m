@@ -18,7 +18,7 @@ SPEC_BEGIN(ExampleAsyncSpec)
         it(@"should receive data within one second", ^{
 
             [[LRResty client] get:@"http://www.example.com" withBlock:^(LRRestyResponse* r) {
-                NSLog(@"That's it! %@", [r asString]);
+                //NSLog(@"That's it! %@", [r asString]);
                 fetchedData = [r asString];
             }];
 

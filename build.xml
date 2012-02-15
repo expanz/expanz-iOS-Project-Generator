@@ -20,7 +20,6 @@
     --clean,
     --make.dirs,
     --unit.tests.build,
-    --tests.run,
     --assemble.coverage.data,
     --coverage.report,
     --api.report,
@@ -67,6 +66,9 @@
         <exec executable="xcodebuild" failonerror="true">
             <arg line="-target ${tests.target.name}"/>
         </exec>
+
+        <fail if="tests.failed" message="Tests failed. Report is at ${tests.report}"/>
+        <fail if="tests.exception" message="Tests failed. Report is at ${tests.report}"/>
     </target>
 
     <target name="--application.build">
@@ -88,39 +90,6 @@
         </exec>
     </target>
 
-    <target name="--tests.run">
-        <mkdir dir="${reports.dir}/tests"/>
-        <property name="tests.report" value="${reports.dir}/tests/test-results.txt"/>
-        <exec executable="${basedir}/build/Release/${tests.target.name}" outputproperty="tests.output"
-              failonerror="false"
-              failifexecutionfails="true">
-            <env key="PATH" path="${env.PATH}:${basedir}/bin"/>
-        </exec>
-
-        <!-- Write report to disk -->
-        <echo file="${tests.report}" message="${tests.output}"/>
-        <!-- Print report to console -->
-        <echo message="${tests.output}"/>
-
-        <loadfile srcfile="${tests.report}" property="tests.failed">
-            <filterchain>
-                <filterreader classname="org.apache.tools.ant.filters.LineContains">
-                    <param type="contains" value="FAILURE"/>
-                </filterreader>
-            </filterchain>
-        </loadfile>
-
-        <loadfile srcfile="${tests.report}" property="tests.exception">
-            <filterchain>
-                <filterreader classname="org.apache.tools.ant.filters.LineContains">
-                    <param type="contains" value="EXCEPTION"/>
-                </filterreader>
-            </filterchain>
-        </loadfile>
-
-        <fail if="tests.failed" message="Tests failed. Report is at ${tests.report}"/>
-        <fail if="tests.exception" message="Tests failed. Report is at ${tests.report}"/>
-    </target>
 
     <target name="--assemble.coverage.data">
         <mkdir dir="${temp.dir}/coverage-data"/>
@@ -165,8 +134,7 @@
 
         <echo file="${temp.dir}/genhtml.sh">
             #!/bin/sh
-            genhtml -p ${source.main.dir} --no-function-coverage --no-branch-coverage -o ${coverage.reports.dir}
-            ${temp.dir}/coverage.info
+            genhtml -p ${source.main.dir} --no-function-coverage --no-branch-coverage -o ${coverage.reports.dir} ${temp.dir}/coverage.info
         </echo>
         <chmod perm="+x" file="${temp.dir}/genhtml.sh"/>
         <exec executable="${temp.dir}/genhtml.sh" failonerror="true" failifexecutionfails="true"/>
