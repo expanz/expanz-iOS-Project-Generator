@@ -10,6 +10,9 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
+#import <LRRestyResponse.h>
+#import <LRResty.h>
+
 SPEC_BEGIN(ExampleAsyncSpec)
 
     __block NSString* fetchedData; 
@@ -18,11 +21,11 @@ SPEC_BEGIN(ExampleAsyncSpec)
         it(@"should receive data within one second", ^{
 
             [[LRResty client] get:@"http://www.example.com" withBlock:^(LRRestyResponse* r) {
-                //NSLog(@"That's it! %@", [r asString]);
+                NSLog(@"That's it! %@", [r asString]);
                 fetchedData = [r asString];
             }];
 
-            assertWillHappen(fetchedData != nil);
+            [[expectFutureValue(fetchedData) shouldEventually] beNonNil];
 
 
         });
