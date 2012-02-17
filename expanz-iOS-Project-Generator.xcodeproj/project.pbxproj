@@ -22,6 +22,8 @@
 		6B9FD26714BEF008006F8D04 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC10164147775A40055CF03 /* Cocoa.framework */; };
 		6B9FD26F14BEF008006F8D04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9FD26E14BEF008006F8D04 /* main.m */; };
 		6B9FD27614BEF008006F8D04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9FD27514BEF008006F8D04 /* AppDelegate.m */; };
+		6BAD70E914EE3516001E6A23 /* ListAvailableSitesResponse.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BAD70E814EE3516001E6A23 /* ListAvailableSitesResponse.xml */; };
+		6BAD70EB14EE351D001E6A23 /* ListAvailableSitesResponse.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6BAD70E814EE3516001E6A23 /* ListAvailableSitesResponse.xml */; };
 		6BB4DA2E14EB731700DC153B /* ClassDefinitionSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B783BC314AD8CF90087E522 /* ClassDefinitionSpec.m */; };
 		6BB4DA4814EB851700DC153B /* xcode_ClassDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB4DA3714EB851700DC153B /* xcode_ClassDefinition.m */; };
 		6BB4DA4914EB851700DC153B /* xcode_ClassDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB4DA3714EB851700DC153B /* xcode_ClassDefinition.m */; };
@@ -78,6 +80,13 @@
 		6BE4B2B4147E6D3C0059E4EF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E4EE /* InfoPlist.strings */; };
 		6BE4B2B4147E6D3C0059E4F1 /* ServiceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E4F0 /* ServiceSpec.m */; };
 		6BE4B2B4147E6D3C0059E4F4 /* SdkConfigurationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E4F3 /* SdkConfigurationSpec.m */; };
+		6BE4B2B4147E6D3C0059E4FB /* RXMLElement+ListAvailableSitesXResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E4FA /* RXMLElement+ListAvailableSitesXResponse.m */; };
+		6BE4B2B4147E6D3C0059E4FC /* RXMLElement+ListAvailableSitesXResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E4FA /* RXMLElement+ListAvailableSitesXResponse.m */; };
+		6BE4B2B4147E6D3C0059E4FF /* expanz_service_XmlPostWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E4FE /* expanz_service_XmlPostWebService.m */; };
+		6BE4B2B4147E6D3C0059E500 /* expanz_service_XmlPostWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E4FE /* expanz_service_XmlPostWebService.m */; };
+		6BE4B2B4147E6D3C0059E503 /* expanz_model_AppSite.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E502 /* expanz_model_AppSite.m */; };
+		6BE4B2B4147E6D3C0059E504 /* expanz_model_AppSite.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E502 /* expanz_model_AppSite.m */; };
+		6BE4B2B4147E6D3C0059E508 /* RXMLElement_ListAvailableSitesXResponseSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E507 /* RXMLElement_ListAvailableSitesXResponseSpec.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -89,6 +98,7 @@
 			files = (
 				6BBD6C8714ECD8DC00451BA2 /* production_environment.xml in CopyFiles */,
 				6BD1B46414EBAD1B00F5AD1C /* project.pbxproj in CopyFiles */,
+				6BAD70EB14EE351D001E6A23 /* ListAvailableSitesResponse.xml in CopyFiles */,
 				6BD1B46514EBAD1C00F5AD1C /* ESA_Sales_Foobar_ViewController.header in CopyFiles */,
 				6BD1B46614EBAD1E00F5AD1C /* ESA_Sales_Foobar_ViewController.impl in CopyFiles */,
 			);
@@ -119,6 +129,8 @@
 		6B9FD26E14BEF008006F8D04 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6B9FD27414BEF008006F8D04 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6B9FD27514BEF008006F8D04 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6BAD70DA14EE31FE001E6A23 /* xml_Serializable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xml_Serializable.h; sourceTree = "<group>"; };
+		6BAD70E814EE3516001E6A23 /* ListAvailableSitesResponse.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ListAvailableSitesResponse.xml; sourceTree = "<group>"; };
 		6BB4D88114EB61F900DC153B /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
 		6BB4D88214EB61F900DC153B /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 		6BB4D88314EB61F900DC153B /* NSDictionary+QueryString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+QueryString.h"; sourceTree = "<group>"; };
@@ -386,6 +398,13 @@
 		6BE4B2B4147E6D3C0059E4F0 /* ServiceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceSpec.m; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E4F2 /* SpecHelper2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecHelper2.h; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E4F3 /* SdkConfigurationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SdkConfigurationSpec.m; sourceTree = "<group>"; };
+		6BE4B2B4147E6D3C0059E4F9 /* RXMLElement+ListAvailableSitesXResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RXMLElement+ListAvailableSitesXResponse.h"; sourceTree = "<group>"; };
+		6BE4B2B4147E6D3C0059E4FA /* RXMLElement+ListAvailableSitesXResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RXMLElement+ListAvailableSitesXResponse.m"; sourceTree = "<group>"; };
+		6BE4B2B4147E6D3C0059E4FD /* expanz_service_XmlPostWebService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_XmlPostWebService.h; sourceTree = "<group>"; };
+		6BE4B2B4147E6D3C0059E4FE /* expanz_service_XmlPostWebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_XmlPostWebService.m; sourceTree = "<group>"; };
+		6BE4B2B4147E6D3C0059E501 /* expanz_model_AppSite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_AppSite.h; sourceTree = "<group>"; };
+		6BE4B2B4147E6D3C0059E502 /* expanz_model_AppSite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_AppSite.m; sourceTree = "<group>"; };
+		6BE4B2B4147E6D3C0059E507 /* RXMLElement_ListAvailableSitesXResponseSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMLElement_ListAvailableSitesXResponseSpec.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -451,6 +470,7 @@
 		6B783BBB14AD8CF90087E522 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6BAD70E814EE3516001E6A23 /* ListAvailableSitesResponse.xml */,
 				6BBD6C7814ECB73200451BA2 /* production_environment.xml */,
 				6BD1B46114EBABB000F5AD1C /* project.pbxproj */,
 				6B783BBC14AD8CF90087E522 /* ESA_Sales_Foobar_ViewController.header */,
@@ -464,6 +484,7 @@
 			children = (
 				6BE4B2B4147E6D3C0059E4DD /* XcodeEditor */,
 				6BE4B2B4147E6D3C0059E4F5 /* Assembly */,
+				6BE4B2B4147E6D3C0059E505 /* Services */,
 			);
 			path = Unit;
 			sourceTree = "<group>";
@@ -480,13 +501,23 @@
 		6B783BCF14AD8D190087E522 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				6BAD70D914EE31FE001E6A23 /* Utils */,
 				6BB4DA3514EB851700DC153B /* XcodeEditor */,
 				6BB72DB414BEF9A9005A5961 /* UserInterface */,
 				6BCEC02614BBD9D600538D1D /* Resources */,
 				6BE4B2B4147E6D3C0059E4D3 /* Assembly */,
 				6BE4B2B4147E6D3C0059E4D6 /* Model */,
+				6BE4B2B4147E6D3C0059E4F6 /* Services */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		6BAD70D914EE31FE001E6A23 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6BAD70DA14EE31FE001E6A23 /* xml_Serializable.h */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		6BB4D87F14EB61F900DC153B /* LRResty */ = {
@@ -781,7 +812,6 @@
 		6BC10155147775A40055CF03 = {
 			isa = PBXGroup;
 			children = (
-				6BBD6C9614ECF28200451BA2 /* libz.dylib */,
 				6BE4B285147E6B610059E44D /* Source */,
 				6BC10163147775A40055CF03 /* Frameworks */,
 				6B105A041479CF9A002DEBCE /* External */,
@@ -802,6 +832,7 @@
 		6BC10163147775A40055CF03 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6BBD6C9614ECF28200451BA2 /* libz.dylib */,
 				6BD1B48214EBC3C000F5AD1C /* libprofile_rt.dylib */,
 				6B789B7D14E37ACB00DAA872 /* QuartzCore.framework */,
 				6B789B7C14E37ACB00DAA872 /* Quartz.framework */,
@@ -872,6 +903,8 @@
 		6BE4B2B4147E6D3C0059E4D6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6BE4B2B4147E6D3C0059E502 /* expanz_model_AppSite.m */,
+				6BE4B2B4147E6D3C0059E501 /* expanz_model_AppSite.h */,
 				6BE4B2B4147E6D3C0059E4DA /* expanz_codegen_model_ProcessStep.h */,
 				6BE4B2B4147E6D3C0059E4D7 /* expanz_codegen_model_ProcessStep.m */,
 			);
@@ -919,6 +952,49 @@
 				6BE4B2B4147E6D3C0059E4F3 /* SdkConfigurationSpec.m */,
 			);
 			path = Assembly;
+			sourceTree = "<group>";
+		};
+		6BE4B2B4147E6D3C0059E4F6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				6BE4B2B4147E6D3C0059E4FE /* expanz_service_XmlPostWebService.m */,
+				6BE4B2B4147E6D3C0059E4FD /* expanz_service_XmlPostWebService.h */,
+				6BE4B2B4147E6D3C0059E4F7 /* AppSite */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		6BE4B2B4147E6D3C0059E4F7 /* AppSite */ = {
+			isa = PBXGroup;
+			children = (
+				6BE4B2B4147E6D3C0059E4F8 /* Payload */,
+			);
+			path = AppSite;
+			sourceTree = "<group>";
+		};
+		6BE4B2B4147E6D3C0059E4F8 /* Payload */ = {
+			isa = PBXGroup;
+			children = (
+				6BE4B2B4147E6D3C0059E4FA /* RXMLElement+ListAvailableSitesXResponse.m */,
+				6BE4B2B4147E6D3C0059E4F9 /* RXMLElement+ListAvailableSitesXResponse.h */,
+			);
+			path = Payload;
+			sourceTree = "<group>";
+		};
+		6BE4B2B4147E6D3C0059E505 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				6BE4B2B4147E6D3C0059E506 /* AppSite */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		6BE4B2B4147E6D3C0059E506 /* AppSite */ = {
+			isa = PBXGroup;
+			children = (
+				6BE4B2B4147E6D3C0059E507 /* RXMLElement_ListAvailableSitesXResponseSpec.m */,
+			);
+			path = AppSite;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1016,6 +1092,7 @@
 				6BB4DA6914EB92FA00DC153B /* ESA_Sales_Foobar_ViewController.impl in Resources */,
 				6BD1B46214EBABB000F5AD1C /* project.pbxproj in Resources */,
 				6BBD6C7914ECB73200451BA2 /* production_environment.xml in Resources */,
+				6BAD70E914EE3516001E6A23 /* ListAvailableSitesResponse.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1085,6 +1162,10 @@
 				6BBD6C9114ECDABC00451BA2 /* NSDataAdditions.m in Sources */,
 				6BBD6C9314ECDABC00451BA2 /* RXMLElement.m in Sources */,
 				6BBD6C9514ECDABC00451BA2 /* TBXML.m in Sources */,
+				6BE4B2B4147E6D3C0059E4FC /* RXMLElement+ListAvailableSitesXResponse.m in Sources */,
+				6BE4B2B4147E6D3C0059E500 /* expanz_service_XmlPostWebService.m in Sources */,
+				6BE4B2B4147E6D3C0059E504 /* expanz_model_AppSite.m in Sources */,
+				6BE4B2B4147E6D3C0059E508 /* RXMLElement_ListAvailableSitesXResponseSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1111,6 +1192,9 @@
 				6BBD6C9014ECDABC00451BA2 /* NSDataAdditions.m in Sources */,
 				6BBD6C9214ECDABC00451BA2 /* RXMLElement.m in Sources */,
 				6BBD6C9414ECDABC00451BA2 /* TBXML.m in Sources */,
+				6BE4B2B4147E6D3C0059E4FB /* RXMLElement+ListAvailableSitesXResponse.m in Sources */,
+				6BE4B2B4147E6D3C0059E4FF /* expanz_service_XmlPostWebService.m in Sources */,
+				6BE4B2B4147E6D3C0059E503 /* expanz_model_AppSite.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

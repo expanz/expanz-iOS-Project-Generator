@@ -22,7 +22,7 @@
 		<key>Tests.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>0</integer>
 		</dict>
 		<key>xcodePlugin.xcscheme</key>
 		<dict>
