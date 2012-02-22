@@ -10,11 +10,19 @@
 ////////////////////////////////////////////////////////////////////////////////
 #import <Foundation/Foundation.h>
 #import <Cocoa/Cocoa.h>
+#import "expanz_service_SiteClient.h"
 
-@interface expanz_codegen_ui_ExpanzSettingsViewController : NSViewController
+@class JSObjectionInjector;
+
+@interface expanz_codegen_ui_ExpanzSettingsViewController : NSViewController<expanz_service_SiteClientDelegate> {
+
+@private
+    JSObjectionInjector* _injector;
+}
 
 @property(nonatomic, weak) IBOutlet NSComboBox* expanzBackendCombo;
 @property(nonatomic, strong) NSString* projectFilePath;
+@property(nonatomic, strong) id<expanz_service_SiteClient> siteClient;
 
 - (NSString*) supportingFilesPath;
 

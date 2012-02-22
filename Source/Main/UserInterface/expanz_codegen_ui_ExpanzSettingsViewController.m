@@ -9,17 +9,21 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 #import "expanz_codegen_ui_ExpanzSettingsViewController.h"
+#import "expanz_SdkConfiguration.h"
+#import "JSObjectionInjector.h"
+#import "JSObjection.h"
+#import "expanz_CoreModule.h"
 
 @implementation expanz_codegen_ui_ExpanzSettingsViewController
 
 @synthesize projectFilePath = _projectFilePath;
 @synthesize expanzBackendCombo = _expanzBackendCombo;
+@synthesize siteClient = _siteClient;
 
 
 /* ================================================ Interface Methods =============================================== */
 - (void) awakeFromNib {
     [super awakeFromNib];
-    LogDebug(@"Set action");
     [_expanzBackendCombo setTarget:self];
     [_expanzBackendCombo setAction:@selector(populateSiteList)];
 }
@@ -39,6 +43,17 @@
 }
 
 - (void) populateSiteList {
+    NSString* configFilePath =
+        [[self supportingFilesPath] stringByAppendingPathComponent:[_expanzBackendCombo objectValueOfSelectedItem]];
+
+    SdkConfiguration* configuration = [[SdkConfiguration alloc]
+        initWithXmlString:[NSString stringWithContentsOfFile:configFilePath encoding:NSUTF8StringEncoding error:nil]];
+    [SdkConfiguration setGlobalConfiguration:configuration];
+    LogDebug(@"Here's the configuration: %@", configuration);
+    _injector = [JSObjection createInjector:[[CoreModule alloc] init]];
+
+    _siteClient = [_injector getObject:@protocol(expanz_service_SiteClient)];
+    [_siteClient listAvailableSitesWith:self];
     LogDebug(@"Ok - now populate the site list with value: %@", [_expanzBackendCombo objectValueOfSelectedItem]);
 }
 
@@ -46,6 +61,16 @@
 - (NSString*) supportingFilesPath {
     return [[_projectFilePath stringByAppendingPathComponent:[_projectFilePath lastPathComponent]]
         stringByAppendingPathComponent:@"Supporting Files"];
+}
+
+/* ================================================= Protocol Methods =============================================== */
+- (void) requestDidFinishWithSiteList:(expanz_model_SiteList*)siteList {
+    LogDebug(@"Got site list: %@", siteList);
+
+}
+
+- (void) requestDidFailWithError:(NSError*)error {
+    LogDebug(@"Oh fuck! An error!");
 }
 
 
