@@ -10,9 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "AppDelegate.h"
-#import "../UserInterface/expanz_codegen_ui_MainWindowController.h"
-#import "LRRestyResponse.h"
-#import "LRResty.h"
+#import "expanz_codegen_ui_MainWindowController.h"
 
 @implementation AppDelegate
 
@@ -34,13 +32,6 @@
             LogDebug(@"Project file path is: %@", projectFilePath);
         }
     }
-
-    [[LRResty client] get:@"http://www.google.com" withBlock:^(LRRestyResponse* response) {
-
-        if (response.status == 200) {
-            NSLog(@"Successful response %@", [response asString]);
-        }
-    }];
 
     _windowController = [[MainWindowController alloc] initWithProjectFilePath:projectFilePath];
     [_windowController showWindow:self];

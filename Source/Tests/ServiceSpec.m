@@ -10,8 +10,8 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-#import <LRRestyResponse.h>
-#import <LRResty.h>
+#import <LRResty/LRRestyResponse.h>
+#import <LRResty/LRResty.h>
 
 SPEC_BEGIN(ExampleAsyncSpec)
 
