@@ -13,13 +13,9 @@
 
 @class expanz_codegen_ui_MainWindowController;
 
-@interface AppDelegate : NSObject<NSApplicationDelegate> {
-
-@private
-    expanz_codegen_ui_MainWindowController* _windowController;
-}
+@interface AppDelegate : NSObject<NSApplicationDelegate>
 
 @property(nonatomic, strong) NSWindow* window;
-
+@property(nonatomic, strong) expanz_codegen_ui_MainWindowController* windowController;
 
 @end

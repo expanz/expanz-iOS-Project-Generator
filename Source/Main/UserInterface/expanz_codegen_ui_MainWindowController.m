@@ -67,7 +67,9 @@
         [_processStepsTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:1] byExtendingSelection:NO];
         [_expanzSettingsViewController
             setProjectFilePath:[_projectLocationViewController.projectLocationCombo objectValueOfSelectedItem]];
-        [_expanzSettingsViewController populateExpanzBackendCombo];
+        if ([_expanzSettingsViewController configFilesNeedLoading]) {
+            [_expanzSettingsViewController populateExpanzBackendCombo];
+        }
         [self setContentView:_expanzSettingsViewController.view];
     }
     else if (_currentStep == [ProcessStep activities]) {

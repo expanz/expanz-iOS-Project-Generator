@@ -15,6 +15,7 @@
 @implementation AppDelegate
 
 @synthesize window = _window;
+@synthesize windowController = _windowController;
 
 /* ================================================ Interface Methods =============================================== */
 - (void) applicationDidFinishLaunching:(NSNotification*)aNotification {

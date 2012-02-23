@@ -13,17 +13,22 @@
 #import "JSObjectionInjector.h"
 #import "JSObjection.h"
 #import "expanz_CoreModule.h"
+#import "expanz_model_SiteList.h"
+#import "expanz_model_AppSite.h"
 
 @implementation expanz_codegen_ui_ExpanzSettingsViewController
 
 @synthesize projectFilePath = _projectFilePath;
 @synthesize expanzBackendCombo = _expanzBackendCombo;
 @synthesize siteClient = _siteClient;
+@synthesize siteListTableView = _siteListTableView;
+@synthesize configFilesNeedLoading = _configFilesNeedLoading;
 
 
 /* ================================================ Interface Methods =============================================== */
 - (void) awakeFromNib {
     [super awakeFromNib];
+    _configFilesNeedLoading = YES;
     [_expanzBackendCombo setTarget:self];
     [_expanzBackendCombo setAction:@selector(populateSiteList)];
 }
@@ -39,7 +44,8 @@
         }
     }
     [_expanzBackendCombo selectItemAtIndex:0];
-    [self populateSiteList];
+    _configFilesNeedLoading = NO;
+    [self performSelectorInBackground:@selector(populateSiteList) withObject:nil];
 }
 
 - (void) populateSiteList {
@@ -48,6 +54,7 @@
 
     SdkConfiguration* configuration = [[SdkConfiguration alloc]
         initWithXmlString:[NSString stringWithContentsOfFile:configFilePath encoding:NSUTF8StringEncoding error:nil]];
+    [SdkConfiguration clearGlobalConfiguration];
     [SdkConfiguration setGlobalConfiguration:configuration];
     LogDebug(@"Here's the configuration: %@", configuration);
     _injector = [JSObjection createInjector:[[CoreModule alloc] init]];
@@ -66,11 +73,33 @@
 /* ================================================= Protocol Methods =============================================== */
 - (void) requestDidFinishWithSiteList:(expanz_model_SiteList*)siteList {
     LogDebug(@"Got site list: %@", siteList);
+    _siteList = siteList;
+    [_siteListTableView reloadData];
+}
+
+
+- (NSInteger) numberOfRowsInTableView:(NSTableView*)tableView {
+    return [[_siteList sites] count];
 
 }
 
-- (void) requestDidFailWithError:(NSError*)error {
-    LogDebug(@"Oh fuck! An error!");
+- (id) tableView:(NSTableView*)tableView objectValueForTableColumn:(NSTableColumn*)tableColumn row:(NSInteger)row {
+    AppSite* site = [[_siteList sites] objectAtIndex:row];
+    NSString* identifier = [tableColumn identifier];
+
+    NSString* columnValue;
+    if ([identifier isEqualToString:@"Id"]) {
+        columnValue = [site appSiteId];
+    }
+    else if ([identifier isEqualToString:@"Description"]) {
+        columnValue = [site name];
+    }
+    else if ([identifier isEqualToString:@"Preferred"]) {
+        if (site == [_siteList preferredSite]) {
+            columnValue = @"Y";
+        }
+    }
+    return columnValue;
 }
 
 

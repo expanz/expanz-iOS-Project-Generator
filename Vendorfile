@@ -1,0 +1,24 @@
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ GitHub Libraries ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+lib "ExpanzCore",         :git => "git@github.com:expanz/expanz-iOS-SDK.git",              :require => "Source/Main/Core"
+lib "Objection",          :git => "https://github.com/atomicobject/objection.git",         :require => "Source"
+lib "ObjectiveLogger",    :git => "git@github.com:jasperblues/objective-loggerheads.git"
+lib "RaptureXML",         :git => "https://github.com/ZaBlanc/RaptureXML.git",             :require => "Library"
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Targets ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+target "Model-Object-Explorer" do
+  lib "ExpanzCore"
+  lib "Objection"
+  lib "ObjectiveLogger"
+  lib "RaptureXML"
+end
+
+target "Tests" do
+  lib "ExpanzCore"
+  lib "Objection"
+  lib "ObjectiveLogger"
+  lib "RaptureXML"
+end
