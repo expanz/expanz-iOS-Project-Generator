@@ -9,9 +9,18 @@
 /* Begin PBXBuildFile section */
 		6B225D9C14E0B43500B0F735 /* expanz.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B225D9B14E0B43500B0F735 /* expanz.png */; };
 		6B29561314F534F40040E5FF /* libKiwi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B40695014EBDB1F00AD1DEF /* libKiwi.a */; };
-		6B41FDA814F60C5E00004897 /* libprofile_rt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B41FDA714F60C5E00004897 /* libprofile_rt.dylib */; };
 		6B55223714EA723700494CF3 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD8982D14EA2441007875F4 /* SenTestingKit.framework */; };
 		6B55223814EA723700494CF3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC10164147775A40055CF03 /* Cocoa.framework */; };
+		6B62CC0914FC967900A0E098 /* activities.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B62CC0814FC967900A0E098 /* activities.xib */; };
+		6B62CC0A14FC967900A0E098 /* activities.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B62CC0814FC967900A0E098 /* activities.xib */; };
+		6B62CC1214FC9D5D00A0E098 /* libprofile_rt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B62CC1114FC9D5D00A0E098 /* libprofile_rt.dylib */; };
+		6B62CC1714FC9EA600A0E098 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9FD27514BEF008006F8D04 /* AppDelegate.m */; };
+		6B62CC1914FC9EBE00A0E098 /* expanz_codegen_model_ProcessStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E4D7 /* expanz_codegen_model_ProcessStep.m */; };
+		6B62CC1A14FC9EC500A0E098 /* expanz_codegen_ui_ExpanzSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD5342114E668090009196B /* expanz_codegen_ui_ExpanzSettingsViewController.m */; };
+		6B62CC1B14FC9EC800A0E098 /* expanz_codegen_ui_ProjectLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E4E2 /* expanz_codegen_ui_ProjectLocationViewController.m */; };
+		6B62CC1C14FC9ECF00A0E098 /* expanz_codegen_ui_MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB72DB914BEF9A9005A5961 /* expanz_codegen_ui_MainWindowController.m */; };
+		6B62CC1D14FC9EF100A0E098 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B789B7C14E37ACB00DAA872 /* Quartz.framework */; };
+		6B62CC1E14FC9EF100A0E098 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B789B7D14E37ACB00DAA872 /* QuartzCore.framework */; };
 		6B789B7A14E3656300DAA872 /* ProjectLocation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B789B7914E3656300DAA872 /* ProjectLocation.xib */; };
 		6B789B7E14E37ACB00DAA872 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B789B7C14E37ACB00DAA872 /* Quartz.framework */; };
 		6B789B7F14E37ACB00DAA872 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B789B7D14E37ACB00DAA872 /* QuartzCore.framework */; };
@@ -126,31 +135,31 @@
 		6BC4D86114FBBE5500335BF3 /* NSString+Contains.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7E014FBBE5500335BF3 /* NSString+Contains.m */; };
 		6BC4D86214FBBE5500335BF3 /* NSString+Contains.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7E014FBBE5500335BF3 /* NSString+Contains.m */; };
 		6BC4D86314FBBE5500335BF3 /* JSObjectFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7E614FBBE5500335BF3 /* JSObjectFactory.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6BC4D86414FBBE5500335BF3 /* JSObjectFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7E614FBBE5500335BF3 /* JSObjectFactory.m */; };
+		6BC4D86414FBBE5500335BF3 /* JSObjectFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7E614FBBE5500335BF3 /* JSObjectFactory.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BC4D86514FBBE5500335BF3 /* JSObjection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7E814FBBE5500335BF3 /* JSObjection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6BC4D86614FBBE5500335BF3 /* JSObjection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7E814FBBE5500335BF3 /* JSObjection.m */; };
+		6BC4D86614FBBE5500335BF3 /* JSObjection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7E814FBBE5500335BF3 /* JSObjection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BC4D86714FBBE5500335BF3 /* JSObjectionBindingEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7EA14FBBE5500335BF3 /* JSObjectionBindingEntry.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6BC4D86814FBBE5500335BF3 /* JSObjectionBindingEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7EA14FBBE5500335BF3 /* JSObjectionBindingEntry.m */; };
+		6BC4D86814FBBE5500335BF3 /* JSObjectionBindingEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7EA14FBBE5500335BF3 /* JSObjectionBindingEntry.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BC4D86914FBBE5500335BF3 /* JSObjectionEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7EC14FBBE5500335BF3 /* JSObjectionEntry.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6BC4D86A14FBBE5500335BF3 /* JSObjectionEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7EC14FBBE5500335BF3 /* JSObjectionEntry.m */; };
+		6BC4D86A14FBBE5500335BF3 /* JSObjectionEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7EC14FBBE5500335BF3 /* JSObjectionEntry.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BC4D86B14FBBE5500335BF3 /* JSObjectionInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7EE14FBBE5500335BF3 /* JSObjectionInjector.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6BC4D86C14FBBE5500335BF3 /* JSObjectionInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7EE14FBBE5500335BF3 /* JSObjectionInjector.m */; };
+		6BC4D86C14FBBE5500335BF3 /* JSObjectionInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7EE14FBBE5500335BF3 /* JSObjectionInjector.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BC4D86D14FBBE5500335BF3 /* JSObjectionInjectorEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7F014FBBE5500335BF3 /* JSObjectionInjectorEntry.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6BC4D86E14FBBE5500335BF3 /* JSObjectionInjectorEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7F014FBBE5500335BF3 /* JSObjectionInjectorEntry.m */; };
+		6BC4D86E14FBBE5500335BF3 /* JSObjectionInjectorEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7F014FBBE5500335BF3 /* JSObjectionInjectorEntry.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BC4D86F14FBBE5500335BF3 /* JSObjectionModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7F214FBBE5500335BF3 /* JSObjectionModule.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6BC4D87014FBBE5500335BF3 /* JSObjectionModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7F214FBBE5500335BF3 /* JSObjectionModule.m */; };
+		6BC4D87014FBBE5500335BF3 /* JSObjectionModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7F214FBBE5500335BF3 /* JSObjectionModule.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BC4D87114FBBE5500335BF3 /* JSObjectionProviderEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7F414FBBE5500335BF3 /* JSObjectionProviderEntry.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6BC4D87214FBBE5500335BF3 /* JSObjectionProviderEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7F414FBBE5500335BF3 /* JSObjectionProviderEntry.m */; };
+		6BC4D87214FBBE5500335BF3 /* JSObjectionProviderEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7F414FBBE5500335BF3 /* JSObjectionProviderEntry.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BC4D87314FBBE5500335BF3 /* JSObjectionUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7F614FBBE5500335BF3 /* JSObjectionUtils.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6BC4D87414FBBE5500335BF3 /* JSObjectionUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7F614FBBE5500335BF3 /* JSObjectionUtils.m */; };
+		6BC4D87414FBBE5500335BF3 /* JSObjectionUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7F614FBBE5500335BF3 /* JSObjectionUtils.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BC4D87514FBBE5500335BF3 /* NSObject+Objection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7F814FBBE5500335BF3 /* NSObject+Objection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6BC4D87614FBBE5500335BF3 /* NSObject+Objection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7F814FBBE5500335BF3 /* NSObject+Objection.m */; };
+		6BC4D87614FBBE5500335BF3 /* NSObject+Objection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7F814FBBE5500335BF3 /* NSObject+Objection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BC4D87714FBBE5500335BF3 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7FC14FBBE5500335BF3 /* NSDataAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6BC4D87814FBBE5500335BF3 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7FC14FBBE5500335BF3 /* NSDataAdditions.m */; };
+		6BC4D87814FBBE5500335BF3 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7FC14FBBE5500335BF3 /* NSDataAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BC4D87914FBBE5500335BF3 /* RXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7FE14FBBE5500335BF3 /* RXMLElement.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6BC4D87A14FBBE5500335BF3 /* RXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7FE14FBBE5500335BF3 /* RXMLElement.m */; };
+		6BC4D87A14FBBE5500335BF3 /* RXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7FE14FBBE5500335BF3 /* RXMLElement.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BC4D87B14FBBE5500335BF3 /* TBXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D80014FBBE5500335BF3 /* TBXML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6BC4D87C14FBBE5500335BF3 /* TBXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D80014FBBE5500335BF3 /* TBXML.m */; };
+		6BC4D87C14FBBE5500335BF3 /* TBXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D80014FBBE5500335BF3 /* TBXML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BC4D87D14FBBF1D00335BF3 /* libLRResty.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B40695114EBDB1F00AD1DEF /* libLRResty.a */; };
 		6BCEC01914BBD88700538D1D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC10164147775A40055CF03 /* Cocoa.framework */; };
 		6BCEC03014BBD9D600538D1D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BCEC02914BBD9D600538D1D /* InfoPlist.strings */; };
@@ -167,6 +176,9 @@
 		6BE4B2B4147E6D3C0059E4E4 /* expanz_codegen_ui_ProjectLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E4E2 /* expanz_codegen_ui_ProjectLocationViewController.m */; };
 		6BE4B2B4147E6D3C0059E4EF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E4EE /* InfoPlist.strings */; };
 		6BE4B2B4147E6D3C0059E4F1 /* ServiceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E4F0 /* ServiceSpec.m */; };
+		6BE4B2B4147E6D3C0059E507 /* expanz_codegen_ui_ActivitySelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E506 /* expanz_codegen_ui_ActivitySelectionViewController.m */; };
+		6BE4B2B4147E6D3C0059E508 /* expanz_codegen_ui_ActivitySelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E506 /* expanz_codegen_ui_ActivitySelectionViewController.m */; };
+		6BE4B2B4147E6D3C0059E50C /* AppDelegateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E50B /* AppDelegateSpec.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -192,6 +204,8 @@
 		6B40695114EBDB1F00AD1DEF /* libLRResty.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLRResty.a; path = ../Libraries/libLRResty.a; sourceTree = "<group>"; };
 		6B41FDA714F60C5E00004897 /* libprofile_rt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libprofile_rt.dylib; path = Toolchains/XcodeDefault.xctoolchain/usr/lib/libprofile_rt.dylib; sourceTree = DEVELOPER_DIR; };
 		6B55223614EA723700494CF3 /* Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B62CC0814FC967900A0E098 /* activities.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = activities.xib; sourceTree = "<group>"; };
+		6B62CC1114FC9D5D00A0E098 /* libprofile_rt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libprofile_rt.dylib; path = usr/lib/libprofile_rt.dylib; sourceTree = DEVELOPER_DIR; };
 		6B783BBC14AD8CF90087E522 /* ESA_Sales_Foobar_ViewController.header */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ESA_Sales_Foobar_ViewController.header; sourceTree = "<group>"; };
 		6B783BBD14AD8CF90087E522 /* ESA_Sales_Foobar_ViewController.impl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ESA_Sales_Foobar_ViewController.impl; sourceTree = "<group>"; };
 		6B789B7914E3656300DAA872 /* ProjectLocation.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectLocation.xib; sourceTree = "<group>"; };
@@ -377,6 +391,9 @@
 		6BE4B2B4147E6D3C0059E4ED /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E4F0 /* ServiceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceSpec.m; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E4F2 /* SpecHelper2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecHelper2.h; sourceTree = "<group>"; };
+		6BE4B2B4147E6D3C0059E506 /* expanz_codegen_ui_ActivitySelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_codegen_ui_ActivitySelectionViewController.m; sourceTree = "<group>"; };
+		6BE4B2B4147E6D3C0059E509 /* expanz_codegen_ui_ActivitySelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_codegen_ui_ActivitySelectionViewController.h; sourceTree = "<group>"; };
+		6BE4B2B4147E6D3C0059E50B /* AppDelegateSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegateSpec.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -384,12 +401,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B62CC1D14FC9EF100A0E098 /* Quartz.framework in Frameworks */,
+				6B62CC1E14FC9EF100A0E098 /* QuartzCore.framework in Frameworks */,
+				6B62CC1214FC9D5D00A0E098 /* libprofile_rt.dylib in Frameworks */,
 				6BB5EE5F14F49B1B00B5B193 /* LRResty.framework in Frameworks */,
 				6B29561314F534F40040E5FF /* libKiwi.a in Frameworks */,
 				6BBD6C9714ECF28200451BA2 /* libz.dylib in Frameworks */,
 				6B55223714EA723700494CF3 /* SenTestingKit.framework in Frameworks */,
 				6B55223814EA723700494CF3 /* Cocoa.framework in Frameworks */,
-				6B41FDA814F60C5E00004897 /* libprofile_rt.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,14 +460,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		6B783BC114AD8CF90087E522 /* Unit */ = {
-			isa = PBXGroup;
-			children = (
-				6BE4B2B4147E6D3C0059E505 /* Services */,
-			);
-			path = Unit;
-			sourceTree = "<group>";
-		};
 		6B783BC714AD8CF90087E522 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -481,6 +492,8 @@
 		6BB72DB414BEF9A9005A5961 /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
+				6BE4B2B4147E6D3C0059E509 /* expanz_codegen_ui_ActivitySelectionViewController.h */,
+				6BE4B2B4147E6D3C0059E506 /* expanz_codegen_ui_ActivitySelectionViewController.m */,
 				6BD5342014E668090009196B /* expanz_codegen_ui_ExpanzSettingsViewController.h */,
 				6BD5342114E668090009196B /* expanz_codegen_ui_ExpanzSettingsViewController.m */,
 				6BE4B2B4147E6D3C0059E4E5 /* expanz_codegen_ui_ProjectLocationViewController.h */,
@@ -495,6 +508,7 @@
 		6BB72DB514BEF9A9005A5961 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				6B62CC0814FC967900A0E098 /* activities.xib */,
 				6B225D9B14E0B43500B0F735 /* expanz.png */,
 				6BB72DB614BEF9A9005A5961 /* MainMenu.xib */,
 				6BCEDDEF14C034D40089804B /* MainWindow.xib */,
@@ -507,6 +521,7 @@
 		6BC10155147775A40055CF03 = {
 			isa = PBXGroup;
 			children = (
+				6B62CC1114FC9D5D00A0E098 /* libprofile_rt.dylib */,
 				6BE4B285147E6B610059E44D /* Source */,
 				6BC10163147775A40055CF03 /* Frameworks */,
 				6B105A041479CF9A002DEBCE /* External */,
@@ -876,13 +891,13 @@
 			isa = PBXGroup;
 			children = (
 				6B783BC714AD8CF90087E522 /* Utils */,
-				6B783BC114AD8CF90087E522 /* Unit */,
 				6B783BBB14AD8CF90087E522 /* Resources */,
 				6BE4B2B4147E6D3C0059E4F2 /* SpecHelper2.h */,
 				6BE4B2B4147E6D3C0059E4F0 /* ServiceSpec.m */,
 				6BE4B2B4147E6D3C0059E4EB /* Tests-Prefix.pch */,
 				6BE4B2B4147E6D3C0059E4E9 /* Tests-Info.plist */,
 				6BE4B2B4147E6D3C0059E4EC /* en.lproj */,
+				6BE4B2B4147E6D3C0059E50A /* Unit */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -895,11 +910,12 @@
 			path = en.lproj;
 			sourceTree = "<group>";
 		};
-		6BE4B2B4147E6D3C0059E505 /* Services */ = {
+		6BE4B2B4147E6D3C0059E50A /* Unit */ = {
 			isa = PBXGroup;
 			children = (
+				6BE4B2B4147E6D3C0059E50B /* AppDelegateSpec.m */,
 			);
-			path = Services;
+			path = Unit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -996,6 +1012,7 @@
 				6BB4DA6914EB92FA00DC153B /* ESA_Sales_Foobar_ViewController.impl in Resources */,
 				6BD1B46214EBABB000F5AD1C /* project.pbxproj in Resources */,
 				6BBD6C7914ECB73200451BA2 /* production_environment.xml in Resources */,
+				6B62CC0A14FC967900A0E098 /* activities.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1008,6 +1025,7 @@
 				6B225D9C14E0B43500B0F735 /* expanz.png in Resources */,
 				6B789B7A14E3656300DAA872 /* ProjectLocation.xib in Resources */,
 				6BD5341E14E61DAA0009196B /* expanzSettings.xib in Resources */,
+				6B62CC0914FC967900A0E098 /* activities.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1106,6 +1124,13 @@
 				6BC4D87814FBBE5500335BF3 /* NSDataAdditions.m in Sources */,
 				6BC4D87A14FBBE5500335BF3 /* RXMLElement.m in Sources */,
 				6BC4D87C14FBBE5500335BF3 /* TBXML.m in Sources */,
+				6BE4B2B4147E6D3C0059E508 /* expanz_codegen_ui_ActivitySelectionViewController.m in Sources */,
+				6BE4B2B4147E6D3C0059E50C /* AppDelegateSpec.m in Sources */,
+				6B62CC1714FC9EA600A0E098 /* AppDelegate.m in Sources */,
+				6B62CC1914FC9EBE00A0E098 /* expanz_codegen_model_ProcessStep.m in Sources */,
+				6B62CC1A14FC9EC500A0E098 /* expanz_codegen_ui_ExpanzSettingsViewController.m in Sources */,
+				6B62CC1B14FC9EC800A0E098 /* expanz_codegen_ui_ProjectLocationViewController.m in Sources */,
+				6B62CC1C14FC9ECF00A0E098 /* expanz_codegen_ui_MainWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1181,6 +1206,7 @@
 				6BC4D87714FBBE5500335BF3 /* NSDataAdditions.m in Sources */,
 				6BC4D87914FBBE5500335BF3 /* RXMLElement.m in Sources */,
 				6BC4D87B14FBBE5500335BF3 /* TBXML.m in Sources */,
+				6BE4B2B4147E6D3C0059E507 /* expanz_codegen_ui_ActivitySelectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

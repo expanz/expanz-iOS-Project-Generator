@@ -15,6 +15,7 @@
 @class expanz_codegen_model_ProcessStep;
 @class expanz_codegen_ui_ProjectLocationViewController;
 @class expanz_codegen_ui_ExpanzSettingsViewController;
+@class expanz_codegen_ui_ActivitySelectionViewController;
 
 @interface expanz_codegen_ui_MainWindowController : NSWindowController<NSTableViewDataSource, NSTableViewDelegate> {
 
@@ -23,6 +24,7 @@
     expanz_codegen_model_ProcessStep* _currentStep;
     expanz_codegen_ui_ProjectLocationViewController* _projectLocationViewController;
     expanz_codegen_ui_ExpanzSettingsViewController* _expanzSettingsViewController;
+    expanz_codegen_ui_ActivitySelectionViewController* _activitySelectionViewController;
 }
 
 @property(nonatomic, weak) IBOutlet NSTableView* processStepsTableView;

@@ -14,6 +14,7 @@
 #import "expanz_codegen_model_ProcessStep.h"
 #import "expanz_codegen_ui_ProjectLocationViewController.h"
 #import "expanz_codegen_ui_ExpanzSettingsViewController.h"
+#import "expanz_codegen_ui_ActivitySelectionViewController.h"
 
 @interface expanz_codegen_ui_MainWindowController (private)
 
@@ -43,6 +44,9 @@
         _expanzSettingsViewController =
             [[ExpanzSettingsViewController alloc] initWithNibName:@"expanzSettings" bundle:[NSBundle mainBundle]];
         [_expanzSettingsViewController view];
+        _activitySelectionViewController =
+            [[ActivitySelectionViewController alloc] initWithNibName:@"activities" bundle:[NSBundle mainBundle]];
+
     }
     return self;
 }
@@ -76,6 +80,7 @@
         [_previousStepButton setEnabled:YES];
         [_nextStepButton setEnabled:NO];
         [_processStepsTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:2] byExtendingSelection:NO];
+        [self setContentView:_activitySelectionViewController.view];
     }
 }
 

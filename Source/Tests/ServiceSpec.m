@@ -25,7 +25,7 @@ SPEC_BEGIN(ExampleAsyncSpec)
                 fetchedData = [r asString];
             }];
 
-            [[expectFutureValue(fetchedData) shouldEventually] beNonNil];
+            [[expectFutureValue(fetchedData) shouldEventuallyBeforeTimingOutAfter(2.0)] beNonNil];
 
 
         });
