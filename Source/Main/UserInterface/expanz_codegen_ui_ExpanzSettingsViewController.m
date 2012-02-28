@@ -15,10 +15,10 @@
 #import "expanz_CoreModule.h"
 #import "expanz_model_SiteList.h"
 #import "expanz_model_AppSite.h"
+#import "expanz_codegen_model_UserSession.h"
 
 @implementation expanz_codegen_ui_ExpanzSettingsViewController
 
-@synthesize projectFilePath = _projectFilePath;
 @synthesize expanzBackendCombo = _expanzBackendCombo;
 @synthesize siteClient = _siteClient;
 @synthesize siteListTableView = _siteListTableView;
@@ -31,6 +31,7 @@
     _configFilesNeedLoading = YES;
     [_expanzBackendCombo setTarget:self];
     [_expanzBackendCombo setAction:@selector(populateSiteList)];
+    _injector = [JSObjection createInjector:[[CoreModule alloc] init]];
 }
 
 - (void) populateExpanzBackendCombo {
@@ -57,7 +58,6 @@
     [SdkConfiguration clearGlobalConfiguration];
     [SdkConfiguration setGlobalConfiguration:configuration];
     LogDebug(@"Here's the configuration: %@", configuration);
-    _injector = [JSObjection createInjector:[[CoreModule alloc] init]];
 
     _siteClient = [_injector getObject:@protocol(expanz_service_SiteClient)];
     [_siteClient listAvailableSitesWith:self];
@@ -66,7 +66,8 @@
 
 
 - (NSString*) supportingFilesPath {
-    return [[_projectFilePath stringByAppendingPathComponent:[_projectFilePath lastPathComponent]]
+    NSString* projectFilePath = [[UserSession sharedUserSession] projectFilePath];
+    return [[projectFilePath stringByAppendingPathComponent:[projectFilePath lastPathComponent]]
         stringByAppendingPathComponent:@"Supporting Files"];
 }
 
@@ -75,6 +76,15 @@
     LogDebug(@"Got site list: %@", siteList);
     _siteList = siteList;
     [_siteListTableView reloadData];
+}
+
+- (void) requestDidFinishWithActivityList:(expanz_model_ActivityDefinitionList*)activityList {
+    //To change the template use AppCode | Preferences | File Templates.
+}
+
+- (void) requestDidFailWithError:(NSError*)error {
+    //To change the template use AppCode | Preferences | File Templates.
+
 }
 
 

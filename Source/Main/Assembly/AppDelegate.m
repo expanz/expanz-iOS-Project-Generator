@@ -11,6 +11,7 @@
 
 #import "AppDelegate.h"
 #import "expanz_codegen_ui_MainWindowController.h"
+#import "expanz_codegen_model_UserSession.h"
 
 @implementation AppDelegate
 
@@ -34,7 +35,8 @@
         }
     }
 
-    _windowController = [[MainWindowController alloc] initWithProjectFilePath:projectFilePath];
+    [[UserSession sharedUserSession] setProjectFilePath:projectFilePath];
+    _windowController = [[MainWindowController alloc] init];
     [_windowController showWindow:self];
 }
 

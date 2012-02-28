@@ -25,7 +25,6 @@
 
 @property(nonatomic, weak) IBOutlet NSComboBox* expanzBackendCombo;
 @property(nonatomic, weak) IBOutlet NSTableView* siteListTableView;
-@property(nonatomic, strong) NSString* projectFilePath;
 @property(nonatomic, strong) id<expanz_service_SiteClient> siteClient;
 @property(nonatomic) BOOL configFilesNeedLoading;
 

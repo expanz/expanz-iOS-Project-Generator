@@ -31,7 +31,6 @@
 @property(nonatomic, weak) IBOutlet NSView* currentStepViewContainer;
 @property(nonatomic, weak) IBOutlet NSButton* nextStepButton;
 @property(nonatomic, weak) IBOutlet NSButton* previousStepButton;
-@property(nonatomic, strong, readonly) NSString* projectFilePath;
 
 - (id) initWithProjectFilePath:(NSString*)projectFilePath;
 

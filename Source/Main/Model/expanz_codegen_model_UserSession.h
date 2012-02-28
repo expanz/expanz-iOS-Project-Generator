@@ -8,22 +8,23 @@
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
-
-#import <Cocoa/Cocoa.h>
 #import <Foundation/Foundation.h>
 
+@interface expanz_codegen_model_UserSession : NSObject {
 
-@interface expanz_codegen_ui_ProjectLocationViewController : NSViewController
+@private
+    NSMutableArray* _selectedActivities;
+}
 
-@property(nonatomic, strong) IBOutlet NSComboBox* projectLocationCombo;
-@property(nonatomic, strong) IBOutlet NSButton* browseForProjectButton;
+@property(nonatomic, strong) NSString* projectFilePath;
+@property(nonatomic, strong) NSString* selectedSite;
 
-- (void) browseForProject;
++ (expanz_codegen_model_UserSession*) sharedUserSession;
 
-- (void) selectedProjectFileDidChange;
+- (NSArray*) selectedActivities;
 
-- (void) setSelectedProjectFilePath:(NSString*)selectedProjectFilePath;
+- (void) addSelectedActivity:(NSString*)activityId;
 
 @end
 /* ================================================================================================================== */
-@compatibility_alias ProjectLocationViewController expanz_codegen_ui_ProjectLocationViewController;
+@compatibility_alias UserSession expanz_codegen_model_UserSession;

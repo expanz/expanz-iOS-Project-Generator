@@ -9,6 +9,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 #import "expanz_codegen_ui_ProjectLocationViewController.h"
+#import "expanz_codegen_model_UserSession.h"
 
 
 @implementation expanz_codegen_ui_ProjectLocationViewController
@@ -20,6 +21,12 @@
 - (void) browseForProject {
     LogDebug(@"Need to implement browse for project action.");
 }
+
+- (void) selectedProjectFileDidChange {
+    NSString* projectFilePath = [_projectLocationCombo objectValueOfSelectedItem];
+    [[UserSession sharedUserSession] setProjectFilePath:projectFilePath];
+}
+
 
 - (void) setSelectedProjectFilePath:(NSString*)selectedProjectFilePath {
     NSInteger indexOfSelectedFilePath = [_projectLocationCombo indexOfItemWithObjectValue:selectedProjectFilePath];
@@ -35,6 +42,7 @@
 - (void) awakeFromNib {
     [super awakeFromNib];
     [_browseForProjectButton setAction:@selector(browseForProject)];
+    [_projectLocationCombo setAction:@selector(selectedProjectFileDidChange)];
 }
 
 

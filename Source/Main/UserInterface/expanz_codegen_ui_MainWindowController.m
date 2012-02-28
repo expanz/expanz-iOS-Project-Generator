@@ -15,6 +15,7 @@
 #import "expanz_codegen_ui_ProjectLocationViewController.h"
 #import "expanz_codegen_ui_ExpanzSettingsViewController.h"
 #import "expanz_codegen_ui_ActivitySelectionViewController.h"
+#import "expanz_codegen_model_UserSession.h"
 
 @interface expanz_codegen_ui_MainWindowController (private)
 
@@ -30,14 +31,12 @@
 @synthesize currentStepViewContainer = _currentStepViewContainer;
 @synthesize nextStepButton = _nextStepButton;
 @synthesize previousStepButton = _previousStepButton;
-@synthesize projectFilePath = _projectFilePath;
 
 
 /* ================================================== Initializers ================================================== */
-- (id) initWithProjectFilePath:(NSString*)projectFilePath {
+- (id) init {
     self = [super initWithWindowNibName:@"MainWindow"];
     if (self) {
-        _projectFilePath = [projectFilePath copy];
         _projectLocationViewController =
             [[ProjectLocationViewController alloc] initWithNibName:@"ProjectLocation" bundle:[NSBundle mainBundle]];
         [_projectLocationViewController view];
@@ -46,7 +45,6 @@
         [_expanzSettingsViewController view];
         _activitySelectionViewController =
             [[ActivitySelectionViewController alloc] initWithNibName:@"activities" bundle:[NSBundle mainBundle]];
-
     }
     return self;
 }
@@ -69,8 +67,6 @@
         [_previousStepButton setEnabled:YES];
         [_nextStepButton setEnabled:YES];
         [_processStepsTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:1] byExtendingSelection:NO];
-        [_expanzSettingsViewController
-            setProjectFilePath:[_projectLocationViewController.projectLocationCombo objectValueOfSelectedItem]];
         if ([_expanzSettingsViewController configFilesNeedLoading]) {
             [_expanzSettingsViewController populateExpanzBackendCombo];
         }
@@ -105,8 +101,9 @@
     [_previousStepButton setAction:@selector(previousStep)];
     [_nextStepButton setAction:@selector(nextStep)];
     [_processStepsTableView reloadData];
-    if (_projectFilePath.length > 0) {
-        [_projectLocationViewController setSelectedProjectFilePath:_projectFilePath];
+    NSString* const projectFilePath = [[UserSession sharedUserSession] projectFilePath];
+    if (projectFilePath.length > 0) {
+        [_projectLocationViewController setSelectedProjectFilePath:projectFilePath];
         [self setCurrentStep:[ProcessStep expanzSettings]];
     }
     else {

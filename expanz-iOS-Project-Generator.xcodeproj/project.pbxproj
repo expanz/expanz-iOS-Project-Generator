@@ -179,6 +179,8 @@
 		6BE4B2B4147E6D3C0059E507 /* expanz_codegen_ui_ActivitySelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E506 /* expanz_codegen_ui_ActivitySelectionViewController.m */; };
 		6BE4B2B4147E6D3C0059E508 /* expanz_codegen_ui_ActivitySelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E506 /* expanz_codegen_ui_ActivitySelectionViewController.m */; };
 		6BE4B2B4147E6D3C0059E50C /* AppDelegateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E50B /* AppDelegateSpec.m */; };
+		6BE4B2B4147E6D3C0059E50E /* expanz_codegen_model_UserSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E50D /* expanz_codegen_model_UserSession.m */; };
+		6BE4B2B4147E6D3C0059E50F /* expanz_codegen_model_UserSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E50D /* expanz_codegen_model_UserSession.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -394,6 +396,8 @@
 		6BE4B2B4147E6D3C0059E506 /* expanz_codegen_ui_ActivitySelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_codegen_ui_ActivitySelectionViewController.m; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E509 /* expanz_codegen_ui_ActivitySelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_codegen_ui_ActivitySelectionViewController.h; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E50B /* AppDelegateSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegateSpec.m; sourceTree = "<group>"; };
+		6BE4B2B4147E6D3C0059E50D /* expanz_codegen_model_UserSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_codegen_model_UserSession.m; sourceTree = "<group>"; };
+		6BE4B2B4147E6D3C0059E510 /* expanz_codegen_model_UserSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_codegen_model_UserSession.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -881,6 +885,8 @@
 		6BE4B2B4147E6D3C0059E4D6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6BE4B2B4147E6D3C0059E510 /* expanz_codegen_model_UserSession.h */,
+				6BE4B2B4147E6D3C0059E50D /* expanz_codegen_model_UserSession.m */,
 				6BE4B2B4147E6D3C0059E4DA /* expanz_codegen_model_ProcessStep.h */,
 				6BE4B2B4147E6D3C0059E4D7 /* expanz_codegen_model_ProcessStep.m */,
 			);
@@ -1131,6 +1137,7 @@
 				6B62CC1A14FC9EC500A0E098 /* expanz_codegen_ui_ExpanzSettingsViewController.m in Sources */,
 				6B62CC1B14FC9EC800A0E098 /* expanz_codegen_ui_ProjectLocationViewController.m in Sources */,
 				6B62CC1C14FC9ECF00A0E098 /* expanz_codegen_ui_MainWindowController.m in Sources */,
+				6BE4B2B4147E6D3C0059E50F /* expanz_codegen_model_UserSession.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1207,6 +1214,7 @@
 				6BC4D87914FBBE5500335BF3 /* RXMLElement.m in Sources */,
 				6BC4D87B14FBBE5500335BF3 /* TBXML.m in Sources */,
 				6BE4B2B4147E6D3C0059E507 /* expanz_codegen_ui_ActivitySelectionViewController.m in Sources */,
+				6BE4B2B4147E6D3C0059E50E /* expanz_codegen_model_UserSession.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
