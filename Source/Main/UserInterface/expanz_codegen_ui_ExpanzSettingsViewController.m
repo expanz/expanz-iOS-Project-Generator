@@ -8,6 +8,7 @@
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
+
 #import "expanz_codegen_ui_ExpanzSettingsViewController.h"
 #import "expanz_SdkConfiguration.h"
 #import "JSObjectionInjector.h"
@@ -17,10 +18,17 @@
 #import "expanz_model_AppSite.h"
 #import "expanz_codegen_model_UserSession.h"
 
+/* ================================================================================================================== */
+@interface expanz_codegen_ui_ExpanzSettingsViewController (private)
+
+- (NSString*) supportingFilesPath;
+
+@end
+
+/* ================================================================================================================== */
 @implementation expanz_codegen_ui_ExpanzSettingsViewController
 
 @synthesize expanzBackendCombo = _expanzBackendCombo;
-@synthesize siteClient = _siteClient;
 @synthesize siteListTableView = _siteListTableView;
 @synthesize configFilesNeedLoading = _configFilesNeedLoading;
 
@@ -31,7 +39,7 @@
     _configFilesNeedLoading = YES;
     [_expanzBackendCombo setTarget:self];
     [_expanzBackendCombo setAction:@selector(populateSiteList)];
-    _injector = [JSObjection createInjector:[[CoreModule alloc] init]];
+    [_siteListTableView setAction:@selector(selectedSiteDidChange)];
 }
 
 - (void) populateExpanzBackendCombo {
@@ -50,6 +58,8 @@
 }
 
 - (void) populateSiteList {
+    _siteList = nil;
+    [_siteListTableView reloadData];
     NSString* configFilePath =
         [[self supportingFilesPath] stringByAppendingPathComponent:[_expanzBackendCombo objectValueOfSelectedItem]];
 
@@ -57,21 +67,14 @@
         initWithXmlString:[NSString stringWithContentsOfFile:configFilePath encoding:NSUTF8StringEncoding error:nil]];
     [SdkConfiguration clearGlobalConfiguration];
     [SdkConfiguration setGlobalConfiguration:configuration];
-    LogDebug(@"Here's the configuration: %@", configuration);
 
-    _siteClient = [_injector getObject:@protocol(expanz_service_SiteClient)];
-    [_siteClient listAvailableSitesWith:self];
-    LogDebug(@"Ok - now populate the site list with value: %@", [_expanzBackendCombo objectValueOfSelectedItem]);
-}
-
-
-- (NSString*) supportingFilesPath {
-    NSString* projectFilePath = [[UserSession sharedUserSession] projectFilePath];
-    return [[projectFilePath stringByAppendingPathComponent:[projectFilePath lastPathComponent]]
-        stringByAppendingPathComponent:@"Supporting Files"];
+    id<expanz_service_SiteClient>
+        siteClient = [[JSObjection globalInjector] getObject:@protocol(expanz_service_SiteClient)];
+    [siteClient listAvailableSitesWith:self];
 }
 
 /* ================================================= Protocol Methods =============================================== */
+#pragma mark SiteClientDelegate
 - (void) requestDidFinishWithSiteList:(expanz_model_SiteList*)siteList {
     LogDebug(@"Got site list: %@", siteList);
     _siteList = siteList;
@@ -84,10 +87,10 @@
 
 - (void) requestDidFailWithError:(NSError*)error {
     //To change the template use AppCode | Preferences | File Templates.
-
 }
 
-
+/* ================================================================================================================== */
+#pragma mark Table view delegate & datasource
 - (NSInteger) numberOfRowsInTableView:(NSTableView*)tableView {
     return [[_siteList sites] count];
 
@@ -112,5 +115,18 @@
     return columnValue;
 }
 
+- (void) tableViewSelectionDidChange:(NSNotification*)notification {
+    AppSite* site = [[_siteList sites] objectAtIndex:[_siteListTableView selectedRow]];
+    [[UserSession sharedUserSession] setSelectedSite:site.appSiteId];
+    LogDebug(@"Set selected site to %@", site.appSiteId);
+}
+
+
+/* ================================================== Private Methods =============================================== */
+- (NSString*) supportingFilesPath {
+    NSString* projectFilePath = [[UserSession sharedUserSession] projectFilePath];
+    return [[projectFilePath stringByAppendingPathComponent:[projectFilePath lastPathComponent]]
+        stringByAppendingPathComponent:@"Supporting Files"];
+}
 
 @end

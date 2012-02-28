@@ -42,7 +42,6 @@
         [_projectLocationViewController view];
         _expanzSettingsViewController =
             [[ExpanzSettingsViewController alloc] initWithNibName:@"expanzSettings" bundle:[NSBundle mainBundle]];
-        [_expanzSettingsViewController view];
         _activitySelectionViewController =
             [[ActivitySelectionViewController alloc] initWithNibName:@"activities" bundle:[NSBundle mainBundle]];
     }
@@ -58,25 +57,26 @@
 - (void) setCurrentStep:(expanz_codegen_model_ProcessStep*)currentStep {
     _currentStep = currentStep;
     if (_currentStep == [ProcessStep projectLocation]) {
+        [self setContentView:_projectLocationViewController.view];
         [_previousStepButton setEnabled:NO];
         [_nextStepButton setEnabled:YES];
         [_processStepsTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:0] byExtendingSelection:NO];
-        [self setContentView:_projectLocationViewController.view];
     }
     else if (_currentStep == [ProcessStep expanzSettings]) {
+        [self setContentView:_expanzSettingsViewController.view];
         [_previousStepButton setEnabled:YES];
         [_nextStepButton setEnabled:YES];
         [_processStepsTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:1] byExtendingSelection:NO];
         if ([_expanzSettingsViewController configFilesNeedLoading]) {
             [_expanzSettingsViewController populateExpanzBackendCombo];
         }
-        [self setContentView:_expanzSettingsViewController.view];
     }
     else if (_currentStep == [ProcessStep activities]) {
+        [self setContentView:_activitySelectionViewController.view];
+        [_activitySelectionViewController populateActivityList];
         [_previousStepButton setEnabled:YES];
         [_nextStepButton setEnabled:NO];
         [_processStepsTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:2] byExtendingSelection:NO];
-        [self setContentView:_activitySelectionViewController.view];
     }
 }
 

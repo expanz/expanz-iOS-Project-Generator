@@ -32,8 +32,6 @@
 @property(nonatomic, weak) IBOutlet NSButton* nextStepButton;
 @property(nonatomic, weak) IBOutlet NSButton* previousStepButton;
 
-- (id) initWithProjectFilePath:(NSString*)projectFilePath;
-
 - (expanz_codegen_model_ProcessStep*) currentStep;
 
 - (void) setCurrentStep:(expanz_codegen_model_ProcessStep*)currentStep;

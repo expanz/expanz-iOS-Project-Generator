@@ -9,10 +9,72 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 #import "expanz_codegen_ui_ActivitySelectionViewController.h"
+#import "expanz_service_SiteClient.h"
+#import "JSObjection.h"
+#import "expanz_codegen_model_UserSession.h"
+#import "expanz_model_SiteList.h"
+#import "expanz_model_AppSite.h"
+#import "expanz_model_ActivityDefinition.h"
 
 
-@implementation expanz_codegen_ui_ActivitySelectionViewController {
+@implementation expanz_codegen_ui_ActivitySelectionViewController 
+
+@synthesize activityTableView = _activityTableView;
+
+
+/* ================================================ Interface Methods =============================================== */
+- (void) populateActivityList {
+    id<expanz_service_SiteClient>
+            siteClient = [[JSObjection globalInjector] getObject:@protocol(expanz_service_SiteClient)];
+    [siteClient listActivitiesForSite:[UserSession sharedUserSession].selectedSite with:self];
+}
+
+
+/* ================================================= Protocol Methods =============================================== */
+#pragma mark SiteClientDelegate
+- (void) requestDidFinishWithSiteList:(expanz_model_SiteList*)siteList {
+    //To change the template use AppCode | Preferences | File Templates.
 
 }
+
+- (void) requestDidFinishWithActivityList:(expanz_model_ActivityDefinitionList*)activityList {
+    _activityList = activityList;
+    [_activityTableView reloadData];
+}
+
+- (void) requestDidFailWithError:(NSError*)error {
+    //To change the template use AppCode | Preferences | File Templates.
+
+}
+
+/* ================================================================================================================== */
+#pragma mark table view data source & delegate
+
+- (NSInteger) numberOfRowsInTableView:(NSTableView*)tableView {
+    return [[_activityList activities] count];
+
+}
+
+- (id) tableView:(NSTableView*)tableView objectValueForTableColumn:(NSTableColumn*)tableColumn row:(NSInteger)row {
+    ActivityDefinition* activityDefinition = [[_activityList activities] objectAtIndex:row];
+    NSString* identifier = [tableColumn identifier];
+
+    NSString* columnValue;
+    if ([identifier isEqualToString:@"Id"]) {
+        columnValue = [activityDefinition activityId];
+    }
+    else if ([identifier isEqualToString:@"Title"]) {
+        columnValue = [activityDefinition title];
+    }
+    return columnValue;
+}
+
+- (void) tableViewSelectionDidChange:(NSNotification*)notification {
+//    AppSite* site = [[_siteList sites] objectAtIndex:[_siteListTableView selectedRow]];
+//    [[UserSession sharedUserSession] setSelectedSite:site.appSiteId];
+//    LogDebug(@"Set selected site to %@", site.appSiteId);
+}
+
+
 
 @end

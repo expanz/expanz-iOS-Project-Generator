@@ -12,6 +12,8 @@
 #import "AppDelegate.h"
 #import "expanz_codegen_ui_MainWindowController.h"
 #import "expanz_codegen_model_UserSession.h"
+#import "JSObjection.h"
+#import "expanz_CoreModule.h"
 
 @implementation AppDelegate
 
@@ -32,10 +34,13 @@
                 stringByReplacingOccurrencesOfString:@"\"" withString:@""];
 
             LogDebug(@"Project file path is: %@", projectFilePath);
+            [[UserSession sharedUserSession] setProjectFilePath:projectFilePath];
         }
     }
 
-    [[UserSession sharedUserSession] setProjectFilePath:projectFilePath];
+    JSObjectionInjector* injector = [JSObjection createInjector:[[CoreModule alloc] init]];
+    [JSObjection setGlobalInjector:injector];
+
     _windowController = [[MainWindowController alloc] init];
     [_windowController showWindow:self];
 }

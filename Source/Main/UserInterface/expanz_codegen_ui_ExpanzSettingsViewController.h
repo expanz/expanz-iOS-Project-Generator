@@ -19,16 +19,13 @@
     NSTableViewDelegate, NSTableViewDataSource> {
 
 @private
-    JSObjectionInjector* _injector;
     expanz_model_SiteList* _siteList;
 }
 
 @property(nonatomic, weak) IBOutlet NSComboBox* expanzBackendCombo;
 @property(nonatomic, weak) IBOutlet NSTableView* siteListTableView;
-@property(nonatomic, strong) id<expanz_service_SiteClient> siteClient;
 @property(nonatomic) BOOL configFilesNeedLoading;
 
-- (NSString*) supportingFilesPath;
 
 - (void) populateExpanzBackendCombo;
 
