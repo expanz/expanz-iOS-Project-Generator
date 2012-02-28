@@ -24,6 +24,9 @@
 
 /* ================================================ Interface Methods =============================================== */
 - (void) populateActivityList {
+    _activityList = nil;
+    [_activityTableView reloadData];
+    LogDebug(@"Dispatch request: %@", [UserSession sharedUserSession].selectedSite);
     id<expanz_service_SiteClient>
             siteClient = [[JSObjection globalInjector] getObject:@protocol(expanz_service_SiteClient)];
     [siteClient listActivitiesForSite:[UserSession sharedUserSession].selectedSite with:self];
@@ -38,12 +41,13 @@
 }
 
 - (void) requestDidFinishWithActivityList:(expanz_model_ActivityDefinitionList*)activityList {
+    LogDebug(@"Got response: %@", activityList);
     _activityList = activityList;
     [_activityTableView reloadData];
 }
 
 - (void) requestDidFailWithError:(NSError*)error {
-    //To change the template use AppCode | Preferences | File Templates.
+    LogDebug(@"Got this error: %@", error);
 
 }
 
