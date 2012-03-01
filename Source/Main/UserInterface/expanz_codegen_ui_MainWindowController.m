@@ -37,13 +37,9 @@
 - (id) init {
     self = [super initWithWindowNibName:@"MainWindow"];
     if (self) {
-        _projectLocationViewController =
-            [[ProjectLocationViewController alloc] initWithNibName:@"ProjectLocation" bundle:[NSBundle mainBundle]];
-        [_projectLocationViewController view];
-        _expanzSettingsViewController =
-            [[ExpanzSettingsViewController alloc] initWithNibName:@"expanzSettings" bundle:[NSBundle mainBundle]];
-        _activitySelectionViewController =
-            [[ActivitySelectionViewController alloc] initWithNibName:@"activities" bundle:[NSBundle mainBundle]];
+        _projectLocationViewController = [[ProjectLocationViewController alloc] initWithDelegate:self];
+        _expanzSettingsViewController = [[ExpanzSettingsViewController alloc] initWithDelegate:self];
+        _activitySelectionViewController = [[ActivitySelectionViewController alloc] initWithDelegate:self];
     }
     return self;
 }
@@ -56,6 +52,8 @@
 
 - (void) setCurrentStep:(expanz_codegen_model_ProcessStep*)currentStep {
     _currentStep = currentStep;
+    [_nextStepButton setTitle:@"Next"];
+    [_nextStepButton setAction:@selector(nextStep)];
     if (_currentStep == [ProcessStep projectLocation]) {
         [self setContentView:_projectLocationViewController.view];
         [_previousStepButton setEnabled:NO];
@@ -65,11 +63,12 @@
     else if (_currentStep == [ProcessStep expanzSettings]) {
         [self setContentView:_expanzSettingsViewController.view];
         [_previousStepButton setEnabled:YES];
-        [_nextStepButton setEnabled:YES];
+        [_nextStepButton setEnabled:NO];
         [_processStepsTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:1] byExtendingSelection:NO];
         if ([_expanzSettingsViewController configFilesNeedLoading]) {
             [_expanzSettingsViewController populateExpanzBackendCombo];
         }
+        [_expanzSettingsViewController populateSiteList];
     }
     else if (_currentStep == [ProcessStep activities]) {
         [self setContentView:_activitySelectionViewController.view];
@@ -77,10 +76,11 @@
         [_previousStepButton setEnabled:YES];
         [_nextStepButton setEnabled:NO];
         [_processStepsTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:2] byExtendingSelection:NO];
+        [_activitySelectionViewController.activityTableView deselectAll:self];
     }
 }
 
-- (IBAction) previousStep {
+- (void) previousStep {
     NSUInteger currentStepIndex = [[ProcessStep allSteps] indexOfObject:_currentStep];
     if (currentStepIndex != 0) {
         ProcessStep* previousStep = [[ProcessStep allSteps] objectAtIndex:currentStepIndex - 1];
@@ -88,13 +88,18 @@
     }
 }
 
-- (IBAction) nextStep {
+- (void) nextStep {
     NSUInteger currentStepIndex = [[ProcessStep allSteps] indexOfObject:_currentStep];
     if (currentStepIndex + 1 <= [[ProcessStep allSteps] count]) {
         ProcessStep* nextStep = [[ProcessStep allSteps] objectAtIndex:currentStepIndex + 1];
         [self setCurrentStep:nextStep];
     }
 }
+
+- (void) generate {
+    LogDebug(@"Ok! go generate");
+}
+
 
 - (void) windowDidLoad {
     [super windowDidLoad];
@@ -130,6 +135,18 @@
     return cellView;
 }
 
+/* ================================================================================================================== */
+#pragma mark expanz_codegen_ui_EventHandler
+
+- (void) didSelectSite {
+    [_nextStepButton setEnabled:YES];
+}
+
+- (void) didSelectActivity {
+    [_nextStepButton setTitle:@"Go!"];
+    [_nextStepButton setEnabled:YES];
+    [_nextStepButton setAction:@selector(generate)];
+}
 
 /* ================================================== Private Methods =============================================== */
 - (void) setContentView:(NSView*)view {

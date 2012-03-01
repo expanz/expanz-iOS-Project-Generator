@@ -11,13 +11,15 @@
 
 #import <Foundation/Foundation.h>
 #import <Cocoa/Cocoa.h>
+#import "expanz_codegen_ui_EventHandler.h"
 
 @class expanz_codegen_model_ProcessStep;
 @class expanz_codegen_ui_ProjectLocationViewController;
 @class expanz_codegen_ui_ExpanzSettingsViewController;
 @class expanz_codegen_ui_ActivitySelectionViewController;
 
-@interface expanz_codegen_ui_MainWindowController : NSWindowController<NSTableViewDataSource, NSTableViewDelegate> {
+@interface expanz_codegen_ui_MainWindowController : NSWindowController<NSTableViewDataSource, NSTableViewDelegate,
+        expanz_codegen_ui_EventHandler> {
 
 @private
     NSView* _currentContentView;
@@ -39,6 +41,8 @@
 - (void) previousStep;
 
 - (void) nextStep;
+
+- (void) generate;
 
 @end
 

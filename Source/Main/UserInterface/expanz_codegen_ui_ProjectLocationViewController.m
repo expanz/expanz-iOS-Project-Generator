@@ -10,12 +10,23 @@
 ////////////////////////////////////////////////////////////////////////////////
 #import "expanz_codegen_ui_ProjectLocationViewController.h"
 #import "expanz_codegen_model_UserSession.h"
+#import "expanz_codegen_ui_EventHandler.h"
 
 
 @implementation expanz_codegen_ui_ProjectLocationViewController
 
 @synthesize projectLocationCombo = _projectLocationCombo;
 @synthesize browseForProjectButton = _browseForProjectButton;
+
+
+/* ================================================== Initializers ================================================== */
+- (id) initWithDelegate:(id<expanz_codegen_ui_EventHandler>)delegate {
+    self = [super initWithNibName:@"ProjectLocation" bundle:[NSBundle mainBundle]];
+    if (self) {
+        _delegate = delegate;
+    }
+    return self;
+}
 
 /* ================================================ Interface Methods =============================================== */
 - (void) browseForProject {

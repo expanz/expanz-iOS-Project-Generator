@@ -16,6 +16,7 @@
 #import "expanz_model_SiteList.h"
 #import "expanz_model_AppSite.h"
 #import "expanz_codegen_model_UserSession.h"
+#import "expanz_codegen_ui_EventHandler.h"
 
 /* ================================================================================================================== */
 @interface expanz_codegen_ui_ExpanzSettingsViewController (private)
@@ -30,6 +31,17 @@
 @synthesize expanzBackendCombo = _expanzBackendCombo;
 @synthesize siteListTableView = _siteListTableView;
 @synthesize configFilesNeedLoading = _configFilesNeedLoading;
+
+
+
+/* ================================================== Initializers ================================================== */
+- (id) initWithDelegate:(id<expanz_codegen_ui_EventHandler>)delegate {
+    self = [super initWithNibName:@"expanzSettings" bundle:[NSBundle mainBundle]];
+    if (self) {
+        _delegate = delegate;
+    }
+    return self;
+}
 
 
 /* ================================================ Interface Methods =============================================== */
@@ -60,15 +72,17 @@
     _siteList = nil;
     [_siteListTableView reloadData];
     NSString* configFilePath =
-        [[self supportingFilesPath] stringByAppendingPathComponent:[_expanzBackendCombo objectValueOfSelectedItem]];
+            [[self supportingFilesPath] stringByAppendingPathComponent:[_expanzBackendCombo objectValueOfSelectedItem]];
 
-    SdkConfiguration* configuration = [[SdkConfiguration alloc]
-        initWithXmlString:[NSString stringWithContentsOfFile:configFilePath encoding:NSUTF8StringEncoding error:nil]];
+    SdkConfiguration* configuration = [[SdkConfiguration alloc] initWithXmlString:[NSString
+                                                                                          stringWithContentsOfFile:configFilePath
+                                                                                          encoding:NSUTF8StringEncoding
+                                                                                          error:nil]];
     [SdkConfiguration clearGlobalConfiguration];
     [SdkConfiguration setGlobalConfiguration:configuration];
 
     id<expanz_service_SiteDetailsClient>
-        siteDetailsClient = [[JSObjection globalInjector] getObject:@protocol(expanz_service_SiteDetailsClient)];
+            siteDetailsClient = [[JSObjection globalInjector] getObject:@protocol(expanz_service_SiteDetailsClient)];
     [siteDetailsClient listAvailableSitesWithDelegate:self];
 }
 
@@ -112,12 +126,14 @@
         }
     }
     return columnValue;
+
 }
 
 - (void) tableViewSelectionDidChange:(NSNotification*)notification {
     AppSite* site = [[_siteList sites] objectAtIndex:[_siteListTableView selectedRow]];
     [[UserSession sharedUserSession] setSelectedSite:site.appSiteId];
     LogDebug(@"Set selected site to %@", site.appSiteId);
+    [_delegate didSelectSite];
 }
 
 
@@ -125,7 +141,7 @@
 - (NSString*) supportingFilesPath {
     NSString* projectFilePath = [[UserSession sharedUserSession] projectFilePath];
     return [[projectFilePath stringByAppendingPathComponent:[projectFilePath lastPathComponent]]
-        stringByAppendingPathComponent:@"Supporting Files"];
+            stringByAppendingPathComponent:@"Supporting Files"];
 }
 
 @end

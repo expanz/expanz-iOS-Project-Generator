@@ -14,17 +14,21 @@
 
 @class JSObjectionInjector;
 @class expanz_model_SiteList;
+@protocol expanz_codegen_ui_EventHandler;
 
 @interface expanz_codegen_ui_ExpanzSettingsViewController : NSViewController<expanz_service_SiteDetailsClientDelegate,
     NSTableViewDelegate, NSTableViewDataSource> {
 
 @private
     expanz_model_SiteList* _siteList;
+    id<expanz_codegen_ui_EventHandler> _delegate;
 }
 
 @property(nonatomic, weak) IBOutlet NSComboBox* expanzBackendCombo;
 @property(nonatomic, weak) IBOutlet NSTableView* siteListTableView;
 @property(nonatomic) BOOL configFilesNeedLoading;
+
+- (id) initWithDelegate:(id<expanz_codegen_ui_EventHandler>)delegate;
 
 
 - (void) populateExpanzBackendCombo;

@@ -12,11 +12,21 @@
 #import <Cocoa/Cocoa.h>
 #import <Foundation/Foundation.h>
 
+@protocol expanz_codegen_ui_EventHandler;
 
-@interface expanz_codegen_ui_ProjectLocationViewController : NSViewController
+
+@interface expanz_codegen_ui_ProjectLocationViewController : NSViewController {
+
+@private
+
+    id<expanz_codegen_ui_EventHandler> _delegate;
+}
 
 @property(nonatomic, strong) IBOutlet NSComboBox* projectLocationCombo;
 @property(nonatomic, strong) IBOutlet NSButton* browseForProjectButton;
+
+- (id) initWithDelegate:(id<expanz_codegen_ui_EventHandler>)delegate;
+
 
 - (void) browseForProject;
 

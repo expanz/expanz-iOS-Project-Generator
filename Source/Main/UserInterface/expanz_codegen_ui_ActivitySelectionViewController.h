@@ -14,16 +14,21 @@
 
 @class JSObjectionInjector;
 @class expanz_model_ActivityMenu;
+@protocol expanz_codegen_ui_EventHandler;
 
 
 @interface expanz_codegen_ui_ActivitySelectionViewController : NSViewController<expanz_service_SiteDetailsClientDelegate,
     NSTableViewDataSource, NSTableViewDelegate> {
 
 @private
+    id<expanz_codegen_ui_EventHandler> _delegate;
     expanz_model_ActivityMenu* _activityList;
 }
 
 @property(nonatomic, weak) IBOutlet NSTableView* activityTableView;
+
+- (id) initWithDelegate:(id<expanz_codegen_ui_EventHandler>)delegate;
+
 
 - (void) populateActivityList;
 

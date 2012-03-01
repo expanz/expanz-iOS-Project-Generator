@@ -15,11 +15,21 @@
 #import "expanz_model_SiteList.h"
 #import "expanz_model_ActivityMenuItem.h"
 #import "expanz_model_ActivityMenu.h"
+#import "expanz_codegen_ui_EventHandler.h"
 
 
 @implementation expanz_codegen_ui_ActivitySelectionViewController 
 
 @synthesize activityTableView = _activityTableView;
+
+/* ================================================== Initializers ================================================== */
+- (id) initWithDelegate:(id<expanz_codegen_ui_EventHandler>)delegate {
+    self = [super initWithNibName:@"activities" bundle:[NSBundle mainBundle]];
+    if (self) {
+        _delegate = delegate;
+    }
+    return self;
+}
 
 
 /* ================================================ Interface Methods =============================================== */
@@ -74,9 +84,7 @@
 }
 
 - (void) tableViewSelectionDidChange:(NSNotification*)notification {
-//    AppSite* site = [[_siteList sites] objectAtIndex:[_siteListTableView selectedRow]];
-//    [[UserSession sharedUserSession] setSelectedSite:site.appSiteId];
-//    LogDebug(@"Set selected site to %@", site.appSiteId);
+    [_delegate didSelectActivity];
 }
 
 

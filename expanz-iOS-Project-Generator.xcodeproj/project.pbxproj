@@ -406,6 +406,7 @@
 		6BE4B2B4147E6D3C0059E50B /* AppDelegateSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegateSpec.m; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E50D /* expanz_codegen_model_UserSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_codegen_model_UserSession.m; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E510 /* expanz_codegen_model_UserSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_codegen_model_UserSession.h; sourceTree = "<group>"; };
+		6BE4B2B4147E6D3C0059E511 /* expanz_codegen_ui_EventHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_codegen_ui_EventHandler.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -730,6 +731,7 @@
 		6BB72DB414BEF9A9005A5961 /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
+				6BE4B2B4147E6D3C0059E511 /* expanz_codegen_ui_EventHandler.h */,
 				6BE4B2B4147E6D3C0059E509 /* expanz_codegen_ui_ActivitySelectionViewController.h */,
 				6BE4B2B4147E6D3C0059E506 /* expanz_codegen_ui_ActivitySelectionViewController.m */,
 				6BD5342014E668090009196B /* expanz_codegen_ui_ExpanzSettingsViewController.h */,
