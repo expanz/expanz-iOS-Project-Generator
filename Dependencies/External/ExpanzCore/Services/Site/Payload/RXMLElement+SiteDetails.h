@@ -11,10 +11,26 @@
 #import <Foundation/Foundation.h>
 #import "RXMLElement.h"
 
-@class expanz_model_ActivityDefinitionList;
+@class expanz_model_ActivityMenu;
+@class expanz_model_SiteList;
+@class expanz_model_AppSite;
+@class expanz_model_ActivitySchema;
+@class expanz_model_MethodSchema;
+@class expanz_model_FieldSchema;
 
 @interface RXMLElement (ListActivitiesForSite)
 
-- (expanz_model_ActivityDefinitionList*) asActivityDefinitionList;
+- (expanz_model_SiteList*) asSiteList;
+
+- (expanz_model_AppSite*) asAppSite;
+
+- (expanz_model_ActivityMenu*) asActivityMenu;
+
+- (expanz_model_ActivitySchema*) asActivitySchema;
+
+- (expanz_model_FieldSchema*) asFieldSchema;
+
+- (expanz_model_MethodSchema*) asMethodSchema;
+
 
 @end

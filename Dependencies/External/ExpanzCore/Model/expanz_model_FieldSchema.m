@@ -8,30 +8,31 @@
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
+#import "expanz_model_FieldSchema.h"
 
-#import "expanz_model_ActivityDefinition.h"
 
-@implementation expanz_model_ActivityDefinition
+@implementation expanz_model_FieldSchema
 
-@synthesize activityId = _activityId;
-@synthesize title = _title;
-@synthesize style = _style;
-
+@synthesize name = _name;
+@synthesize class = _class;
+@synthesize label = _label;
 
 /* ================================================== Initializers ================================================== */
-- (id) initWithActivityId:(NSString*)name title:(NSString*)title style:(ActivityStyle*)style {
-    self = [self init];
+- (id) initWithName:(NSString*)name class:(NSString*)class label:(NSString*)label {
+    self = [super init];
     if (self) {
-        _activityId = [name copy];
-        _title = [title copy];
-        _style = style;
+        _name = name;
+        _class = class;
+        _label = label;
     }
+
     return self;
 }
 
 /* ================================================== Utility Methods =============================================== */
 - (NSString*) description {
-    return [NSString stringWithFormat:@"Activity id=%@, title=%@", _activityId, _title];
+    return [NSString stringWithFormat:@"FieldSchema: name=%@, class=%@, label=%@", _name, _class, _label];
 }
+
 
 @end

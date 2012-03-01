@@ -8,19 +8,18 @@
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
-
 #import <Foundation/Foundation.h>
-#import "expanz_model_ActivityStyle.h"
 
-@interface expanz_model_ActivityDefinition : NSObject
 
-@property(nonatomic, strong, readonly) NSString* activityId;
-@property(nonatomic, strong, readonly) NSString* title;
-@property(nonatomic, strong, readonly) ActivityStyle* style;
+@interface expanz_model_FieldSchema : NSObject
 
-- (id) initWithActivityId:(NSString*)name title:(NSString*)title style:(ActivityStyle*)style;
+@property(nonatomic, strong, readonly) NSString* name;
+@property(nonatomic, strong, readonly) NSString* class;
+@property(nonatomic, strong, readonly) NSString* label;
+
+- (id) initWithName:(NSString*)name class:(NSString*)class label:(NSString*)label;
+
 
 @end
-
 /* ================================================================================================================== */
-@compatibility_alias ActivityDefinition expanz_model_ActivityDefinition;
+@compatibility_alias FieldSchema expanz_model_FieldSchema;

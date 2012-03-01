@@ -8,16 +8,22 @@
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
+#import "expanz_model_MethodSchema.h"
 
-#import "expanz_service_AbstractServiceClientDelegate.h"
 
-@class expanz_model_ResourceCollection;
+@implementation expanz_model_MethodSchema
 
-@protocol expanz_service_FileDownloadClientDelegate<expanz_service_AbstractServiceClientDelegate>
+@synthesize name = _name;
+@synthesize description = _description;
 
-@optional
+- (id) initWithName:(NSString*)name description:(NSString*)description {
+    self = [super init];
+    if (self) {
+        _name = [name copy];
+        _description = [description copy];
+    }
+    return self;
+}
 
-- (void) requestDidFinishWithResourceCollection:(expanz_model_ResourceCollection*)collection;
-- (void) requestDidFinishWithData:(NSData*)data;
 
 @end

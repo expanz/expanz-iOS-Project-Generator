@@ -68,9 +68,9 @@
     [SdkConfiguration clearGlobalConfiguration];
     [SdkConfiguration setGlobalConfiguration:configuration];
 
-    id<expanz_service_SiteClient>
-        siteClient = [[JSObjection globalInjector] getObject:@protocol(expanz_service_SiteClient)];
-    [siteClient listAvailableSitesWith:self];
+    id<expanz_service_SiteDetailsClient>
+        siteDetailsClient = [[JSObjection globalInjector] getObject:@protocol(expanz_service_SiteDetailsClient)];
+    [siteDetailsClient listAvailableSitesWithDelegate:self];
 }
 
 /* ================================================= Protocol Methods =============================================== */

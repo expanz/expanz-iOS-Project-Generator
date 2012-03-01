@@ -9,17 +9,16 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 #import <Foundation/Foundation.h>
-#import "RXMLElement+ListAvailableSites.h"
-#import "RXMLElement.h"
 
 
-@class expanz_model_AppSite;
-@class expanz_model_SiteList;
+@interface expanz_model_MethodSchema : NSObject
 
-@interface RXMLElement (ListAvailableSites)
+@property(nonatomic, strong, readonly) NSString* name;
+@property(nonatomic, strong, readonly) NSString* description;
 
-- (expanz_model_SiteList*) asSiteList;
+- (id) initWithName:(NSString*)name description:(NSString*)description;
 
-- (expanz_model_AppSite*) asAppSite;
 
 @end
+/* ================================================================================================================== */
+@compatibility_alias MethodSchema expanz_model_MethodSchema;
