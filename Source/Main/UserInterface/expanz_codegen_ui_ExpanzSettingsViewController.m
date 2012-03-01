@@ -13,7 +13,6 @@
 #import "expanz_SdkConfiguration.h"
 #import "JSObjectionInjector.h"
 #import "JSObjection.h"
-#import "expanz_CoreModule.h"
 #import "expanz_model_SiteList.h"
 #import "expanz_model_AppSite.h"
 #import "expanz_codegen_model_UserSession.h"

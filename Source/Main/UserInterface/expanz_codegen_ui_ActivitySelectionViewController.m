@@ -40,7 +40,7 @@
 
 }
 
-- (void) requestDidFinishWithActivityList:(expanz_model_ActivityDefinitionList*)activityList {
+- (void) requestDidFinishWithActivityMenu:(expanz_model_ActivityMenu*)activityList {
     LogDebug(@"Got response: %@", activityList);
     _activityList = activityList;
     [_activityTableView reloadData];
