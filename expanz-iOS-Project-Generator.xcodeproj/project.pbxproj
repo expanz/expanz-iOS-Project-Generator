@@ -150,6 +150,8 @@
 		6B789B7F14E37ACB00DAA872 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B789B7D14E37ACB00DAA872 /* QuartzCore.framework */; };
 		6B9C3D841501CD78006A7F97 /* libGRMustache1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B9C3D831501CD78006A7F97 /* libGRMustache1.a */; };
 		6B9C3D851501CD78006A7F97 /* libGRMustache1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B9C3D831501CD78006A7F97 /* libGRMustache1.a */; };
+		6B9C3D941501FC85006A7F97 /* GetSchemaForActivityXResponse.xml in Copy Test Resources to /tmp */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E512 /* GetSchemaForActivityXResponse.xml */; };
+		6B9C3D961501FF00006A7F97 /* controllerHeader.mustache in Copy Test Resources to /tmp */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E51D /* controllerHeader.mustache */; };
 		6B9FD26714BEF008006F8D04 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC10164147775A40055CF03 /* Cocoa.framework */; };
 		6B9FD26F14BEF008006F8D04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9FD26E14BEF008006F8D04 /* main.m */; };
 		6B9FD27614BEF008006F8D04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9FD27514BEF008006F8D04 /* AppDelegate.m */; };
@@ -203,7 +205,6 @@
 		6BE4B2B4147E6D3C0059E4D9 /* expanz_codegen_model_ProcessStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E4D7 /* expanz_codegen_model_ProcessStep.m */; };
 		6BE4B2B4147E6D3C0059E4E4 /* expanz_codegen_ui_ProjectLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E4E2 /* expanz_codegen_ui_ProjectLocationViewController.m */; };
 		6BE4B2B4147E6D3C0059E4EF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E4EE /* InfoPlist.strings */; };
-		6BE4B2B4147E6D3C0059E4F1 /* ServiceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E4F0 /* ServiceSpec.m */; };
 		6BE4B2B4147E6D3C0059E507 /* expanz_codegen_ui_ActivitySelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E506 /* expanz_codegen_ui_ActivitySelectionViewController.m */; };
 		6BE4B2B4147E6D3C0059E508 /* expanz_codegen_ui_ActivitySelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E506 /* expanz_codegen_ui_ActivitySelectionViewController.m */; };
 		6BE4B2B4147E6D3C0059E50C /* AppDelegateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E50B /* AppDelegateSpec.m */; };
@@ -213,10 +214,10 @@
 		6BE4B2B4147E6D3C0059E514 /* GetSchemaForActivityXResponse.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E512 /* GetSchemaForActivityXResponse.xml */; };
 		6BE4B2B4147E6D3C0059E516 /* expanz_codegen_model_ActivityGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E515 /* expanz_codegen_model_ActivityGenerator.m */; };
 		6BE4B2B4147E6D3C0059E517 /* expanz_codegen_model_ActivityGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E515 /* expanz_codegen_model_ActivityGenerator.m */; };
-		6BE4B2B4147E6D3C0059E51A /* MustacheSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E519 /* MustacheSpec.m */; };
 		6BE4B2B4147E6D3C0059E51C /* sampleTemplate.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E51B /* sampleTemplate.txt */; };
 		6BE4B2B4147E6D3C0059E51E /* controllerHeader.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E51D /* controllerHeader.mustache */; };
 		6BE4B2B4147E6D3C0059E51F /* controllerHeader.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E51D /* controllerHeader.mustache */; };
+		6BE4B2B4147E6D3C0059E521 /* ActivityGeneratorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E520 /* ActivityGeneratorSpec.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -229,6 +230,8 @@
 				6BBD6C8714ECD8DC00451BA2 /* production_environment.xml in Copy Test Resources to /tmp */,
 				6BD1B46414EBAD1B00F5AD1C /* project.pbxproj in Copy Test Resources to /tmp */,
 				6BD1B46514EBAD1C00F5AD1C /* ESA_Sales_Foobar_ViewController.header in Copy Test Resources to /tmp */,
+				6B9C3D961501FF00006A7F97 /* controllerHeader.mustache in Copy Test Resources to /tmp */,
+				6B9C3D941501FC85006A7F97 /* GetSchemaForActivityXResponse.xml in Copy Test Resources to /tmp */,
 				6B22F5291500BF2300427F39 /* sampleTemplate.txt in Copy Test Resources to /tmp */,
 				6BD1B46614EBAD1E00F5AD1C /* ESA_Sales_Foobar_ViewController.impl in Copy Test Resources to /tmp */,
 			);
@@ -448,7 +451,6 @@
 		6BE4B2B4147E6D3C0059E4E9 /* Tests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E4EB /* Tests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E4ED /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
-		6BE4B2B4147E6D3C0059E4F0 /* ServiceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceSpec.m; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E4F2 /* SpecHelper2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecHelper2.h; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E506 /* expanz_codegen_ui_ActivitySelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_codegen_ui_ActivitySelectionViewController.m; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E509 /* expanz_codegen_ui_ActivitySelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_codegen_ui_ActivitySelectionViewController.h; sourceTree = "<group>"; };
@@ -459,9 +461,9 @@
 		6BE4B2B4147E6D3C0059E512 /* GetSchemaForActivityXResponse.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = GetSchemaForActivityXResponse.xml; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E515 /* expanz_codegen_model_ActivityGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_codegen_model_ActivityGenerator.m; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E518 /* expanz_codegen_model_ActivityGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_codegen_model_ActivityGenerator.h; sourceTree = "<group>"; };
-		6BE4B2B4147E6D3C0059E519 /* MustacheSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MustacheSpec.m; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E51B /* sampleTemplate.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sampleTemplate.txt; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E51D /* controllerHeader.mustache */ = {isa = PBXFileReference; lastKnownFileType = file.mustache; path = controllerHeader.mustache; sourceTree = "<group>"; };
+		6BE4B2B4147E6D3C0059E520 /* ActivityGeneratorSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityGeneratorSpec.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -999,7 +1001,6 @@
 				6B783BC714AD8CF90087E522 /* Utils */,
 				6B783BBB14AD8CF90087E522 /* Resources */,
 				6BE4B2B4147E6D3C0059E4F2 /* SpecHelper2.h */,
-				6BE4B2B4147E6D3C0059E4F0 /* ServiceSpec.m */,
 				6BE4B2B4147E6D3C0059E4EB /* Tests-Prefix.pch */,
 				6BE4B2B4147E6D3C0059E4E9 /* Tests-Info.plist */,
 				6BE4B2B4147E6D3C0059E4EC /* en.lproj */,
@@ -1019,7 +1020,7 @@
 		6BE4B2B4147E6D3C0059E50A /* Unit */ = {
 			isa = PBXGroup;
 			children = (
-				6BE4B2B4147E6D3C0059E519 /* MustacheSpec.m */,
+				6BE4B2B4147E6D3C0059E520 /* ActivityGeneratorSpec.m */,
 				6BE4B2B4147E6D3C0059E50B /* AppDelegateSpec.m */,
 			);
 			path = Unit;
@@ -1172,7 +1173,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BE4B2B4147E6D3C0059E4F1 /* ServiceSpec.m in Sources */,
 				6BD1B46D14EBAE3700F5AD1C /* NSString+TestResource.m in Sources */,
 				6BC4D86414FBBE5500335BF3 /* JSObjectFactory.m in Sources */,
 				6BC4D86614FBBE5500335BF3 /* JSObjection.m in Sources */,
@@ -1247,7 +1247,6 @@
 				6B59D0F814FF5E8E002F25CA /* RXMLElement+SiteDetails.m in Sources */,
 				6B59D0FA14FF5E8E002F25CA /* NSString+Contains.m in Sources */,
 				6BE4B2B4147E6D3C0059E517 /* expanz_codegen_model_ActivityGenerator.m in Sources */,
-				6BE4B2B4147E6D3C0059E51A /* MustacheSpec.m in Sources */,
 				6B22F3C61500A82200427F39 /* (null) in Sources */,
 				6B22F4BB1500AA5C00427F39 /* (null) in Sources */,
 				6B22F4C11500AA5C00427F39 /* (null) in Sources */,
@@ -1257,6 +1256,7 @@
 				6B22F4D11500AA5C00427F39 /* (null) in Sources */,
 				6B22F4D31500AA5C00427F39 /* (null) in Sources */,
 				6B22F4D51500AA5C00427F39 /* (null) in Sources */,
+				6BE4B2B4147E6D3C0059E521 /* ActivityGeneratorSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

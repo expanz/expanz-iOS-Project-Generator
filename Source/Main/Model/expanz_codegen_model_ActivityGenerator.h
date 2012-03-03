@@ -15,11 +15,16 @@
 @interface expanz_codegen_model_ActivityGenerator : NSObject
 
 @property(nonatomic, strong, readonly) ActivitySchema* schema;
+@property(nonatomic, strong, readonly) NSString* headerTemplate;
+@property(nonatomic, strong, readonly) NSString* implTemplate;
+@property(nonatomic, strong, readonly) NSString* xibTemplate;
 
-- (id) initWithSchema:(ActivitySchema*)schema;
+
+- (id) initWithSchema:(ActivitySchema*)schema headerTemplate:(NSString*)headerTemplate
+        implTemplate:(NSString*)implTemplate xibTemplate:(NSString*)xibTemplate;
 
 
-
+- (NSString*) headerText;
 
 @end
 /* ================================================================================================================== */
