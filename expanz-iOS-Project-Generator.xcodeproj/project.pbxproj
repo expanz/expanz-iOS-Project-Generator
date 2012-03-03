@@ -8,6 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		6B225D9C14E0B43500B0F735 /* expanz.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B225D9B14E0B43500B0F735 /* expanz.png */; };
+		6B22F3C61500A82200427F39 /* (null) in Sources */ = {isa = PBXBuildFile; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6B22F4B21500AA5C00427F39 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6B22F4B41500AA5C00427F39 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6B22F4B61500AA5C00427F39 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6B22F4B81500AA5C00427F39 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6B22F4BB1500AA5C00427F39 /* (null) in Sources */ = {isa = PBXBuildFile; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6B22F4BC1500AA5C00427F39 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6B22F4BE1500AA5C00427F39 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6B22F4C11500AA5C00427F39 /* (null) in Sources */ = {isa = PBXBuildFile; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6B22F4C31500AA5C00427F39 /* (null) in Sources */ = {isa = PBXBuildFile; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6B22F4C51500AA5C00427F39 /* (null) in Sources */ = {isa = PBXBuildFile; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6B22F4C61500AA5C00427F39 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6B22F4C81500AA5C00427F39 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6B22F4CA1500AA5C00427F39 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6B22F4CC1500AA5C00427F39 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6B22F4CF1500AA5C00427F39 /* (null) in Sources */ = {isa = PBXBuildFile; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6B22F4D11500AA5C00427F39 /* (null) in Sources */ = {isa = PBXBuildFile; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6B22F4D31500AA5C00427F39 /* (null) in Sources */ = {isa = PBXBuildFile; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6B22F4D51500AA5C00427F39 /* (null) in Sources */ = {isa = PBXBuildFile; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6B22F4D61500AA5C00427F39 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6B22F4D81500AA5C00427F39 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		6B22F5291500BF2300427F39 /* sampleTemplate.txt in Copy Test Resources to /tmp */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E51B /* sampleTemplate.txt */; };
 		6B29561314F534F40040E5FF /* libKiwi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B40695014EBDB1F00AD1DEF /* libKiwi.a */; };
 		6B55223714EA723700494CF3 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD8982D14EA2441007875F4 /* SenTestingKit.framework */; };
 		6B55223814EA723700494CF3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC10164147775A40055CF03 /* Cocoa.framework */; };
@@ -126,6 +148,8 @@
 		6B789B7A14E3656300DAA872 /* ProjectLocation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B789B7914E3656300DAA872 /* ProjectLocation.xib */; };
 		6B789B7E14E37ACB00DAA872 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B789B7C14E37ACB00DAA872 /* Quartz.framework */; };
 		6B789B7F14E37ACB00DAA872 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B789B7D14E37ACB00DAA872 /* QuartzCore.framework */; };
+		6B9C3D841501CD78006A7F97 /* libGRMustache1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B9C3D831501CD78006A7F97 /* libGRMustache1.a */; };
+		6B9C3D851501CD78006A7F97 /* libGRMustache1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B9C3D831501CD78006A7F97 /* libGRMustache1.a */; };
 		6B9FD26714BEF008006F8D04 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC10164147775A40055CF03 /* Cocoa.framework */; };
 		6B9FD26F14BEF008006F8D04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9FD26E14BEF008006F8D04 /* main.m */; };
 		6B9FD27614BEF008006F8D04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9FD27514BEF008006F8D04 /* AppDelegate.m */; };
@@ -135,7 +159,7 @@
 		6BB72DCD14BEF9A9005A5961 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BB72DB614BEF9A9005A5961 /* MainMenu.xib */; };
 		6BB72DD014BEF9A9005A5961 /* expanz_codegen_ui_MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB72DB914BEF9A9005A5961 /* expanz_codegen_ui_MainWindowController.m */; };
 		6BBD6C7914ECB73200451BA2 /* production_environment.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BBD6C7814ECB73200451BA2 /* production_environment.xml */; };
-		6BBD6C8714ECD8DC00451BA2 /* production_environment.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6BBD6C7814ECB73200451BA2 /* production_environment.xml */; };
+		6BBD6C8714ECD8DC00451BA2 /* production_environment.xml in Copy Test Resources to /tmp */ = {isa = PBXBuildFile; fileRef = 6BBD6C7814ECB73200451BA2 /* production_environment.xml */; };
 		6BBD6C9714ECF28200451BA2 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BBD6C9614ECF28200451BA2 /* libz.dylib */; };
 		6BBD6C9814ECFC9C00451BA2 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BBD6C9614ECF28200451BA2 /* libz.dylib */; };
 		6BC4D86314FBBE5500335BF3 /* JSObjectFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7E614FBBE5500335BF3 /* JSObjectFactory.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -169,9 +193,9 @@
 		6BCEC03014BBD9D600538D1D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BCEC02914BBD9D600538D1D /* InfoPlist.strings */; };
 		6BCEDDF014C034D40089804B /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BCEDDEF14C034D40089804B /* MainWindow.xib */; };
 		6BD1B46214EBABB000F5AD1C /* project.pbxproj in Resources */ = {isa = PBXBuildFile; fileRef = 6BD1B46114EBABB000F5AD1C /* project.pbxproj */; };
-		6BD1B46414EBAD1B00F5AD1C /* project.pbxproj in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6BD1B46114EBABB000F5AD1C /* project.pbxproj */; };
-		6BD1B46514EBAD1C00F5AD1C /* ESA_Sales_Foobar_ViewController.header in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6B783BBC14AD8CF90087E522 /* ESA_Sales_Foobar_ViewController.header */; };
-		6BD1B46614EBAD1E00F5AD1C /* ESA_Sales_Foobar_ViewController.impl in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6B783BBD14AD8CF90087E522 /* ESA_Sales_Foobar_ViewController.impl */; };
+		6BD1B46414EBAD1B00F5AD1C /* project.pbxproj in Copy Test Resources to /tmp */ = {isa = PBXBuildFile; fileRef = 6BD1B46114EBABB000F5AD1C /* project.pbxproj */; };
+		6BD1B46514EBAD1C00F5AD1C /* ESA_Sales_Foobar_ViewController.header in Copy Test Resources to /tmp */ = {isa = PBXBuildFile; fileRef = 6B783BBC14AD8CF90087E522 /* ESA_Sales_Foobar_ViewController.header */; };
+		6BD1B46614EBAD1E00F5AD1C /* ESA_Sales_Foobar_ViewController.impl in Copy Test Resources to /tmp */ = {isa = PBXBuildFile; fileRef = 6B783BBD14AD8CF90087E522 /* ESA_Sales_Foobar_ViewController.impl */; };
 		6BD1B46D14EBAE3700F5AD1C /* NSString+TestResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E4BD /* NSString+TestResource.m */; };
 		6BD5341E14E61DAA0009196B /* expanzSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD5341D14E61DAA0009196B /* expanzSettings.xib */; };
 		6BD5342314E668090009196B /* expanz_codegen_ui_ExpanzSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD5342114E668090009196B /* expanz_codegen_ui_ExpanzSettingsViewController.m */; };
@@ -185,20 +209,28 @@
 		6BE4B2B4147E6D3C0059E50C /* AppDelegateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E50B /* AppDelegateSpec.m */; };
 		6BE4B2B4147E6D3C0059E50E /* expanz_codegen_model_UserSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E50D /* expanz_codegen_model_UserSession.m */; };
 		6BE4B2B4147E6D3C0059E50F /* expanz_codegen_model_UserSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E50D /* expanz_codegen_model_UserSession.m */; };
+		6BE4B2B4147E6D3C0059E513 /* GetSchemaForActivityXResponse.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E512 /* GetSchemaForActivityXResponse.xml */; };
+		6BE4B2B4147E6D3C0059E514 /* GetSchemaForActivityXResponse.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E512 /* GetSchemaForActivityXResponse.xml */; };
+		6BE4B2B4147E6D3C0059E516 /* expanz_codegen_model_ActivityGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E515 /* expanz_codegen_model_ActivityGenerator.m */; };
+		6BE4B2B4147E6D3C0059E517 /* expanz_codegen_model_ActivityGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E515 /* expanz_codegen_model_ActivityGenerator.m */; };
+		6BE4B2B4147E6D3C0059E51A /* MustacheSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E519 /* MustacheSpec.m */; };
+		6BE4B2B4147E6D3C0059E51C /* sampleTemplate.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E51B /* sampleTemplate.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		6BD1B46314EBAD0E00F5AD1C /* CopyFiles */ = {
+		6BD1B46314EBAD0E00F5AD1C /* Copy Test Resources to /tmp */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /tmp;
 			dstSubfolderSpec = 0;
 			files = (
-				6BBD6C8714ECD8DC00451BA2 /* production_environment.xml in CopyFiles */,
-				6BD1B46414EBAD1B00F5AD1C /* project.pbxproj in CopyFiles */,
-				6BD1B46514EBAD1C00F5AD1C /* ESA_Sales_Foobar_ViewController.header in CopyFiles */,
-				6BD1B46614EBAD1E00F5AD1C /* ESA_Sales_Foobar_ViewController.impl in CopyFiles */,
+				6BBD6C8714ECD8DC00451BA2 /* production_environment.xml in Copy Test Resources to /tmp */,
+				6BD1B46414EBAD1B00F5AD1C /* project.pbxproj in Copy Test Resources to /tmp */,
+				6BD1B46514EBAD1C00F5AD1C /* ESA_Sales_Foobar_ViewController.header in Copy Test Resources to /tmp */,
+				6B22F5291500BF2300427F39 /* sampleTemplate.txt in Copy Test Resources to /tmp */,
+				6BD1B46614EBAD1E00F5AD1C /* ESA_Sales_Foobar_ViewController.impl in Copy Test Resources to /tmp */,
 			);
+			name = "Copy Test Resources to /tmp";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -208,7 +240,6 @@
 		6B225D9B14E0B43500B0F735 /* expanz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = expanz.png; sourceTree = "<group>"; };
 		6B40695014EBDB1F00AD1DEF /* libKiwi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libKiwi.a; path = ../Libraries/libKiwi.a; sourceTree = "<group>"; };
 		6B40695114EBDB1F00AD1DEF /* libLRResty.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLRResty.a; path = ../Libraries/libLRResty.a; sourceTree = "<group>"; };
-		6B41FDA714F60C5E00004897 /* libprofile_rt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libprofile_rt.dylib; path = Toolchains/XcodeDefault.xctoolchain/usr/lib/libprofile_rt.dylib; sourceTree = DEVELOPER_DIR; };
 		6B55223614EA723700494CF3 /* Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B59D01514FF5E8D002F25CA /* expanz_CoreModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_CoreModule.h; sourceTree = "<group>"; };
 		6B59D01614FF5E8D002F25CA /* expanz_CoreModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_CoreModule.m; sourceTree = "<group>"; };
@@ -332,6 +363,22 @@
 		6B789B7914E3656300DAA872 /* ProjectLocation.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectLocation.xib; sourceTree = "<group>"; };
 		6B789B7C14E37ACB00DAA872 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
 		6B789B7D14E37ACB00DAA872 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		6B9C3D741501CD78006A7F97 /* GRBoolean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRBoolean.h; sourceTree = "<group>"; };
+		6B9C3D751501CD78006A7F97 /* GRMustache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMustache.h; sourceTree = "<group>"; };
+		6B9C3D761501CD78006A7F97 /* GRMustacheAvailabilityMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMustacheAvailabilityMacros.h; sourceTree = "<group>"; };
+		6B9C3D771501CD78006A7F97 /* GRMustacheContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMustacheContext.h; sourceTree = "<group>"; };
+		6B9C3D781501CD78006A7F97 /* GRMustacheDateFormatterHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMustacheDateFormatterHelper.h; sourceTree = "<group>"; };
+		6B9C3D791501CD78006A7F97 /* GRMustacheEnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMustacheEnvironment.h; sourceTree = "<group>"; };
+		6B9C3D7A1501CD78006A7F97 /* GRMustacheError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMustacheError.h; sourceTree = "<group>"; };
+		6B9C3D7B1501CD78006A7F97 /* GRMustacheLambda.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMustacheLambda.h; sourceTree = "<group>"; };
+		6B9C3D7C1501CD78006A7F97 /* GRMustacheNumberFormatterHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMustacheNumberFormatterHelper.h; sourceTree = "<group>"; };
+		6B9C3D7D1501CD78006A7F97 /* GRMustacheSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMustacheSection.h; sourceTree = "<group>"; };
+		6B9C3D7E1501CD78006A7F97 /* GRMustacheTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMustacheTemplate.h; sourceTree = "<group>"; };
+		6B9C3D7F1501CD78006A7F97 /* GRMustacheTemplateLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMustacheTemplateLoader.h; sourceTree = "<group>"; };
+		6B9C3D801501CD78006A7F97 /* GRMustacheTemplateLoader_protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMustacheTemplateLoader_protected.h; sourceTree = "<group>"; };
+		6B9C3D811501CD78006A7F97 /* GRMustacheUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMustacheUtils.h; sourceTree = "<group>"; };
+		6B9C3D821501CD78006A7F97 /* GRMustacheVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMustacheVersion.h; sourceTree = "<group>"; };
+		6B9C3D831501CD78006A7F97 /* libGRMustache1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGRMustache1.a; path = Dependencies/Libraries/libGRMustache1.a; sourceTree = SOURCE_ROOT; };
 		6B9FD26514BEF008006F8D04 /* Model-Object-Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Model-Object-Explorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B9FD26A14BEF008006F8D04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B9FD26E14BEF008006F8D04 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -407,6 +454,11 @@
 		6BE4B2B4147E6D3C0059E50D /* expanz_codegen_model_UserSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_codegen_model_UserSession.m; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E510 /* expanz_codegen_model_UserSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_codegen_model_UserSession.h; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E511 /* expanz_codegen_ui_EventHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_codegen_ui_EventHandler.h; sourceTree = "<group>"; };
+		6BE4B2B4147E6D3C0059E512 /* GetSchemaForActivityXResponse.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = GetSchemaForActivityXResponse.xml; sourceTree = "<group>"; };
+		6BE4B2B4147E6D3C0059E515 /* expanz_codegen_model_ActivityGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_codegen_model_ActivityGenerator.m; sourceTree = "<group>"; };
+		6BE4B2B4147E6D3C0059E518 /* expanz_codegen_model_ActivityGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_codegen_model_ActivityGenerator.h; sourceTree = "<group>"; };
+		6BE4B2B4147E6D3C0059E519 /* MustacheSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MustacheSpec.m; sourceTree = "<group>"; };
+		6BE4B2B4147E6D3C0059E51B /* sampleTemplate.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sampleTemplate.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -422,6 +474,7 @@
 				6BBD6C9714ECF28200451BA2 /* libz.dylib in Frameworks */,
 				6B55223714EA723700494CF3 /* SenTestingKit.framework in Frameworks */,
 				6B55223814EA723700494CF3 /* Cocoa.framework in Frameworks */,
+				6B9C3D851501CD78006A7F97 /* libGRMustache1.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +487,7 @@
 				6B789B7E14E37ACB00DAA872 /* Quartz.framework in Frameworks */,
 				6B789B7F14E37ACB00DAA872 /* QuartzCore.framework in Frameworks */,
 				6B9FD26714BEF008006F8D04 /* Cocoa.framework in Frameworks */,
+				6B9C3D841501CD78006A7F97 /* libGRMustache1.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +505,8 @@
 		6B105A041479CF9A002DEBCE /* External */ = {
 			isa = PBXGroup;
 			children = (
+				6B9C3D731501CD78006A7F97 /* GRMustache */,
+				6B9C3D831501CD78006A7F97 /* libGRMustache1.a */,
 				6B59D01414FF5E8D002F25CA /* ExpanzCore */,
 				6BC4D7E214FBBE5500335BF3 /* Flexible-iOS-Logging-1.0 */,
 				6BC4D7E414FBBE5500335BF3 /* objection */,
@@ -691,6 +747,8 @@
 		6B783BBB14AD8CF90087E522 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6BE4B2B4147E6D3C0059E51B /* sampleTemplate.txt */,
+				6BE4B2B4147E6D3C0059E512 /* GetSchemaForActivityXResponse.xml */,
 				6BBD6C7814ECB73200451BA2 /* production_environment.xml */,
 				6BD1B46114EBABB000F5AD1C /* project.pbxproj */,
 				6B783BBC14AD8CF90087E522 /* ESA_Sales_Foobar_ViewController.header */,
@@ -719,6 +777,29 @@
 			);
 			path = Main;
 			sourceTree = "<group>";
+		};
+		6B9C3D731501CD78006A7F97 /* GRMustache */ = {
+			isa = PBXGroup;
+			children = (
+				6B9C3D741501CD78006A7F97 /* GRBoolean.h */,
+				6B9C3D751501CD78006A7F97 /* GRMustache.h */,
+				6B9C3D761501CD78006A7F97 /* GRMustacheAvailabilityMacros.h */,
+				6B9C3D771501CD78006A7F97 /* GRMustacheContext.h */,
+				6B9C3D781501CD78006A7F97 /* GRMustacheDateFormatterHelper.h */,
+				6B9C3D791501CD78006A7F97 /* GRMustacheEnvironment.h */,
+				6B9C3D7A1501CD78006A7F97 /* GRMustacheError.h */,
+				6B9C3D7B1501CD78006A7F97 /* GRMustacheLambda.h */,
+				6B9C3D7C1501CD78006A7F97 /* GRMustacheNumberFormatterHelper.h */,
+				6B9C3D7D1501CD78006A7F97 /* GRMustacheSection.h */,
+				6B9C3D7E1501CD78006A7F97 /* GRMustacheTemplate.h */,
+				6B9C3D7F1501CD78006A7F97 /* GRMustacheTemplateLoader.h */,
+				6B9C3D801501CD78006A7F97 /* GRMustacheTemplateLoader_protected.h */,
+				6B9C3D811501CD78006A7F97 /* GRMustacheUtils.h */,
+				6B9C3D821501CD78006A7F97 /* GRMustacheVersion.h */,
+			);
+			name = GRMustache;
+			path = Dependencies/Libraries/GRMustache;
+			sourceTree = SOURCE_ROOT;
 		};
 		6BAD70D914EE31FE001E6A23 /* Utils */ = {
 			isa = PBXGroup;
@@ -761,7 +842,6 @@
 		6BC10155147775A40055CF03 = {
 			isa = PBXGroup;
 			children = (
-				6B62CC1114FC9D5D00A0E098 /* libprofile_rt.dylib */,
 				6BE4B285147E6B610059E44D /* Source */,
 				6BC10163147775A40055CF03 /* Frameworks */,
 				6B105A041479CF9A002DEBCE /* External */,
@@ -782,7 +862,7 @@
 		6BC10163147775A40055CF03 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6B41FDA714F60C5E00004897 /* libprofile_rt.dylib */,
+				6B62CC1114FC9D5D00A0E098 /* libprofile_rt.dylib */,
 				6BB5EE5E14F49B1B00B5B193 /* LRResty.framework */,
 				6BBD6C9614ECF28200451BA2 /* libz.dylib */,
 				6B789B7D14E37ACB00DAA872 /* QuartzCore.framework */,
@@ -899,6 +979,8 @@
 		6BE4B2B4147E6D3C0059E4D6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6BE4B2B4147E6D3C0059E515 /* expanz_codegen_model_ActivityGenerator.m */,
+				6BE4B2B4147E6D3C0059E518 /* expanz_codegen_model_ActivityGenerator.h */,
 				6BE4B2B4147E6D3C0059E510 /* expanz_codegen_model_UserSession.h */,
 				6BE4B2B4147E6D3C0059E50D /* expanz_codegen_model_UserSession.m */,
 				6BE4B2B4147E6D3C0059E4DA /* expanz_codegen_model_ProcessStep.h */,
@@ -933,6 +1015,7 @@
 		6BE4B2B4147E6D3C0059E50A /* Unit */ = {
 			isa = PBXGroup;
 			children = (
+				6BE4B2B4147E6D3C0059E519 /* MustacheSpec.m */,
 				6BE4B2B4147E6D3C0059E50B /* AppDelegateSpec.m */,
 			);
 			path = Unit;
@@ -948,7 +1031,7 @@
 				6B55223114EA723700494CF3 /* Sources */,
 				6B55223214EA723700494CF3 /* Frameworks */,
 				6B55223314EA723700494CF3 /* Resources */,
-				6BD1B46314EBAD0E00F5AD1C /* CopyFiles */,
+				6BD1B46314EBAD0E00F5AD1C /* Copy Test Resources to /tmp */,
 				6B55223414EA723700494CF3 /* ShellScript */,
 			);
 			buildRules = (
@@ -1033,6 +1116,8 @@
 				6BD1B46214EBABB000F5AD1C /* project.pbxproj in Resources */,
 				6BBD6C7914ECB73200451BA2 /* production_environment.xml in Resources */,
 				6B62CC0A14FC967900A0E098 /* activities.xib in Resources */,
+				6BE4B2B4147E6D3C0059E514 /* GetSchemaForActivityXResponse.xml in Resources */,
+				6BE4B2B4147E6D3C0059E51C /* sampleTemplate.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1046,6 +1131,7 @@
 				6B789B7A14E3656300DAA872 /* ProjectLocation.xib in Resources */,
 				6BD5341E14E61DAA0009196B /* expanzSettings.xib in Resources */,
 				6B62CC0914FC967900A0E098 /* activities.xib in Resources */,
+				6BE4B2B4147E6D3C0059E513 /* GetSchemaForActivityXResponse.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1154,6 +1240,17 @@
 				6B59D0F614FF5E8E002F25CA /* expanz_service_DefaultSiteDetailsClient.m in Sources */,
 				6B59D0F814FF5E8E002F25CA /* RXMLElement+SiteDetails.m in Sources */,
 				6B59D0FA14FF5E8E002F25CA /* NSString+Contains.m in Sources */,
+				6BE4B2B4147E6D3C0059E517 /* expanz_codegen_model_ActivityGenerator.m in Sources */,
+				6BE4B2B4147E6D3C0059E51A /* MustacheSpec.m in Sources */,
+				6B22F3C61500A82200427F39 /* (null) in Sources */,
+				6B22F4BB1500AA5C00427F39 /* (null) in Sources */,
+				6B22F4C11500AA5C00427F39 /* (null) in Sources */,
+				6B22F4C31500AA5C00427F39 /* (null) in Sources */,
+				6B22F4C51500AA5C00427F39 /* (null) in Sources */,
+				6B22F4CF1500AA5C00427F39 /* (null) in Sources */,
+				6B22F4D11500AA5C00427F39 /* (null) in Sources */,
+				6B22F4D31500AA5C00427F39 /* (null) in Sources */,
+				6B22F4D51500AA5C00427F39 /* (null) in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1233,6 +1330,19 @@
 				6B59D0F514FF5E8E002F25CA /* expanz_service_DefaultSiteDetailsClient.m in Sources */,
 				6B59D0F714FF5E8E002F25CA /* RXMLElement+SiteDetails.m in Sources */,
 				6B59D0F914FF5E8E002F25CA /* NSString+Contains.m in Sources */,
+				6BE4B2B4147E6D3C0059E516 /* expanz_codegen_model_ActivityGenerator.m in Sources */,
+				6B22F4B21500AA5C00427F39 /* (null) in Sources */,
+				6B22F4B41500AA5C00427F39 /* (null) in Sources */,
+				6B22F4B61500AA5C00427F39 /* (null) in Sources */,
+				6B22F4B81500AA5C00427F39 /* (null) in Sources */,
+				6B22F4BC1500AA5C00427F39 /* (null) in Sources */,
+				6B22F4BE1500AA5C00427F39 /* (null) in Sources */,
+				6B22F4C61500AA5C00427F39 /* (null) in Sources */,
+				6B22F4C81500AA5C00427F39 /* (null) in Sources */,
+				6B22F4CA1500AA5C00427F39 /* (null) in Sources */,
+				6B22F4CC1500AA5C00427F39 /* (null) in Sources */,
+				6B22F4D61500AA5C00427F39 /* (null) in Sources */,
+				6B22F4D81500AA5C00427F39 /* (null) in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1286,13 +1396,17 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Source/Tests/Tests-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Dependencies/Libraries/Kiwi\"";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/Dependencies/Libraries/Kiwi\"",
+					"\"$(SRCROOT)/Dependencies/Libraries/MGTemplateEngine\"",
+				);
 				INFOPLIST_FILE = "Source/Tests/Tests-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(DEVELOPER_DIR)/usr/lib\"",
 					"\"$(SRCROOT)/Dependencies/Libraries\"",
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib\"",
+					"\"$(SRCROOT)/../MGTemplateEngine/build/UninstalledProducts\"",
 				);
 				OTHER_CFLAGS = (
 					"-ftest-coverage",
@@ -1321,13 +1435,17 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Source/Tests/Tests-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Dependencies/Libraries/Kiwi\"";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/Dependencies/Libraries/Kiwi\"",
+					"\"$(SRCROOT)/Dependencies/Libraries/MGTemplateEngine\"",
+				);
 				INFOPLIST_FILE = "Source/Tests/Tests-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(DEVELOPER_DIR)/usr/lib\"",
 					"\"$(SRCROOT)/Dependencies/Libraries\"",
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib\"",
+					"\"$(SRCROOT)/../MGTemplateEngine/build/UninstalledProducts\"",
 				);
 				OTHER_CFLAGS = (
 					"-ftest-coverage",
