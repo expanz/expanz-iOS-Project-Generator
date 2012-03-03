@@ -20,11 +20,11 @@ SPEC_BEGIN(ActivityGeneratorSpec)
             NSString* actvityXml = [NSString stringWithTestResource:@"GetSchemaForActivityXResponse.xml"];
             RXMLElement* element = [RXMLElement elementFromXMLString:actvityXml];
             ActivitySchema* schema = [[element child:@"GetSchemaForActivityXResult.ESA.Activity"] asActivitySchema];
-
             NSString* headerTemplate = [NSString stringWithTestResource:@"controllerHeader.mustache"];
+            NSString* implTemplate = [NSString stringWithTestResource:@"controllerImpl.mustache"];
 
             generator = [[ActivityGenerator alloc]
-                    initWithSchema:schema headerTemplate:headerTemplate implTemplate:nil xibTemplate:nil];
+                    initWithSchema:schema headerTemplate:headerTemplate implTemplate:implTemplate xibTemplate:nil];
         });
 
 
@@ -32,6 +32,13 @@ SPEC_BEGIN(ActivityGeneratorSpec)
 
             NSString* headerText = [generator headerText];
             LogDebug(@"\n%@", headerText);
+
+        });
+
+        it(@"should generate the impl file.", ^{
+
+            NSString* implText = [generator implText];
+            LogDebug(@"\n%@", implText);
 
         });
 

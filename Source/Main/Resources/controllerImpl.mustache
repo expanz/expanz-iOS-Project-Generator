@@ -1,0 +1,27 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+//  EXPANZ
+//  Copyright 2008-2011 EXPANZ
+//  All Rights Reserved.
+//
+//  NOTICE: Expanz permits you to use, modify, and distribute this file
+//  in accordance with the terms of the license agreement accompanying it.
+//
+////////////////////////////////////////////////////////////////////////////////
+
+#import "{{viewControllerName}}.h"
+
+@implementation {{viewControllerName}}
+
+{{#fields}}
+@synthesize {{name}} = _{{name}};
+{{/fields}}
+
+{{#methods}}
+- (IBAction) do{{name}} {
+    [super sendMethodInvocation:@"{{name}}"];
+}
+{{/methods}}
+
+
+@end

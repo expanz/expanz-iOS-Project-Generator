@@ -25,7 +25,6 @@
 @synthesize divide = _divide;
 
 
-/* ================================================ Interface Methods =============================================== */
 - (IBAction) addClicked {
     [super sendMethodInvocation:@"Add"];
 }

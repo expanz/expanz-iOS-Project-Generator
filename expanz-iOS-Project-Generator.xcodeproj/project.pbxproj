@@ -29,7 +29,6 @@
 		6B22F4D51500AA5C00427F39 /* (null) in Sources */ = {isa = PBXBuildFile; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6B22F4D61500AA5C00427F39 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6B22F4D81500AA5C00427F39 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		6B22F5291500BF2300427F39 /* sampleTemplate.txt in Copy Test Resources to /tmp */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E51B /* sampleTemplate.txt */; };
 		6B29561314F534F40040E5FF /* libKiwi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B40695014EBDB1F00AD1DEF /* libKiwi.a */; };
 		6B55223714EA723700494CF3 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD8982D14EA2441007875F4 /* SenTestingKit.framework */; };
 		6B55223814EA723700494CF3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC10164147775A40055CF03 /* Cocoa.framework */; };
@@ -152,6 +151,7 @@
 		6B9C3D851501CD78006A7F97 /* libGRMustache1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B9C3D831501CD78006A7F97 /* libGRMustache1.a */; };
 		6B9C3D941501FC85006A7F97 /* GetSchemaForActivityXResponse.xml in Copy Test Resources to /tmp */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E512 /* GetSchemaForActivityXResponse.xml */; };
 		6B9C3D961501FF00006A7F97 /* controllerHeader.mustache in Copy Test Resources to /tmp */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E51D /* controllerHeader.mustache */; };
+		6B9C3DA015021425006A7F97 /* controllerImpl.mustache in Copy Test Resources to /tmp */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E522 /* controllerImpl.mustache */; };
 		6B9FD26714BEF008006F8D04 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC10164147775A40055CF03 /* Cocoa.framework */; };
 		6B9FD26F14BEF008006F8D04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9FD26E14BEF008006F8D04 /* main.m */; };
 		6B9FD27614BEF008006F8D04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9FD27514BEF008006F8D04 /* AppDelegate.m */; };
@@ -214,10 +214,11 @@
 		6BE4B2B4147E6D3C0059E514 /* GetSchemaForActivityXResponse.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E512 /* GetSchemaForActivityXResponse.xml */; };
 		6BE4B2B4147E6D3C0059E516 /* expanz_codegen_model_ActivityGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E515 /* expanz_codegen_model_ActivityGenerator.m */; };
 		6BE4B2B4147E6D3C0059E517 /* expanz_codegen_model_ActivityGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E515 /* expanz_codegen_model_ActivityGenerator.m */; };
-		6BE4B2B4147E6D3C0059E51C /* sampleTemplate.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E51B /* sampleTemplate.txt */; };
 		6BE4B2B4147E6D3C0059E51E /* controllerHeader.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E51D /* controllerHeader.mustache */; };
 		6BE4B2B4147E6D3C0059E51F /* controllerHeader.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E51D /* controllerHeader.mustache */; };
 		6BE4B2B4147E6D3C0059E521 /* ActivityGeneratorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E520 /* ActivityGeneratorSpec.m */; };
+		6BE4B2B4147E6D3C0059E523 /* controllerImpl.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E522 /* controllerImpl.mustache */; };
+		6BE4B2B4147E6D3C0059E524 /* controllerImpl.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E522 /* controllerImpl.mustache */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -229,10 +230,10 @@
 			files = (
 				6BBD6C8714ECD8DC00451BA2 /* production_environment.xml in Copy Test Resources to /tmp */,
 				6BD1B46414EBAD1B00F5AD1C /* project.pbxproj in Copy Test Resources to /tmp */,
-				6BD1B46514EBAD1C00F5AD1C /* ESA_Sales_Foobar_ViewController.header in Copy Test Resources to /tmp */,
+				6B9C3DA015021425006A7F97 /* controllerImpl.mustache in Copy Test Resources to /tmp */,
 				6B9C3D961501FF00006A7F97 /* controllerHeader.mustache in Copy Test Resources to /tmp */,
+				6BD1B46514EBAD1C00F5AD1C /* ESA_Sales_Foobar_ViewController.header in Copy Test Resources to /tmp */,
 				6B9C3D941501FC85006A7F97 /* GetSchemaForActivityXResponse.xml in Copy Test Resources to /tmp */,
-				6B22F5291500BF2300427F39 /* sampleTemplate.txt in Copy Test Resources to /tmp */,
 				6BD1B46614EBAD1E00F5AD1C /* ESA_Sales_Foobar_ViewController.impl in Copy Test Resources to /tmp */,
 			);
 			name = "Copy Test Resources to /tmp";
@@ -461,9 +462,9 @@
 		6BE4B2B4147E6D3C0059E512 /* GetSchemaForActivityXResponse.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = GetSchemaForActivityXResponse.xml; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E515 /* expanz_codegen_model_ActivityGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_codegen_model_ActivityGenerator.m; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E518 /* expanz_codegen_model_ActivityGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_codegen_model_ActivityGenerator.h; sourceTree = "<group>"; };
-		6BE4B2B4147E6D3C0059E51B /* sampleTemplate.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sampleTemplate.txt; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E51D /* controllerHeader.mustache */ = {isa = PBXFileReference; lastKnownFileType = file.mustache; path = controllerHeader.mustache; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E520 /* ActivityGeneratorSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityGeneratorSpec.m; sourceTree = "<group>"; };
+		6BE4B2B4147E6D3C0059E522 /* controllerImpl.mustache */ = {isa = PBXFileReference; lastKnownFileType = file.mustache; path = controllerImpl.mustache; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -752,7 +753,6 @@
 		6B783BBB14AD8CF90087E522 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				6BE4B2B4147E6D3C0059E51B /* sampleTemplate.txt */,
 				6BE4B2B4147E6D3C0059E512 /* GetSchemaForActivityXResponse.xml */,
 				6BBD6C7814ECB73200451BA2 /* production_environment.xml */,
 				6BD1B46114EBABB000F5AD1C /* project.pbxproj */,
@@ -943,6 +943,7 @@
 		6BCEC02614BBD9D600538D1D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6BE4B2B4147E6D3C0059E522 /* controllerImpl.mustache */,
 				6BE4B2B4147E6D3C0059E51D /* controllerHeader.mustache */,
 				6B9FD26A14BEF008006F8D04 /* Info.plist */,
 				6BCEC02714BBD9D600538D1D /* Credits.rtf */,
@@ -1122,8 +1123,8 @@
 				6BBD6C7914ECB73200451BA2 /* production_environment.xml in Resources */,
 				6B62CC0A14FC967900A0E098 /* activities.xib in Resources */,
 				6BE4B2B4147E6D3C0059E514 /* GetSchemaForActivityXResponse.xml in Resources */,
-				6BE4B2B4147E6D3C0059E51C /* sampleTemplate.txt in Resources */,
 				6BE4B2B4147E6D3C0059E51F /* controllerHeader.mustache in Resources */,
+				6BE4B2B4147E6D3C0059E524 /* controllerImpl.mustache in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1139,6 +1140,7 @@
 				6B62CC0914FC967900A0E098 /* activities.xib in Resources */,
 				6BE4B2B4147E6D3C0059E513 /* GetSchemaForActivityXResponse.xml in Resources */,
 				6BE4B2B4147E6D3C0059E51E /* controllerHeader.mustache in Resources */,
+				6BE4B2B4147E6D3C0059E523 /* controllerImpl.mustache in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

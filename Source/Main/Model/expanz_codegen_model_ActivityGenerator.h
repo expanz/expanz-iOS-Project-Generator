@@ -12,12 +12,15 @@
 #import <Foundation/Foundation.h>
 #import "expanz_model_ActivitySchema.h"
 
-@interface expanz_codegen_model_ActivityGenerator : NSObject
+@interface expanz_codegen_model_ActivityGenerator : NSObject {
+
+@private
+    NSString* _headerTemplate;
+    NSString* _implTemplate;
+    NSString* _xibTemplate;
+}
 
 @property(nonatomic, strong, readonly) ActivitySchema* schema;
-@property(nonatomic, strong, readonly) NSString* headerTemplate;
-@property(nonatomic, strong, readonly) NSString* implTemplate;
-@property(nonatomic, strong, readonly) NSString* xibTemplate;
 
 
 - (id) initWithSchema:(ActivitySchema*)schema headerTemplate:(NSString*)headerTemplate
@@ -25,6 +28,8 @@
 
 
 - (NSString*) headerText;
+
+- (NSString*) implText;
 
 @end
 /* ================================================================================================================== */

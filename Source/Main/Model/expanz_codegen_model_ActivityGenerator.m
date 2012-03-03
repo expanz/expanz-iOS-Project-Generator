@@ -17,10 +17,6 @@
 @implementation expanz_codegen_model_ActivityGenerator
 
 @synthesize schema = _schema;
-@synthesize headerTemplate = _headerTemplate;
-@synthesize implTemplate = _implTemplate;
-@synthesize xibTemplate = _xibTemplate;
-
 
 
 /* ================================================== Initializers ================================================== */
@@ -42,10 +38,21 @@
 - (NSString*) headerText {
     NSError* error;
     GRMustacheTemplate* template = [GRMustacheTemplate templateFromString:_headerTemplate error:&error];
-    NSString* header = [template renderObjects:_schema];
+    NSString* headerText = [template renderObjects:_schema];
+    if (error) {
+        [NSException raise:NSInternalInconsistencyException format:[[error userInfo] description]];
+    }
+    return headerText;
+}
 
-    LogDebug(@"Errors: %@", error);
-    return header;
+- (NSString*) implText {
+    NSError* error;
+    GRMustacheTemplate* template = [GRMustacheTemplate templateFromString:_implTemplate error:&error];
+    NSString* implText = [template renderObjects:_schema];
+    if (error) {
+        [NSException raise:NSInternalInconsistencyException format:[[error userInfo] description]];
+    }
+    return implText;
 }
 
 
