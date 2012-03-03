@@ -21,7 +21,7 @@
 
 /* ================================================== Initializers ================================================== */
 - (id) initWithSchema:(ActivitySchema*)schema headerTemplate:(NSString*)headerTemplate
-        implTemplate:(NSString*)implTemplate xibTemplate:(NSString*)xibTemplate {
+         implTemplate:(NSString*)implTemplate xibTemplate:(NSString*)xibTemplate {
 
     self = [super init];
     if (self) {
@@ -53,6 +53,16 @@
         [NSException raise:NSInternalInconsistencyException format:[[error userInfo] description]];
     }
     return implText;
+}
+
+- (NSString*) xibText {
+    NSError* error;
+    GRMustacheTemplate* template = [GRMustacheTemplate templateFromString:_xibTemplate error:&error];
+    NSString* xibText = [template renderObjects:_schema];
+    if (error) {
+        [NSException raise:NSInternalInconsistencyException format:[[error userInfo] description]];
+    }
+    return xibText;
 }
 
 

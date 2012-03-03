@@ -31,6 +31,8 @@
 
 - (NSString*) implText;
 
+- (NSString*) xibText;
+
 @end
 /* ================================================================================================================== */
 @compatibility_alias ActivityGenerator expanz_codegen_model_ActivityGenerator;

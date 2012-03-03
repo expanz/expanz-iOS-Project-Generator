@@ -8,27 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6B225D9C14E0B43500B0F735 /* expanz.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B225D9B14E0B43500B0F735 /* expanz.png */; };
-		6B22F3C61500A82200427F39 /* (null) in Sources */ = {isa = PBXBuildFile; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6B22F4B21500AA5C00427F39 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		6B22F4B41500AA5C00427F39 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		6B22F4B61500AA5C00427F39 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		6B22F4B81500AA5C00427F39 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		6B22F4BB1500AA5C00427F39 /* (null) in Sources */ = {isa = PBXBuildFile; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6B22F4BC1500AA5C00427F39 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		6B22F4BE1500AA5C00427F39 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		6B22F4C11500AA5C00427F39 /* (null) in Sources */ = {isa = PBXBuildFile; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6B22F4C31500AA5C00427F39 /* (null) in Sources */ = {isa = PBXBuildFile; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6B22F4C51500AA5C00427F39 /* (null) in Sources */ = {isa = PBXBuildFile; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6B22F4C61500AA5C00427F39 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		6B22F4C81500AA5C00427F39 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		6B22F4CA1500AA5C00427F39 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		6B22F4CC1500AA5C00427F39 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		6B22F4CF1500AA5C00427F39 /* (null) in Sources */ = {isa = PBXBuildFile; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6B22F4D11500AA5C00427F39 /* (null) in Sources */ = {isa = PBXBuildFile; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6B22F4D31500AA5C00427F39 /* (null) in Sources */ = {isa = PBXBuildFile; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6B22F4D51500AA5C00427F39 /* (null) in Sources */ = {isa = PBXBuildFile; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6B22F4D61500AA5C00427F39 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		6B22F4D81500AA5C00427F39 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6B29561314F534F40040E5FF /* libKiwi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B40695014EBDB1F00AD1DEF /* libKiwi.a */; };
 		6B55223714EA723700494CF3 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD8982D14EA2441007875F4 /* SenTestingKit.framework */; };
 		6B55223814EA723700494CF3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC10164147775A40055CF03 /* Cocoa.framework */; };
@@ -144,10 +123,13 @@
 		6B62CC1C14FC9ECF00A0E098 /* expanz_codegen_ui_MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB72DB914BEF9A9005A5961 /* expanz_codegen_ui_MainWindowController.m */; };
 		6B62CC1D14FC9EF100A0E098 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B789B7C14E37ACB00DAA872 /* Quartz.framework */; };
 		6B62CC1E14FC9EF100A0E098 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B789B7D14E37ACB00DAA872 /* QuartzCore.framework */; };
+		6B726718150264D1001281CE /* uiFile.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 6B726717150264D1001281CE /* uiFile.mustache */; };
+		6B726719150264D1001281CE /* uiFile.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 6B726717150264D1001281CE /* uiFile.mustache */; };
+		6B72671A15026589001281CE /* uiFile.mustache in Copy Test Resources to /tmp */ = {isa = PBXBuildFile; fileRef = 6B726717150264D1001281CE /* uiFile.mustache */; };
 		6B789B7A14E3656300DAA872 /* ProjectLocation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B789B7914E3656300DAA872 /* ProjectLocation.xib */; };
 		6B789B7E14E37ACB00DAA872 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B789B7C14E37ACB00DAA872 /* Quartz.framework */; };
 		6B789B7F14E37ACB00DAA872 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B789B7D14E37ACB00DAA872 /* QuartzCore.framework */; };
-		6B9C3D841501CD78006A7F97 /* libGRMustache1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B9C3D831501CD78006A7F97 /* libGRMustache1.a */; };
+		6B9C3D841501CD78006A7F97 /* libGRMustache1.a in Resources */ = {isa = PBXBuildFile; fileRef = 6B9C3D831501CD78006A7F97 /* libGRMustache1.a */; };
 		6B9C3D851501CD78006A7F97 /* libGRMustache1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B9C3D831501CD78006A7F97 /* libGRMustache1.a */; };
 		6B9C3D941501FC85006A7F97 /* GetSchemaForActivityXResponse.xml in Copy Test Resources to /tmp */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E512 /* GetSchemaForActivityXResponse.xml */; };
 		6B9C3D961501FF00006A7F97 /* controllerHeader.mustache in Copy Test Resources to /tmp */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E51D /* controllerHeader.mustache */; };
@@ -231,6 +213,7 @@
 				6BBD6C8714ECD8DC00451BA2 /* production_environment.xml in Copy Test Resources to /tmp */,
 				6BD1B46414EBAD1B00F5AD1C /* project.pbxproj in Copy Test Resources to /tmp */,
 				6B9C3DA015021425006A7F97 /* controllerImpl.mustache in Copy Test Resources to /tmp */,
+				6B72671A15026589001281CE /* uiFile.mustache in Copy Test Resources to /tmp */,
 				6B9C3D961501FF00006A7F97 /* controllerHeader.mustache in Copy Test Resources to /tmp */,
 				6BD1B46514EBAD1C00F5AD1C /* ESA_Sales_Foobar_ViewController.header in Copy Test Resources to /tmp */,
 				6B9C3D941501FC85006A7F97 /* GetSchemaForActivityXResponse.xml in Copy Test Resources to /tmp */,
@@ -364,6 +347,7 @@
 		6B59D09414FF5E8D002F25CA /* xml_Serializable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xml_Serializable.h; sourceTree = "<group>"; };
 		6B62CC0814FC967900A0E098 /* activities.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = activities.xib; sourceTree = "<group>"; };
 		6B62CC1114FC9D5D00A0E098 /* libprofile_rt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libprofile_rt.dylib; path = usr/lib/libprofile_rt.dylib; sourceTree = DEVELOPER_DIR; };
+		6B726717150264D1001281CE /* uiFile.mustache */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = uiFile.mustache; sourceTree = "<group>"; };
 		6B783BBC14AD8CF90087E522 /* ESA_Sales_Foobar_ViewController.header */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ESA_Sales_Foobar_ViewController.header; sourceTree = "<group>"; };
 		6B783BBD14AD8CF90087E522 /* ESA_Sales_Foobar_ViewController.impl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ESA_Sales_Foobar_ViewController.impl; sourceTree = "<group>"; };
 		6B789B7914E3656300DAA872 /* ProjectLocation.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectLocation.xib; sourceTree = "<group>"; };
@@ -493,7 +477,6 @@
 				6B789B7E14E37ACB00DAA872 /* Quartz.framework in Frameworks */,
 				6B789B7F14E37ACB00DAA872 /* QuartzCore.framework in Frameworks */,
 				6B9FD26714BEF008006F8D04 /* Cocoa.framework in Frameworks */,
-				6B9C3D841501CD78006A7F97 /* libGRMustache1.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -943,6 +926,7 @@
 		6BCEC02614BBD9D600538D1D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6B726717150264D1001281CE /* uiFile.mustache */,
 				6BE4B2B4147E6D3C0059E522 /* controllerImpl.mustache */,
 				6BE4B2B4147E6D3C0059E51D /* controllerHeader.mustache */,
 				6B9FD26A14BEF008006F8D04 /* Info.plist */,
@@ -1125,6 +1109,7 @@
 				6BE4B2B4147E6D3C0059E514 /* GetSchemaForActivityXResponse.xml in Resources */,
 				6BE4B2B4147E6D3C0059E51F /* controllerHeader.mustache in Resources */,
 				6BE4B2B4147E6D3C0059E524 /* controllerImpl.mustache in Resources */,
+				6B726719150264D1001281CE /* uiFile.mustache in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1132,6 +1117,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B9C3D841501CD78006A7F97 /* libGRMustache1.a in Resources */,
 				6BB72DCD14BEF9A9005A5961 /* MainMenu.xib in Resources */,
 				6BCEDDF014C034D40089804B /* MainWindow.xib in Resources */,
 				6B225D9C14E0B43500B0F735 /* expanz.png in Resources */,
@@ -1141,6 +1127,7 @@
 				6BE4B2B4147E6D3C0059E513 /* GetSchemaForActivityXResponse.xml in Resources */,
 				6BE4B2B4147E6D3C0059E51E /* controllerHeader.mustache in Resources */,
 				6BE4B2B4147E6D3C0059E523 /* controllerImpl.mustache in Resources */,
+				6B726718150264D1001281CE /* uiFile.mustache in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1249,15 +1236,6 @@
 				6B59D0F814FF5E8E002F25CA /* RXMLElement+SiteDetails.m in Sources */,
 				6B59D0FA14FF5E8E002F25CA /* NSString+Contains.m in Sources */,
 				6BE4B2B4147E6D3C0059E517 /* expanz_codegen_model_ActivityGenerator.m in Sources */,
-				6B22F3C61500A82200427F39 /* (null) in Sources */,
-				6B22F4BB1500AA5C00427F39 /* (null) in Sources */,
-				6B22F4C11500AA5C00427F39 /* (null) in Sources */,
-				6B22F4C31500AA5C00427F39 /* (null) in Sources */,
-				6B22F4C51500AA5C00427F39 /* (null) in Sources */,
-				6B22F4CF1500AA5C00427F39 /* (null) in Sources */,
-				6B22F4D11500AA5C00427F39 /* (null) in Sources */,
-				6B22F4D31500AA5C00427F39 /* (null) in Sources */,
-				6B22F4D51500AA5C00427F39 /* (null) in Sources */,
 				6BE4B2B4147E6D3C0059E521 /* ActivityGeneratorSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1339,18 +1317,6 @@
 				6B59D0F714FF5E8E002F25CA /* RXMLElement+SiteDetails.m in Sources */,
 				6B59D0F914FF5E8E002F25CA /* NSString+Contains.m in Sources */,
 				6BE4B2B4147E6D3C0059E516 /* expanz_codegen_model_ActivityGenerator.m in Sources */,
-				6B22F4B21500AA5C00427F39 /* (null) in Sources */,
-				6B22F4B41500AA5C00427F39 /* (null) in Sources */,
-				6B22F4B61500AA5C00427F39 /* (null) in Sources */,
-				6B22F4B81500AA5C00427F39 /* (null) in Sources */,
-				6B22F4BC1500AA5C00427F39 /* (null) in Sources */,
-				6B22F4BE1500AA5C00427F39 /* (null) in Sources */,
-				6B22F4C61500AA5C00427F39 /* (null) in Sources */,
-				6B22F4C81500AA5C00427F39 /* (null) in Sources */,
-				6B22F4CA1500AA5C00427F39 /* (null) in Sources */,
-				6B22F4CC1500AA5C00427F39 /* (null) in Sources */,
-				6B22F4D61500AA5C00427F39 /* (null) in Sources */,
-				6B22F4D81500AA5C00427F39 /* (null) in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
