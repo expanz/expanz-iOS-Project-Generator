@@ -215,6 +215,8 @@
 		6BE4B2B4147E6D3C0059E517 /* expanz_codegen_model_ActivityGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E515 /* expanz_codegen_model_ActivityGenerator.m */; };
 		6BE4B2B4147E6D3C0059E51A /* MustacheSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E519 /* MustacheSpec.m */; };
 		6BE4B2B4147E6D3C0059E51C /* sampleTemplate.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E51B /* sampleTemplate.txt */; };
+		6BE4B2B4147E6D3C0059E51E /* controllerHeader.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E51D /* controllerHeader.mustache */; };
+		6BE4B2B4147E6D3C0059E51F /* controllerHeader.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E51D /* controllerHeader.mustache */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -459,6 +461,7 @@
 		6BE4B2B4147E6D3C0059E518 /* expanz_codegen_model_ActivityGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_codegen_model_ActivityGenerator.h; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E519 /* MustacheSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MustacheSpec.m; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E51B /* sampleTemplate.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sampleTemplate.txt; sourceTree = "<group>"; };
+		6BE4B2B4147E6D3C0059E51D /* controllerHeader.mustache */ = {isa = PBXFileReference; lastKnownFileType = file.mustache; path = controllerHeader.mustache; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -938,6 +941,7 @@
 		6BCEC02614BBD9D600538D1D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6BE4B2B4147E6D3C0059E51D /* controllerHeader.mustache */,
 				6B9FD26A14BEF008006F8D04 /* Info.plist */,
 				6BCEC02714BBD9D600538D1D /* Credits.rtf */,
 				6BCEC02914BBD9D600538D1D /* InfoPlist.strings */,
@@ -1118,6 +1122,7 @@
 				6B62CC0A14FC967900A0E098 /* activities.xib in Resources */,
 				6BE4B2B4147E6D3C0059E514 /* GetSchemaForActivityXResponse.xml in Resources */,
 				6BE4B2B4147E6D3C0059E51C /* sampleTemplate.txt in Resources */,
+				6BE4B2B4147E6D3C0059E51F /* controllerHeader.mustache in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1132,6 +1137,7 @@
 				6BD5341E14E61DAA0009196B /* expanzSettings.xib in Resources */,
 				6B62CC0914FC967900A0E098 /* activities.xib in Resources */,
 				6BE4B2B4147E6D3C0059E513 /* GetSchemaForActivityXResponse.xml in Resources */,
+				6BE4B2B4147E6D3C0059E51E /* controllerHeader.mustache in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

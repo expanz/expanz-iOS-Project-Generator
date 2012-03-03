@@ -11,7 +11,7 @@
 
 #import "expanz_ui_ActivityInstanceViewController.h"
 
-@interface ESA_Sales_Foobar_ViewController : expanz_ui_ActivityInstanceViewController
+@interface {_ViewController : expanz_ui_ActivityInstanceViewController
 
 @property(nonatomic, strong) IBOutlet UILabel* ResultLabel;
 @property(nonatomic, strong) IBOutlet UILabel* Op1Label;
@@ -25,10 +25,10 @@
 @property(nonatomic, strong) IBOutlet UIButton* divide;
 
 
-- (IBAction) addClicked; 
-- (IBAction) subtractClicked; 
-- (IBAction) multiplyClicked; 
-- (IBAction) divideClicked; 
+- (IBAction) addClicked;
+- (IBAction) subtractClicked;
+- (IBAction) multiplyClicked;
+- (IBAction) divideClicked;
 
 @end
 
