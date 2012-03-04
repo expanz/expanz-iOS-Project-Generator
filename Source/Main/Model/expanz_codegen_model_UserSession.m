@@ -9,6 +9,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 #import "expanz_codegen_model_UserSession.h"
+#import "xcode_Project.h"
 
 
 @implementation expanz_codegen_model_UserSession
@@ -43,6 +44,15 @@ static expanz_codegen_model_UserSession* sharedUserSession;
 
 - (void) addSelectedActivity:(NSString*)selectedActivityId {
     [_selectedActivities addObject:selectedActivityId];
+}
+
+- (xcode_Project*) project {
+    if (_project == nil) {
+        NSString* filePath = [[_projectFilePath stringByAppendingPathComponent:[_projectFilePath lastPathComponent]]
+            stringByAppendingString:@".xcodeProj"];
+        _project = [[Project alloc] initWithFilePath:filePath];
+    }
+    return _project;
 }
 
 

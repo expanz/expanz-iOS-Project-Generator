@@ -10,10 +10,13 @@
 ////////////////////////////////////////////////////////////////////////////////
 #import <Foundation/Foundation.h>
 
+@class xcode_Project;
+
 @interface expanz_codegen_model_UserSession : NSObject {
 
 @private
     NSMutableArray* _selectedActivities;
+    xcode_Project* _project;
 }
 
 @property(nonatomic, strong) NSString* projectFilePath;
@@ -24,6 +27,8 @@
 - (NSArray*) selectedActivities;
 
 - (void) addSelectedActivity:(NSString*)activityId;
+
+- (xcode_Project*) project;
 
 @end
 /* ================================================================================================================== */

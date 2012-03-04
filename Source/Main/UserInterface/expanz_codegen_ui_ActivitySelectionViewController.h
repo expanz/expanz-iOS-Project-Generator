@@ -11,10 +11,11 @@
 
 #import <Foundation/Foundation.h>
 #import "expanz_service_SiteDetailsClientDelegate.h"
+#import "expanz_service_SiteDetailsClient.h"
+#import "expanz_codegen_ui_EventHandler.h"
 
 @class JSObjectionInjector;
 @class expanz_model_ActivityMenu;
-@protocol expanz_codegen_ui_EventHandler;
 
 
 @interface expanz_codegen_ui_ActivitySelectionViewController : NSViewController<expanz_service_SiteDetailsClientDelegate,
@@ -22,7 +23,10 @@
 
 @private
     id<expanz_codegen_ui_EventHandler> _delegate;
+    id<expanz_service_SiteDetailsClient> _siteClient;
     expanz_model_ActivityMenu* _activityList;
+
+
 }
 
 @property(nonatomic, weak) IBOutlet NSTableView* activityTableView;
@@ -31,6 +35,8 @@
 
 
 - (void) populateActivityList;
+
+- (void) generateSelectedActivity;
 
 
 @end

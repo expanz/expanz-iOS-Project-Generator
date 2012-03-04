@@ -97,7 +97,7 @@
 }
 
 - (void) generate {
-    LogDebug(@"Ok! go generate");
+    [_activitySelectionViewController generateSelectedActivity];
 }
 
 

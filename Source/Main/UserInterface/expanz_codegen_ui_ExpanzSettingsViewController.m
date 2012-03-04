@@ -72,17 +72,17 @@
     _siteList = nil;
     [_siteListTableView reloadData];
     NSString* configFilePath =
-            [[self supportingFilesPath] stringByAppendingPathComponent:[_expanzBackendCombo objectValueOfSelectedItem]];
+        [[self supportingFilesPath] stringByAppendingPathComponent:[_expanzBackendCombo objectValueOfSelectedItem]];
 
-    SdkConfiguration* configuration = [[SdkConfiguration alloc] initWithXmlString:[NSString
-                                                                                          stringWithContentsOfFile:configFilePath
-                                                                                          encoding:NSUTF8StringEncoding
-                                                                                          error:nil]];
+    LogDebug(@"Config file path: %@", configFilePath);
+
+    SdkConfiguration* configuration = [[SdkConfiguration alloc]
+        initWithXmlString:[NSString stringWithContentsOfFile:configFilePath encoding:NSUTF8StringEncoding error:nil]];
     [SdkConfiguration clearGlobalConfiguration];
     [SdkConfiguration setGlobalConfiguration:configuration];
 
     id<expanz_service_SiteDetailsClient>
-            siteDetailsClient = [[JSObjection globalInjector] getObject:@protocol(expanz_service_SiteDetailsClient)];
+        siteDetailsClient = [[JSObjection globalInjector] getObject:@protocol(expanz_service_SiteDetailsClient)];
     [siteDetailsClient listAvailableSitesWithDelegate:self];
 }
 
@@ -141,7 +141,7 @@
 - (NSString*) supportingFilesPath {
     NSString* projectFilePath = [[UserSession sharedUserSession] projectFilePath];
     return [[projectFilePath stringByAppendingPathComponent:[projectFilePath lastPathComponent]]
-            stringByAppendingPathComponent:@"Supporting Files"];
+        stringByAppendingPathComponent:@"Supporting Files"];
 }
 
 @end
