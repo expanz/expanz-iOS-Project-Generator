@@ -220,6 +220,8 @@
 		6BE4B2B4147E6D3C0059E521 /* ActivityGeneratorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E520 /* ActivityGeneratorSpec.m */; };
 		6BE4B2B4147E6D3C0059E523 /* controllerImpl.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E522 /* controllerImpl.mustache */; };
 		6BE4B2B4147E6D3C0059E524 /* controllerImpl.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E522 /* controllerImpl.mustache */; };
+		6BE4B2B4147E6D3C0059E527 /* GRArrayIndexHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E526 /* GRArrayIndexHelper.m */; };
+		6BE4B2B4147E6D3C0059E528 /* GRArrayIndexHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E526 /* GRArrayIndexHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -487,6 +489,8 @@
 		6BE4B2B4147E6D3C0059E51D /* controllerHeader.mustache */ = {isa = PBXFileReference; lastKnownFileType = file.mustache; path = controllerHeader.mustache; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E520 /* ActivityGeneratorSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityGeneratorSpec.m; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E522 /* controllerImpl.mustache */ = {isa = PBXFileReference; lastKnownFileType = file.mustache; path = controllerImpl.mustache; sourceTree = "<group>"; };
+		6BE4B2B4147E6D3C0059E525 /* GRArrayIndexHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRArrayIndexHelper.h; sourceTree = "<group>"; };
+		6BE4B2B4147E6D3C0059E526 /* GRArrayIndexHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRArrayIndexHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -858,6 +862,8 @@
 		6BAD70D914EE31FE001E6A23 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				6BE4B2B4147E6D3C0059E526 /* GRArrayIndexHelper.m */,
+				6BE4B2B4147E6D3C0059E525 /* GRArrayIndexHelper.h */,
 				6BAD70DA14EE31FE001E6A23 /* xml_Serializable.h */,
 			);
 			path = Utils;
@@ -1312,6 +1318,7 @@
 				6B86D88B1503B65800EEE635 /* xcode_Target.m in Sources */,
 				6B86D88D1503B65800EEE635 /* XcodeProjectFileType.m in Sources */,
 				6B86D88F1503B65800EEE635 /* XcodeProjectNodeType.m in Sources */,
+				6BE4B2B4147E6D3C0059E528 /* GRArrayIndexHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1401,6 +1408,7 @@
 				6B86D88A1503B65800EEE635 /* xcode_Target.m in Sources */,
 				6B86D88C1503B65800EEE635 /* XcodeProjectFileType.m in Sources */,
 				6B86D88E1503B65800EEE635 /* XcodeProjectNodeType.m in Sources */,
+				6BE4B2B4147E6D3C0059E527 /* GRArrayIndexHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

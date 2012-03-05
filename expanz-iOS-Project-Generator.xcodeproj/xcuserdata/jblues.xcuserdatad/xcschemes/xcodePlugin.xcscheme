@@ -8,9 +8,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6BCEC01714BBD88700538D1D"
-               BuildableName = "expanz-xcodePlugin.xcplugin"
                BlueprintName = "xcodePlugin"
-               ReferencedContainer = "container:expanz-iOS-Project-Generator.xcodeproj">
+               ReferencedContainer = "container:expanz-iOS-Project-Generator.xcodeproj"
+               BuildableName = "expanz-xcodePlugin.xcplugin">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -24,9 +24,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6BCEC01714BBD88700538D1D"
-            BuildableName = "expanz-xcodePlugin.xcplugin"
             BlueprintName = "xcodePlugin"
-            ReferencedContainer = "container:expanz-iOS-Project-Generator.xcodeproj">
+            ReferencedContainer = "container:expanz-iOS-Project-Generator.xcodeproj"
+            BuildableName = "expanz-xcodePlugin.xcplugin">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>

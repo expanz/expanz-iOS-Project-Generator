@@ -8,9 +8,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6B9FD26414BEF008006F8D04"
-               BuildableName = "Model-Object-Explorer.app"
                BlueprintName = "Model-Object-Explorer"
-               ReferencedContainer = "container:expanz-iOS-Project-Generator.xcodeproj">
+               ReferencedContainer = "container:expanz-iOS-Project-Generator.xcodeproj"
+               BuildableName = "Model-Object-Explorer.app">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -24,9 +24,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6B9FD26414BEF008006F8D04"
-            BuildableName = "Model-Object-Explorer.app"
             BlueprintName = "Model-Object-Explorer"
-            ReferencedContainer = "container:expanz-iOS-Project-Generator.xcodeproj">
+            ReferencedContainer = "container:expanz-iOS-Project-Generator.xcodeproj"
+            BuildableName = "Model-Object-Explorer.app">
          </BuildableReference>
       </BuildableProductRunnable>
       <CommandLineArguments>

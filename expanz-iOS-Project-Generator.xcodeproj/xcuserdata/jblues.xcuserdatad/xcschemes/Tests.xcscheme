@@ -4,26 +4,28 @@
    <BuildAction>
       <BuildActionEntries>
          <BuildActionEntry
-            buildForTesting = "YES">
+            buildForTesting = "YES"
+            buildForRunning = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6B55223514EA723700494CF3"
-               BuildableName = "Tests.octest"
                BlueprintName = "Tests"
-               ReferencedContainer = "container:expanz-iOS-Project-Generator.xcodeproj">
+               ReferencedContainer = "container:expanz-iOS-Project-Generator.xcodeproj"
+               BuildableName = "Tests.octest">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
-   <TestAction>
+   <TestAction
+      buildConfiguration = "Debug">
       <Testables>
          <TestableReference>
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6B55223514EA723700494CF3"
-               BuildableName = "Tests.octest"
                BlueprintName = "Tests"
-               ReferencedContainer = "container:expanz-iOS-Project-Generator.xcodeproj">
+               ReferencedContainer = "container:expanz-iOS-Project-Generator.xcodeproj"
+               BuildableName = "Tests.octest">
             </BuildableReference>
          </TestableReference>
       </Testables>

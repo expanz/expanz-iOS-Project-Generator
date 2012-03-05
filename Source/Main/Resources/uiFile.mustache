@@ -101,20 +101,20 @@
 					<string key="className">{{viewControllerName}}</string>
 					<string key="superclassName">expanz_ui_ActivityInstanceViewController</string>
 					<object class="NSMutableDictionary" key="actions">
-                        {{#methods}}
+                        {{#GRArrayIndex}}{{#methods}}
 						<string key="NS.key.0">do{{name}}</string>
-						<string key="NS.object.0">id</string>
-                        {{/methods}}
+						<string key="NS.object.{{index}}">id</string>
+                        {{/methods}}{{/GRArrayIndex}}
 					</object>
 					<object class="NSMutableDictionary" key="actionInfosByName">
 
-                        {{#methods}}
+                        {{#GRArrayIndex}}{{#methods}}
                         <string key="NS.key.0">do{{name}}</string>
-                        	<object class="IBActionInfo" key="NS.object.0">
+                        	<object class="IBActionInfo" key="NS.object.{{index}}">
                         		<string key="name">do{{name}}</string>
                         		<string key="candidateClassName">id</string>
                         	</object>
-                        {{/methods}}
+                        {{/methods}}{{/GRArrayIndex}}
 
 					</object>
 					<dictionary class="NSMutableDictionary" key="outlets">
