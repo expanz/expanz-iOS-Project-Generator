@@ -12,26 +12,25 @@
 #import <Foundation/Foundation.h>
 #import "expanz_model_ActivitySchema.h"
 
+@class GRMustacheTemplate;
+
 @interface expanz_codegen_model_ActivityGenerator : NSObject {
 
 @private
-    NSString* _headerTemplate;
-    NSString* _implTemplate;
-    NSString* _xibTemplate;
+    GRMustacheTemplate* _headerTemplate;
+    GRMustacheTemplate* _implTemplate;
+    GRMustacheTemplate* _xibTemplate;
 }
 
-@property(nonatomic, strong, readonly) ActivitySchema* schema;
 
+- (id) initWithHeaderTemplate:(NSString*)headerTemplate implTemplate:(NSString*)implTemplate
+        xibTemplate:(NSString*)xibTemplate;
 
-- (id) initWithSchema:(ActivitySchema*)schema headerTemplate:(NSString*)headerTemplate
-        implTemplate:(NSString*)implTemplate xibTemplate:(NSString*)xibTemplate;
+- (NSString*) headerForSchema:(expanz_model_ActivitySchema*)schema;
 
+- (NSString*) implementationForSchema:(expanz_model_ActivitySchema*)schema;
 
-- (NSString*) headerText;
-
-- (NSString*) implText;
-
-- (NSString*) xibText;
+- (NSString*) xibForSchema:(expanz_model_ActivitySchema*)schema;
 
 @end
 /* ================================================================================================================== */

@@ -8,32 +8,17 @@
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
-
 #import <Foundation/Foundation.h>
-@class xcode_Project;
-@class xcode_SourceFile;
 
-/**
-* Represents a target in an xcode project.
-*/
-@interface xcode_Target : NSObject {
 
-@private
-    NSMutableArray* _members;
-}
+@interface xcode_XibDefinition : NSObject
 
-@property (nonatomic, weak, readonly) xcode_Project* project;
-@property (nonatomic, strong, readonly) NSString* key;
-@property (nonatomic, strong, readonly) NSString* name;
+@property(nonatomic, strong, readonly) NSString* name;
+@property(nonatomic, strong, readonly) NSString* content;
 
-- (id) initWithProject:(xcode_Project*)project key:(NSString*)key name:(NSString*)name;
-
-- (NSArray*) members;
-
-- (void) addMember:(xcode_SourceFile*)member;
+- (id) initWithName:(NSString*)name content:(NSString*)content;
 
 
 @end
-
 /* ================================================================================================================== */
-@compatibility_alias Target xcode_Target;
+@compatibility_alias XibDefinition xcode_XibDefinition;

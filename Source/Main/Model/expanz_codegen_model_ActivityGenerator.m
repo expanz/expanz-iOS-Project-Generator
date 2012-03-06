@@ -11,58 +11,40 @@
 
 #import "expanz_codegen_model_ActivityGenerator.h"
 #import "GRMustacheTemplate.h"
-#import "expanz_model_FieldSchema.h"
 
 
 @implementation expanz_codegen_model_ActivityGenerator
 
-@synthesize schema = _schema;
-
 
 /* ================================================== Initializers ================================================== */
-- (id) initWithSchema:(ActivitySchema*)schema headerTemplate:(NSString*)headerTemplate
-         implTemplate:(NSString*)implTemplate xibTemplate:(NSString*)xibTemplate {
+- (id) initWithHeaderTemplate:(NSString*)headerTemplate implTemplate:(NSString*)implTemplate
+        xibTemplate:(NSString*)xibTemplate {
 
     self = [super init];
     if (self) {
-        _schema = schema;
-        _headerTemplate = headerTemplate;
-        _implTemplate = implTemplate;
-        _xibTemplate = xibTemplate;
+        NSError* error;
+        _headerTemplate = [GRMustacheTemplate templateFromString:headerTemplate error:&error];
+        _implTemplate = [GRMustacheTemplate templateFromString:implTemplate error:&error];
+        _xibTemplate = [GRMustacheTemplate templateFromString:xibTemplate error:&error];
+        if (error) {
+            [NSException raise:NSInternalInconsistencyException format:[[error userInfo] description]];
+        }
     }
     return self;
 }
 
 
 /* ================================================ Interface Methods =============================================== */
-- (NSString*) headerText {
-    NSError* error;
-    GRMustacheTemplate* template = [GRMustacheTemplate templateFromString:_headerTemplate error:&error];
-    NSString* headerText = [template renderObjects:_schema];
-    if (error) {
-        [NSException raise:NSInternalInconsistencyException format:[[error userInfo] description]];
-    }
-    return headerText;
+- (NSString*) headerForSchema:(expanz_model_ActivitySchema*)schema {
+    return [_headerTemplate renderObjects:schema];
 }
 
-- (NSString*) implText {
-    NSError* error;
-    GRMustacheTemplate* template = [GRMustacheTemplate templateFromString:_implTemplate error:&error];
-    NSString* implText = [template renderObjects:_schema];
-    if (error) {
-        [NSException raise:NSInternalInconsistencyException format:[[error userInfo] description]];
-    }
-    return implText;
+- (NSString*) implementationForSchema:(expanz_model_ActivitySchema*)schema {
+    return [_implTemplate renderObject:schema];
 }
 
-- (NSString*) xibText {
-    NSError* error;
-    GRMustacheTemplate* template = [GRMustacheTemplate templateFromString:_xibTemplate error:&error];
-    NSString* xibText = [template renderObjects:_schema];
-    if (error) {
-        [NSException raise:NSInternalInconsistencyException format:[[error userInfo] description]];
-    }
-    return xibText;
+- (NSString*) xibForSchema:(expanz_model_ActivitySchema*)schema {
+    return [_xibTemplate renderObject:schema];
 }
 
 

@@ -9,16 +9,5 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "XcodeMemberType.h"
-
-@protocol XcodeGroupMember
-
-- (NSString*) key;
-
-- (NSString*) displayName;
-
-/**
-* Group members can either be other groups of source files.
-*/
-- (XcodeMemberType) groupMemberType;
-@end
+#define boxEnum(expression) \
+[NSNumber numberWithInt:expression] \

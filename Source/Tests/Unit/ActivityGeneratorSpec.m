@@ -14,43 +14,45 @@
 
 SPEC_BEGIN(ActivityGeneratorSpec)
 
-    __block ActivityGenerator* generator;
+        __block ActivityGenerator* generator;
+        __block ActivitySchema* schema;
 
-    beforeEach(^{
-        NSString* actvityXml = [NSString stringWithTestResource:@"GetSchemaForActivityXResponse.xml"];
-        RXMLElement* element = [RXMLElement elementFromXMLString:actvityXml];
-        ActivitySchema* schema = [[element child:@"GetSchemaForActivityXResult.ESA.Activity"] asActivitySchema];
-        NSString* headerTemplate = [NSString stringWithTestResource:@"controllerHeader.mustache"];
-        NSString* implTemplate = [NSString stringWithTestResource:@"controllerImpl.mustache"];
-        NSString* xibTemplate = [NSString stringWithTestResource:@"uiFile.mustache"];
+        beforeEach(^{
+            NSString* actvityXml = [NSString stringWithTestResource:@"GetSchemaForActivityXResponse.xml"];
+            RXMLElement* element = [RXMLElement elementFromXMLString:actvityXml];
+            schema = [[element child:@"GetSchemaForActivityXResult.ESA.Activity"] asActivitySchema];
 
-        generator = [[ActivityGenerator alloc]
-            initWithSchema:schema headerTemplate:headerTemplate implTemplate:implTemplate xibTemplate:xibTemplate];
-    });
+            NSString* headerTemplate = [NSString stringWithTestResource:@"controllerHeader.mustache"];
+            NSString* implTemplate = [NSString stringWithTestResource:@"controllerImpl.mustache"];
+            NSString* xibTemplate = [NSString stringWithTestResource:@"uiFile.mustache"];
 
-
-    it(@"should generate the header file", ^{
-
-        NSString* headerText = [generator headerText];
-        LogDebug(@"\n%@", headerText);
-
-    });
-
-    it(@"should generate the impl file.", ^{
-
-        NSString* implText = [generator implText];
-        LogDebug(@"\n%@", implText);
-
-    });
-
-    it(@"should generate the xib file.", ^{
-
-        NSString* xibText = [generator xibText];
-        LogDebug(@"\n%@", xibText);
-
-    });
+            generator = [[ActivityGenerator alloc]
+                    initWithHeaderTemplate:headerTemplate implTemplate:implTemplate xibTemplate:xibTemplate];
+        });
 
 
+        it(@"should generate the header file", ^{
+
+            NSString* headerText = [generator headerForSchema:schema];
+            LogDebug(@"\n%@", headerText);
+
+        });
+
+        it(@"should generate the impl file.", ^{
+
+            NSString* implText = [generator implementationForSchema:schema];
+            LogDebug(@"\n%@", implText);
+
+        });
+
+        it(@"should generate the xib file.", ^{
+
+            NSString* xibText = [generator xibForSchema:schema];
+            LogDebug(@"\n%@", xibText);
+
+        });
 
 
-SPEC_END
+
+
+        SPEC_END
