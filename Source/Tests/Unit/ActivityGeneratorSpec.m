@@ -33,21 +33,21 @@ SPEC_BEGIN(ActivityGeneratorSpec)
 
         it(@"should generate the header file", ^{
 
-            NSString* headerText = [generator headerForSchema:schema];
+            NSString* headerText = [generator headerForSchema:schema controllerClassName:@"Foobar"];
             LogDebug(@"\n%@", headerText);
 
         });
 
         it(@"should generate the impl file.", ^{
 
-            NSString* implText = [generator implementationForSchema:schema];
+            NSString* implText = [generator implementationForSchema:schema controllerClassName:@"Foobar"];
             LogDebug(@"\n%@", implText);
 
         });
 
         it(@"should generate the xib file.", ^{
 
-            NSString* xibText = [generator xibForSchema:schema];
+            NSString* xibText = [generator xibForSchema:schema controllerClassName:@"Foobar"];
             LogDebug(@"\n%@", xibText);
 
         });

@@ -13,6 +13,8 @@
 @class expanz_model_FieldInstance;
 @class expanz_model_MethodSchema;
 @class expanz_model_FieldSchema;
+@class expanz_model_ActivityStyle;
+@class expanz_model_Query;
 
 
 @interface expanz_model_ActivitySchema : NSObject {
@@ -33,11 +35,13 @@
 
 - (id) initWithActivityId:(NSString*)activity title:(NSString*)title;
 
-- (NSString*) viewControllerName;
-
 - (void) addField:(expanz_model_FieldSchema*)field;
 
 - (void) addMethod:(expanz_model_MethodSchema*)method;
+
+- (void) addStyle:(expanz_model_ActivityStyle*)style;
+
+- (void) addQuery:(expanz_model_Query*)query;
 
 
 

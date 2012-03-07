@@ -60,7 +60,7 @@
 
 - (void) generateSelectedActivity {
     ActivityMenuItem* menuItem = [[_activityList activities] objectAtIndex:[_activityTableView selectedRow]];
-    [_siteClient site:[UserSession sharedUserSession].selectedSite retriveSchemaForActivity:[menuItem activityId]
+    [_siteClient site:[UserSession sharedUserSession].selectedSite requestSchemaForActivity:[menuItem activityId]
             withDelegate:self];
 }
 
@@ -82,16 +82,19 @@
     NSString* groupName = [[[UserSession sharedUserSession] projectFilePath] lastPathComponent];
     Group* group = [project groupWithPathRelativeToParent:groupName];
 
-    ClassDefinition* classDefinition = [[ClassDefinition alloc] initWithName:[activitySchema viewControllerName]];
-    [classDefinition setHeader:[_generator headerForSchema:activitySchema]];
-    [classDefinition setSource:[_generator implementationForSchema:activitySchema]];
-    [group addClass:classDefinition toTargets:[project targets]];
+    for (ActivityStyle* style in [activitySchema styles]) {
+        NSString* viewControllerName = [style controllerClassNameForActivityId:activitySchema.activityId];
+        ClassDefinition* classDefinition = [[ClassDefinition alloc] initWithName:viewControllerName];
+        [classDefinition setHeader:[_generator headerForSchema:activitySchema controllerClassName:viewControllerName]];
+        [classDefinition
+                setSource:[_generator implementationForSchema:activitySchema controllerClassName:viewControllerName]];
+        [group addClass:classDefinition toTargets:[project targets]];
 
-    NSString* xibFileName = [[activitySchema activityId] stringByAppendingString:@".xib"];
-    XibDefinition* xibDefinition =
-            [[XibDefinition alloc] initWithName:xibFileName content:[_generator xibForSchema:activitySchema]];
-    [group addXib:xibDefinition toTargets:[project targets]];
-
+        NSString* xibFileName = [style nibNameForActivityId:activitySchema.activityId];
+        XibDefinition* xibDefinition = [[XibDefinition alloc] initWithName:xibFileName
+                content:[_generator xibForSchema:activitySchema controllerClassName:viewControllerName]];
+        [group addXib:xibDefinition toTargets:[project targets]];
+    }
     [project save];
 
 }

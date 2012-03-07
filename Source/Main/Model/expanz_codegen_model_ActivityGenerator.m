@@ -35,16 +35,19 @@
 
 
 /* ================================================ Interface Methods =============================================== */
-- (NSString*) headerForSchema:(expanz_model_ActivitySchema*)schema {
-    return [_headerTemplate renderObjects:schema];
+- (NSString*) headerForSchema:(expanz_model_ActivitySchema*)schema controllerClassName:(NSString*)className {
+    NSDictionary* style = [NSDictionary dictionaryWithObject:className forKey:@"controllerClassName"];
+    return [_headerTemplate renderObjects:schema, style, nil];
 }
 
-- (NSString*) implementationForSchema:(expanz_model_ActivitySchema*)schema {
-    return [_implTemplate renderObject:schema];
+- (NSString*) implementationForSchema:(expanz_model_ActivitySchema*)schema controllerClassName:(NSString*)className {
+    NSDictionary* style = [NSDictionary dictionaryWithObject:className forKey:@"controllerClassName"];
+    return [_implTemplate renderObjects:schema, style, nil];
 }
 
-- (NSString*) xibForSchema:(expanz_model_ActivitySchema*)schema {
-    return [_xibTemplate renderObject:schema];
+- (NSString*) xibForSchema:(expanz_model_ActivitySchema*)schema controllerClassName:(NSString*)className {
+    NSDictionary* style = [NSDictionary dictionaryWithObject:className forKey:@"controllerClassName"];
+    return [_xibTemplate renderObjects:schema, style, nil];
 }
 
 

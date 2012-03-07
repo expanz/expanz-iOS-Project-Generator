@@ -8,18 +8,25 @@
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
+
 #import <Foundation/Foundation.h>
 
+@class expanz_model_FieldSchema;
 
-@interface xcode_XibDefinition : NSObject
+@interface expanz_model_Query : NSObject {
 
-@property(nonatomic, strong, readonly) NSString* name;
-@property(nonatomic, strong, readonly) NSString* content;
+@private
+    NSMutableArray* _fields;
+}
 
-- (id) initWithName:(NSString*)name content:(NSString*)content;
+@property(nonatomic, strong, readonly) NSString* queryId;
 
-- (NSString*) xibFileName;
+- (id) initWithQueryId:(NSString*)queryId;
+
+- (NSArray*) fields;
+
+- (void) addField:(expanz_model_FieldSchema*)fieldSchema;
 
 @end
 /* ================================================================================================================== */
-@compatibility_alias XibDefinition xcode_XibDefinition;
+@compatibility_alias Query expanz_model_Query;

@@ -26,11 +26,11 @@
 - (id) initWithHeaderTemplate:(NSString*)headerTemplate implTemplate:(NSString*)implTemplate
         xibTemplate:(NSString*)xibTemplate;
 
-- (NSString*) headerForSchema:(expanz_model_ActivitySchema*)schema;
+- (NSString*) headerForSchema:(expanz_model_ActivitySchema*)schema controllerClassName:(NSString*)className;
 
-- (NSString*) implementationForSchema:(expanz_model_ActivitySchema*)schema;
+- (NSString*) implementationForSchema:(expanz_model_ActivitySchema*)schema controllerClassName:(NSString*)className;;
 
-- (NSString*) xibForSchema:(expanz_model_ActivitySchema*)schema;
+- (NSString*) xibForSchema:(expanz_model_ActivitySchema*)schema controllerClassName:(NSString*)className;;
 
 @end
 /* ================================================================================================================== */

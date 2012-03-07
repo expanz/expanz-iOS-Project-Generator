@@ -11,6 +11,8 @@
 #import "expanz_model_ActivitySchema.h"
 #import "expanz_model_MethodSchema.h"
 #import "expanz_model_FieldSchema.h"
+#import "expanz_model_ActivityStyle.h"
+#import "expanz_model_Query.h"
 
 
 @implementation expanz_model_ActivitySchema
@@ -32,10 +34,6 @@
 }
 
 /* ================================================ Interface Methods =============================================== */
-- (NSString*) viewControllerName {
-    return [[_activityId stringByReplacingOccurrencesOfString:@"." withString:@"_"]
-            stringByAppendingString:@"_ViewController"];
-}
 
 - (NSArray*) fields {
     NSSortDescriptor* sorter = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
@@ -48,21 +46,31 @@
 }
 
 - (NSArray*) styles {
-    return nil;
+    NSSortDescriptor* sorter = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
+    return [_styles sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];
 }
 
 - (NSArray*) queries {
-    return nil;
+    NSSortDescriptor* sorter = [NSSortDescriptor sortDescriptorWithKey:@"queryId" ascending:YES];
+    return [_queries sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];
 }
 
 - (void) addField:(expanz_model_FieldInstance*)field {
     [_fields addObject:field];
-
 }
 
 - (void) addMethod:(expanz_model_MethodSchema*)method {
     [_methods addObject:method];
 }
+
+- (void) addStyle:(expanz_model_ActivityStyle*)style {
+    [_styles addObject:style];
+}
+
+- (void) addQuery:(expanz_model_Query*)query {
+    [_queries addObject:query];
+}
+
 
 /* ================================================== Utility Methods =============================================== */
 - (NSString*) description {

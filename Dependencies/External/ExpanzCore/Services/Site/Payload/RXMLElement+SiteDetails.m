@@ -13,13 +13,17 @@
 #import "expanz_model_SiteList.h"
 #import "expanz_model_AppSite.h"
 #import "expanz_model_ActivitySchema.h"
-#import "RXMLElement+ActivityInstance.h"
 #import "expanz_model_MethodSchema.h"
 #import "expanz_model_FieldSchema.h"
+#import "expanz_model_ActivityStyle.h"
+#import "expanz_model_Query.h"
 
 @implementation RXMLElement (SiteDetails)
 
-- (expanz_model_ActivityMenu*) asActivityMenu {
+/* ================================================================================================================== */
+#pragma mark ActivityMenu
+
+- (ActivityMenu*) asActivityMenu {
     if (![self.tag isEqualToString:@"Activities"]) {
         [NSException raise:NSInvalidArgumentException format:@"Element is not an AppSite."];
     }
@@ -33,7 +37,10 @@
     return activityList;
 }
 
-- (expanz_model_SiteList*) asSiteList {
+/* ================================================================================================================== */
+#pragma mark SiteList and children
+
+- (SiteList*) asSiteList {
     if (![self.tag isEqualToString:@"AppSites"]) {
         [NSException raise:NSInvalidArgumentException format:@"Element is not an AppSite."];
     }
@@ -46,7 +53,7 @@
     return siteList;
 }
 
-- (expanz_model_AppSite*) asAppSite {
+- (AppSite*) asAppSite {
     if (![self.tag isEqualToString:@"AppSite"]) {
         [NSException raise:NSInvalidArgumentException format:@"Element is not an AppSite."];
     }
@@ -54,7 +61,10 @@
             authenticationMode:[self attribute:@"authenticationMode"]];
 }
 
-- (expanz_model_ActivitySchema*) asActivitySchema {
+/* ================================================================================================================== */
+#pragma mark ActivitySchema and children
+
+- (ActivitySchema*) asActivitySchema {
     if (![self.tag isEqualToString:@"Activity"]) {
         [NSException raise:NSInvalidArgumentException format:@"Element is not an Activity."];
     }
@@ -71,24 +81,48 @@
             [activitySchema addMethod:[e asMethodSchema]];
         }
 
+        else if ([e.tag isEqualToString:@"Style"]) {
+            [activitySchema addStyle:[e asActivityStyle]];
+        }
+
     }];
     return activitySchema;
 }
 
-- (expanz_model_FieldSchema*) asFieldSchema {
+- (FieldSchema*) asFieldSchema {
     if (![self.tag isEqualToString:@"Field"]) {
         [NSException raise:NSInvalidArgumentException format:@"Element is not a Field."];
     }
     return [[FieldSchema alloc]
             initWithName:[self attribute:@"name"] expanzType:[self attribute:@"class"] label:[self attribute:@"label"]];
-
 }
 
-- (expanz_model_MethodSchema*) asMethodSchema {
+- (MethodSchema*) asMethodSchema {
     if (![self.tag isEqualToString:@"Method"]) {
         [NSException raise:NSInvalidArgumentException format:@"Element is not a Method."];
     }
     return [[MethodSchema alloc] initWithName:[self attribute:@"name"] description:[self attribute:@"description"]];
+}
+
+- (ActivityStyle*) asActivityStyle {
+    if (![self.tag isEqualToString:@"Style"]) {
+        [NSException raise:NSInvalidArgumentException format:@"Element is not a Style."];
+    }
+    return [[ActivityStyle alloc] initWithName:[self attribute:@"name"]];
+}
+
+- (Query*) asQuery {
+    if (![self.tag isEqualToString:@"Query"]) {
+        [NSException raise:NSInvalidArgumentException format:@"Element is not a Query."];
+    }
+    Query* query = [[Query alloc] initWithQueryId:[self attribute:@"id"]];
+
+    [self iterate:@"*" with:^(RXMLElement* e) {
+        FieldSchema* fieldSchema =
+                [[FieldSchema alloc] initWithName:[e attribute:@"name"] expanzType:nil label:[e attribute:@"title"]];
+        [query addField:fieldSchema];
+    }];
+    return query;
 }
 
 @end
