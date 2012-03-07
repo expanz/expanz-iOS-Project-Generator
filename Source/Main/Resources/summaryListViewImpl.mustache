@@ -9,18 +9,12 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import <expanziOS/expanz_ui_ActivityInstanceViewController.h>
+#import "{{controllerClassName}}.h"
 
-@interface {{controllerClassName}} : expanz_ui_ActivityInstanceViewController
+@implementation {{controllerClassName}}
 
-{{#schema.fields}}
-@property(nonatomic, weak) IBOutlet UIView* {{name}};
-{{/schema.fields}}
-
-{{#schema.methods}}
-- (IBAction) do{{name}};
-{{/schema.methods}}
-
+{{#schema.queries}}
+@synthesize {{queryId}} = _{{queryId}};
+{{/schema.queries}}
 
 @end
-

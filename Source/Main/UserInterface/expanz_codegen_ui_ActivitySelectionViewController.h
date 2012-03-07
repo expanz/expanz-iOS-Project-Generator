@@ -26,8 +26,8 @@
     id<expanz_codegen_ui_EventHandler> _delegate;
     id<expanz_service_SiteDetailsClient> _siteClient;
     expanz_model_ActivityMenu* _activityList;
-    expanz_codegen_model_ViewTemplateRenderer* _generator;
-
+    expanz_codegen_model_ViewTemplateRenderer* _detailViewRenderer;
+    expanz_codegen_model_ViewTemplateRenderer* _summaryListViewRenderer;
 }
 
 @property(nonatomic, weak) IBOutlet NSTableView* activityTableView;

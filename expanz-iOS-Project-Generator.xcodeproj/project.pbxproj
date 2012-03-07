@@ -176,6 +176,9 @@
 		6BC620D31507553000A10C61 /* RXMLElement+SiteDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC620681507553000A10C61 /* RXMLElement+SiteDetails.m */; };
 		6BC620D41507553000A10C61 /* NSString+Contains.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC6206C1507553000A10C61 /* NSString+Contains.m */; };
 		6BC620D51507553000A10C61 /* NSString+Contains.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC6206C1507553000A10C61 /* NSString+Contains.m */; };
+		6BC620F615077E5400A10C61 /* summaryListViewXib.mustache in Copy Test Resources to /tmp */ = {isa = PBXBuildFile; fileRef = 6BEDCD7A150703C600D9A266 /* summaryListViewXib.mustache */; };
+		6BC620F815077E5600A10C61 /* summaryListViewImpl.mustache in Copy Test Resources to /tmp */ = {isa = PBXBuildFile; fileRef = 6BEDCD7A150703C600D9A263 /* summaryListViewImpl.mustache */; };
+		6BC620F915077E5800A10C61 /* summaryListViewHeader.mustache in Copy Test Resources to /tmp */ = {isa = PBXBuildFile; fileRef = 6BEDCD7A150703C600D9A260 /* summaryListViewHeader.mustache */; };
 		6BCEC01914BBD88700538D1D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC10164147775A40055CF03 /* Cocoa.framework */; };
 		6BCEC03014BBD9D600538D1D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BCEC02914BBD9D600538D1D /* InfoPlist.strings */; };
 		6BCEDDF014C034D40089804B /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BCEDDEF14C034D40089804B /* MainWindow.xib */; };
@@ -228,6 +231,12 @@
 		6BEDCD7A150703C600D9A25B /* XcodeSourceFileType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEDCCFE150703C600D9A25B /* XcodeSourceFileType.m */; };
 		6BEDCD7A150703C600D9A25D /* expanz_codegen_model_GeneratedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEDCD7A150703C600D9A25C /* expanz_codegen_model_GeneratedView.m */; };
 		6BEDCD7A150703C600D9A25E /* expanz_codegen_model_GeneratedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEDCD7A150703C600D9A25C /* expanz_codegen_model_GeneratedView.m */; };
+		6BEDCD7A150703C600D9A261 /* summaryListViewHeader.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 6BEDCD7A150703C600D9A260 /* summaryListViewHeader.mustache */; };
+		6BEDCD7A150703C600D9A262 /* summaryListViewHeader.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 6BEDCD7A150703C600D9A260 /* summaryListViewHeader.mustache */; };
+		6BEDCD7A150703C600D9A264 /* summaryListViewImpl.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 6BEDCD7A150703C600D9A263 /* summaryListViewImpl.mustache */; };
+		6BEDCD7A150703C600D9A265 /* summaryListViewImpl.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 6BEDCD7A150703C600D9A263 /* summaryListViewImpl.mustache */; };
+		6BEDCD7A150703C600D9A267 /* summaryListViewXib.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 6BEDCD7A150703C600D9A266 /* summaryListViewXib.mustache */; };
+		6BEDCD7A150703C600D9A268 /* summaryListViewXib.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 6BEDCD7A150703C600D9A266 /* summaryListViewXib.mustache */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -240,6 +249,9 @@
 				6BBD6C8714ECD8DC00451BA2 /* production_environment.xml in Copy Test Resources to /tmp */,
 				6BD1B46414EBAD1B00F5AD1C /* project.pbxproj in Copy Test Resources to /tmp */,
 				6B9C3DA015021425006A7F97 /* detailViewImpl.mustache in Copy Test Resources to /tmp */,
+				6BC620F815077E5600A10C61 /* summaryListViewImpl.mustache in Copy Test Resources to /tmp */,
+				6BC620F615077E5400A10C61 /* summaryListViewXib.mustache in Copy Test Resources to /tmp */,
+				6BC620F915077E5800A10C61 /* summaryListViewHeader.mustache in Copy Test Resources to /tmp */,
 				6B72671A15026589001281CE /* detailViewXib.mustache in Copy Test Resources to /tmp */,
 				6B9C3D961501FF00006A7F97 /* detailViewHeader.mustache in Copy Test Resources to /tmp */,
 				6BD1B46514EBAD1C00F5AD1C /* ESA_Sales_Foobar_ViewController.header in Copy Test Resources to /tmp */,
@@ -504,6 +516,9 @@
 		6BEDCCFE150703C600D9A25B /* XcodeSourceFileType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XcodeSourceFileType.m; sourceTree = "<group>"; };
 		6BEDCD7A150703C600D9A25C /* expanz_codegen_model_GeneratedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_codegen_model_GeneratedView.m; sourceTree = "<group>"; };
 		6BEDCD7A150703C600D9A25F /* expanz_codegen_model_GeneratedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_codegen_model_GeneratedView.h; sourceTree = "<group>"; };
+		6BEDCD7A150703C600D9A260 /* summaryListViewHeader.mustache */ = {isa = PBXFileReference; lastKnownFileType = file.mustache; path = summaryListViewHeader.mustache; sourceTree = "<group>"; };
+		6BEDCD7A150703C600D9A263 /* summaryListViewImpl.mustache */ = {isa = PBXFileReference; lastKnownFileType = file.mustache; path = summaryListViewImpl.mustache; sourceTree = "<group>"; };
+		6BEDCD7A150703C600D9A266 /* summaryListViewXib.mustache */ = {isa = PBXFileReference; lastKnownFileType = file.mustache; path = summaryListViewXib.mustache; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -987,6 +1002,9 @@
 		6BCEC02614BBD9D600538D1D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6BEDCD7A150703C600D9A266 /* summaryListViewXib.mustache */,
+				6BEDCD7A150703C600D9A263 /* summaryListViewImpl.mustache */,
+				6BEDCD7A150703C600D9A260 /* summaryListViewHeader.mustache */,
 				6B726717150264D1001281CE /* detailViewXib.mustache */,
 				6BE4B2B4147E6D3C0059E522 /* detailViewImpl.mustache */,
 				6BE4B2B4147E6D3C0059E51D /* detailViewHeader.mustache */,
@@ -1202,6 +1220,9 @@
 				6BE4B2B4147E6D3C0059E51F /* detailViewHeader.mustache in Resources */,
 				6BE4B2B4147E6D3C0059E524 /* detailViewImpl.mustache in Resources */,
 				6B726719150264D1001281CE /* detailViewXib.mustache in Resources */,
+				6BEDCD7A150703C600D9A262 /* summaryListViewHeader.mustache in Resources */,
+				6BEDCD7A150703C600D9A265 /* summaryListViewImpl.mustache in Resources */,
+				6BEDCD7A150703C600D9A268 /* summaryListViewXib.mustache in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1220,6 +1241,9 @@
 				6BE4B2B4147E6D3C0059E51E /* detailViewHeader.mustache in Resources */,
 				6BE4B2B4147E6D3C0059E523 /* detailViewImpl.mustache in Resources */,
 				6B726718150264D1001281CE /* detailViewXib.mustache in Resources */,
+				6BEDCD7A150703C600D9A261 /* summaryListViewHeader.mustache in Resources */,
+				6BEDCD7A150703C600D9A264 /* summaryListViewImpl.mustache in Resources */,
+				6BEDCD7A150703C600D9A267 /* summaryListViewXib.mustache in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -23,35 +23,79 @@ SPEC_BEGIN(ActivityGeneratorSpec)
         __block ViewTemplateRenderer* viewRenderer;
         __block GeneratedView* generatedView;
 
-        beforeEach(^{
-            NSString* actvityXml = [NSString stringWithTestResource:@"GetSchemaForActivityXResponse.xml"];
-            RXMLElement* element = [RXMLElement elementFromXMLString:actvityXml];
-            ActivitySchema* schema = [[element child:@"GetSchemaForActivityXResult.ESA.Activity"] asActivitySchema];
-            generatedView = [[GeneratedView alloc] initWithStyle:[ActivityStyle defaultStyle] schema:schema];
+        describe(@"Generating detail style views", ^{
 
-            NSString* headerTemplate = [NSString stringWithTestResource:@"detailViewHeader.mustache"];
-            NSString* implTemplate = [NSString stringWithTestResource:@"detailViewImpl.mustache"];
-            NSString* xibTemplate = [NSString stringWithTestResource:@"detailViewXib.mustache"];
+            beforeEach(^{
+                NSString* headerTemplate = [NSString stringWithTestResource:@"detailViewHeader.mustache"];
+                NSString* implTemplate = [NSString stringWithTestResource:@"detailViewImpl.mustache"];
+                NSString* xibTemplate = [NSString stringWithTestResource:@"detailViewXib.mustache"];
 
-            viewRenderer = [[ViewTemplateRenderer alloc]
-                    initWithHeaderTemplate:headerTemplate implTemplate:implTemplate xibTemplate:xibTemplate];
+                viewRenderer = [[ViewTemplateRenderer alloc]
+                        initWithHeaderTemplate:headerTemplate implTemplate:implTemplate xibTemplate:xibTemplate];
+
+                NSString* actvityXml = [NSString stringWithTestResource:@"GetSchemaForActivityXResponse.xml"];
+                RXMLElement* element = [RXMLElement elementFromXMLString:actvityXml];
+                ActivitySchema* schema = [[element child:@"GetSchemaForActivityXResult.ESA.Activity"] asActivitySchema];
+                generatedView = [[GeneratedView alloc] initWithStyle:[ActivityStyle defaultStyle] schema:schema];
+            });
+
+
+            it(@"should generate the controller class", ^{
+
+                ClassDefinition* classDefinition = [viewRenderer classDefinitionWith:generatedView];
+                LogDebug(@"Header: \n%@", [classDefinition header]);
+                LogDebug(@"Source: \n%@", [classDefinition source]);
+
+            });
+
+            it(@"should generate the xib file.", ^{
+
+                XibDefinition* xibDefinition = [viewRenderer xibDefinitionWith:generatedView];
+                LogDebug(@"Xib: \n%@", [xibDefinition content]);
+
+            });
+
         });
 
 
-        it(@"should generate the controller class", ^{
+        describe(@"Generating summary list style views", ^{
 
-            ClassDefinition* classDefinition = [viewRenderer classDefinitionWith:generatedView];
-            LogDebug(@"Header: \n%@", [classDefinition header]);
-            LogDebug(@"Source: \n%@", [classDefinition source]);
+            beforeEach(^{
+                NSString* headerTemplate = [NSString stringWithTestResource:@"summaryListViewHeader.mustache"];
+                NSString* implTemplate = [NSString stringWithTestResource:@"summaryListViewImpl.mustache"];
+                NSString* xibTemplate = [NSString stringWithTestResource:@"summaryListViewXib.mustache"];
+
+                viewRenderer = [[ViewTemplateRenderer alloc]
+                        initWithHeaderTemplate:headerTemplate implTemplate:implTemplate xibTemplate:xibTemplate];
+
+                NSString* actvityXml = [NSString stringWithTestResource:@"GetSchemaForActivityXResponse.xml"];
+                RXMLElement* element = [RXMLElement elementFromXMLString:actvityXml];
+                ActivitySchema* schema = [[element child:@"GetSchemaForActivityXResult.ESA.Activity"] asActivitySchema];
+                [[element child:@"GetSchemaForActivityXResult.ESA.Queries"] iterate:@"*" with:^(RXMLElement* e) {
+                    [schema addQuery:[e asQuery]];
+                }];
+                generatedView = [[GeneratedView alloc] initWithStyle:[ActivityStyle browseStyle] schema:schema];
+            });
+
+
+            it(@"should generate the controller class", ^{
+
+                ClassDefinition* classDefinition = [viewRenderer classDefinitionWith:generatedView];
+                LogDebug(@"Header: \n%@", [classDefinition header]);
+                LogDebug(@"Source: \n%@", [classDefinition source]);
+
+            });
+
+            it(@"should generate the xib file.", ^{
+
+                XibDefinition* xibDefinition = [viewRenderer xibDefinitionWith:generatedView];
+                LogDebug(@"Xib: \n%@", [xibDefinition content]);
+
+            });
+
 
         });
 
-        it(@"should generate the xib file.", ^{
-
-            XibDefinition* xibDefinition = [viewRenderer xibDefinitionWith:generatedView];
-            LogDebug(@"Xib: \n%@", [xibDefinition content]);
-
-        });
 
 
 

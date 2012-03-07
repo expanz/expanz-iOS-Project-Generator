@@ -13,14 +13,10 @@
 
 @interface {{controllerClassName}} : expanz_ui_ActivityInstanceViewController
 
-{{#schema.fields}}
-@property(nonatomic, weak) IBOutlet UIView* {{name}};
-{{/schema.fields}}
 
-{{#schema.methods}}
-- (IBAction) do{{name}};
-{{/schema.methods}}
+{{#schema.queries}}
+@property(nonatomic, weak) IBOutlet UITableView* {{queryId}};
+{{/schema.queries}}
 
 
 @end
-

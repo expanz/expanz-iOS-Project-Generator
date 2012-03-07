@@ -17,8 +17,15 @@
 #import "expanz_codegen_model_ViewTemplateRenderer.h"
 #import "xcode_Project.h"
 #import "xcode_Group.h"
-#import "xcode_ClassDefinition.h"
-#import "xcode_XibDefinition.h"
+#import "expanz_codegen_model_GeneratedView.h"
+
+@interface expanz_codegen_ui_ActivitySelectionViewController (private)
+
+- (void) assembleDetailViewRenderer;
+
+- (void) assembleSummaryViewRenderer;
+
+@end
 
 
 @implementation expanz_codegen_ui_ActivitySelectionViewController
@@ -26,24 +33,14 @@
 @synthesize activityTableView = _activityTableView;
 
 /* ================================================== Initializers ================================================== */
+
+
 - (id) initWithDelegate:(id<expanz_codegen_ui_EventHandler>)delegate {
     self = [super initWithNibName:@"activities" bundle:[NSBundle mainBundle]];
     if (self) {
         _delegate = delegate;
-        NSString* headerTemplate = [NSString
-                stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"detailViewHeader" ofType:@"mustache"]
-                encoding:NSUTF8StringEncoding error:nil];
-
-        NSString* implTemplate = [NSString
-                stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"detailViewImpl" ofType:@"mustache"]
-                encoding:NSUTF8StringEncoding error:nil];
-
-        NSString* xibTemplate = [NSString
-                stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"detailViewXib" ofType:@"mustache"]
-                encoding:NSUTF8StringEncoding error:nil];
-
-        _generator = [[ViewTemplateRenderer alloc]
-                initWithHeaderTemplate:headerTemplate implTemplate:implTemplate xibTemplate:xibTemplate];
+        [self assembleDetailViewRenderer];
+        [self assembleSummaryViewRenderer];
     }
     return self;
 }
@@ -76,26 +73,26 @@
 }
 
 - (void) requestDidFinishWithActivitySchema:(ActivitySchema*)activitySchema {
-    LogDebug(@"Here's the schema! :%@", activitySchema);
-
     Project* project = [[UserSession sharedUserSession] project];
+    LogDebug(@"$$$$$$$$$$$$$$$$$$$$Project: %@", [project groups]);
     NSString* groupName = [[[UserSession sharedUserSession] projectFilePath] lastPathComponent];
     Group* group = [project groupWithPathRelativeToParent:groupName];
-//
-//    for (ActivityStyle* style in [activitySchema styles]) {
-//        NSString* viewControllerName = [style controllerClassNameForActivityId:activitySchema.activityId];
-//        ClassDefinition* classDefinition = [[ClassDefinition alloc] initWithName:viewControllerName];
-//        [classDefinition setHeader:[_generator headerForSchema:activitySchema controllerClassName:viewControllerName]];
-//        [classDefinition
-//                setSource:[_generator implementationForSchema:activitySchema controllerClassName:viewControllerName]];
-//        [group addClass:classDefinition toTargets:[project targets]];
-//
-//        NSString* xibFileName = [style nibNameForActivityId:activitySchema.activityId];
-//        XibDefinition* xibDefinition = [[XibDefinition alloc] initWithName:xibFileName
-//                content:[_generator xibForSchema:activitySchema controllerClassName:viewControllerName]];
-//        [group addXib:xibDefinition toTargets:[project targets]];
-//    }
-//    [project save];
+
+    for (ActivityStyle* style in [activitySchema styles]) {
+        GeneratedView* generatedView = [[GeneratedView alloc] initWithStyle:style schema:activitySchema];
+
+        ViewTemplateRenderer* renderer;
+        if ([style formLayout] == DetailLayoutStyle) {
+            renderer = _detailViewRenderer;
+        }
+        else if ([style formLayout] == SummaryListLayoutStyle) {
+            renderer = _summaryListViewRenderer;
+        }
+
+        [group addClass:[renderer classDefinitionWith:generatedView] toTargets:[project targets]];
+        [group addXib:[renderer xibDefinitionWith:generatedView] toTargets:[project targets]];
+    }
+    [project save];
 
 }
 
@@ -128,6 +125,41 @@
 
 - (void) tableViewSelectionDidChange:(NSNotification*)notification {
     [_delegate didSelectActivity];
+}
+
+/* ================================================== Private Methods =============================================== */
+- (void) assembleDetailViewRenderer {
+    NSString* headerTemplate = [NSString
+            stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"detailViewHeader" ofType:@"mustache"]
+            encoding:NSUTF8StringEncoding error:nil];
+
+    NSString* implTemplate = [NSString
+            stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"detailViewImpl" ofType:@"mustache"]
+            encoding:NSUTF8StringEncoding error:nil];
+
+    NSString* xibTemplate = [NSString
+            stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"detailViewXib" ofType:@"mustache"]
+            encoding:NSUTF8StringEncoding error:nil];
+
+    _detailViewRenderer = [[ViewTemplateRenderer alloc]
+            initWithHeaderTemplate:headerTemplate implTemplate:implTemplate xibTemplate:xibTemplate];
+}
+
+- (void) assembleSummaryViewRenderer {
+    NSString* headerTemplate = [NSString
+            stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"summaryListViewHeader" ofType:@"mustache"]
+            encoding:NSUTF8StringEncoding error:nil];
+
+    NSString* implTemplate = [NSString
+            stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"summaryListViewImpl" ofType:@"mustache"]
+            encoding:NSUTF8StringEncoding error:nil];
+
+    NSString* xibTemplate = [NSString
+            stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"summaryListViewXib" ofType:@"mustache"]
+            encoding:NSUTF8StringEncoding error:nil];
+
+    _summaryListViewRenderer = [[ViewTemplateRenderer alloc]
+            initWithHeaderTemplate:headerTemplate implTemplate:implTemplate xibTemplate:xibTemplate];
 }
 
 
