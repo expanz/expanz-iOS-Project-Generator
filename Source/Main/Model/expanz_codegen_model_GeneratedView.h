@@ -10,18 +10,21 @@
 ////////////////////////////////////////////////////////////////////////////////
 #import <Foundation/Foundation.h>
 
+@class expanz_model_ActivitySchema;
+@class expanz_model_ActivityStyle;
 
-@interface xcode_XibDefinition : NSObject
 
-@property(nonatomic, strong, readonly) NSString* name;
-@property(nonatomic, strong) NSString* content;
+@interface expanz_codegen_model_GeneratedView : NSObject
 
-- (id) initWithName:(NSString*)name;
+@property (nonatomic, strong, readonly) expanz_model_ActivityStyle* style;
+@property (nonatomic, strong, readonly) expanz_model_ActivitySchema* schema;
 
-- (id) initWithName:(NSString*)name content:(NSString*)content;
+- (id) initWithStyle:(expanz_model_ActivityStyle*)style schema:(expanz_model_ActivitySchema*)schema;
 
-- (NSString*) xibFileName;
+- (NSString*) controllerClassName;
+
+- (NSString*) nibName;
 
 @end
 /* ================================================================================================================== */
-@compatibility_alias XibDefinition xcode_XibDefinition;
+@compatibility_alias GeneratedView expanz_codegen_model_GeneratedView;

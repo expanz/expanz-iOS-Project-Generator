@@ -13,8 +13,11 @@
 #import "expanz_model_ActivitySchema.h"
 
 @class GRMustacheTemplate;
+@class xcode_ClassDefinition;
+@class xcode_XibDefinition;
+@class expanz_codegen_model_GeneratedView;
 
-@interface expanz_codegen_model_ActivityGenerator : NSObject {
+@interface expanz_codegen_model_ViewTemplateRenderer : NSObject {
 
 @private
     GRMustacheTemplate* _headerTemplate;
@@ -26,12 +29,11 @@
 - (id) initWithHeaderTemplate:(NSString*)headerTemplate implTemplate:(NSString*)implTemplate
         xibTemplate:(NSString*)xibTemplate;
 
-- (NSString*) headerForSchema:(expanz_model_ActivitySchema*)schema controllerClassName:(NSString*)className;
+- (xcode_ClassDefinition*) classDefinitionWith:(expanz_codegen_model_GeneratedView*)view;
 
-- (NSString*) implementationForSchema:(expanz_model_ActivitySchema*)schema controllerClassName:(NSString*)className;;
+- (xcode_XibDefinition*) xibDefinitionWith:(expanz_codegen_model_GeneratedView*)view;
 
-- (NSString*) xibForSchema:(expanz_model_ActivitySchema*)schema controllerClassName:(NSString*)className;;
 
 @end
 /* ================================================================================================================== */
-@compatibility_alias ActivityGenerator expanz_codegen_model_ActivityGenerator;
+@compatibility_alias ViewTemplateRenderer expanz_codegen_model_ViewTemplateRenderer;

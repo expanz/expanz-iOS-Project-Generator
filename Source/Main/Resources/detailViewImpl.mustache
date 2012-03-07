@@ -13,15 +13,15 @@
 
 @implementation {{controllerClassName}}
 
-{{#fields}}
+{{#schema.fields}}
 @synthesize {{name}} = _{{name}};
-{{/fields}}
+{{/schema.fields}}
 
-{{#methods}}
+{{#schema.methods}}
 - (IBAction) do{{name}} {
     [super sendMethodInvocation:@"{{name}}"];
 }
-{{/methods}}
+{{/schema.methods}}
 
 
 @end

@@ -13,13 +13,13 @@
 
 @interface {{controllerClassName}} : expanz_ui_ActivityInstanceViewController
 
-{{#fields}}
+{{#schema.fields}}
 @property(nonatomic, strong) IBOutlet UITextField* {{name}};
-{{/fields}}
+{{/schema.fields}}
 
-{{#methods}}
+{{#schema.methods}}
 - (IBAction) do{{name}};
-{{/methods}}
+{{/schema.methods}}
 
 
 @end

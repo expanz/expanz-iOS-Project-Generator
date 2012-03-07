@@ -9,12 +9,20 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "expanz_codegen_model_ActivityGenerator.h"
+#import "expanz_codegen_model_ViewTemplateRenderer.h"
 #import "GRMustacheTemplate.h"
+#import "xcode_ClassDefinition.h"
+#import "xcode_XibDefinition.h"
+#import "expanz_codegen_model_GeneratedView.h"
+
+@interface expanz_codegen_model_ViewTemplateRenderer (private)
+
+- (NSDictionary*) wrapClassName:(NSString*)name;
+
+@end
 
 
-@implementation expanz_codegen_model_ActivityGenerator
-
+@implementation expanz_codegen_model_ViewTemplateRenderer
 
 /* ================================================== Initializers ================================================== */
 - (id) initWithHeaderTemplate:(NSString*)headerTemplate implTemplate:(NSString*)implTemplate
@@ -35,19 +43,23 @@
 
 
 /* ================================================ Interface Methods =============================================== */
-- (NSString*) headerForSchema:(expanz_model_ActivitySchema*)schema controllerClassName:(NSString*)className {
-    NSDictionary* style = [NSDictionary dictionaryWithObject:className forKey:@"controllerClassName"];
-    return [_headerTemplate renderObjects:schema, style, nil];
+- (xcode_ClassDefinition*) classDefinitionWith:(expanz_codegen_model_GeneratedView*)view {
+
+    ClassDefinition* classDefinition = [[ClassDefinition alloc] initWithName:[view controllerClassName]];
+    [classDefinition setHeader:[_headerTemplate renderObject:view]];
+    [classDefinition setSource:[_implTemplate renderObject:view]];
+    return classDefinition;
 }
 
-- (NSString*) implementationForSchema:(expanz_model_ActivitySchema*)schema controllerClassName:(NSString*)className {
-    NSDictionary* style = [NSDictionary dictionaryWithObject:className forKey:@"controllerClassName"];
-    return [_implTemplate renderObjects:schema, style, nil];
+- (xcode_XibDefinition*) xibDefinitionWith:(expanz_codegen_model_GeneratedView*)view {
+    XibDefinition* xibDefinition = [[XibDefinition alloc] initWithName:[view nibName]];
+    [xibDefinition setContent:[_xibTemplate renderObject:view]];
+    return xibDefinition;
 }
 
-- (NSString*) xibForSchema:(expanz_model_ActivitySchema*)schema controllerClassName:(NSString*)className {
-    NSDictionary* style = [NSDictionary dictionaryWithObject:className forKey:@"controllerClassName"];
-    return [_xibTemplate renderObjects:schema, style, nil];
+/* ================================================== Private Methods =============================================== */
+- (NSDictionary*) wrapClassName:(NSString*)name {
+    return [NSDictionary dictionaryWithObject:name forKey:@"controllerClassName"];
 }
 
 

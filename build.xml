@@ -27,15 +27,9 @@
 
     <target name="install" depends="
     --application.build,
-    --application.install"/>
+    --plugin.build"/>
 
     <target name="clean" depends="--clean"/>
-
-    <target name="release" depends="clean">
-        <exec executable="xcodebuild" failonerror="true">
-            <arg line="-target expanz-iOS-SDK"/>
-        </exec>
-    </target>
 
 
     <target name="fast">
@@ -72,24 +66,16 @@
     </target>
 
     <target name="--application.build">
+            <exec executable="xcodebuild" failonerror="true">
+                <arg line="-target ${application.target.name}"/>
+            </exec>
+    </target>
+
+    <target name="--plugin.build">
         <exec executable="xcodebuild" failonerror="true">
-            <arg line="-target ${application.target.name}"/>
+            <arg line="-target ${plugin.target.name}"/>
         </exec>
     </target>
-
-    <target name="--application.install">
-        <echo file="${temp.dir}/install.sh">
-            #!/bin/sh
-            cp -fr ${target.dir}/Release/${application.target.name}.app /Applications
-        </echo>
-        <exec executable="sh" failonerror="true" failifexecutionfails="true">
-            <arg line="${temp.dir}/install.sh"/>
-        </exec>
-        <exec executable="sh">
-            <arg line=""/>
-        </exec>
-    </target>
-
 
     <target name="--assemble.coverage.data">
         <mkdir dir="${temp.dir}/coverage-data"/>
