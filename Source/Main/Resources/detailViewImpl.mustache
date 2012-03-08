@@ -13,9 +13,13 @@
 
 @implementation {{controllerClassName}}
 
-{{#schema.fields}}
+{{#schema.displayableFields}}
 @synthesize {{name}} = _{{name}};
-{{/schema.fields}}
+{{/schema.displayableFields}}
+
+{{#schema.displayableFields}}
+@synthesize {{name}}Label = _{{name}}Label;
+{{/schema.displayableFields}}
 
 {{#schema.methods}}
 - (IBAction) do{{name}} {

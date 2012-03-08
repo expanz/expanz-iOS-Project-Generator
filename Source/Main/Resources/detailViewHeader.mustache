@@ -13,9 +13,15 @@
 
 @interface {{controllerClassName}} : expanz_ui_ActivityInstanceViewController
 
-{{#schema.fields}}
+{{#schema.displayableFields}}
 @property(nonatomic, weak) IBOutlet UIView* {{name}};
-{{/schema.fields}}
+{{/schema.displayableFields}}
+
+{{#schema.displayableFields}}
+@property(nonatomic, weak) IBOutlet UILabel* {{name}}Label;
+{{/schema.displayableFields}}
+
+
 
 {{#schema.methods}}
 - (IBAction) do{{name}};
