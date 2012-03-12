@@ -29,6 +29,10 @@
     --application.build,
     --plugin.build"/>
 
+    <target name="jenkins" depends="
+    build,
+    --publish.site"/>
+
     <target name="clean" depends="--clean"/>
 
 
@@ -154,6 +158,26 @@
         <copy todir="${reports.dir}/api">
             <fileset dir="${docs.dir}/${module.company}.${module.name}.docset/Contents/Resources/Documents"/>
         </copy>
+    </target>
+
+    <target name="--publish.site">
+        <echo file="${temp.dir}/publish-site.sh">
+            #!/bin/sh
+            cd ${basedir}
+            git checkout gh-pages
+            git pull
+            rm -fr ./coverage
+            cp -fr ${reports.dir}/coverage/ ./coverage
+            git add ./coverage
+            rm -fr ./api
+            cp -fr ${reports.dir}/api ./api
+            git add api
+            git commit -a -m "publish reports to gh-pages"
+            git push -u origin gh-pages
+            git checkout master
+        </echo>
+        <chmod perm="+x" file="${temp.dir}/publish-site.sh"/>
+        <exec executable="${temp.dir}/publish-site.sh" failonerror="true" failifexecutionfails="true"/>
     </target>
 
 
