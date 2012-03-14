@@ -25,6 +25,8 @@
 
 - (void) assembleSummaryViewRenderer;
 
+- (void) terminate;
+
 @end
 
 
@@ -74,7 +76,6 @@
 
 - (void) requestDidFinishWithActivitySchema:(ActivitySchema*)activitySchema {
     Project* project = [[UserSession sharedUserSession] project];
-    LogDebug(@"$$$$$$$$$$$$$$$$$$$$Project: %@", [project groups]);
     NSString* groupName = [[[UserSession sharedUserSession] projectFilePath] lastPathComponent];
     Group* group = [project groupWithPathRelativeToParent:groupName];
 
@@ -93,7 +94,12 @@
         [group addXib:[renderer xibDefinitionWith:generatedView] toTargets:[project targets]];
     }
     [project save];
-
+    NSAlert* alert = [[NSAlert alloc] init];
+    [alert addButtonWithTitle:@"OK"];
+    [alert setMessageText:@"Controller and xibs for selected activities were generated successfully."];
+    [alert setAlertStyle:NSInformationalAlertStyle];
+    [alert beginSheetModalForWindow:self.view.window modalDelegate:self didEndSelector:@selector(terminate)
+            contextInfo:nil];
 }
 
 
@@ -160,6 +166,10 @@
 
     _summaryListViewRenderer = [[ViewTemplateRenderer alloc]
             initWithHeaderTemplate:headerTemplate implTemplate:implTemplate xibTemplate:xibTemplate];
+}
+
+- (void) terminate {
+    [NSApp terminate:nil];
 }
 
 
