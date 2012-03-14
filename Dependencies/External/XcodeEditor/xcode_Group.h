@@ -16,6 +16,8 @@
 @class xcode_SourceFile;
 @class xcode_XibDefinition;
 @class xcode_FileWriteQueue;
+@class xcode_FrameworkDefinition;
+
 
 /**
 * Represents a group container in an Xcode project. A group can contain members of type `xcode_SourceFile` or other
@@ -27,6 +29,7 @@
     NSString* _pathRelativeToProjectRoot;
     NSMutableArray* _children;
     __weak xcode_FileWriteQueue* _writeQueue;
+    NSMutableArray* _members;
 }
 
 /* =================================================== Properties =================================================== */
@@ -67,7 +70,8 @@
 /* ================================================ Interface Methods =============================================== */
 #pragma mark Adding children
 /**
- * Adds a class to the group.
+ * Adds a class to the group, as specified by the ClassDefinition. If the group already contains a class by the same
+ * name, the contents will be updated.
 */
 - (void) addClass:(xcode_ClassDefinition*)classDefinition;
 
@@ -77,7 +81,7 @@
 - (void) addClass:(xcode_ClassDefinition*)classDefinition toTargets:(NSArray*)targets;
 
 /**
- * Adds a xib file to the group.
+ * Adds a xib file to the group. If the group already contains a class by the same name, the contents will be updated.
 */
 - (void) addXib:(xcode_XibDefinition*)xibDefinition;
 
@@ -85,6 +89,11 @@
  * Adds a xib to the group, making it a member of the specified [targets](xcode_Target).
 */
 - (void) addXib:(xcode_XibDefinition*)xibDefinition toTargets:(NSArray*)targets;
+
+/**
+* Adds a framework to the group.
+*/
+- (void) addFramework:(xcode_FrameworkDefinition*)frameworkDefinition;
 
 /* ================================================================================================================== */
 #pragma mark Locating children
@@ -94,9 +103,14 @@
 - (NSArray*) members;
 
 /**
- * Returns the child with the specified key.
+ * Returns the child with the specified key, or nil.
 */
 - (id<XcodeGroupMember>) memberWithKey:(NSString*)key;
+
+/**
+* Returns the child with the specified name, or nil.
+*/
+- (id<XcodeGroupMember>) memberWithDisplayName:(NSString*)name;
 
 /* ================================================================================================================== */
 #pragma mark File paths
