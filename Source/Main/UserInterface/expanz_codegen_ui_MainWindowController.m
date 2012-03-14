@@ -97,7 +97,7 @@
 }
 
 - (void) generate {
-    [_activitySelectionViewController generateSelectedActivity];
+    [_activitySelectionViewController generateSelectedActivities];
 }
 
 

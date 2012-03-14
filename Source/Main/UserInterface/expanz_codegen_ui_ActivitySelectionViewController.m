@@ -57,10 +57,16 @@
     [_siteClient listActivitiesForSite:[UserSession sharedUserSession].selectedSite withDelegate:self];
 }
 
-- (void) generateSelectedActivity {
-    ActivityMenuItem* menuItem = [[_activityList activities] objectAtIndex:[_activityTableView selectedRow]];
-    [_siteClient site:[UserSession sharedUserSession].selectedSite requestSchemaForActivity:[menuItem activityId]
-            withDelegate:self];
+- (void) generateSelectedActivities {
+    NSIndexSet* indexSet = [_activityTableView selectedRowIndexes];
+    _selectedActivityCount = [indexSet count];
+
+    [indexSet enumerateIndexesUsingBlock:^(NSUInteger index, BOOL* stop) {
+        ActivityMenuItem* menuItem = [[_activityList activities] objectAtIndex:index];
+        NSString* selectedSite = [UserSession sharedUserSession].selectedSite;
+        [_siteClient site:selectedSite requestSchemaForActivity:[menuItem activityId] withDelegate:self];
+    }];
+
 }
 
 
@@ -93,13 +99,17 @@
         [group addClass:[renderer classDefinitionWith:generatedView] toTargets:[project targets]];
         [group addXib:[renderer xibDefinitionWith:generatedView] toTargets:[project targets]];
     }
-    [project save];
-    NSAlert* alert = [[NSAlert alloc] init];
-    [alert addButtonWithTitle:@"OK"];
-    [alert setMessageText:@"Controller and xibs for selected activities were generated successfully."];
-    [alert setAlertStyle:NSInformationalAlertStyle];
-    [alert beginSheetModalForWindow:self.view.window modalDelegate:self didEndSelector:@selector(terminate)
-            contextInfo:nil];
+
+    _receivedActivityCount++;
+    if (_receivedActivityCount == _selectedActivityCount) {
+        [project save];
+        NSAlert* alert = [[NSAlert alloc] init];
+        [alert addButtonWithTitle:@"OK"];
+        [alert setMessageText:@"Controller and xibs for selected activities were generated successfully."];
+        [alert setAlertStyle:NSInformationalAlertStyle];
+        [alert beginSheetModalForWindow:self.view.window modalDelegate:self didEndSelector:@selector(terminate)
+                contextInfo:nil];
+    }
 }
 
 

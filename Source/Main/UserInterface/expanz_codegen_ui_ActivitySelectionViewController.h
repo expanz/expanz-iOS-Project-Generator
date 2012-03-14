@@ -28,6 +28,8 @@
     expanz_model_ActivityMenu* _activityList;
     expanz_codegen_model_ViewTemplateRenderer* _detailViewRenderer;
     expanz_codegen_model_ViewTemplateRenderer* _summaryListViewRenderer;
+    int _selectedActivityCount;
+    int _receivedActivityCount;
 }
 
 @property(nonatomic, weak) IBOutlet NSTableView* activityTableView;
@@ -37,7 +39,7 @@
 
 - (void) populateActivityList;
 
-- (void) generateSelectedActivity;
+- (void) generateSelectedActivities;
 
 
 @end

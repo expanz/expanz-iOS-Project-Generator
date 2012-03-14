@@ -31,7 +31,7 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "-expanzProjectDirectory=/Users/jblues/ExpanzProjects/AHooYah"
+            argument = "-expanzProjectDirectory=/Users/jblues/ExpanzProjects/Test"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
