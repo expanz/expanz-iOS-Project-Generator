@@ -81,34 +81,37 @@
 }
 
 - (void) requestDidFinishWithActivitySchema:(ActivitySchema*)activitySchema {
-    Project* project = [[UserSession sharedUserSession] project];
-    NSString* groupName = [[[UserSession sharedUserSession] projectFilePath] lastPathComponent];
-    Group* group = [project groupWithPathRelativeToParent:groupName];
+    @synchronized (self) {
 
-    for (ActivityStyle* style in [activitySchema styles]) {
-        GeneratedView* generatedView = [[GeneratedView alloc] initWithStyle:style schema:activitySchema];
+        Project* project = [[UserSession sharedUserSession] project];
+        NSString* groupName = [[[UserSession sharedUserSession] projectFilePath] lastPathComponent];
+        Group* group = [project groupWithPathRelativeToParent:groupName];
 
-        ViewTemplateRenderer* renderer;
-        if ([style formLayout] == DetailLayoutStyle) {
-            renderer = _detailViewRenderer;
+        for (ActivityStyle* style in [activitySchema styles]) {
+            GeneratedView* generatedView = [[GeneratedView alloc] initWithStyle:style schema:activitySchema];
+
+            ViewTemplateRenderer* renderer;
+            if ([style formLayout] == DetailLayoutStyle) {
+                renderer = _detailViewRenderer;
+            }
+            else if ([style formLayout] == SummaryListLayoutStyle) {
+                renderer = _summaryListViewRenderer;
+            }
+
+            [group addClass:[renderer classDefinitionWith:generatedView] toTargets:[project targets]];
+            [group addXib:[renderer xibDefinitionWith:generatedView] toTargets:[project targets]];
         }
-        else if ([style formLayout] == SummaryListLayoutStyle) {
-            renderer = _summaryListViewRenderer;
+
+        _receivedActivityCount++;
+        if (_receivedActivityCount == _selectedActivityCount) {
+            [project save];
+            NSAlert* alert = [[NSAlert alloc] init];
+            [alert addButtonWithTitle:@"OK"];
+            [alert setMessageText:@"Controller and xibs for selected activities were generated successfully."];
+            [alert setAlertStyle:NSInformationalAlertStyle];
+            [alert beginSheetModalForWindow:self.view.window modalDelegate:self didEndSelector:@selector(terminate)
+                    contextInfo:nil];
         }
-
-        [group addClass:[renderer classDefinitionWith:generatedView] toTargets:[project targets]];
-        [group addXib:[renderer xibDefinitionWith:generatedView] toTargets:[project targets]];
-    }
-
-    _receivedActivityCount++;
-    if (_receivedActivityCount == _selectedActivityCount) {
-        [project save];
-        NSAlert* alert = [[NSAlert alloc] init];
-        [alert addButtonWithTitle:@"OK"];
-        [alert setMessageText:@"Controller and xibs for selected activities were generated successfully."];
-        [alert setAlertStyle:NSInformationalAlertStyle];
-        [alert beginSheetModalForWindow:self.view.window modalDelegate:self didEndSelector:@selector(terminate)
-                contextInfo:nil];
     }
 }
 
