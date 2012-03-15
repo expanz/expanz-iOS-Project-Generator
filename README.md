@@ -24,7 +24,7 @@ training course for 8 - 16 pax.
 * <a href="">Tutorials</a>
 * <a href="https://github.com/expanz/expanz-iOS-Project-Generator/wiki">Wiki</a>
 * <a href="http://expanz.github.com/expanz-iOS-Project-Generator/api/index.html">API</a>
-* <a href="http://expanz.github.com/expanz-iOS-Project-Generator/coverage/index.html">Reports</a>
+* <a href="http://expanz.github.com/expanz-iOS-Project-Generator/coverage/index.html">Coverage Reports</a>
 
 # Building
 
