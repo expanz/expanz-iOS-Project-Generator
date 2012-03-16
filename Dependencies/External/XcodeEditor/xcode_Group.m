@@ -25,13 +25,18 @@
 
 - (void) flagMembersAsDirty;
 
-- (NSDictionary*) makeFileReference:(NSString*)name type:(XcodeSourceFileType)type;
+- (NSDictionary*) makeFileReferenceWithPath:(NSString*)path type:(XcodeSourceFileType)type;
+
+- (NSDictionary*) makeFileReferenceWithPath:(NSString*)path name:(NSString*)name type:(XcodeSourceFileType)type;
 
 - (NSDictionary*) asDictionary;
 
 - (XcodeMemberType) typeForKey:(NSString*)key;
 
 - (void) addSourceFile:(SourceFile*)sourceFile toTargets:(NSArray*)targets;
+
+- (void) warnPendingOverwrite:(NSString*)resourceName;
+
 
 @end
 /* ================================================================================================================== */
@@ -64,33 +69,39 @@
 /* ================================================ Interface Methods =============================================== */
 #pragma mark Adding children
 - (void) addClass:(ClassDefinition*)classDefinition {
-    if ([self memberWithDisplayName:[classDefinition headerFileName]] == nil) {
-        NSDictionary* header = [self makeFileReference:[classDefinition headerFileName] type:SourceCodeHeader];
+
+    SourceFile* currentHeaderFile = [self memberWithDisplayName:[classDefinition headerFileName]];
+    if ((currentHeaderFile) == nil) {
+        NSDictionary* header = [self makeFileReferenceWithPath:[classDefinition headerFileName] type:SourceCodeHeader];
         NSString* headerKey = [[KeyBuilder forItemNamed:[classDefinition headerFileName]] build];
         [[_project objects] setObject:header forKey:headerKey];
         [self addMemberWithKey:headerKey];
+        [_writeQueue queueFile:[classDefinition headerFileName] inDirectory:[self pathRelativeToProjectRoot]
+                withContents:[classDefinition source]];
     }
     else {
-        LogInfo(@"*** WARNING *** Group %@ already contains member with name %@. Contents will be updated.", [self
-                displayName], [classDefinition headerFileName]);
+        [self warnPendingOverwrite:[classDefinition headerFileName]];
+        [_writeQueue queueFile:[classDefinition headerFileName]
+                inDirectory:[[currentHeaderFile sourcePath] stringByDeletingLastPathComponent]
+                withContents:[classDefinition source]];
     }
 
-    if ([self memberWithDisplayName:[classDefinition sourceFileName]] == nil) {
-        NSDictionary* source = [self makeFileReference:[classDefinition sourceFileName] type:SourceCodeObjC];
+    SourceFile* currentSourceFile = [self memberWithDisplayName:[classDefinition sourceFileName]];
+    if ((currentSourceFile) == nil) {
+        NSDictionary* source = [self makeFileReferenceWithPath:[classDefinition sourceFileName] type:SourceCodeObjC];
         NSString* sourceKey = [[KeyBuilder forItemNamed:[classDefinition sourceFileName]] build];
         [[_project objects] setObject:source forKey:sourceKey];
         [self addMemberWithKey:sourceKey];
+        [_writeQueue queueFile:[classDefinition sourceFileName] inDirectory:[self pathRelativeToProjectRoot]
+                withContents:[classDefinition source]];
     }
     else {
-        LogInfo(@"*** WARNING *** Group %@ already contains member with name %@. Contents will be updated.", [self
-                displayName], [classDefinition sourceFileName]);
+        [self warnPendingOverwrite:[classDefinition sourceFileName]];
+        [_writeQueue queueFile:[classDefinition sourceFileName]
+                inDirectory:[[currentSourceFile sourcePath] stringByDeletingLastPathComponent]
+                withContents:[classDefinition source]];
     }
     [[_project objects] setObject:[self asDictionary] forKey:_key];
-
-    [_writeQueue queueFile:[classDefinition headerFileName] inDirectory:[self pathRelativeToProjectRoot]
-            withContents:[classDefinition header]];
-    [_writeQueue queueFile:[classDefinition sourceFileName] inDirectory:[self pathRelativeToProjectRoot]
-            withContents:[classDefinition source]];
 }
 
 - (void) addClass:(ClassDefinition*)classDefinition toTargets:(NSArray*)targets {
@@ -100,34 +111,60 @@
 }
 
 - (void) addXib:(XibDefinition*)xibDefinition {
-    if ([self memberWithDisplayName:[xibDefinition xibFileName]] == nil) {
-        NSDictionary* xib = [self makeFileReference:[xibDefinition xibFileName] type:XibFile];
+    SourceFile* currentXibFile = [self memberWithDisplayName:[xibDefinition xibFileName]];
+    if (currentXibFile == nil) {
+        NSDictionary* xib = [self makeFileReferenceWithPath:[xibDefinition xibFileName] type:XibFile];
         NSString* xibKey = [[KeyBuilder forItemNamed:[xibDefinition xibFileName]] build];
         [[_project objects] setObject:xib forKey:xibKey];
         [self addMemberWithKey:xibKey];
+        [_writeQueue queueFile:[xibDefinition xibFileName] inDirectory:[self pathRelativeToProjectRoot]
+                withContents:[xibDefinition content]];
     }
     else {
-        LogInfo(@"*** WARNING *** Group %@ already contains member with name %@. Contents will be updated", [self
-                displayName], [xibDefinition xibFileName]);
+        [self warnPendingOverwrite:[xibDefinition xibFileName]];
+        [_writeQueue queueFile:[xibDefinition xibFileName]
+                inDirectory:[[currentXibFile sourcePath] stringByDeletingLastPathComponent]
+                withContents:[xibDefinition content]];
     }
     [[_project objects] setObject:[self asDictionary] forKey:_key];
-    [_writeQueue queueFile:[xibDefinition xibFileName] inDirectory:[self pathRelativeToProjectRoot]
-            withContents:[xibDefinition content]];
 }
 
-- (void) addXib:(xcode_XibDefinition*)xibDefinition toTargets:(NSArray*)targets {
+- (void) addXib:(XibDefinition*)xibDefinition toTargets:(NSArray*)targets {
     [self addXib:xibDefinition];
     SourceFile* sourceFile = [_project fileWithName:[xibDefinition xibFileName]];
     [self addSourceFile:sourceFile toTargets:targets];
 }
 
-- (void) addFramework:(xcode_FrameworkDefinition*)frameworkDefinition {
-    NSDictionary* framework = [self makeFileReference:[frameworkDefinition name] type:Framework];
-    NSString* frameworkKey = [[KeyBuilder forItemNamed:[frameworkDefinition name]] build];
-    [[_project objects] setObject:framework forKey:frameworkKey];
-    [self addMemberWithKey:frameworkKey];
+
+- (void) addFramework:(FrameworkDefinition*)frameworkDefinition {
+
+    if (([self memberWithDisplayName:[frameworkDefinition name]]) == nil) {
+        NSDictionary* fileReference;
+        if ([frameworkDefinition copyToDestination]) {
+            fileReference = [self makeFileReferenceWithPath:[frameworkDefinition name] type:Framework];
+            [_writeQueue queueFrameworkWithFilePath:[frameworkDefinition filePath]
+                    inDirectory:[self pathRelativeToProjectRoot]];
+        }
+        else {
+            NSString* path = [frameworkDefinition filePath];
+            NSString* name = [frameworkDefinition name];
+            fileReference = [self makeFileReferenceWithPath:path name:name type:Framework];
+        }
+        NSString* frameworkKey = [[KeyBuilder forItemNamed:[frameworkDefinition name]] build];
+        [[_project objects] setObject:fileReference forKey:frameworkKey];
+        [self addMemberWithKey:frameworkKey];
+    }
+    else {
+        [self warnPendingOverwrite:[frameworkDefinition filePath]];
+    }
     [[_project objects] setObject:[self asDictionary] forKey:_key];
 }
+
+- (void) addFramework:(FrameworkDefinition*)frameworkDefinition toTargets:(NSArray*)targets {
+    [self addFramework:frameworkDefinition];
+    [self addSourceFile:[self memberWithDisplayName:[frameworkDefinition name]] toTargets:targets];
+}
+
 
 /* ================================================================================================================== */
 #pragma mark Locating children
@@ -228,15 +265,25 @@
     _members = nil;
 }
 
-- (NSDictionary*) makeFileReference:(NSString*)name type:(XcodeSourceFileType)type {
+- (NSDictionary*) makeFileReferenceWithPath:(NSString*)path type:(XcodeSourceFileType)type {
+    return [self makeFileReferenceWithPath:path name:nil type:type];
+}
+
+- (NSDictionary*) makeFileReferenceWithPath:(NSString*)path name:(NSString*)name type:(XcodeSourceFileType)type {
     NSMutableDictionary* reference = [[NSMutableDictionary alloc] init];
     [reference setObject:[NSString stringFromMemberType:PBXFileReference] forKey:@"isa"];
     [reference setObject:@"4" forKey:@"FileEncoding"];
     [reference setObject:[NSString stringFromSourceFileType:type] forKey:@"lastKnownFileType"];
-    [reference setObject:name forKey:@"path"];
+    if (name != nil) {
+        [reference setObject:[name lastPathComponent] forKey:@"name"];
+    }
+    if (path != nil) {
+        [reference setObject:path forKey:@"path"];
+    }
     [reference setObject:@"<group>" forKey:@"sourceTree"];
     return reference;
 }
+
 
 - (NSDictionary*) asDictionary {
     NSMutableDictionary* groupData = [[NSMutableDictionary alloc] init];
@@ -260,6 +307,11 @@
     for (Target* target in targets) {
         [target addMember:sourceFile];
     }
+}
+
+- (void) warnPendingOverwrite:(NSString*)resourceName {
+    LogInfo(@"*** WARNING *** Group %@ already contains member with name %@. Contents will be updated", [self
+            displayName], resourceName);
 }
 
 

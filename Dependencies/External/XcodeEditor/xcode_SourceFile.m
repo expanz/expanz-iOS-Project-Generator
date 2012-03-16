@@ -50,7 +50,7 @@
 }
 
 - (BOOL) canBecomeBuildFile {
-    return _type == SourceCodeObjC || _type == SourceCodeObjCPlusPlus || _type == XibFile;
+    return _type == SourceCodeObjC || _type == SourceCodeObjCPlusPlus || _type == XibFile || _type == Framework;
 }
 
 
@@ -70,6 +70,7 @@
 
 
 - (void) becomeBuildFile {
+    LogDebug(@"$$$$$$$$$$$$$$$$$ Start becoming build file");
     if (![self isBuildFile]) {
         if ([self canBecomeBuildFile]) {
             NSMutableDictionary* sourceBuildFile = [[NSMutableDictionary alloc] init];
@@ -87,6 +88,7 @@
         }
 
     }
+    LogDebug(@"Done becoming build file");
 }
 
 - (NSString*) sourcePath {
