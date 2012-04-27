@@ -180,6 +180,7 @@
 		6BC620F615077E5400A10C61 /* summaryListViewXib.mustache in Copy Test Resources to /tmp */ = {isa = PBXBuildFile; fileRef = 6BEDCD7A150703C600D9A266 /* summaryListViewXib.mustache */; };
 		6BC620F815077E5600A10C61 /* summaryListViewImpl.mustache in Copy Test Resources to /tmp */ = {isa = PBXBuildFile; fileRef = 6BEDCD7A150703C600D9A263 /* summaryListViewImpl.mustache */; };
 		6BC620F915077E5800A10C61 /* summaryListViewHeader.mustache in Copy Test Resources to /tmp */ = {isa = PBXBuildFile; fileRef = 6BEDCD7A150703C600D9A260 /* summaryListViewHeader.mustache */; };
+		6BCDDF2B154A602E009EE515 /* XcodeEditor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B01A055154A1FF500122D48 /* XcodeEditor.framework */; };
 		6BCEC01914BBD88700538D1D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC10164147775A40055CF03 /* Cocoa.framework */; };
 		6BCEC03014BBD9D600538D1D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BCEC02914BBD9D600538D1D /* InfoPlist.strings */; };
 		6BCEDDF014C034D40089804B /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BCEDDEF14C034D40089804B /* MainWindow.xib */; };
@@ -486,6 +487,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BCDDF2B154A602E009EE515 /* XcodeEditor.framework in Frameworks */,
 				6B62CC1D14FC9EF100A0E098 /* Quartz.framework in Frameworks */,
 				6B62CC1E14FC9EF100A0E098 /* QuartzCore.framework in Frameworks */,
 				6B62CC1214FC9D5D00A0E098 /* libprofile_rt.dylib in Frameworks */,
