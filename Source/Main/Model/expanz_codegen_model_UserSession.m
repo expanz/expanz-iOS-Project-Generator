@@ -9,7 +9,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 #import "expanz_codegen_model_UserSession.h"
-#import "xcode_Project.h"
+#import <XcodeEditor/XcodeEditor.h>
 
 
 @implementation expanz_codegen_model_UserSession

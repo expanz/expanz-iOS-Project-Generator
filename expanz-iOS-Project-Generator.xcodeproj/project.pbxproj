@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B01A056154A1FF500122D48 /* XcodeEditor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B01A055154A1FF500122D48 /* XcodeEditor.framework */; };
 		6B225D9C14E0B43500B0F735 /* expanz.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B225D9B14E0B43500B0F735 /* expanz.png */; };
 		6B29561314F534F40040E5FF /* libKiwi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B40695014EBDB1F00AD1DEF /* libKiwi.a */; };
 		6B55223714EA723700494CF3 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD8982D14EA2441007875F4 /* SenTestingKit.framework */; };
@@ -209,26 +210,6 @@
 		6BE4B2B4147E6D3C0059E524 /* detailViewImpl.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E522 /* detailViewImpl.mustache */; };
 		6BE4B2B4147E6D3C0059E527 /* GRArrayIndexHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E526 /* GRArrayIndexHelper.m */; };
 		6BE4B2B4147E6D3C0059E528 /* GRArrayIndexHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4B2B4147E6D3C0059E526 /* GRArrayIndexHelper.m */; };
-		6BEDCD67150703C600D9A25B /* xcode_ClassDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEDCCEA150703C600D9A25B /* xcode_ClassDefinition.m */; };
-		6BEDCD68150703C600D9A25B /* xcode_ClassDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEDCCEA150703C600D9A25B /* xcode_ClassDefinition.m */; };
-		6BEDCD69150703C600D9A25B /* xcode_FileWriteQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEDCCEC150703C600D9A25B /* xcode_FileWriteQueue.m */; };
-		6BEDCD6A150703C600D9A25B /* xcode_FileWriteQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEDCCEC150703C600D9A25B /* xcode_FileWriteQueue.m */; };
-		6BEDCD6B150703C600D9A25B /* xcode_Group.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEDCCEE150703C600D9A25B /* xcode_Group.m */; };
-		6BEDCD6C150703C600D9A25B /* xcode_Group.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEDCCEE150703C600D9A25B /* xcode_Group.m */; };
-		6BEDCD6D150703C600D9A25B /* xcode_KeyBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEDCCF0150703C600D9A25B /* xcode_KeyBuilder.m */; };
-		6BEDCD6E150703C600D9A25B /* xcode_KeyBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEDCCF0150703C600D9A25B /* xcode_KeyBuilder.m */; };
-		6BEDCD6F150703C600D9A25B /* xcode_Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEDCCF2150703C600D9A25B /* xcode_Project.m */; };
-		6BEDCD70150703C600D9A25B /* xcode_Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEDCCF2150703C600D9A25B /* xcode_Project.m */; };
-		6BEDCD71150703C600D9A25B /* xcode_SourceFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEDCCF4150703C600D9A25B /* xcode_SourceFile.m */; };
-		6BEDCD72150703C600D9A25B /* xcode_SourceFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEDCCF4150703C600D9A25B /* xcode_SourceFile.m */; };
-		6BEDCD73150703C600D9A25B /* xcode_Target.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEDCCF6150703C600D9A25B /* xcode_Target.m */; };
-		6BEDCD74150703C600D9A25B /* xcode_Target.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEDCCF6150703C600D9A25B /* xcode_Target.m */; };
-		6BEDCD75150703C600D9A25B /* xcode_XibDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEDCCF9150703C600D9A25B /* xcode_XibDefinition.m */; };
-		6BEDCD76150703C600D9A25B /* xcode_XibDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEDCCF9150703C600D9A25B /* xcode_XibDefinition.m */; };
-		6BEDCD77150703C600D9A25B /* XcodeMemberType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEDCCFC150703C600D9A25B /* XcodeMemberType.m */; };
-		6BEDCD78150703C600D9A25B /* XcodeMemberType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEDCCFC150703C600D9A25B /* XcodeMemberType.m */; };
-		6BEDCD79150703C600D9A25B /* XcodeSourceFileType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEDCCFE150703C600D9A25B /* XcodeSourceFileType.m */; };
-		6BEDCD7A150703C600D9A25B /* XcodeSourceFileType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEDCCFE150703C600D9A25B /* XcodeSourceFileType.m */; };
 		6BEDCD7A150703C600D9A25D /* expanz_codegen_model_GeneratedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEDCD7A150703C600D9A25C /* expanz_codegen_model_GeneratedView.m */; };
 		6BEDCD7A150703C600D9A25E /* expanz_codegen_model_GeneratedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEDCD7A150703C600D9A25C /* expanz_codegen_model_GeneratedView.m */; };
 		6BEDCD7A150703C600D9A261 /* summaryListViewHeader.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 6BEDCD7A150703C600D9A260 /* summaryListViewHeader.mustache */; };
@@ -264,6 +245,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6B01A055154A1FF500122D48 /* XcodeEditor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeEditor.framework; path = Library/Frameworks/XcodeEditor.framework; sourceTree = SDKROOT; };
 		6B17B89814BDAE3700F53089 /* IDEKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDEKit.framework; path = Library/PrivateFrameworks/IDEKit.framework; sourceTree = DEVELOPER_DIR; };
 		6B225D9B14E0B43500B0F735 /* expanz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = expanz.png; sourceTree = "<group>"; };
 		6B40695014EBDB1F00AD1DEF /* libKiwi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libKiwi.a; path = ../Libraries/libKiwi.a; sourceTree = "<group>"; };
@@ -492,28 +474,6 @@
 		6BE4B2B4147E6D3C0059E522 /* detailViewImpl.mustache */ = {isa = PBXFileReference; lastKnownFileType = file.mustache; path = detailViewImpl.mustache; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E525 /* GRArrayIndexHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRArrayIndexHelper.h; sourceTree = "<group>"; };
 		6BE4B2B4147E6D3C0059E526 /* GRArrayIndexHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRArrayIndexHelper.m; sourceTree = "<group>"; };
-		6BEDCCE9150703C600D9A25B /* xcode_ClassDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xcode_ClassDefinition.h; sourceTree = "<group>"; };
-		6BEDCCEA150703C600D9A25B /* xcode_ClassDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xcode_ClassDefinition.m; sourceTree = "<group>"; };
-		6BEDCCEB150703C600D9A25B /* xcode_FileWriteQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xcode_FileWriteQueue.h; sourceTree = "<group>"; };
-		6BEDCCEC150703C600D9A25B /* xcode_FileWriteQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xcode_FileWriteQueue.m; sourceTree = "<group>"; };
-		6BEDCCED150703C600D9A25B /* xcode_Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xcode_Group.h; sourceTree = "<group>"; };
-		6BEDCCEE150703C600D9A25B /* xcode_Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xcode_Group.m; sourceTree = "<group>"; };
-		6BEDCCEF150703C600D9A25B /* xcode_KeyBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xcode_KeyBuilder.h; sourceTree = "<group>"; };
-		6BEDCCF0150703C600D9A25B /* xcode_KeyBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xcode_KeyBuilder.m; sourceTree = "<group>"; };
-		6BEDCCF1150703C600D9A25B /* xcode_Project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xcode_Project.h; sourceTree = "<group>"; };
-		6BEDCCF2150703C600D9A25B /* xcode_Project.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xcode_Project.m; sourceTree = "<group>"; };
-		6BEDCCF3150703C600D9A25B /* xcode_SourceFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xcode_SourceFile.h; sourceTree = "<group>"; };
-		6BEDCCF4150703C600D9A25B /* xcode_SourceFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xcode_SourceFile.m; sourceTree = "<group>"; };
-		6BEDCCF5150703C600D9A25B /* xcode_Target.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xcode_Target.h; sourceTree = "<group>"; };
-		6BEDCCF6150703C600D9A25B /* xcode_Target.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xcode_Target.m; sourceTree = "<group>"; };
-		6BEDCCF7150703C600D9A25B /* xcode_utils_Enum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xcode_utils_Enum.h; sourceTree = "<group>"; };
-		6BEDCCF8150703C600D9A25B /* xcode_XibDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xcode_XibDefinition.h; sourceTree = "<group>"; };
-		6BEDCCF9150703C600D9A25B /* xcode_XibDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xcode_XibDefinition.m; sourceTree = "<group>"; };
-		6BEDCCFA150703C600D9A25B /* XcodeGroupMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XcodeGroupMember.h; sourceTree = "<group>"; };
-		6BEDCCFB150703C600D9A25B /* XcodeMemberType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XcodeMemberType.h; sourceTree = "<group>"; };
-		6BEDCCFC150703C600D9A25B /* XcodeMemberType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XcodeMemberType.m; sourceTree = "<group>"; };
-		6BEDCCFD150703C600D9A25B /* XcodeSourceFileType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XcodeSourceFileType.h; sourceTree = "<group>"; };
-		6BEDCCFE150703C600D9A25B /* XcodeSourceFileType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XcodeSourceFileType.m; sourceTree = "<group>"; };
 		6BEDCD7A150703C600D9A25C /* expanz_codegen_model_GeneratedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_codegen_model_GeneratedView.m; sourceTree = "<group>"; };
 		6BEDCD7A150703C600D9A25F /* expanz_codegen_model_GeneratedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_codegen_model_GeneratedView.h; sourceTree = "<group>"; };
 		6BEDCD7A150703C600D9A260 /* summaryListViewHeader.mustache */ = {isa = PBXFileReference; lastKnownFileType = file.mustache; path = summaryListViewHeader.mustache; sourceTree = "<group>"; };
@@ -542,6 +502,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B01A056154A1FF500122D48 /* XcodeEditor.framework in Frameworks */,
 				6B72671B1503A929001281CE /* libGRMustache1.a in Frameworks */,
 				6BC4D87D14FBBF1D00335BF3 /* libLRResty.a in Frameworks */,
 				6BBD6C9814ECFC9C00451BA2 /* libz.dylib in Frameworks */,
@@ -566,7 +527,6 @@
 			isa = PBXGroup;
 			children = (
 				6BC61FEB1507553000A10C61 /* ExpanzCore */,
-				6BEDCCE8150703C600D9A25B /* XcodeEditor */,
 				6B9C3D731501CD78006A7F97 /* GRMustache */,
 				6B9C3D831501CD78006A7F97 /* libGRMustache1.a */,
 				6BC4D7E214FBBE5500335BF3 /* Flexible-iOS-Logging-1.0 */,
@@ -678,6 +638,7 @@
 		6BC10155147775A40055CF03 = {
 			isa = PBXGroup;
 			children = (
+				6B01A055154A1FF500122D48 /* XcodeEditor.framework */,
 				6BE4B285147E6B610059E44D /* Source */,
 				6BC10163147775A40055CF03 /* Frameworks */,
 				6B105A041479CF9A002DEBCE /* External */,
@@ -1092,35 +1053,6 @@
 			path = Unit;
 			sourceTree = "<group>";
 		};
-		6BEDCCE8150703C600D9A25B /* XcodeEditor */ = {
-			isa = PBXGroup;
-			children = (
-				6BEDCCE9150703C600D9A25B /* xcode_ClassDefinition.h */,
-				6BEDCCEA150703C600D9A25B /* xcode_ClassDefinition.m */,
-				6BEDCCEB150703C600D9A25B /* xcode_FileWriteQueue.h */,
-				6BEDCCEC150703C600D9A25B /* xcode_FileWriteQueue.m */,
-				6BEDCCED150703C600D9A25B /* xcode_Group.h */,
-				6BEDCCEE150703C600D9A25B /* xcode_Group.m */,
-				6BEDCCEF150703C600D9A25B /* xcode_KeyBuilder.h */,
-				6BEDCCF0150703C600D9A25B /* xcode_KeyBuilder.m */,
-				6BEDCCF1150703C600D9A25B /* xcode_Project.h */,
-				6BEDCCF2150703C600D9A25B /* xcode_Project.m */,
-				6BEDCCF3150703C600D9A25B /* xcode_SourceFile.h */,
-				6BEDCCF4150703C600D9A25B /* xcode_SourceFile.m */,
-				6BEDCCF5150703C600D9A25B /* xcode_Target.h */,
-				6BEDCCF6150703C600D9A25B /* xcode_Target.m */,
-				6BEDCCF7150703C600D9A25B /* xcode_utils_Enum.h */,
-				6BEDCCF8150703C600D9A25B /* xcode_XibDefinition.h */,
-				6BEDCCF9150703C600D9A25B /* xcode_XibDefinition.m */,
-				6BEDCCFA150703C600D9A25B /* XcodeGroupMember.h */,
-				6BEDCCFB150703C600D9A25B /* XcodeMemberType.h */,
-				6BEDCCFC150703C600D9A25B /* XcodeMemberType.m */,
-				6BEDCCFD150703C600D9A25B /* XcodeSourceFileType.h */,
-				6BEDCCFE150703C600D9A25B /* XcodeSourceFileType.m */,
-			);
-			path = XcodeEditor;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1303,16 +1235,6 @@
 				6BE4B2B4147E6D3C0059E517 /* expanz_codegen_model_ViewTemplateRenderer.m in Sources */,
 				6BE4B2B4147E6D3C0059E521 /* ViewTemplateRendererSpec.m in Sources */,
 				6BE4B2B4147E6D3C0059E528 /* GRArrayIndexHelper.m in Sources */,
-				6BEDCD68150703C600D9A25B /* xcode_ClassDefinition.m in Sources */,
-				6BEDCD6A150703C600D9A25B /* xcode_FileWriteQueue.m in Sources */,
-				6BEDCD6C150703C600D9A25B /* xcode_Group.m in Sources */,
-				6BEDCD6E150703C600D9A25B /* xcode_KeyBuilder.m in Sources */,
-				6BEDCD70150703C600D9A25B /* xcode_Project.m in Sources */,
-				6BEDCD72150703C600D9A25B /* xcode_SourceFile.m in Sources */,
-				6BEDCD74150703C600D9A25B /* xcode_Target.m in Sources */,
-				6BEDCD76150703C600D9A25B /* xcode_XibDefinition.m in Sources */,
-				6BEDCD78150703C600D9A25B /* XcodeMemberType.m in Sources */,
-				6BEDCD7A150703C600D9A25B /* XcodeSourceFileType.m in Sources */,
 				6BC6206F1507553000A10C61 /* expanz_CoreModule.m in Sources */,
 				6BC620711507553000A10C61 /* expanz_SdkConfiguration.m in Sources */,
 				6BC620731507553000A10C61 /* expanz_model_AbstractData.m in Sources */,
@@ -1396,16 +1318,6 @@
 				6BE4B2B4147E6D3C0059E50E /* expanz_codegen_model_UserSession.m in Sources */,
 				6BE4B2B4147E6D3C0059E516 /* expanz_codegen_model_ViewTemplateRenderer.m in Sources */,
 				6BE4B2B4147E6D3C0059E527 /* GRArrayIndexHelper.m in Sources */,
-				6BEDCD67150703C600D9A25B /* xcode_ClassDefinition.m in Sources */,
-				6BEDCD69150703C600D9A25B /* xcode_FileWriteQueue.m in Sources */,
-				6BEDCD6B150703C600D9A25B /* xcode_Group.m in Sources */,
-				6BEDCD6D150703C600D9A25B /* xcode_KeyBuilder.m in Sources */,
-				6BEDCD6F150703C600D9A25B /* xcode_Project.m in Sources */,
-				6BEDCD71150703C600D9A25B /* xcode_SourceFile.m in Sources */,
-				6BEDCD73150703C600D9A25B /* xcode_Target.m in Sources */,
-				6BEDCD75150703C600D9A25B /* xcode_XibDefinition.m in Sources */,
-				6BEDCD77150703C600D9A25B /* XcodeMemberType.m in Sources */,
-				6BEDCD79150703C600D9A25B /* XcodeSourceFileType.m in Sources */,
 				6BC6206E1507553000A10C61 /* expanz_CoreModule.m in Sources */,
 				6BC620701507553000A10C61 /* expanz_SdkConfiguration.m in Sources */,
 				6BC620721507553000A10C61 /* expanz_model_AbstractData.m in Sources */,

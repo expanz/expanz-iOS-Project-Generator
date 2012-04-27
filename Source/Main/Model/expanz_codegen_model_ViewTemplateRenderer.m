@@ -11,9 +11,8 @@
 
 #import "expanz_codegen_model_ViewTemplateRenderer.h"
 #import "GRMustacheTemplate.h"
-#import "xcode_ClassDefinition.h"
-#import "xcode_XibDefinition.h"
 #import "expanz_codegen_model_GeneratedView.h"
+#import <XcodeEditor/XcodeEditor.h>
 
 @interface expanz_codegen_model_ViewTemplateRenderer (private)
 
@@ -54,6 +53,7 @@
 - (xcode_XibDefinition*) xibDefinitionWith:(expanz_codegen_model_GeneratedView*)view {
     XibDefinition* xibDefinition = [[XibDefinition alloc] initWithName:[view nibName]];
     [xibDefinition setContent:[_xibTemplate renderObject:view]];
+    [xibDefinition setFileOperationStyle:FileOperationStyleAcceptExisting];
     return xibDefinition;
 }
 
