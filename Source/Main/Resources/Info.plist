@@ -7,6 +7,8 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>
+	<string>model-object-explorer.icns</string>
+	<key>LSApplicationCategoryType</key>
 	<string></string>
 	<key>CFBundleIdentifier</key>
 	<string>expanz.Model-Explorer</string>

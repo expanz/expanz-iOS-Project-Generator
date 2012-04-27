@@ -181,6 +181,7 @@
 		6BC620F815077E5600A10C61 /* summaryListViewImpl.mustache in Copy Test Resources to /tmp */ = {isa = PBXBuildFile; fileRef = 6BEDCD7A150703C600D9A263 /* summaryListViewImpl.mustache */; };
 		6BC620F915077E5800A10C61 /* summaryListViewHeader.mustache in Copy Test Resources to /tmp */ = {isa = PBXBuildFile; fileRef = 6BEDCD7A150703C600D9A260 /* summaryListViewHeader.mustache */; };
 		6BCDDF2B154A602E009EE515 /* XcodeEditor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B01A055154A1FF500122D48 /* XcodeEditor.framework */; };
+		6BCDDF2E154A60C1009EE515 /* model-object-explorer.icns in Resources */ = {isa = PBXBuildFile; fileRef = 6BCDDF2D154A60C1009EE515 /* model-object-explorer.icns */; };
 		6BCEC01914BBD88700538D1D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC10164147775A40055CF03 /* Cocoa.framework */; };
 		6BCEC03014BBD9D600538D1D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BCEC02914BBD9D600538D1D /* InfoPlist.strings */; };
 		6BCEDDF014C034D40089804B /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BCEDDEF14C034D40089804B /* MainWindow.xib */; };
@@ -438,6 +439,7 @@
 		6BC6206B1507553000A10C61 /* NSString+Contains.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Contains.h"; sourceTree = "<group>"; };
 		6BC6206C1507553000A10C61 /* NSString+Contains.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Contains.m"; sourceTree = "<group>"; };
 		6BC6206D1507553000A10C61 /* xml_Serializable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xml_Serializable.h; sourceTree = "<group>"; };
+		6BCDDF2D154A60C1009EE515 /* model-object-explorer.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "model-object-explorer.icns"; sourceTree = "<group>"; };
 		6BCEC01814BBD88700538D1D /* expanz-xcodePlugin.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "expanz-xcodePlugin.xcplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BCEC02814BBD9D600538D1D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		6BCEC02A14BBD9D600538D1D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -965,6 +967,7 @@
 		6BCEC02614BBD9D600538D1D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6BCDDF2D154A60C1009EE515 /* model-object-explorer.icns */,
 				6BEDCD7A150703C600D9A266 /* summaryListViewXib.mustache */,
 				6BEDCD7A150703C600D9A263 /* summaryListViewImpl.mustache */,
 				6BEDCD7A150703C600D9A260 /* summaryListViewHeader.mustache */,
@@ -1178,6 +1181,7 @@
 				6BEDCD7A150703C600D9A261 /* summaryListViewHeader.mustache in Resources */,
 				6BEDCD7A150703C600D9A264 /* summaryListViewImpl.mustache in Resources */,
 				6BEDCD7A150703C600D9A267 /* summaryListViewXib.mustache in Resources */,
+				6BCDDF2E154A60C1009EE515 /* model-object-explorer.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
