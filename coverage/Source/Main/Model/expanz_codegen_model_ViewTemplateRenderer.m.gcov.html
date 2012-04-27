@@ -31,13 +31,13 @@
             <td class="headerValue">coverage.info</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntry">24</td>
-            <td class="headerCovTableEntry">29</td>
-            <td class="headerCovTableEntryMed">82.8 %</td>
+            <td class="headerCovTableEntry">25</td>
+            <td class="headerCovTableEntry">30</td>
+            <td class="headerCovTableEntryMed">83.3 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2012-03-27</td>
+            <td class="headerValue">2012-04-27</td>
             <td></td>
           </tr>
           <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
@@ -69,49 +69,49 @@
 <span class="lineNum">      11 </span>            : 
 <span class="lineNum">      12 </span>            : #import &quot;expanz_codegen_model_ViewTemplateRenderer.h&quot;
 <span class="lineNum">      13 </span>            : #import &quot;GRMustacheTemplate.h&quot;
-<span class="lineNum">      14 </span>            : #import &quot;xcode_ClassDefinition.h&quot;
-<span class="lineNum">      15 </span>            : #import &quot;xcode_XibDefinition.h&quot;
-<span class="lineNum">      16 </span>            : #import &quot;expanz_codegen_model_GeneratedView.h&quot;
-<span class="lineNum">      17 </span>            : 
-<span class="lineNum">      18 </span>            : @interface expanz_codegen_model_ViewTemplateRenderer (private)
-<span class="lineNum">      19 </span>            : 
-<span class="lineNum">      20 </span>            : - (NSDictionary*) wrapClassName:(NSString*)name;
-<span class="lineNum">      21 </span>            : 
-<span class="lineNum">      22 </span>            : @end
+<span class="lineNum">      14 </span>            : #import &quot;expanz_codegen_model_GeneratedView.h&quot;
+<span class="lineNum">      15 </span>            : #import &lt;XcodeEditor/XcodeEditor.h&gt;
+<span class="lineNum">      16 </span>            : 
+<span class="lineNum">      17 </span>            : @interface expanz_codegen_model_ViewTemplateRenderer (private)
+<span class="lineNum">      18 </span>            : 
+<span class="lineNum">      19 </span>            : - (NSDictionary*) wrapClassName:(NSString*)name;
+<span class="lineNum">      20 </span>            : 
+<span class="lineNum">      21 </span>            : @end
+<span class="lineNum">      22 </span>            : 
 <span class="lineNum">      23 </span>            : 
-<span class="lineNum">      24 </span>            : 
-<span class="lineNum">      25 </span><span class="lineCov">          3 : @implementation expanz_codegen_model_ViewTemplateRenderer</span>
-<span class="lineNum">      26 </span>            : 
-<span class="lineNum">      27 </span>            : /* ================================================== Initializers ================================================== */
-<span class="lineNum">      28 </span>            : - (id) initWithHeaderTemplate:(NSString*)headerTemplate implTemplate:(NSString*)implTemplate
-<span class="lineNum">      29 </span><span class="lineCov">          4 :         xibTemplate:(NSString*)xibTemplate {</span>
-<span class="lineNum">      30 </span><span class="lineCov">          4 : </span>
-<span class="lineNum">      31 </span>            :     self = [super init];
-<span class="lineNum">      32 </span><span class="lineCov">          4 :     if (self) {</span>
-<span class="lineNum">      33 </span><span class="lineCov">          4 :         NSError* error;</span>
-<span class="lineNum">      34 </span><span class="lineCov">          4 :         _headerTemplate = [GRMustacheTemplate templateFromString:headerTemplate error:&amp;error];</span>
-<span class="lineNum">      35 </span><span class="lineCov">          4 :         _implTemplate = [GRMustacheTemplate templateFromString:implTemplate error:&amp;error];</span>
-<span class="lineNum">      36 </span><span class="lineCov">          4 :         _xibTemplate = [GRMustacheTemplate templateFromString:xibTemplate error:&amp;error];</span>
-<span class="lineNum">      37 </span><span class="lineCov">          4 :         if (error) {</span>
-<span class="lineNum">      38 </span><span class="lineCov">          4 :             [NSException raise:NSInternalInconsistencyException format:[[error userInfo] description]];</span>
-<span class="lineNum">      39 </span><span class="lineNoCov">          0 :         }</span>
-<span class="lineNum">      40 </span><span class="lineNoCov">          0 :     }</span>
-<span class="lineNum">      41 </span><span class="lineCov">          4 :     return self;</span>
-<span class="lineNum">      42 </span><span class="lineCov">          4 : }</span>
-<span class="lineNum">      43 </span><span class="lineCov">          4 : </span>
-<span class="lineNum">      44 </span>            : 
-<span class="lineNum">      45 </span>            : /* ================================================ Interface Methods =============================================== */
-<span class="lineNum">      46 </span>            : - (xcode_ClassDefinition*) classDefinitionWith:(expanz_codegen_model_GeneratedView*)view {
-<span class="lineNum">      47 </span><span class="lineCov">          2 : </span>
-<span class="lineNum">      48 </span>            :     ClassDefinition* classDefinition = [[ClassDefinition alloc] initWithName:[view controllerClassName]];
-<span class="lineNum">      49 </span><span class="lineCov">          2 :     [classDefinition setHeader:[_headerTemplate renderObject:view]];</span>
-<span class="lineNum">      50 </span><span class="lineCov">          2 :     [classDefinition setSource:[_implTemplate renderObject:view]];</span>
-<span class="lineNum">      51 </span><span class="lineCov">          2 :     return classDefinition;</span>
-<span class="lineNum">      52 </span><span class="lineCov">          2 : }</span>
-<span class="lineNum">      53 </span><span class="lineCov">          2 : </span>
-<span class="lineNum">      54 </span>            : - (xcode_XibDefinition*) xibDefinitionWith:(expanz_codegen_model_GeneratedView*)view {
-<span class="lineNum">      55 </span><span class="lineCov">          2 :     XibDefinition* xibDefinition = [[XibDefinition alloc] initWithName:[view nibName]];</span>
-<span class="lineNum">      56 </span><span class="lineCov">          2 :     [xibDefinition setContent:[_xibTemplate renderObject:view]];</span>
+<span class="lineNum">      24 </span><span class="lineCov">          3 : @implementation expanz_codegen_model_ViewTemplateRenderer</span>
+<span class="lineNum">      25 </span>            : 
+<span class="lineNum">      26 </span>            : /* ================================================== Initializers ================================================== */
+<span class="lineNum">      27 </span>            : - (id) initWithHeaderTemplate:(NSString*)headerTemplate implTemplate:(NSString*)implTemplate
+<span class="lineNum">      28 </span><span class="lineCov">          4 :         xibTemplate:(NSString*)xibTemplate {</span>
+<span class="lineNum">      29 </span><span class="lineCov">          4 : </span>
+<span class="lineNum">      30 </span>            :     self = [super init];
+<span class="lineNum">      31 </span><span class="lineCov">          4 :     if (self) {</span>
+<span class="lineNum">      32 </span><span class="lineCov">          4 :         NSError* error;</span>
+<span class="lineNum">      33 </span><span class="lineCov">          4 :         _headerTemplate = [GRMustacheTemplate templateFromString:headerTemplate error:&amp;error];</span>
+<span class="lineNum">      34 </span><span class="lineCov">          4 :         _implTemplate = [GRMustacheTemplate templateFromString:implTemplate error:&amp;error];</span>
+<span class="lineNum">      35 </span><span class="lineCov">          4 :         _xibTemplate = [GRMustacheTemplate templateFromString:xibTemplate error:&amp;error];</span>
+<span class="lineNum">      36 </span><span class="lineCov">          4 :         if (error) {</span>
+<span class="lineNum">      37 </span><span class="lineCov">          4 :             [NSException raise:NSInternalInconsistencyException format:[[error userInfo] description]];</span>
+<span class="lineNum">      38 </span><span class="lineNoCov">          0 :         }</span>
+<span class="lineNum">      39 </span><span class="lineNoCov">          0 :     }</span>
+<span class="lineNum">      40 </span><span class="lineCov">          4 :     return self;</span>
+<span class="lineNum">      41 </span><span class="lineCov">          4 : }</span>
+<span class="lineNum">      42 </span><span class="lineCov">          4 : </span>
+<span class="lineNum">      43 </span>            : 
+<span class="lineNum">      44 </span>            : /* ================================================ Interface Methods =============================================== */
+<span class="lineNum">      45 </span>            : - (xcode_ClassDefinition*) classDefinitionWith:(expanz_codegen_model_GeneratedView*)view {
+<span class="lineNum">      46 </span><span class="lineCov">          2 : </span>
+<span class="lineNum">      47 </span>            :     ClassDefinition* classDefinition = [[ClassDefinition alloc] initWithName:[view controllerClassName]];
+<span class="lineNum">      48 </span><span class="lineCov">          2 :     [classDefinition setHeader:[_headerTemplate renderObject:view]];</span>
+<span class="lineNum">      49 </span><span class="lineCov">          2 :     [classDefinition setSource:[_implTemplate renderObject:view]];</span>
+<span class="lineNum">      50 </span><span class="lineCov">          2 :     return classDefinition;</span>
+<span class="lineNum">      51 </span><span class="lineCov">          2 : }</span>
+<span class="lineNum">      52 </span><span class="lineCov">          2 : </span>
+<span class="lineNum">      53 </span>            : - (xcode_XibDefinition*) xibDefinitionWith:(expanz_codegen_model_GeneratedView*)view {
+<span class="lineNum">      54 </span><span class="lineCov">          2 :     XibDefinition* xibDefinition = [[XibDefinition alloc] initWithName:[view nibName]];</span>
+<span class="lineNum">      55 </span><span class="lineCov">          2 :     [xibDefinition setContent:[_xibTemplate renderObject:view]];</span>
+<span class="lineNum">      56 </span><span class="lineCov">          2 :     [xibDefinition setFileOperationStyle:FileOperationStyleAcceptExisting];</span>
 <span class="lineNum">      57 </span><span class="lineCov">          2 :     return xibDefinition;</span>
 <span class="lineNum">      58 </span><span class="lineCov">          2 : }</span>
 <span class="lineNum">      59 </span><span class="lineCov">          2 : </span>
