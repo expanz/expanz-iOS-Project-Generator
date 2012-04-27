@@ -642,7 +642,6 @@
 		6BC10155147775A40055CF03 = {
 			isa = PBXGroup;
 			children = (
-				6B01A055154A1FF500122D48 /* XcodeEditor.framework */,
 				6BE4B285147E6B610059E44D /* Source */,
 				6BC10163147775A40055CF03 /* Frameworks */,
 				6B105A041479CF9A002DEBCE /* External */,
@@ -663,6 +662,7 @@
 		6BC10163147775A40055CF03 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6B01A055154A1FF500122D48 /* XcodeEditor.framework */,
 				6B62CC1114FC9D5D00A0E098 /* libprofile_rt.dylib */,
 				6BB5EE5E14F49B1B00B5B193 /* LRResty.framework */,
 				6BBD6C9614ECF28200451BA2 /* libz.dylib */,
@@ -1426,6 +1426,7 @@
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
 					"\"$(SRCROOT)/Dependencies/Frameworks\"",
 				);
+				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Source/Tests/Tests-Prefix.pch";
@@ -1465,6 +1466,7 @@
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
 					"\"$(SRCROOT)/Dependencies/Frameworks\"",
 				);
+				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Source/Tests/Tests-Prefix.pch";
