@@ -14,8 +14,7 @@
 #import "expanz_codegen_model_ViewTemplateRenderer.h"
 #import "expanz_codegen_model_GeneratedView.h"
 #import "expanz_model_ActivityStyle.h"
-#import "xcode_ClassDefinition.h"
-#import "xcode_XibDefinition.h"
+#import <XcodeEditor/XcodeEditor.h>
 
 
 SPEC_BEGIN(ActivityGeneratorSpec)
