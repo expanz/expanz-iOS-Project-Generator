@@ -220,6 +220,8 @@
 		6BEDCD7A150703C600D9A265 /* summaryListViewImpl.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 6BEDCD7A150703C600D9A263 /* summaryListViewImpl.mustache */; };
 		6BEDCD7A150703C600D9A267 /* summaryListViewXib.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 6BEDCD7A150703C600D9A266 /* summaryListViewXib.mustache */; };
 		6BEDCD7A150703C600D9A268 /* summaryListViewXib.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 6BEDCD7A150703C600D9A266 /* summaryListViewXib.mustache */; };
+		6BEDCD7A150703C600D9A26A /* controllerCustomCodeHeader.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 6BEDCD7A150703C600D9A269 /* controllerCustomCodeHeader.mustache */; };
+		6BEDCD7A150703C600D9A26C /* controllerCustomerCodeImpl.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 6BEDCD7A150703C600D9A26B /* controllerCustomerCodeImpl.mustache */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -482,6 +484,8 @@
 		6BEDCD7A150703C600D9A260 /* summaryListViewHeader.mustache */ = {isa = PBXFileReference; lastKnownFileType = file.mustache; path = summaryListViewHeader.mustache; sourceTree = "<group>"; };
 		6BEDCD7A150703C600D9A263 /* summaryListViewImpl.mustache */ = {isa = PBXFileReference; lastKnownFileType = file.mustache; path = summaryListViewImpl.mustache; sourceTree = "<group>"; };
 		6BEDCD7A150703C600D9A266 /* summaryListViewXib.mustache */ = {isa = PBXFileReference; lastKnownFileType = file.mustache; path = summaryListViewXib.mustache; sourceTree = "<group>"; };
+		6BEDCD7A150703C600D9A269 /* controllerCustomCodeHeader.mustache */ = {isa = PBXFileReference; lastKnownFileType = file.header; path = controllerCustomCodeHeader.mustache; sourceTree = "<group>"; };
+		6BEDCD7A150703C600D9A26B /* controllerCustomerCodeImpl.mustache */ = {isa = PBXFileReference; lastKnownFileType = file.mustache; path = controllerCustomerCodeImpl.mustache; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -967,6 +971,8 @@
 		6BCEC02614BBD9D600538D1D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6BEDCD7A150703C600D9A26B /* controllerCustomerCodeImpl.mustache */,
+				6BEDCD7A150703C600D9A269 /* controllerCustomCodeHeader.mustache */,
 				6BCDDF2D154A60C1009EE515 /* model-object-explorer.icns */,
 				6BEDCD7A150703C600D9A266 /* summaryListViewXib.mustache */,
 				6BEDCD7A150703C600D9A263 /* summaryListViewImpl.mustache */,
@@ -1182,6 +1188,8 @@
 				6BEDCD7A150703C600D9A264 /* summaryListViewImpl.mustache in Resources */,
 				6BEDCD7A150703C600D9A267 /* summaryListViewXib.mustache in Resources */,
 				6BCDDF2E154A60C1009EE515 /* model-object-explorer.icns in Resources */,
+				6BEDCD7A150703C600D9A26A /* controllerCustomCodeHeader.mustache in Resources */,
+				6BEDCD7A150703C600D9A26C /* controllerCustomerCodeImpl.mustache in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

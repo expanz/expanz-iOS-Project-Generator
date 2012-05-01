@@ -21,11 +21,30 @@
 @synthesize {{name}}Label = _{{name}}Label;
 {{/schema.displayableFields}}
 
+/* ================================================================================================================== */
 {{#schema.methods}}
-- (IBAction) do{{name}} {
+- (IBAction) model{{name}} {
     [super sendMethodInvocation:@"{{name}}"];
 }
 {{/schema.methods}}
 
+/* ================================================================================================================== */
+- (void)viewDidLoad {
+    [super viewDidLoad];
+	// Do any additional setup after loading the view.
+}
+
+- (void)viewDidUnload {
+    [super viewDidUnload];
+    // Release any retained subviews of the main view.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+}
 
 @end
