@@ -12,6 +12,7 @@
 
 #import <LRResty/LRResty.h>
 #import "expanz_model_ImageGridDataCell.h"
+#import "expanz_SdkConfiguration.h"
 
 
 @implementation expanz_model_ImageGridDataCell
@@ -24,7 +25,10 @@
 - (id) initWithCellId:(NSString*)cellId imageUrl:(NSString*)imageUrl {
     self = [super initWithCellId:cellId];
     if (self) {
-        _imageUrl = [imageUrl copy];
+        if (imageUrl.length > 0) {
+            _imageUrl = [[SdkConfiguration globalConfiguration].blobCacheUrl
+                    stringByAppendingString:[imageUrl stringByReplacingOccurrencesOfString:@"\\" withString:@"/"]];
+        }
         [self loadImage];
     }
     return self;
@@ -33,14 +37,17 @@
 /* ================================================ Interface Methods =============================================== */
 - (void) loadImage {
     self.hasAskedImageToLoad = YES;
-    [[LRResty client] get:_imageUrl withBlock:^(LRRestyResponse* response) {
-        if (response.status == 200) {
-            self.imageData = [response responseData];
-        }
-        else {
-            self.imageData = nil;
-        }
-    }];
+    if (_imageUrl) {
+        LogDebug(@"Loading the shiz: %@", _imageUrl);
+        [[LRResty client] get:_imageUrl withBlock:^(LRRestyResponse* response) {
+            if (response.status == 200) {
+                self.imageData = [response responseData];
+            }
+            else {
+                self.imageData = nil;
+            }
+        }];
+    }
 }
 
 @end

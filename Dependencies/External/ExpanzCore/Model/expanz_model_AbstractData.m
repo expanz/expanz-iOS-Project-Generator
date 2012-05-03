@@ -8,6 +8,7 @@
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
+
 #import "expanz_model_AbstractData.h"
 
 @implementation expanz_model_AbstractData
@@ -16,12 +17,13 @@
 
 /* ================================================== Initializers ================================================== */
 
-- (id)initWithDataId:(NSString*)dataId {
+- (id) initWithDataId:(NSString*)dataId {
     self = [super init];
     if (self) {
         _dataId = [dataId copy];
     }
     return self;
 }
+
 
 @end

@@ -12,7 +12,7 @@
 
 #import "RXMLElement+ActivityInstance.h"
 #import "expanz_model_ActivityInstance.h"
-#import "expanz_model_FieldInstance.h"
+#import "expanz_model_Field.h"
 #import "expanz_model_Message.h"
 #import "expanz_model_GridData.h"
 #import "expanz_model_Column.h"
@@ -20,7 +20,6 @@
 #import "expanz_model_DataBuilder.h"
 #import "expanz_model_Folder.h"
 #import "expanz_model_File.h"
-
 
 @implementation RXMLElement (ActivityInstance)
 
@@ -53,7 +52,7 @@
 }
 
 /* ================================================================================================================== */
-- (FieldInstance*) asFieldInstance {
+- (Field*) asFieldInstance {
     if (![self.tag isEqualToString:@"Field"]) {
         [NSException raise:NSInvalidArgumentException format:@"Element is not a Field."];
     }
@@ -64,7 +63,7 @@
     NSString* label = [self attribute:@"label"];
     NSString* hint = [self attribute:@"hint"];
 
-    FieldInstance* field = [[FieldInstance alloc]
+    Field* field = [[Field alloc]
         initWithFieldId:fieldId nullable:nullable defaultValue:defaultValue dataType:datatype label:label hint:hint];
 
     switch (field.datatype) {
@@ -74,7 +73,7 @@
         case ExpanzDataTypeNull:
         case ExpanzDataTypeDate:
         case ExpanzDataTypeDateTime:
-            [field setValue:[self attribute:@"value"]];
+            [field setValue:[self parseFieldValueAttribute]];
             break;
 
         case ExpanzDataTypeImage:
@@ -199,6 +198,20 @@
 
     return file;
 
+}
+
+/* ================================================== Private Methods =============================================== */
+
+static NSString* const LONG_DATA_MARKER = @"$longData$";
+
+- (NSString*) parseFieldValueAttribute {
+    NSString* attributeValue = [self attribute:@"value"];
+    if ([attributeValue isEqualToString:LONG_DATA_MARKER]) {
+        return [self text];
+    }
+    else {
+        return attributeValue;
+    }
 }
 
 

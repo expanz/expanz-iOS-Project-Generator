@@ -11,6 +11,7 @@
 #import "expanz_codegen_model_GeneratedView.h"
 #import "expanz_model_ActivitySchema.h"
 #import "expanz_model_ActivityStyle.h"
+#import "NSString+ExpanzUtils.h"
 
 
 @implementation expanz_codegen_model_GeneratedView
@@ -30,12 +31,12 @@
 
 /* ================================================ Interface Methods =============================================== */
 - (NSString*) controllerClassName {
-    return [_style controllerClassNameForActivityId:[_schema activityId]];
+    return [NSString controllerClassNameForActivityId:[_schema activityId] style:_style];
 
 }
 
 - (NSString*) nibName {
-    return [_style nibNameForActivityId:[_schema activityId]];
+    return [NSString nibNameForActivityId:[_schema activityId] style:_style];
 }
 
 

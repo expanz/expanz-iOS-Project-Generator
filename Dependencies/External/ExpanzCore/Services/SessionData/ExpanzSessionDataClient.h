@@ -10,18 +10,28 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
-#import "expanz_service_SessionDataClientDelegate.h"
+#import "ExpanzAbstractServiceClientDelegate.h"
 
 @class expanz_model_Menu;
 @class expanz_service_SessionDataRequest;
+@protocol ExpanzSessionDataClientDelegate;
+@class expanz_model_SessionData;
 
-@protocol expanz_service_SessionDataClient <NSObject>
+@protocol ExpanzSessionDataClientDelegate<ExpanzAbstractServiceClientDelegate>
 
+@optional
+
+- (void) requestDidFinishWithSessionData:(expanz_model_SessionData*)sessionData;
+
+@end
+/* ================================================================================================================== */
+
+@protocol ExpanzSessionDataClient<NSObject>
 
 /** 
  * Presents credentials to the expanz server and returns a SessionContext, which contains a session token.  
  */
 - (void) retrieveSessionDataWith:(expanz_service_SessionDataRequest*)sessionDataRequest 
-                        delegate:(id<expanz_service_SessionDataClientDelegate>)delegate;
+                        delegate:(id<ExpanzSessionDataClientDelegate>)delegate;
 
 @end

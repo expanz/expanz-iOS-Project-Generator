@@ -11,7 +11,6 @@
 #import "expanz_codegen_ui_ActivitySelectionViewController.h"
 #import "JSObjection.h"
 #import "expanz_codegen_model_UserSession.h"
-#import "expanz_model_ActivityMenuItem.h"
 #import "expanz_model_ActivityMenu.h"
 #import "expanz_model_ActivitySchema.h"
 #import "expanz_codegen_model_ViewTemplateRenderer.h"
@@ -52,7 +51,7 @@
     _activityList = nil;
     [_activityTableView reloadData];
     LogDebug(@"Dispatch request: %@", [UserSession sharedUserSession].selectedSite);
-    _siteClient = [[JSObjection globalInjector] getObject:@protocol(expanz_service_SiteDetailsClient)];
+    _siteClient = [[JSObjection globalInjector] getObject:@protocol(ExpanzSiteDetailsClient)];
     [_siteClient listActivitiesForSite:[UserSession sharedUserSession].selectedSite withDelegate:self];
 }
 
@@ -61,7 +60,7 @@
     _selectedActivityCount = [indexSet count];
 
     [indexSet enumerateIndexesUsingBlock:^(NSUInteger index, BOOL* stop) {
-        ActivityMenuItem* menuItem = [[_activityList activities] objectAtIndex:index];
+        MenuItem* menuItem = [[_activityList activities] objectAtIndex:index];
         NSString* selectedSite = [UserSession sharedUserSession].selectedSite;
         [_siteClient site:selectedSite requestSchemaForActivity:[menuItem activityId] withDelegate:self];
     }];
@@ -128,7 +127,7 @@
 }
 
 - (id) tableView:(NSTableView*)tableView objectValueForTableColumn:(NSTableColumn*)tableColumn row:(NSInteger)row {
-    ActivityMenuItem* activityDefinition = [[_activityList activities] objectAtIndex:row];
+    MenuItem* activityDefinition = [[_activityList activities] objectAtIndex:row];
     NSString* identifier = [tableColumn identifier];
 
     NSString* columnValue;

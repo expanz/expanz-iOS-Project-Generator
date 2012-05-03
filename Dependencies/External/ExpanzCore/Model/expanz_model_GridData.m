@@ -30,6 +30,15 @@
 }
 
 /* ================================================ Interface Methods =============================================== */
+- (NSArray*) fieldIdentifiers {
+    NSMutableArray* allFieldNames = [NSMutableArray array];
+    for (Column* column in _columns) {
+        [allFieldNames addObject:column.fieldId];
+    }
+    return [NSArray arrayWithArray:allFieldNames];
+}
+
+
 - (void) addColumn:(Column*)column {
     column.dataSet = self;
     [_columns addObject:column];
@@ -77,5 +86,16 @@
     return nil;
 }
 
+/* ================================================================================================================== */
+#pragma mark AbstractData Template Methods
+
+- (int) count {
+    return [_rows count];
+}
+
+/* ================================================== Utility Methods =============================================== */
+- (NSString*) description {
+    return [NSString stringWithFormat:@"GridData id=%@", self.dataId];
+}
 
 @end

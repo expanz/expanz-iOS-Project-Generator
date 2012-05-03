@@ -10,13 +10,13 @@
 ////////////////////////////////////////////////////////////////////////////////
 #import <Foundation/Foundation.h>
 #import <Cocoa/Cocoa.h>
-#import "expanz_service_SiteDetailsClient.h"
+#import "ExpanzSiteDetailsClient.h"
 
 @class JSObjectionInjector;
 @class expanz_model_SiteList;
 @protocol expanz_codegen_ui_EventHandler;
 
-@interface expanz_codegen_ui_ExpanzSettingsViewController : NSViewController<expanz_service_SiteDetailsClientDelegate,
+@interface expanz_codegen_ui_ExpanzSettingsViewController : NSViewController<ExpanzSiteDetailsClientDelegate,
     NSTableViewDelegate, NSTableViewDataSource> {
 
 @private

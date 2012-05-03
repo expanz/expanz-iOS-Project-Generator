@@ -9,14 +9,14 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import "expanz_service_AbstractServiceClientDelegate.h"
+#import <Foundation/Foundation.h>
 
-@class expanz_model_Menu;
 
-@protocol expanz_service_SessionDataClientDelegate<expanz_service_AbstractServiceClientDelegate>
+@interface expanz_utils_BundleResource : NSObject
 
-@optional
-
-- (void) requestDidFinishWithMenu:(expanz_model_Menu*)menu;
++ (NSString*) withName:(NSString*)name;
 
 @end
+
+/* ================================================================================================================== */
+@compatibility_alias BundleResource expanz_utils_BundleResource;

@@ -9,13 +9,14 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#import <QuartzCore/QuartzCore.h>
+#import <Foundation/Foundation.h>
 
-/**
- * Unlock private filter API. TODO: Replace this with Library call. 
- */
-@interface CAFilter : NSObject 
+@class expanz_model_ActivityStyle;
 
-+ (CAFilter*) filterWithName: (NSString*) name;
+@interface NSString (ExpanzUtils)
+
++ (NSString*) controllerClassNameForActivityId:(NSString*)activityId style:(expanz_model_ActivityStyle*)style;
+
++ (NSString*) nibNameForActivityId:(NSString*)activityId style:(expanz_model_ActivityStyle*)style;
 
 @end

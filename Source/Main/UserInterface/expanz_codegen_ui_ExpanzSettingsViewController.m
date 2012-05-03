@@ -81,8 +81,8 @@
     [SdkConfiguration clearGlobalConfiguration];
     [SdkConfiguration setGlobalConfiguration:configuration];
 
-    id<expanz_service_SiteDetailsClient>
-        siteDetailsClient = [[JSObjection globalInjector] getObject:@protocol(expanz_service_SiteDetailsClient)];
+    id<ExpanzSiteDetailsClient>
+        siteDetailsClient = [[JSObjection globalInjector] getObject:@protocol(ExpanzSiteDetailsClient)];
     [siteDetailsClient listAvailableSitesWithDelegate:self];
 }
 
@@ -92,14 +92,6 @@
     LogDebug(@"Got site list: %@", siteList);
     _siteList = siteList;
     [_siteListTableView reloadData];
-}
-
-- (void) requestDidFinishWithActivityList:(expanz_model_ActivityDefinitionList*)activityList {
-    //To change the template use AppCode | Preferences | File Templates.
-}
-
-- (void) requestDidFailWithError:(NSError*)error {
-    //To change the template use AppCode | Preferences | File Templates.
 }
 
 /* ================================================================================================================== */
