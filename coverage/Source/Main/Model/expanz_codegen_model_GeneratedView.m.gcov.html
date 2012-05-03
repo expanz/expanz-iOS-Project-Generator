@@ -69,35 +69,36 @@
 <span class="lineNum">      11 </span>            : #import &quot;expanz_codegen_model_GeneratedView.h&quot;
 <span class="lineNum">      12 </span>            : #import &quot;expanz_model_ActivitySchema.h&quot;
 <span class="lineNum">      13 </span>            : #import &quot;expanz_model_ActivityStyle.h&quot;
-<span class="lineNum">      14 </span>            : 
+<span class="lineNum">      14 </span>            : #import &quot;NSString+ExpanzUtils.h&quot;
 <span class="lineNum">      15 </span>            : 
-<span class="lineNum">      16 </span><span class="lineCov">          3 : @implementation expanz_codegen_model_GeneratedView</span>
-<span class="lineNum">      17 </span>            : 
-<span class="lineNum">      18 </span><span class="lineNoCov">          0 : @synthesize style = _style;</span>
-<span class="lineNum">      19 </span><span class="lineCov">         12 : @synthesize schema = _schema;</span>
-<span class="lineNum">      20 </span>            : 
-<span class="lineNum">      21 </span>            : /* ================================================== Initializers ================================================== */
-<span class="lineNum">      22 </span>            : - (id) initWithStyle:(expanz_model_ActivityStyle*)style schema:(expanz_model_ActivitySchema*)schema {
-<span class="lineNum">      23 </span><span class="lineCov">          4 :     self = [super init];</span>
-<span class="lineNum">      24 </span><span class="lineCov">          4 :     if (self) {</span>
-<span class="lineNum">      25 </span><span class="lineCov">          4 :         _style = style;</span>
-<span class="lineNum">      26 </span><span class="lineCov">          4 :         _schema = schema;</span>
-<span class="lineNum">      27 </span><span class="lineCov">          4 :     }</span>
-<span class="lineNum">      28 </span><span class="lineCov">          4 :     return self;</span>
-<span class="lineNum">      29 </span><span class="lineCov">          4 : }</span>
-<span class="lineNum">      30 </span><span class="lineCov">          4 : </span>
-<span class="lineNum">      31 </span>            : /* ================================================ Interface Methods =============================================== */
-<span class="lineNum">      32 </span>            : - (NSString*) controllerClassName {
-<span class="lineNum">      33 </span><span class="lineCov">         14 :     return [_style controllerClassNameForActivityId:[_schema activityId]];</span>
-<span class="lineNum">      34 </span><span class="lineCov">         14 : </span>
-<span class="lineNum">      35 </span>            : }
-<span class="lineNum">      36 </span>            : 
-<span class="lineNum">      37 </span>            : - (NSString*) nibName {
-<span class="lineNum">      38 </span><span class="lineCov">          2 :     return [_style nibNameForActivityId:[_schema activityId]];</span>
-<span class="lineNum">      39 </span><span class="lineCov">          2 : }</span>
-<span class="lineNum">      40 </span>            : 
+<span class="lineNum">      16 </span>            : 
+<span class="lineNum">      17 </span><span class="lineCov">          3 : @implementation expanz_codegen_model_GeneratedView</span>
+<span class="lineNum">      18 </span>            : 
+<span class="lineNum">      19 </span><span class="lineNoCov">          0 : @synthesize style = _style;</span>
+<span class="lineNum">      20 </span><span class="lineCov">         12 : @synthesize schema = _schema;</span>
+<span class="lineNum">      21 </span>            : 
+<span class="lineNum">      22 </span>            : /* ================================================== Initializers ================================================== */
+<span class="lineNum">      23 </span>            : - (id) initWithStyle:(expanz_model_ActivityStyle*)style schema:(expanz_model_ActivitySchema*)schema {
+<span class="lineNum">      24 </span><span class="lineCov">          4 :     self = [super init];</span>
+<span class="lineNum">      25 </span><span class="lineCov">          4 :     if (self) {</span>
+<span class="lineNum">      26 </span><span class="lineCov">          4 :         _style = style;</span>
+<span class="lineNum">      27 </span><span class="lineCov">          4 :         _schema = schema;</span>
+<span class="lineNum">      28 </span><span class="lineCov">          4 :     }</span>
+<span class="lineNum">      29 </span><span class="lineCov">          4 :     return self;</span>
+<span class="lineNum">      30 </span><span class="lineCov">          4 : }</span>
+<span class="lineNum">      31 </span><span class="lineCov">          4 : </span>
+<span class="lineNum">      32 </span>            : /* ================================================ Interface Methods =============================================== */
+<span class="lineNum">      33 </span>            : - (NSString*) controllerClassName {
+<span class="lineNum">      34 </span><span class="lineCov">         14 :     return [NSString controllerClassNameForActivityId:[_schema activityId] style:_style];</span>
+<span class="lineNum">      35 </span><span class="lineCov">         14 : </span>
+<span class="lineNum">      36 </span>            : }
+<span class="lineNum">      37 </span>            : 
+<span class="lineNum">      38 </span>            : - (NSString*) nibName {
+<span class="lineNum">      39 </span><span class="lineCov">          2 :     return [NSString nibNameForActivityId:[_schema activityId] style:_style];</span>
+<span class="lineNum">      40 </span><span class="lineCov">          2 : }</span>
 <span class="lineNum">      41 </span>            : 
-<span class="lineNum">      42 </span>            : @end
+<span class="lineNum">      42 </span>            : 
+<span class="lineNum">      43 </span>            : @end
 </pre>
       </td>
     </tr>
