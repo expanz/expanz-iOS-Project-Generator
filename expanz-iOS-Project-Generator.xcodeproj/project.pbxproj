@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6B01A056154A1FF500122D48 /* XcodeEditor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B01A055154A1FF500122D48 /* XcodeEditor.framework */; };
 		6B225D9C14E0B43500B0F735 /* expanz.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B225D9B14E0B43500B0F735 /* expanz.png */; };
 		6B29561314F534F40040E5FF /* libKiwi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B40695014EBDB1F00AD1DEF /* libKiwi.a */; };
 		6B55223714EA723700494CF3 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD8982D14EA2441007875F4 /* SenTestingKit.framework */; };
@@ -37,116 +36,6 @@
 		6B9FD26714BEF008006F8D04 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC10164147775A40055CF03 /* Cocoa.framework */; };
 		6B9FD26F14BEF008006F8D04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9FD26E14BEF008006F8D04 /* main.m */; };
 		6B9FD27614BEF008006F8D04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9FD27514BEF008006F8D04 /* AppDelegate.m */; };
-		6BB1BC5A155295940012C252 /* expanz_CoreModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BBD8155295940012C252 /* expanz_CoreModule.m */; };
-		6BB1BC5B155295940012C252 /* expanz_CoreModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BBD8155295940012C252 /* expanz_CoreModule.m */; };
-		6BB1BC5C155295940012C252 /* expanz_SdkConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BBDA155295940012C252 /* expanz_SdkConfiguration.m */; };
-		6BB1BC5D155295940012C252 /* expanz_SdkConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BBDA155295940012C252 /* expanz_SdkConfiguration.m */; };
-		6BB1BC5E155295940012C252 /* expanz_model_AbstractData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BBDE155295940012C252 /* expanz_model_AbstractData.m */; };
-		6BB1BC5F155295940012C252 /* expanz_model_AbstractData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BBDE155295940012C252 /* expanz_model_AbstractData.m */; };
-		6BB1BC60155295940012C252 /* expanz_model_AbstractGridDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BBE0155295940012C252 /* expanz_model_AbstractGridDataCell.m */; };
-		6BB1BC61155295940012C252 /* expanz_model_AbstractGridDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BBE0155295940012C252 /* expanz_model_AbstractGridDataCell.m */; };
-		6BB1BC62155295940012C252 /* expanz_model_ActivityInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BBE2155295940012C252 /* expanz_model_ActivityInstance.m */; };
-		6BB1BC63155295940012C252 /* expanz_model_ActivityInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BBE2155295940012C252 /* expanz_model_ActivityInstance.m */; };
-		6BB1BC64155295940012C252 /* expanz_model_ActivityMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BBE4155295940012C252 /* expanz_model_ActivityMenu.m */; };
-		6BB1BC65155295940012C252 /* expanz_model_ActivityMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BBE4155295940012C252 /* expanz_model_ActivityMenu.m */; };
-		6BB1BC66155295940012C252 /* expanz_model_ActivitySchema.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BBE6155295940012C252 /* expanz_model_ActivitySchema.m */; };
-		6BB1BC67155295940012C252 /* expanz_model_ActivitySchema.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BBE6155295940012C252 /* expanz_model_ActivitySchema.m */; };
-		6BB1BC68155295940012C252 /* expanz_model_ActivityStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BBE8155295940012C252 /* expanz_model_ActivityStyle.m */; };
-		6BB1BC69155295940012C252 /* expanz_model_ActivityStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BBE8155295940012C252 /* expanz_model_ActivityStyle.m */; };
-		6BB1BC6A155295940012C252 /* expanz_model_AppSite.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BBEA155295940012C252 /* expanz_model_AppSite.m */; };
-		6BB1BC6B155295940012C252 /* expanz_model_AppSite.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BBEA155295940012C252 /* expanz_model_AppSite.m */; };
-		6BB1BC6C155295940012C252 /* expanz_model_Column.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BBEC155295940012C252 /* expanz_model_Column.m */; };
-		6BB1BC6D155295940012C252 /* expanz_model_Column.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BBEC155295940012C252 /* expanz_model_Column.m */; };
-		6BB1BC6E155295940012C252 /* expanz_model_DataBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BBEE155295940012C252 /* expanz_model_DataBuilder.m */; };
-		6BB1BC6F155295940012C252 /* expanz_model_DataBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BBEE155295940012C252 /* expanz_model_DataBuilder.m */; };
-		6BB1BC70155295940012C252 /* expanz_model_Field.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BBF0155295940012C252 /* expanz_model_Field.m */; };
-		6BB1BC71155295940012C252 /* expanz_model_Field.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BBF0155295940012C252 /* expanz_model_Field.m */; };
-		6BB1BC72155295940012C252 /* expanz_model_FieldSchema.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BBF2155295940012C252 /* expanz_model_FieldSchema.m */; };
-		6BB1BC73155295940012C252 /* expanz_model_FieldSchema.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BBF2155295940012C252 /* expanz_model_FieldSchema.m */; };
-		6BB1BC74155295940012C252 /* expanz_model_File.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BBF4155295940012C252 /* expanz_model_File.m */; };
-		6BB1BC75155295940012C252 /* expanz_model_File.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BBF4155295940012C252 /* expanz_model_File.m */; };
-		6BB1BC76155295940012C252 /* expanz_model_FileResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BBF6155295940012C252 /* expanz_model_FileResource.m */; };
-		6BB1BC77155295940012C252 /* expanz_model_FileResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BBF6155295940012C252 /* expanz_model_FileResource.m */; };
-		6BB1BC78155295940012C252 /* expanz_model_Folder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BBF8155295940012C252 /* expanz_model_Folder.m */; };
-		6BB1BC79155295940012C252 /* expanz_model_Folder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BBF8155295940012C252 /* expanz_model_Folder.m */; };
-		6BB1BC7A155295940012C252 /* expanz_model_GridData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BBFA155295940012C252 /* expanz_model_GridData.m */; };
-		6BB1BC7B155295940012C252 /* expanz_model_GridData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BBFA155295940012C252 /* expanz_model_GridData.m */; };
-		6BB1BC7C155295940012C252 /* expanz_model_ImageGridDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BBFC155295940012C252 /* expanz_model_ImageGridDataCell.m */; };
-		6BB1BC7D155295940012C252 /* expanz_model_ImageGridDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BBFC155295940012C252 /* expanz_model_ImageGridDataCell.m */; };
-		6BB1BC7E155295940012C252 /* expanz_model_Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BBFE155295940012C252 /* expanz_model_Menu.m */; };
-		6BB1BC7F155295940012C252 /* expanz_model_Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BBFE155295940012C252 /* expanz_model_Menu.m */; };
-		6BB1BC80155295940012C252 /* expanz_model_MenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC00155295940012C252 /* expanz_model_MenuItem.m */; };
-		6BB1BC81155295940012C252 /* expanz_model_MenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC00155295940012C252 /* expanz_model_MenuItem.m */; };
-		6BB1BC82155295940012C252 /* expanz_model_Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC02155295940012C252 /* expanz_model_Message.m */; };
-		6BB1BC83155295940012C252 /* expanz_model_Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC02155295940012C252 /* expanz_model_Message.m */; };
-		6BB1BC84155295940012C252 /* expanz_model_MethodSchema.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC04155295940012C252 /* expanz_model_MethodSchema.m */; };
-		6BB1BC85155295940012C252 /* expanz_model_MethodSchema.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC04155295940012C252 /* expanz_model_MethodSchema.m */; };
-		6BB1BC86155295940012C252 /* expanz_model_ProcessArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC06155295940012C252 /* expanz_model_ProcessArea.m */; };
-		6BB1BC87155295940012C252 /* expanz_model_ProcessArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC06155295940012C252 /* expanz_model_ProcessArea.m */; };
-		6BB1BC88155295940012C252 /* expanz_model_Query.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC08155295940012C252 /* expanz_model_Query.m */; };
-		6BB1BC89155295940012C252 /* expanz_model_Query.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC08155295940012C252 /* expanz_model_Query.m */; };
-		6BB1BC8A155295940012C252 /* expanz_model_ResourceCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC0A155295940012C252 /* expanz_model_ResourceCollection.m */; };
-		6BB1BC8B155295940012C252 /* expanz_model_ResourceCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC0A155295940012C252 /* expanz_model_ResourceCollection.m */; };
-		6BB1BC8C155295940012C252 /* expanz_model_Row.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC0C155295940012C252 /* expanz_model_Row.m */; };
-		6BB1BC8D155295940012C252 /* expanz_model_Row.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC0C155295940012C252 /* expanz_model_Row.m */; };
-		6BB1BC8E155295940012C252 /* expanz_model_SessionContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC0E155295940012C252 /* expanz_model_SessionContext.m */; };
-		6BB1BC8F155295940012C252 /* expanz_model_SessionContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC0E155295940012C252 /* expanz_model_SessionContext.m */; };
-		6BB1BC90155295940012C252 /* expanz_model_SessionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC10155295940012C252 /* expanz_model_SessionData.m */; };
-		6BB1BC91155295940012C252 /* expanz_model_SessionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC10155295940012C252 /* expanz_model_SessionData.m */; };
-		6BB1BC92155295940012C252 /* expanz_model_SiteList.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC12155295940012C252 /* expanz_model_SiteList.m */; };
-		6BB1BC93155295940012C252 /* expanz_model_SiteList.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC12155295940012C252 /* expanz_model_SiteList.m */; };
-		6BB1BC94155295940012C252 /* expanz_model_TextGridDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC14155295940012C252 /* expanz_model_TextGridDataCell.m */; };
-		6BB1BC95155295940012C252 /* expanz_model_TextGridDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC14155295940012C252 /* expanz_model_TextGridDataCell.m */; };
-		6BB1BC96155295940012C252 /* expanz_model_TreeData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC16155295940012C252 /* expanz_model_TreeData.m */; };
-		6BB1BC97155295940012C252 /* expanz_model_TreeData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC16155295940012C252 /* expanz_model_TreeData.m */; };
-		6BB1BC98155295940012C252 /* expanz_model_UserRole.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC18155295940012C252 /* expanz_model_UserRole.m */; };
-		6BB1BC99155295940012C252 /* expanz_model_UserRole.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC18155295940012C252 /* expanz_model_UserRole.m */; };
-		6BB1BC9A155295940012C252 /* NSString+ExpanzDataType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC1A155295940012C252 /* NSString+ExpanzDataType.m */; };
-		6BB1BC9B155295940012C252 /* NSString+ExpanzDataType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC1A155295940012C252 /* NSString+ExpanzDataType.m */; };
-		6BB1BC9C155295940012C252 /* expanz_service_DefaultActivityClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC1E155295940012C252 /* expanz_service_DefaultActivityClient.m */; };
-		6BB1BC9D155295940012C252 /* expanz_service_DefaultActivityClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC1E155295940012C252 /* expanz_service_DefaultActivityClient.m */; };
-		6BB1BC9E155295940012C252 /* expanz_service_CreateActivityRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC22155295940012C252 /* expanz_service_CreateActivityRequest.m */; };
-		6BB1BC9F155295940012C252 /* expanz_service_CreateActivityRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC22155295940012C252 /* expanz_service_CreateActivityRequest.m */; };
-		6BB1BCA0155295940012C252 /* expanz_service_DataPublicationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC24155295940012C252 /* expanz_service_DataPublicationRequest.m */; };
-		6BB1BCA1155295940012C252 /* expanz_service_DataPublicationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC24155295940012C252 /* expanz_service_DataPublicationRequest.m */; };
-		6BB1BCA2155295940012C252 /* expanz_service_DeltaRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC26155295940012C252 /* expanz_service_DeltaRequest.m */; };
-		6BB1BCA3155295940012C252 /* expanz_service_DeltaRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC26155295940012C252 /* expanz_service_DeltaRequest.m */; };
-		6BB1BCA4155295940012C252 /* expanz_service_FileRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC28155295940012C252 /* expanz_service_FileRequest.m */; };
-		6BB1BCA5155295940012C252 /* expanz_service_FileRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC28155295940012C252 /* expanz_service_FileRequest.m */; };
-		6BB1BCA6155295940012C252 /* expanz_service_MethodInvocationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC2A155295940012C252 /* expanz_service_MethodInvocationRequest.m */; };
-		6BB1BCA7155295940012C252 /* expanz_service_MethodInvocationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC2A155295940012C252 /* expanz_service_MethodInvocationRequest.m */; };
-		6BB1BCA8155295940012C252 /* RXMLElement+ActivityInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC2C155295940012C252 /* RXMLElement+ActivityInstance.m */; };
-		6BB1BCA9155295940012C252 /* RXMLElement+ActivityInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC2C155295940012C252 /* RXMLElement+ActivityInstance.m */; };
-		6BB1BCAA155295940012C252 /* RXMLElement+ResourceCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC2E155295940012C252 /* RXMLElement+ResourceCollection.m */; };
-		6BB1BCAB155295940012C252 /* RXMLElement+ResourceCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC2E155295940012C252 /* RXMLElement+ResourceCollection.m */; };
-		6BB1BCAC155295940012C252 /* expanz_service_AbstractServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC30155295940012C252 /* expanz_service_AbstractServiceClient.m */; };
-		6BB1BCAD155295940012C252 /* expanz_service_AbstractServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC30155295940012C252 /* expanz_service_AbstractServiceClient.m */; };
-		6BB1BCAE155295940012C252 /* expanz_service_DefaultDownloadClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC34155295940012C252 /* expanz_service_DefaultDownloadClient.m */; };
-		6BB1BCAF155295940012C252 /* expanz_service_DefaultDownloadClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC34155295940012C252 /* expanz_service_DefaultDownloadClient.m */; };
-		6BB1BCB0155295940012C252 /* expanz_service_FileDownloadRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC38155295940012C252 /* expanz_service_FileDownloadRequest.m */; };
-		6BB1BCB1155295940012C252 /* expanz_service_FileDownloadRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC38155295940012C252 /* expanz_service_FileDownloadRequest.m */; };
-		6BB1BCB2155295940012C252 /* expanz_service_DefaultLoginClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC3B155295940012C252 /* expanz_service_DefaultLoginClient.m */; };
-		6BB1BCB3155295940012C252 /* expanz_service_DefaultLoginClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC3B155295940012C252 /* expanz_service_DefaultLoginClient.m */; };
-		6BB1BCB4155295940012C252 /* expanz_service_SessionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC3F155295940012C252 /* expanz_service_SessionRequest.m */; };
-		6BB1BCB5155295940012C252 /* expanz_service_SessionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC3F155295940012C252 /* expanz_service_SessionRequest.m */; };
-		6BB1BCB6155295940012C252 /* RXMLElement+SessionContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC41155295940012C252 /* RXMLElement+SessionContext.m */; };
-		6BB1BCB7155295940012C252 /* RXMLElement+SessionContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC41155295940012C252 /* RXMLElement+SessionContext.m */; };
-		6BB1BCB8155295940012C252 /* expanz_service_DefaultSessionDataClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC44155295940012C252 /* expanz_service_DefaultSessionDataClient.m */; };
-		6BB1BCB9155295940012C252 /* expanz_service_DefaultSessionDataClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC44155295940012C252 /* expanz_service_DefaultSessionDataClient.m */; };
-		6BB1BCBA155295940012C252 /* expanz_service_SessionDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC48155295940012C252 /* expanz_service_SessionDataRequest.m */; };
-		6BB1BCBB155295940012C252 /* expanz_service_SessionDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC48155295940012C252 /* expanz_service_SessionDataRequest.m */; };
-		6BB1BCBC155295940012C252 /* RXMLElement+SessionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC4A155295940012C252 /* RXMLElement+SessionData.m */; };
-		6BB1BCBD155295940012C252 /* RXMLElement+SessionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC4A155295940012C252 /* RXMLElement+SessionData.m */; };
-		6BB1BCBE155295940012C252 /* expanz_service_DefaultSiteDetailsClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC4D155295940012C252 /* expanz_service_DefaultSiteDetailsClient.m */; };
-		6BB1BCBF155295940012C252 /* expanz_service_DefaultSiteDetailsClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC4D155295940012C252 /* expanz_service_DefaultSiteDetailsClient.m */; };
-		6BB1BCC0155295940012C252 /* RXMLElement+SiteDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC51155295940012C252 /* RXMLElement+SiteDetails.m */; };
-		6BB1BCC1155295940012C252 /* RXMLElement+SiteDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC51155295940012C252 /* RXMLElement+SiteDetails.m */; };
-		6BB1BCC2155295940012C252 /* expanz_utils_BundleResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC54155295940012C252 /* expanz_utils_BundleResource.m */; };
-		6BB1BCC3155295940012C252 /* expanz_utils_BundleResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC54155295940012C252 /* expanz_utils_BundleResource.m */; };
-		6BB1BCC4155295940012C252 /* NSString+Contains.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC56155295940012C252 /* NSString+Contains.m */; };
-		6BB1BCC5155295940012C252 /* NSString+Contains.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC56155295940012C252 /* NSString+Contains.m */; };
-		6BB1BCC6155295940012C252 /* NSString+ExpanzUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC58155295940012C252 /* NSString+ExpanzUtils.m */; };
-		6BB1BCC7155295940012C252 /* NSString+ExpanzUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB1BC58155295940012C252 /* NSString+ExpanzUtils.m */; };
 		6BB4DA6814EB92F500DC153B /* ESA_Sales_Foobar_ViewController.header in Resources */ = {isa = PBXBuildFile; fileRef = 6B783BBC14AD8CF90087E522 /* ESA_Sales_Foobar_ViewController.header */; };
 		6BB4DA6914EB92FA00DC153B /* ESA_Sales_Foobar_ViewController.impl in Resources */ = {isa = PBXBuildFile; fileRef = 6B783BBD14AD8CF90087E522 /* ESA_Sales_Foobar_ViewController.impl */; };
 		6BB5EE5F14F49B1B00B5B193 /* LRResty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB5EE5E14F49B1B00B5B193 /* LRResty.framework */; };
@@ -156,6 +45,148 @@
 		6BBD6C8714ECD8DC00451BA2 /* production_environment.xml in Copy Test Resources to /tmp */ = {isa = PBXBuildFile; fileRef = 6BBD6C7814ECB73200451BA2 /* production_environment.xml */; };
 		6BBD6C9714ECF28200451BA2 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BBD6C9614ECF28200451BA2 /* libz.dylib */; };
 		6BBD6C9814ECFC9C00451BA2 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BBD6C9614ECF28200451BA2 /* libz.dylib */; };
+		6BC17C6A155E27E7000B3AA4 /* expanz_CoreModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BC3155E27E7000B3AA4 /* expanz_CoreModule.m */; };
+		6BC17C6B155E27E7000B3AA4 /* expanz_CoreModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BC3155E27E7000B3AA4 /* expanz_CoreModule.m */; };
+		6BC17C6C155E27E7000B3AA4 /* expanz_SdkConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BC5155E27E7000B3AA4 /* expanz_SdkConfiguration.m */; };
+		6BC17C6D155E27E7000B3AA4 /* expanz_SdkConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BC5155E27E7000B3AA4 /* expanz_SdkConfiguration.m */; };
+		6BC17C6E155E27E7000B3AA4 /* expanz_model_AbstractData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BC9155E27E7000B3AA4 /* expanz_model_AbstractData.m */; };
+		6BC17C6F155E27E7000B3AA4 /* expanz_model_AbstractData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BC9155E27E7000B3AA4 /* expanz_model_AbstractData.m */; };
+		6BC17C70155E27E7000B3AA4 /* expanz_model_AbstractGridDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BCB155E27E7000B3AA4 /* expanz_model_AbstractGridDataCell.m */; };
+		6BC17C71155E27E7000B3AA4 /* expanz_model_AbstractGridDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BCB155E27E7000B3AA4 /* expanz_model_AbstractGridDataCell.m */; };
+		6BC17C72155E27E7000B3AA4 /* expanz_model_ActivityInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BCD155E27E7000B3AA4 /* expanz_model_ActivityInstance.m */; };
+		6BC17C73155E27E7000B3AA4 /* expanz_model_ActivityInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BCD155E27E7000B3AA4 /* expanz_model_ActivityInstance.m */; };
+		6BC17C74155E27E7000B3AA4 /* expanz_model_ActivityMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BCF155E27E7000B3AA4 /* expanz_model_ActivityMenu.m */; };
+		6BC17C75155E27E7000B3AA4 /* expanz_model_ActivityMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BCF155E27E7000B3AA4 /* expanz_model_ActivityMenu.m */; };
+		6BC17C76155E27E7000B3AA4 /* expanz_model_ActivitySchema.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BD1155E27E7000B3AA4 /* expanz_model_ActivitySchema.m */; };
+		6BC17C77155E27E7000B3AA4 /* expanz_model_ActivitySchema.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BD1155E27E7000B3AA4 /* expanz_model_ActivitySchema.m */; };
+		6BC17C78155E27E7000B3AA4 /* expanz_model_ActivityStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BD3155E27E7000B3AA4 /* expanz_model_ActivityStyle.m */; };
+		6BC17C79155E27E7000B3AA4 /* expanz_model_ActivityStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BD3155E27E7000B3AA4 /* expanz_model_ActivityStyle.m */; };
+		6BC17C7A155E27E7000B3AA4 /* expanz_model_AppSite.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BD5155E27E7000B3AA4 /* expanz_model_AppSite.m */; };
+		6BC17C7B155E27E7000B3AA4 /* expanz_model_AppSite.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BD5155E27E7000B3AA4 /* expanz_model_AppSite.m */; };
+		6BC17C7C155E27E7000B3AA4 /* expanz_model_Column.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BD7155E27E7000B3AA4 /* expanz_model_Column.m */; };
+		6BC17C7D155E27E7000B3AA4 /* expanz_model_Column.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BD7155E27E7000B3AA4 /* expanz_model_Column.m */; };
+		6BC17C7E155E27E7000B3AA4 /* expanz_model_DataBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BD9155E27E7000B3AA4 /* expanz_model_DataBuilder.m */; };
+		6BC17C7F155E27E7000B3AA4 /* expanz_model_DataBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BD9155E27E7000B3AA4 /* expanz_model_DataBuilder.m */; };
+		6BC17C80155E27E7000B3AA4 /* expanz_model_Field.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BDB155E27E7000B3AA4 /* expanz_model_Field.m */; };
+		6BC17C81155E27E7000B3AA4 /* expanz_model_Field.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BDB155E27E7000B3AA4 /* expanz_model_Field.m */; };
+		6BC17C82155E27E7000B3AA4 /* expanz_model_FieldSchema.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BDD155E27E7000B3AA4 /* expanz_model_FieldSchema.m */; };
+		6BC17C83155E27E7000B3AA4 /* expanz_model_FieldSchema.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BDD155E27E7000B3AA4 /* expanz_model_FieldSchema.m */; };
+		6BC17C84155E27E7000B3AA4 /* expanz_model_File.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BDF155E27E7000B3AA4 /* expanz_model_File.m */; };
+		6BC17C85155E27E7000B3AA4 /* expanz_model_File.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BDF155E27E7000B3AA4 /* expanz_model_File.m */; };
+		6BC17C86155E27E7000B3AA4 /* expanz_model_FileResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BE1155E27E7000B3AA4 /* expanz_model_FileResource.m */; };
+		6BC17C87155E27E7000B3AA4 /* expanz_model_FileResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BE1155E27E7000B3AA4 /* expanz_model_FileResource.m */; };
+		6BC17C88155E27E7000B3AA4 /* expanz_model_Folder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BE3155E27E7000B3AA4 /* expanz_model_Folder.m */; };
+		6BC17C89155E27E7000B3AA4 /* expanz_model_Folder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BE3155E27E7000B3AA4 /* expanz_model_Folder.m */; };
+		6BC17C8A155E27E7000B3AA4 /* expanz_model_GridData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BE5155E27E7000B3AA4 /* expanz_model_GridData.m */; };
+		6BC17C8B155E27E7000B3AA4 /* expanz_model_GridData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BE5155E27E7000B3AA4 /* expanz_model_GridData.m */; };
+		6BC17C8C155E27E7000B3AA4 /* expanz_model_ImageGridDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BE7155E27E7000B3AA4 /* expanz_model_ImageGridDataCell.m */; };
+		6BC17C8D155E27E7000B3AA4 /* expanz_model_ImageGridDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BE7155E27E7000B3AA4 /* expanz_model_ImageGridDataCell.m */; };
+		6BC17C8E155E27E7000B3AA4 /* expanz_model_Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BE9155E27E7000B3AA4 /* expanz_model_Menu.m */; };
+		6BC17C8F155E27E7000B3AA4 /* expanz_model_Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BE9155E27E7000B3AA4 /* expanz_model_Menu.m */; };
+		6BC17C90155E27E7000B3AA4 /* expanz_model_MenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BEB155E27E7000B3AA4 /* expanz_model_MenuItem.m */; };
+		6BC17C91155E27E7000B3AA4 /* expanz_model_MenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BEB155E27E7000B3AA4 /* expanz_model_MenuItem.m */; };
+		6BC17C92155E27E7000B3AA4 /* expanz_model_Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BED155E27E7000B3AA4 /* expanz_model_Message.m */; };
+		6BC17C93155E27E7000B3AA4 /* expanz_model_Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BED155E27E7000B3AA4 /* expanz_model_Message.m */; };
+		6BC17C94155E27E7000B3AA4 /* expanz_model_MethodSchema.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BEF155E27E7000B3AA4 /* expanz_model_MethodSchema.m */; };
+		6BC17C95155E27E7000B3AA4 /* expanz_model_MethodSchema.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BEF155E27E7000B3AA4 /* expanz_model_MethodSchema.m */; };
+		6BC17C96155E27E7000B3AA4 /* expanz_model_ProcessArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BF1155E27E7000B3AA4 /* expanz_model_ProcessArea.m */; };
+		6BC17C97155E27E7000B3AA4 /* expanz_model_ProcessArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BF1155E27E7000B3AA4 /* expanz_model_ProcessArea.m */; };
+		6BC17C98155E27E7000B3AA4 /* expanz_model_Query.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BF3155E27E7000B3AA4 /* expanz_model_Query.m */; };
+		6BC17C99155E27E7000B3AA4 /* expanz_model_Query.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BF3155E27E7000B3AA4 /* expanz_model_Query.m */; };
+		6BC17C9A155E27E7000B3AA4 /* expanz_model_ResourceCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BF5155E27E7000B3AA4 /* expanz_model_ResourceCollection.m */; };
+		6BC17C9B155E27E7000B3AA4 /* expanz_model_ResourceCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BF5155E27E7000B3AA4 /* expanz_model_ResourceCollection.m */; };
+		6BC17C9C155E27E7000B3AA4 /* expanz_model_Row.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BF7155E27E7000B3AA4 /* expanz_model_Row.m */; };
+		6BC17C9D155E27E7000B3AA4 /* expanz_model_Row.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BF7155E27E7000B3AA4 /* expanz_model_Row.m */; };
+		6BC17C9E155E27E7000B3AA4 /* expanz_model_SessionContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BF9155E27E7000B3AA4 /* expanz_model_SessionContext.m */; };
+		6BC17C9F155E27E7000B3AA4 /* expanz_model_SessionContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BF9155E27E7000B3AA4 /* expanz_model_SessionContext.m */; };
+		6BC17CA0155E27E7000B3AA4 /* expanz_model_SessionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BFB155E27E7000B3AA4 /* expanz_model_SessionData.m */; };
+		6BC17CA1155E27E7000B3AA4 /* expanz_model_SessionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BFB155E27E7000B3AA4 /* expanz_model_SessionData.m */; };
+		6BC17CA2155E27E7000B3AA4 /* expanz_model_SiteList.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BFD155E27E7000B3AA4 /* expanz_model_SiteList.m */; };
+		6BC17CA3155E27E7000B3AA4 /* expanz_model_SiteList.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BFD155E27E7000B3AA4 /* expanz_model_SiteList.m */; };
+		6BC17CA4155E27E7000B3AA4 /* expanz_model_TextGridDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BFF155E27E7000B3AA4 /* expanz_model_TextGridDataCell.m */; };
+		6BC17CA5155E27E7000B3AA4 /* expanz_model_TextGridDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17BFF155E27E7000B3AA4 /* expanz_model_TextGridDataCell.m */; };
+		6BC17CA6155E27E7000B3AA4 /* expanz_model_TreeData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C01155E27E7000B3AA4 /* expanz_model_TreeData.m */; };
+		6BC17CA7155E27E7000B3AA4 /* expanz_model_TreeData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C01155E27E7000B3AA4 /* expanz_model_TreeData.m */; };
+		6BC17CA8155E27E7000B3AA4 /* expanz_model_UserRole.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C03155E27E7000B3AA4 /* expanz_model_UserRole.m */; };
+		6BC17CA9155E27E7000B3AA4 /* expanz_model_UserRole.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C03155E27E7000B3AA4 /* expanz_model_UserRole.m */; };
+		6BC17CAA155E27E7000B3AA4 /* NSString+ExpanzDataType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C05155E27E7000B3AA4 /* NSString+ExpanzDataType.m */; };
+		6BC17CAB155E27E7000B3AA4 /* NSString+ExpanzDataType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C05155E27E7000B3AA4 /* NSString+ExpanzDataType.m */; };
+		6BC17CAC155E27E7000B3AA4 /* expanz_service_DefaultActivityClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C09155E27E7000B3AA4 /* expanz_service_DefaultActivityClient.m */; };
+		6BC17CAD155E27E7000B3AA4 /* expanz_service_DefaultActivityClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C09155E27E7000B3AA4 /* expanz_service_DefaultActivityClient.m */; };
+		6BC17CAE155E27E7000B3AA4 /* expanz_service_CreateActivityRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C0D155E27E7000B3AA4 /* expanz_service_CreateActivityRequest.m */; };
+		6BC17CAF155E27E7000B3AA4 /* expanz_service_CreateActivityRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C0D155E27E7000B3AA4 /* expanz_service_CreateActivityRequest.m */; };
+		6BC17CB0155E27E7000B3AA4 /* expanz_service_DataPublicationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C0F155E27E7000B3AA4 /* expanz_service_DataPublicationRequest.m */; };
+		6BC17CB1155E27E7000B3AA4 /* expanz_service_DataPublicationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C0F155E27E7000B3AA4 /* expanz_service_DataPublicationRequest.m */; };
+		6BC17CB2155E27E7000B3AA4 /* expanz_service_DeltaRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C11155E27E7000B3AA4 /* expanz_service_DeltaRequest.m */; };
+		6BC17CB3155E27E7000B3AA4 /* expanz_service_DeltaRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C11155E27E7000B3AA4 /* expanz_service_DeltaRequest.m */; };
+		6BC17CB4155E27E7000B3AA4 /* expanz_service_FileRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C13155E27E7000B3AA4 /* expanz_service_FileRequest.m */; };
+		6BC17CB5155E27E7000B3AA4 /* expanz_service_FileRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C13155E27E7000B3AA4 /* expanz_service_FileRequest.m */; };
+		6BC17CB6155E27E7000B3AA4 /* expanz_service_MethodInvocationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C15155E27E7000B3AA4 /* expanz_service_MethodInvocationRequest.m */; };
+		6BC17CB7155E27E7000B3AA4 /* expanz_service_MethodInvocationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C15155E27E7000B3AA4 /* expanz_service_MethodInvocationRequest.m */; };
+		6BC17CB8155E27E7000B3AA4 /* RXMLElement+ActivityInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C17155E27E7000B3AA4 /* RXMLElement+ActivityInstance.m */; };
+		6BC17CB9155E27E7000B3AA4 /* RXMLElement+ActivityInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C17155E27E7000B3AA4 /* RXMLElement+ActivityInstance.m */; };
+		6BC17CBA155E27E7000B3AA4 /* RXMLElement+ResourceCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C19155E27E7000B3AA4 /* RXMLElement+ResourceCollection.m */; };
+		6BC17CBB155E27E7000B3AA4 /* RXMLElement+ResourceCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C19155E27E7000B3AA4 /* RXMLElement+ResourceCollection.m */; };
+		6BC17CBC155E27E7000B3AA4 /* expanz_service_AbstractServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C1B155E27E7000B3AA4 /* expanz_service_AbstractServiceClient.m */; };
+		6BC17CBD155E27E7000B3AA4 /* expanz_service_AbstractServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C1B155E27E7000B3AA4 /* expanz_service_AbstractServiceClient.m */; };
+		6BC17CBE155E27E7000B3AA4 /* expanz_service_DefaultDownloadClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C1F155E27E7000B3AA4 /* expanz_service_DefaultDownloadClient.m */; };
+		6BC17CBF155E27E7000B3AA4 /* expanz_service_DefaultDownloadClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C1F155E27E7000B3AA4 /* expanz_service_DefaultDownloadClient.m */; };
+		6BC17CC0155E27E7000B3AA4 /* expanz_service_FileDownloadRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C23155E27E7000B3AA4 /* expanz_service_FileDownloadRequest.m */; };
+		6BC17CC1155E27E7000B3AA4 /* expanz_service_FileDownloadRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C23155E27E7000B3AA4 /* expanz_service_FileDownloadRequest.m */; };
+		6BC17CC2155E27E7000B3AA4 /* expanz_service_DefaultLoginClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C26155E27E7000B3AA4 /* expanz_service_DefaultLoginClient.m */; };
+		6BC17CC3155E27E7000B3AA4 /* expanz_service_DefaultLoginClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C26155E27E7000B3AA4 /* expanz_service_DefaultLoginClient.m */; };
+		6BC17CC4155E27E7000B3AA4 /* expanz_service_SessionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C2A155E27E7000B3AA4 /* expanz_service_SessionRequest.m */; };
+		6BC17CC5155E27E7000B3AA4 /* expanz_service_SessionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C2A155E27E7000B3AA4 /* expanz_service_SessionRequest.m */; };
+		6BC17CC6155E27E7000B3AA4 /* RXMLElement+SessionContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C2C155E27E7000B3AA4 /* RXMLElement+SessionContext.m */; };
+		6BC17CC7155E27E7000B3AA4 /* RXMLElement+SessionContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C2C155E27E7000B3AA4 /* RXMLElement+SessionContext.m */; };
+		6BC17CC8155E27E7000B3AA4 /* expanz_service_DefaultSessionDataClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C2F155E27E7000B3AA4 /* expanz_service_DefaultSessionDataClient.m */; };
+		6BC17CC9155E27E7000B3AA4 /* expanz_service_DefaultSessionDataClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C2F155E27E7000B3AA4 /* expanz_service_DefaultSessionDataClient.m */; };
+		6BC17CCA155E27E7000B3AA4 /* expanz_service_SessionDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C33155E27E7000B3AA4 /* expanz_service_SessionDataRequest.m */; };
+		6BC17CCB155E27E7000B3AA4 /* expanz_service_SessionDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C33155E27E7000B3AA4 /* expanz_service_SessionDataRequest.m */; };
+		6BC17CCC155E27E7000B3AA4 /* RXMLElement+SessionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C35155E27E7000B3AA4 /* RXMLElement+SessionData.m */; };
+		6BC17CCD155E27E7000B3AA4 /* RXMLElement+SessionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C35155E27E7000B3AA4 /* RXMLElement+SessionData.m */; };
+		6BC17CCE155E27E7000B3AA4 /* expanz_service_DefaultSiteDetailsClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C38155E27E7000B3AA4 /* expanz_service_DefaultSiteDetailsClient.m */; };
+		6BC17CCF155E27E7000B3AA4 /* expanz_service_DefaultSiteDetailsClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C38155E27E7000B3AA4 /* expanz_service_DefaultSiteDetailsClient.m */; };
+		6BC17CD0155E27E7000B3AA4 /* RXMLElement+SiteDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C3C155E27E7000B3AA4 /* RXMLElement+SiteDetails.m */; };
+		6BC17CD1155E27E7000B3AA4 /* RXMLElement+SiteDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C3C155E27E7000B3AA4 /* RXMLElement+SiteDetails.m */; };
+		6BC17CD2155E27E7000B3AA4 /* expanz_utils_BundleResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C3F155E27E7000B3AA4 /* expanz_utils_BundleResource.m */; };
+		6BC17CD3155E27E7000B3AA4 /* expanz_utils_BundleResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C3F155E27E7000B3AA4 /* expanz_utils_BundleResource.m */; };
+		6BC17CD4155E27E7000B3AA4 /* NSString+Contains.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C41155E27E7000B3AA4 /* NSString+Contains.m */; };
+		6BC17CD5155E27E7000B3AA4 /* NSString+Contains.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C41155E27E7000B3AA4 /* NSString+Contains.m */; };
+		6BC17CD6155E27E7000B3AA4 /* NSString+ExpanzUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C43155E27E7000B3AA4 /* NSString+ExpanzUtils.m */; };
+		6BC17CD7155E27E7000B3AA4 /* NSString+ExpanzUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C43155E27E7000B3AA4 /* NSString+ExpanzUtils.m */; };
+		6BC17CD8155E27E7000B3AA4 /* RXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C47155E27E7000B3AA4 /* RXMLElement.m */; };
+		6BC17CD9155E27E7000B3AA4 /* RXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C47155E27E7000B3AA4 /* RXMLElement.m */; };
+		6BC17CDA155E27E7000B3AA4 /* xcode_utils_KeyBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C4C155E27E7000B3AA4 /* xcode_utils_KeyBuilder.m */; };
+		6BC17CDB155E27E7000B3AA4 /* xcode_utils_KeyBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C4C155E27E7000B3AA4 /* xcode_utils_KeyBuilder.m */; };
+		6BC17CDC155E27E7000B3AA4 /* xcode_AbstractDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C4E155E27E7000B3AA4 /* xcode_AbstractDefinition.m */; };
+		6BC17CDD155E27E7000B3AA4 /* xcode_AbstractDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C4E155E27E7000B3AA4 /* xcode_AbstractDefinition.m */; };
+		6BC17CDE155E27E7000B3AA4 /* xcode_ClassDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C50155E27E7000B3AA4 /* xcode_ClassDefinition.m */; };
+		6BC17CDF155E27E7000B3AA4 /* xcode_ClassDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C50155E27E7000B3AA4 /* xcode_ClassDefinition.m */; };
+		6BC17CE0155E27E7000B3AA4 /* xcode_FileOperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C52155E27E7000B3AA4 /* xcode_FileOperationQueue.m */; };
+		6BC17CE1155E27E7000B3AA4 /* xcode_FileOperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C52155E27E7000B3AA4 /* xcode_FileOperationQueue.m */; };
+		6BC17CE2155E27E7000B3AA4 /* xcode_FrameworkDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C54155E27E7000B3AA4 /* xcode_FrameworkDefinition.m */; };
+		6BC17CE3155E27E7000B3AA4 /* xcode_FrameworkDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C54155E27E7000B3AA4 /* xcode_FrameworkDefinition.m */; };
+		6BC17CE4155E27E7000B3AA4 /* xcode_Group.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C56155E27E7000B3AA4 /* xcode_Group.m */; };
+		6BC17CE5155E27E7000B3AA4 /* xcode_Group.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C56155E27E7000B3AA4 /* xcode_Group.m */; };
+		6BC17CE6155E27E7000B3AA4 /* xcode_KeyBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C58155E27E7000B3AA4 /* xcode_KeyBuilder.m */; };
+		6BC17CE7155E27E7000B3AA4 /* xcode_KeyBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C58155E27E7000B3AA4 /* xcode_KeyBuilder.m */; };
+		6BC17CE8155E27E7000B3AA4 /* xcode_Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C5A155E27E7000B3AA4 /* xcode_Project.m */; };
+		6BC17CE9155E27E7000B3AA4 /* xcode_Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C5A155E27E7000B3AA4 /* xcode_Project.m */; };
+		6BC17CEA155E27E7000B3AA4 /* xcode_SourceFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C5C155E27E7000B3AA4 /* xcode_SourceFile.m */; };
+		6BC17CEB155E27E7000B3AA4 /* xcode_SourceFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C5C155E27E7000B3AA4 /* xcode_SourceFile.m */; };
+		6BC17CEC155E27E7000B3AA4 /* xcode_SourceFileDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C5E155E27E7000B3AA4 /* xcode_SourceFileDefinition.m */; };
+		6BC17CED155E27E7000B3AA4 /* xcode_SourceFileDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C5E155E27E7000B3AA4 /* xcode_SourceFileDefinition.m */; };
+		6BC17CEE155E27E7000B3AA4 /* xcode_Target.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C60155E27E7000B3AA4 /* xcode_Target.m */; };
+		6BC17CEF155E27E7000B3AA4 /* xcode_Target.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C60155E27E7000B3AA4 /* xcode_Target.m */; };
+		6BC17CF0155E27E7000B3AA4 /* xcode_XibDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C63155E27E7000B3AA4 /* xcode_XibDefinition.m */; };
+		6BC17CF1155E27E7000B3AA4 /* xcode_XibDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C63155E27E7000B3AA4 /* xcode_XibDefinition.m */; };
+		6BC17CF2155E27E7000B3AA4 /* XcodeMemberType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C67155E27E7000B3AA4 /* XcodeMemberType.m */; };
+		6BC17CF3155E27E7000B3AA4 /* XcodeMemberType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C67155E27E7000B3AA4 /* XcodeMemberType.m */; };
+		6BC17CF4155E27E7000B3AA4 /* XcodeSourceFileType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C69155E27E7000B3AA4 /* XcodeSourceFileType.m */; };
+		6BC17CF5155E27E7000B3AA4 /* XcodeSourceFileType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC17C69155E27E7000B3AA4 /* XcodeSourceFileType.m */; };
+		6BC17CF8155E2A16000B3AA4 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC17CF7155E2A16000B3AA4 /* libxml2.dylib */; };
+		6BC17CF9155E2A1E000B3AA4 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC17CF7155E2A16000B3AA4 /* libxml2.dylib */; };
 		6BC4D86314FBBE5500335BF3 /* JSObjectFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7E614FBBE5500335BF3 /* JSObjectFactory.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BC4D86414FBBE5500335BF3 /* JSObjectFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7E614FBBE5500335BF3 /* JSObjectFactory.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BC4D86514FBBE5500335BF3 /* JSObjection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7E814FBBE5500335BF3 /* JSObjection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -176,17 +207,10 @@
 		6BC4D87414FBBE5500335BF3 /* JSObjectionUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7F614FBBE5500335BF3 /* JSObjectionUtils.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BC4D87514FBBE5500335BF3 /* NSObject+Objection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7F814FBBE5500335BF3 /* NSObject+Objection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BC4D87614FBBE5500335BF3 /* NSObject+Objection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7F814FBBE5500335BF3 /* NSObject+Objection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6BC4D87714FBBE5500335BF3 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7FC14FBBE5500335BF3 /* NSDataAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6BC4D87814FBBE5500335BF3 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7FC14FBBE5500335BF3 /* NSDataAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6BC4D87914FBBE5500335BF3 /* RXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7FE14FBBE5500335BF3 /* RXMLElement.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6BC4D87A14FBBE5500335BF3 /* RXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D7FE14FBBE5500335BF3 /* RXMLElement.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6BC4D87B14FBBE5500335BF3 /* TBXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D80014FBBE5500335BF3 /* TBXML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6BC4D87C14FBBE5500335BF3 /* TBXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC4D80014FBBE5500335BF3 /* TBXML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BC4D87D14FBBF1D00335BF3 /* libLRResty.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B40695114EBDB1F00AD1DEF /* libLRResty.a */; };
 		6BC620F615077E5400A10C61 /* summaryListViewXib.mustache in Copy Test Resources to /tmp */ = {isa = PBXBuildFile; fileRef = 6BEDCD7A150703C600D9A266 /* summaryListViewXib.mustache */; };
 		6BC620F815077E5600A10C61 /* summaryListViewImpl.mustache in Copy Test Resources to /tmp */ = {isa = PBXBuildFile; fileRef = 6BEDCD7A150703C600D9A263 /* summaryListViewImpl.mustache */; };
 		6BC620F915077E5800A10C61 /* summaryListViewHeader.mustache in Copy Test Resources to /tmp */ = {isa = PBXBuildFile; fileRef = 6BEDCD7A150703C600D9A260 /* summaryListViewHeader.mustache */; };
-		6BCDDF2B154A602E009EE515 /* XcodeEditor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B01A055154A1FF500122D48 /* XcodeEditor.framework */; };
 		6BCDDF2E154A60C1009EE515 /* model-object-explorer.icns in Resources */ = {isa = PBXBuildFile; fileRef = 6BCDDF2D154A60C1009EE515 /* model-object-explorer.icns */; };
 		6BCEC01914BBD88700538D1D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC10164147775A40055CF03 /* Cocoa.framework */; };
 		6BCEC03014BBD9D600538D1D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BCEC02914BBD9D600538D1D /* InfoPlist.strings */; };
@@ -289,124 +313,6 @@
 		6B9FD27414BEF008006F8D04 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6B9FD27514BEF008006F8D04 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6BAD70DA14EE31FE001E6A23 /* xml_Serializable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xml_Serializable.h; sourceTree = "<group>"; };
-		6BB1BBD7155295940012C252 /* expanz_CoreModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_CoreModule.h; sourceTree = "<group>"; };
-		6BB1BBD8155295940012C252 /* expanz_CoreModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_CoreModule.m; sourceTree = "<group>"; };
-		6BB1BBD9155295940012C252 /* expanz_SdkConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_SdkConfiguration.h; sourceTree = "<group>"; };
-		6BB1BBDA155295940012C252 /* expanz_SdkConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_SdkConfiguration.m; sourceTree = "<group>"; };
-		6BB1BBDB155295940012C252 /* expanzCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanzCore.h; sourceTree = "<group>"; };
-		6BB1BBDD155295940012C252 /* expanz_model_AbstractData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_AbstractData.h; sourceTree = "<group>"; };
-		6BB1BBDE155295940012C252 /* expanz_model_AbstractData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_AbstractData.m; sourceTree = "<group>"; };
-		6BB1BBDF155295940012C252 /* expanz_model_AbstractGridDataCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_AbstractGridDataCell.h; sourceTree = "<group>"; };
-		6BB1BBE0155295940012C252 /* expanz_model_AbstractGridDataCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_AbstractGridDataCell.m; sourceTree = "<group>"; };
-		6BB1BBE1155295940012C252 /* expanz_model_ActivityInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_ActivityInstance.h; sourceTree = "<group>"; };
-		6BB1BBE2155295940012C252 /* expanz_model_ActivityInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_ActivityInstance.m; sourceTree = "<group>"; };
-		6BB1BBE3155295940012C252 /* expanz_model_ActivityMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_ActivityMenu.h; sourceTree = "<group>"; };
-		6BB1BBE4155295940012C252 /* expanz_model_ActivityMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_ActivityMenu.m; sourceTree = "<group>"; };
-		6BB1BBE5155295940012C252 /* expanz_model_ActivitySchema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_ActivitySchema.h; sourceTree = "<group>"; };
-		6BB1BBE6155295940012C252 /* expanz_model_ActivitySchema.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_ActivitySchema.m; sourceTree = "<group>"; };
-		6BB1BBE7155295940012C252 /* expanz_model_ActivityStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_ActivityStyle.h; sourceTree = "<group>"; };
-		6BB1BBE8155295940012C252 /* expanz_model_ActivityStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_ActivityStyle.m; sourceTree = "<group>"; };
-		6BB1BBE9155295940012C252 /* expanz_model_AppSite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_AppSite.h; sourceTree = "<group>"; };
-		6BB1BBEA155295940012C252 /* expanz_model_AppSite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_AppSite.m; sourceTree = "<group>"; };
-		6BB1BBEB155295940012C252 /* expanz_model_Column.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_Column.h; sourceTree = "<group>"; };
-		6BB1BBEC155295940012C252 /* expanz_model_Column.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_Column.m; sourceTree = "<group>"; };
-		6BB1BBED155295940012C252 /* expanz_model_DataBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_DataBuilder.h; sourceTree = "<group>"; };
-		6BB1BBEE155295940012C252 /* expanz_model_DataBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_DataBuilder.m; sourceTree = "<group>"; };
-		6BB1BBEF155295940012C252 /* expanz_model_Field.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_Field.h; sourceTree = "<group>"; };
-		6BB1BBF0155295940012C252 /* expanz_model_Field.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_Field.m; sourceTree = "<group>"; };
-		6BB1BBF1155295940012C252 /* expanz_model_FieldSchema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_FieldSchema.h; sourceTree = "<group>"; };
-		6BB1BBF2155295940012C252 /* expanz_model_FieldSchema.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_FieldSchema.m; sourceTree = "<group>"; };
-		6BB1BBF3155295940012C252 /* expanz_model_File.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_File.h; sourceTree = "<group>"; };
-		6BB1BBF4155295940012C252 /* expanz_model_File.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_File.m; sourceTree = "<group>"; };
-		6BB1BBF5155295940012C252 /* expanz_model_FileResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_FileResource.h; sourceTree = "<group>"; };
-		6BB1BBF6155295940012C252 /* expanz_model_FileResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_FileResource.m; sourceTree = "<group>"; };
-		6BB1BBF7155295940012C252 /* expanz_model_Folder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_Folder.h; sourceTree = "<group>"; };
-		6BB1BBF8155295940012C252 /* expanz_model_Folder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_Folder.m; sourceTree = "<group>"; };
-		6BB1BBF9155295940012C252 /* expanz_model_GridData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_GridData.h; sourceTree = "<group>"; };
-		6BB1BBFA155295940012C252 /* expanz_model_GridData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_GridData.m; sourceTree = "<group>"; };
-		6BB1BBFB155295940012C252 /* expanz_model_ImageGridDataCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_ImageGridDataCell.h; sourceTree = "<group>"; };
-		6BB1BBFC155295940012C252 /* expanz_model_ImageGridDataCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_ImageGridDataCell.m; sourceTree = "<group>"; };
-		6BB1BBFD155295940012C252 /* expanz_model_Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_Menu.h; sourceTree = "<group>"; };
-		6BB1BBFE155295940012C252 /* expanz_model_Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_Menu.m; sourceTree = "<group>"; };
-		6BB1BBFF155295940012C252 /* expanz_model_MenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_MenuItem.h; sourceTree = "<group>"; };
-		6BB1BC00155295940012C252 /* expanz_model_MenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_MenuItem.m; sourceTree = "<group>"; };
-		6BB1BC01155295940012C252 /* expanz_model_Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_Message.h; sourceTree = "<group>"; };
-		6BB1BC02155295940012C252 /* expanz_model_Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_Message.m; sourceTree = "<group>"; };
-		6BB1BC03155295940012C252 /* expanz_model_MethodSchema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_MethodSchema.h; sourceTree = "<group>"; };
-		6BB1BC04155295940012C252 /* expanz_model_MethodSchema.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_MethodSchema.m; sourceTree = "<group>"; };
-		6BB1BC05155295940012C252 /* expanz_model_ProcessArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_ProcessArea.h; sourceTree = "<group>"; };
-		6BB1BC06155295940012C252 /* expanz_model_ProcessArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_ProcessArea.m; sourceTree = "<group>"; };
-		6BB1BC07155295940012C252 /* expanz_model_Query.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_Query.h; sourceTree = "<group>"; };
-		6BB1BC08155295940012C252 /* expanz_model_Query.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_Query.m; sourceTree = "<group>"; };
-		6BB1BC09155295940012C252 /* expanz_model_ResourceCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_ResourceCollection.h; sourceTree = "<group>"; };
-		6BB1BC0A155295940012C252 /* expanz_model_ResourceCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_ResourceCollection.m; sourceTree = "<group>"; };
-		6BB1BC0B155295940012C252 /* expanz_model_Row.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_Row.h; sourceTree = "<group>"; };
-		6BB1BC0C155295940012C252 /* expanz_model_Row.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_Row.m; sourceTree = "<group>"; };
-		6BB1BC0D155295940012C252 /* expanz_model_SessionContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_SessionContext.h; sourceTree = "<group>"; };
-		6BB1BC0E155295940012C252 /* expanz_model_SessionContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_SessionContext.m; sourceTree = "<group>"; };
-		6BB1BC0F155295940012C252 /* expanz_model_SessionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_SessionData.h; sourceTree = "<group>"; };
-		6BB1BC10155295940012C252 /* expanz_model_SessionData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_SessionData.m; sourceTree = "<group>"; };
-		6BB1BC11155295940012C252 /* expanz_model_SiteList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_SiteList.h; sourceTree = "<group>"; };
-		6BB1BC12155295940012C252 /* expanz_model_SiteList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_SiteList.m; sourceTree = "<group>"; };
-		6BB1BC13155295940012C252 /* expanz_model_TextGridDataCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_TextGridDataCell.h; sourceTree = "<group>"; };
-		6BB1BC14155295940012C252 /* expanz_model_TextGridDataCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_TextGridDataCell.m; sourceTree = "<group>"; };
-		6BB1BC15155295940012C252 /* expanz_model_TreeData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_TreeData.h; sourceTree = "<group>"; };
-		6BB1BC16155295940012C252 /* expanz_model_TreeData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_TreeData.m; sourceTree = "<group>"; };
-		6BB1BC17155295940012C252 /* expanz_model_UserRole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_UserRole.h; sourceTree = "<group>"; };
-		6BB1BC18155295940012C252 /* expanz_model_UserRole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_UserRole.m; sourceTree = "<group>"; };
-		6BB1BC19155295940012C252 /* NSString+ExpanzDataType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ExpanzDataType.h"; sourceTree = "<group>"; };
-		6BB1BC1A155295940012C252 /* NSString+ExpanzDataType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ExpanzDataType.m"; sourceTree = "<group>"; };
-		6BB1BC1D155295940012C252 /* expanz_service_DefaultActivityClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_DefaultActivityClient.h; sourceTree = "<group>"; };
-		6BB1BC1E155295940012C252 /* expanz_service_DefaultActivityClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_DefaultActivityClient.m; sourceTree = "<group>"; };
-		6BB1BC1F155295940012C252 /* ExpanzActivityClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpanzActivityClient.h; sourceTree = "<group>"; };
-		6BB1BC21155295940012C252 /* expanz_service_CreateActivityRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_CreateActivityRequest.h; sourceTree = "<group>"; };
-		6BB1BC22155295940012C252 /* expanz_service_CreateActivityRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_CreateActivityRequest.m; sourceTree = "<group>"; };
-		6BB1BC23155295940012C252 /* expanz_service_DataPublicationRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_DataPublicationRequest.h; sourceTree = "<group>"; };
-		6BB1BC24155295940012C252 /* expanz_service_DataPublicationRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_DataPublicationRequest.m; sourceTree = "<group>"; };
-		6BB1BC25155295940012C252 /* expanz_service_DeltaRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_DeltaRequest.h; sourceTree = "<group>"; };
-		6BB1BC26155295940012C252 /* expanz_service_DeltaRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_DeltaRequest.m; sourceTree = "<group>"; };
-		6BB1BC27155295940012C252 /* expanz_service_FileRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_FileRequest.h; sourceTree = "<group>"; };
-		6BB1BC28155295940012C252 /* expanz_service_FileRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_FileRequest.m; sourceTree = "<group>"; };
-		6BB1BC29155295940012C252 /* expanz_service_MethodInvocationRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_MethodInvocationRequest.h; sourceTree = "<group>"; };
-		6BB1BC2A155295940012C252 /* expanz_service_MethodInvocationRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_MethodInvocationRequest.m; sourceTree = "<group>"; };
-		6BB1BC2B155295940012C252 /* RXMLElement+ActivityInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RXMLElement+ActivityInstance.h"; sourceTree = "<group>"; };
-		6BB1BC2C155295940012C252 /* RXMLElement+ActivityInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RXMLElement+ActivityInstance.m"; sourceTree = "<group>"; };
-		6BB1BC2D155295940012C252 /* RXMLElement+ResourceCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RXMLElement+ResourceCollection.h"; sourceTree = "<group>"; };
-		6BB1BC2E155295940012C252 /* RXMLElement+ResourceCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RXMLElement+ResourceCollection.m"; sourceTree = "<group>"; };
-		6BB1BC2F155295940012C252 /* expanz_service_AbstractServiceClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_AbstractServiceClient.h; sourceTree = "<group>"; };
-		6BB1BC30155295940012C252 /* expanz_service_AbstractServiceClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_AbstractServiceClient.m; sourceTree = "<group>"; };
-		6BB1BC31155295940012C252 /* ExpanzAbstractServiceClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpanzAbstractServiceClientDelegate.h; sourceTree = "<group>"; };
-		6BB1BC33155295940012C252 /* expanz_service_DefaultDownloadClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_DefaultDownloadClient.h; sourceTree = "<group>"; };
-		6BB1BC34155295940012C252 /* expanz_service_DefaultDownloadClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_DefaultDownloadClient.m; sourceTree = "<group>"; };
-		6BB1BC35155295940012C252 /* ExpanzFileDownloadClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpanzFileDownloadClient.h; sourceTree = "<group>"; };
-		6BB1BC37155295940012C252 /* expanz_service_FileDownloadRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_FileDownloadRequest.h; sourceTree = "<group>"; };
-		6BB1BC38155295940012C252 /* expanz_service_FileDownloadRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_FileDownloadRequest.m; sourceTree = "<group>"; };
-		6BB1BC3A155295940012C252 /* expanz_service_DefaultLoginClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_DefaultLoginClient.h; sourceTree = "<group>"; };
-		6BB1BC3B155295940012C252 /* expanz_service_DefaultLoginClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_DefaultLoginClient.m; sourceTree = "<group>"; };
-		6BB1BC3C155295940012C252 /* ExpanzLoginClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpanzLoginClient.h; sourceTree = "<group>"; };
-		6BB1BC3E155295940012C252 /* expanz_service_SessionRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_SessionRequest.h; sourceTree = "<group>"; };
-		6BB1BC3F155295940012C252 /* expanz_service_SessionRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_SessionRequest.m; sourceTree = "<group>"; };
-		6BB1BC40155295940012C252 /* RXMLElement+SessionContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RXMLElement+SessionContext.h"; sourceTree = "<group>"; };
-		6BB1BC41155295940012C252 /* RXMLElement+SessionContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RXMLElement+SessionContext.m"; sourceTree = "<group>"; };
-		6BB1BC43155295940012C252 /* expanz_service_DefaultSessionDataClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_DefaultSessionDataClient.h; sourceTree = "<group>"; };
-		6BB1BC44155295940012C252 /* expanz_service_DefaultSessionDataClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_DefaultSessionDataClient.m; sourceTree = "<group>"; };
-		6BB1BC45155295940012C252 /* ExpanzSessionDataClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpanzSessionDataClient.h; sourceTree = "<group>"; };
-		6BB1BC47155295940012C252 /* expanz_service_SessionDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_SessionDataRequest.h; sourceTree = "<group>"; };
-		6BB1BC48155295940012C252 /* expanz_service_SessionDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_SessionDataRequest.m; sourceTree = "<group>"; };
-		6BB1BC49155295940012C252 /* RXMLElement+SessionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RXMLElement+SessionData.h"; sourceTree = "<group>"; };
-		6BB1BC4A155295940012C252 /* RXMLElement+SessionData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RXMLElement+SessionData.m"; sourceTree = "<group>"; };
-		6BB1BC4C155295940012C252 /* expanz_service_DefaultSiteDetailsClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_DefaultSiteDetailsClient.h; sourceTree = "<group>"; };
-		6BB1BC4D155295940012C252 /* expanz_service_DefaultSiteDetailsClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_DefaultSiteDetailsClient.m; sourceTree = "<group>"; };
-		6BB1BC4E155295940012C252 /* ExpanzSiteDetailsClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpanzSiteDetailsClient.h; sourceTree = "<group>"; };
-		6BB1BC50155295940012C252 /* RXMLElement+SiteDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RXMLElement+SiteDetails.h"; sourceTree = "<group>"; };
-		6BB1BC51155295940012C252 /* RXMLElement+SiteDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RXMLElement+SiteDetails.m"; sourceTree = "<group>"; };
-		6BB1BC53155295940012C252 /* expanz_utils_BundleResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_utils_BundleResource.h; sourceTree = "<group>"; };
-		6BB1BC54155295940012C252 /* expanz_utils_BundleResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_utils_BundleResource.m; sourceTree = "<group>"; };
-		6BB1BC55155295940012C252 /* NSString+Contains.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Contains.h"; sourceTree = "<group>"; };
-		6BB1BC56155295940012C252 /* NSString+Contains.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Contains.m"; sourceTree = "<group>"; };
-		6BB1BC57155295940012C252 /* NSString+ExpanzUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ExpanzUtils.h"; sourceTree = "<group>"; };
-		6BB1BC58155295940012C252 /* NSString+ExpanzUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ExpanzUtils.m"; sourceTree = "<group>"; };
-		6BB1BC59155295940012C252 /* xml_Serializable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xml_Serializable.h; sourceTree = "<group>"; };
 		6BB5EE5E14F49B1B00B5B193 /* LRResty.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LRResty.framework; path = Library/Frameworks/LRResty.framework; sourceTree = SDKROOT; };
 		6BB72DB614BEF9A9005A5961 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		6BB72DB814BEF9A9005A5961 /* expanz_codegen_ui_MainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_codegen_ui_MainWindowController.h; sourceTree = "<group>"; };
@@ -418,6 +324,159 @@
 		6BC10168147775A40055CF03 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		6BC10169147775A40055CF03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6BC1018B1477A42F0055CF03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6BC17BC2155E27E7000B3AA4 /* expanz_CoreModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_CoreModule.h; sourceTree = "<group>"; };
+		6BC17BC3155E27E7000B3AA4 /* expanz_CoreModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_CoreModule.m; sourceTree = "<group>"; };
+		6BC17BC4155E27E7000B3AA4 /* expanz_SdkConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_SdkConfiguration.h; sourceTree = "<group>"; };
+		6BC17BC5155E27E7000B3AA4 /* expanz_SdkConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_SdkConfiguration.m; sourceTree = "<group>"; };
+		6BC17BC6155E27E7000B3AA4 /* expanzCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanzCore.h; sourceTree = "<group>"; };
+		6BC17BC8155E27E7000B3AA4 /* expanz_model_AbstractData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_AbstractData.h; sourceTree = "<group>"; };
+		6BC17BC9155E27E7000B3AA4 /* expanz_model_AbstractData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_AbstractData.m; sourceTree = "<group>"; };
+		6BC17BCA155E27E7000B3AA4 /* expanz_model_AbstractGridDataCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_AbstractGridDataCell.h; sourceTree = "<group>"; };
+		6BC17BCB155E27E7000B3AA4 /* expanz_model_AbstractGridDataCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_AbstractGridDataCell.m; sourceTree = "<group>"; };
+		6BC17BCC155E27E7000B3AA4 /* expanz_model_ActivityInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_ActivityInstance.h; sourceTree = "<group>"; };
+		6BC17BCD155E27E7000B3AA4 /* expanz_model_ActivityInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_ActivityInstance.m; sourceTree = "<group>"; };
+		6BC17BCE155E27E7000B3AA4 /* expanz_model_ActivityMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_ActivityMenu.h; sourceTree = "<group>"; };
+		6BC17BCF155E27E7000B3AA4 /* expanz_model_ActivityMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_ActivityMenu.m; sourceTree = "<group>"; };
+		6BC17BD0155E27E7000B3AA4 /* expanz_model_ActivitySchema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_ActivitySchema.h; sourceTree = "<group>"; };
+		6BC17BD1155E27E7000B3AA4 /* expanz_model_ActivitySchema.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_ActivitySchema.m; sourceTree = "<group>"; };
+		6BC17BD2155E27E7000B3AA4 /* expanz_model_ActivityStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_ActivityStyle.h; sourceTree = "<group>"; };
+		6BC17BD3155E27E7000B3AA4 /* expanz_model_ActivityStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_ActivityStyle.m; sourceTree = "<group>"; };
+		6BC17BD4155E27E7000B3AA4 /* expanz_model_AppSite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_AppSite.h; sourceTree = "<group>"; };
+		6BC17BD5155E27E7000B3AA4 /* expanz_model_AppSite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_AppSite.m; sourceTree = "<group>"; };
+		6BC17BD6155E27E7000B3AA4 /* expanz_model_Column.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_Column.h; sourceTree = "<group>"; };
+		6BC17BD7155E27E7000B3AA4 /* expanz_model_Column.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_Column.m; sourceTree = "<group>"; };
+		6BC17BD8155E27E7000B3AA4 /* expanz_model_DataBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_DataBuilder.h; sourceTree = "<group>"; };
+		6BC17BD9155E27E7000B3AA4 /* expanz_model_DataBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_DataBuilder.m; sourceTree = "<group>"; };
+		6BC17BDA155E27E7000B3AA4 /* expanz_model_Field.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_Field.h; sourceTree = "<group>"; };
+		6BC17BDB155E27E7000B3AA4 /* expanz_model_Field.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_Field.m; sourceTree = "<group>"; };
+		6BC17BDC155E27E7000B3AA4 /* expanz_model_FieldSchema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_FieldSchema.h; sourceTree = "<group>"; };
+		6BC17BDD155E27E7000B3AA4 /* expanz_model_FieldSchema.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_FieldSchema.m; sourceTree = "<group>"; };
+		6BC17BDE155E27E7000B3AA4 /* expanz_model_File.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_File.h; sourceTree = "<group>"; };
+		6BC17BDF155E27E7000B3AA4 /* expanz_model_File.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_File.m; sourceTree = "<group>"; };
+		6BC17BE0155E27E7000B3AA4 /* expanz_model_FileResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_FileResource.h; sourceTree = "<group>"; };
+		6BC17BE1155E27E7000B3AA4 /* expanz_model_FileResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_FileResource.m; sourceTree = "<group>"; };
+		6BC17BE2155E27E7000B3AA4 /* expanz_model_Folder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_Folder.h; sourceTree = "<group>"; };
+		6BC17BE3155E27E7000B3AA4 /* expanz_model_Folder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_Folder.m; sourceTree = "<group>"; };
+		6BC17BE4155E27E7000B3AA4 /* expanz_model_GridData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_GridData.h; sourceTree = "<group>"; };
+		6BC17BE5155E27E7000B3AA4 /* expanz_model_GridData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_GridData.m; sourceTree = "<group>"; };
+		6BC17BE6155E27E7000B3AA4 /* expanz_model_ImageGridDataCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_ImageGridDataCell.h; sourceTree = "<group>"; };
+		6BC17BE7155E27E7000B3AA4 /* expanz_model_ImageGridDataCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_ImageGridDataCell.m; sourceTree = "<group>"; };
+		6BC17BE8155E27E7000B3AA4 /* expanz_model_Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_Menu.h; sourceTree = "<group>"; };
+		6BC17BE9155E27E7000B3AA4 /* expanz_model_Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_Menu.m; sourceTree = "<group>"; };
+		6BC17BEA155E27E7000B3AA4 /* expanz_model_MenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_MenuItem.h; sourceTree = "<group>"; };
+		6BC17BEB155E27E7000B3AA4 /* expanz_model_MenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_MenuItem.m; sourceTree = "<group>"; };
+		6BC17BEC155E27E7000B3AA4 /* expanz_model_Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_Message.h; sourceTree = "<group>"; };
+		6BC17BED155E27E7000B3AA4 /* expanz_model_Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_Message.m; sourceTree = "<group>"; };
+		6BC17BEE155E27E7000B3AA4 /* expanz_model_MethodSchema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_MethodSchema.h; sourceTree = "<group>"; };
+		6BC17BEF155E27E7000B3AA4 /* expanz_model_MethodSchema.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_MethodSchema.m; sourceTree = "<group>"; };
+		6BC17BF0155E27E7000B3AA4 /* expanz_model_ProcessArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_ProcessArea.h; sourceTree = "<group>"; };
+		6BC17BF1155E27E7000B3AA4 /* expanz_model_ProcessArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_ProcessArea.m; sourceTree = "<group>"; };
+		6BC17BF2155E27E7000B3AA4 /* expanz_model_Query.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_Query.h; sourceTree = "<group>"; };
+		6BC17BF3155E27E7000B3AA4 /* expanz_model_Query.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_Query.m; sourceTree = "<group>"; };
+		6BC17BF4155E27E7000B3AA4 /* expanz_model_ResourceCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_ResourceCollection.h; sourceTree = "<group>"; };
+		6BC17BF5155E27E7000B3AA4 /* expanz_model_ResourceCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_ResourceCollection.m; sourceTree = "<group>"; };
+		6BC17BF6155E27E7000B3AA4 /* expanz_model_Row.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_Row.h; sourceTree = "<group>"; };
+		6BC17BF7155E27E7000B3AA4 /* expanz_model_Row.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_Row.m; sourceTree = "<group>"; };
+		6BC17BF8155E27E7000B3AA4 /* expanz_model_SessionContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_SessionContext.h; sourceTree = "<group>"; };
+		6BC17BF9155E27E7000B3AA4 /* expanz_model_SessionContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_SessionContext.m; sourceTree = "<group>"; };
+		6BC17BFA155E27E7000B3AA4 /* expanz_model_SessionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_SessionData.h; sourceTree = "<group>"; };
+		6BC17BFB155E27E7000B3AA4 /* expanz_model_SessionData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_SessionData.m; sourceTree = "<group>"; };
+		6BC17BFC155E27E7000B3AA4 /* expanz_model_SiteList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_SiteList.h; sourceTree = "<group>"; };
+		6BC17BFD155E27E7000B3AA4 /* expanz_model_SiteList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_SiteList.m; sourceTree = "<group>"; };
+		6BC17BFE155E27E7000B3AA4 /* expanz_model_TextGridDataCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_TextGridDataCell.h; sourceTree = "<group>"; };
+		6BC17BFF155E27E7000B3AA4 /* expanz_model_TextGridDataCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_TextGridDataCell.m; sourceTree = "<group>"; };
+		6BC17C00155E27E7000B3AA4 /* expanz_model_TreeData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_TreeData.h; sourceTree = "<group>"; };
+		6BC17C01155E27E7000B3AA4 /* expanz_model_TreeData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_TreeData.m; sourceTree = "<group>"; };
+		6BC17C02155E27E7000B3AA4 /* expanz_model_UserRole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_model_UserRole.h; sourceTree = "<group>"; };
+		6BC17C03155E27E7000B3AA4 /* expanz_model_UserRole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_model_UserRole.m; sourceTree = "<group>"; };
+		6BC17C04155E27E7000B3AA4 /* NSString+ExpanzDataType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ExpanzDataType.h"; sourceTree = "<group>"; };
+		6BC17C05155E27E7000B3AA4 /* NSString+ExpanzDataType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ExpanzDataType.m"; sourceTree = "<group>"; };
+		6BC17C08155E27E7000B3AA4 /* expanz_service_DefaultActivityClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_DefaultActivityClient.h; sourceTree = "<group>"; };
+		6BC17C09155E27E7000B3AA4 /* expanz_service_DefaultActivityClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_DefaultActivityClient.m; sourceTree = "<group>"; };
+		6BC17C0A155E27E7000B3AA4 /* ExpanzActivityClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpanzActivityClient.h; sourceTree = "<group>"; };
+		6BC17C0C155E27E7000B3AA4 /* expanz_service_CreateActivityRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_CreateActivityRequest.h; sourceTree = "<group>"; };
+		6BC17C0D155E27E7000B3AA4 /* expanz_service_CreateActivityRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_CreateActivityRequest.m; sourceTree = "<group>"; };
+		6BC17C0E155E27E7000B3AA4 /* expanz_service_DataPublicationRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_DataPublicationRequest.h; sourceTree = "<group>"; };
+		6BC17C0F155E27E7000B3AA4 /* expanz_service_DataPublicationRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_DataPublicationRequest.m; sourceTree = "<group>"; };
+		6BC17C10155E27E7000B3AA4 /* expanz_service_DeltaRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_DeltaRequest.h; sourceTree = "<group>"; };
+		6BC17C11155E27E7000B3AA4 /* expanz_service_DeltaRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_DeltaRequest.m; sourceTree = "<group>"; };
+		6BC17C12155E27E7000B3AA4 /* expanz_service_FileRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_FileRequest.h; sourceTree = "<group>"; };
+		6BC17C13155E27E7000B3AA4 /* expanz_service_FileRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_FileRequest.m; sourceTree = "<group>"; };
+		6BC17C14155E27E7000B3AA4 /* expanz_service_MethodInvocationRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_MethodInvocationRequest.h; sourceTree = "<group>"; };
+		6BC17C15155E27E7000B3AA4 /* expanz_service_MethodInvocationRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_MethodInvocationRequest.m; sourceTree = "<group>"; };
+		6BC17C16155E27E7000B3AA4 /* RXMLElement+ActivityInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RXMLElement+ActivityInstance.h"; sourceTree = "<group>"; };
+		6BC17C17155E27E7000B3AA4 /* RXMLElement+ActivityInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RXMLElement+ActivityInstance.m"; sourceTree = "<group>"; };
+		6BC17C18155E27E7000B3AA4 /* RXMLElement+ResourceCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RXMLElement+ResourceCollection.h"; sourceTree = "<group>"; };
+		6BC17C19155E27E7000B3AA4 /* RXMLElement+ResourceCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RXMLElement+ResourceCollection.m"; sourceTree = "<group>"; };
+		6BC17C1A155E27E7000B3AA4 /* expanz_service_AbstractServiceClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_AbstractServiceClient.h; sourceTree = "<group>"; };
+		6BC17C1B155E27E7000B3AA4 /* expanz_service_AbstractServiceClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_AbstractServiceClient.m; sourceTree = "<group>"; };
+		6BC17C1C155E27E7000B3AA4 /* ExpanzAbstractServiceClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpanzAbstractServiceClientDelegate.h; sourceTree = "<group>"; };
+		6BC17C1E155E27E7000B3AA4 /* expanz_service_DefaultDownloadClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_DefaultDownloadClient.h; sourceTree = "<group>"; };
+		6BC17C1F155E27E7000B3AA4 /* expanz_service_DefaultDownloadClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_DefaultDownloadClient.m; sourceTree = "<group>"; };
+		6BC17C20155E27E7000B3AA4 /* ExpanzFileDownloadClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpanzFileDownloadClient.h; sourceTree = "<group>"; };
+		6BC17C22155E27E7000B3AA4 /* expanz_service_FileDownloadRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_FileDownloadRequest.h; sourceTree = "<group>"; };
+		6BC17C23155E27E7000B3AA4 /* expanz_service_FileDownloadRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_FileDownloadRequest.m; sourceTree = "<group>"; };
+		6BC17C25155E27E7000B3AA4 /* expanz_service_DefaultLoginClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_DefaultLoginClient.h; sourceTree = "<group>"; };
+		6BC17C26155E27E7000B3AA4 /* expanz_service_DefaultLoginClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_DefaultLoginClient.m; sourceTree = "<group>"; };
+		6BC17C27155E27E7000B3AA4 /* ExpanzLoginClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpanzLoginClient.h; sourceTree = "<group>"; };
+		6BC17C29155E27E7000B3AA4 /* expanz_service_SessionRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_SessionRequest.h; sourceTree = "<group>"; };
+		6BC17C2A155E27E7000B3AA4 /* expanz_service_SessionRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_SessionRequest.m; sourceTree = "<group>"; };
+		6BC17C2B155E27E7000B3AA4 /* RXMLElement+SessionContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RXMLElement+SessionContext.h"; sourceTree = "<group>"; };
+		6BC17C2C155E27E7000B3AA4 /* RXMLElement+SessionContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RXMLElement+SessionContext.m"; sourceTree = "<group>"; };
+		6BC17C2E155E27E7000B3AA4 /* expanz_service_DefaultSessionDataClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_DefaultSessionDataClient.h; sourceTree = "<group>"; };
+		6BC17C2F155E27E7000B3AA4 /* expanz_service_DefaultSessionDataClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_DefaultSessionDataClient.m; sourceTree = "<group>"; };
+		6BC17C30155E27E7000B3AA4 /* ExpanzSessionDataClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpanzSessionDataClient.h; sourceTree = "<group>"; };
+		6BC17C32155E27E7000B3AA4 /* expanz_service_SessionDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_SessionDataRequest.h; sourceTree = "<group>"; };
+		6BC17C33155E27E7000B3AA4 /* expanz_service_SessionDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_SessionDataRequest.m; sourceTree = "<group>"; };
+		6BC17C34155E27E7000B3AA4 /* RXMLElement+SessionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RXMLElement+SessionData.h"; sourceTree = "<group>"; };
+		6BC17C35155E27E7000B3AA4 /* RXMLElement+SessionData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RXMLElement+SessionData.m"; sourceTree = "<group>"; };
+		6BC17C37155E27E7000B3AA4 /* expanz_service_DefaultSiteDetailsClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_service_DefaultSiteDetailsClient.h; sourceTree = "<group>"; };
+		6BC17C38155E27E7000B3AA4 /* expanz_service_DefaultSiteDetailsClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_service_DefaultSiteDetailsClient.m; sourceTree = "<group>"; };
+		6BC17C39155E27E7000B3AA4 /* ExpanzSiteDetailsClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpanzSiteDetailsClient.h; sourceTree = "<group>"; };
+		6BC17C3B155E27E7000B3AA4 /* RXMLElement+SiteDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RXMLElement+SiteDetails.h"; sourceTree = "<group>"; };
+		6BC17C3C155E27E7000B3AA4 /* RXMLElement+SiteDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RXMLElement+SiteDetails.m"; sourceTree = "<group>"; };
+		6BC17C3E155E27E7000B3AA4 /* expanz_utils_BundleResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expanz_utils_BundleResource.h; sourceTree = "<group>"; };
+		6BC17C3F155E27E7000B3AA4 /* expanz_utils_BundleResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expanz_utils_BundleResource.m; sourceTree = "<group>"; };
+		6BC17C40155E27E7000B3AA4 /* NSString+Contains.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Contains.h"; sourceTree = "<group>"; };
+		6BC17C41155E27E7000B3AA4 /* NSString+Contains.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Contains.m"; sourceTree = "<group>"; };
+		6BC17C42155E27E7000B3AA4 /* NSString+ExpanzUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ExpanzUtils.h"; sourceTree = "<group>"; };
+		6BC17C43155E27E7000B3AA4 /* NSString+ExpanzUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ExpanzUtils.m"; sourceTree = "<group>"; };
+		6BC17C44155E27E7000B3AA4 /* xml_Serializable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xml_Serializable.h; sourceTree = "<group>"; };
+		6BC17C46155E27E7000B3AA4 /* RXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMLElement.h; sourceTree = "<group>"; };
+		6BC17C47155E27E7000B3AA4 /* RXMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMLElement.m; sourceTree = "<group>"; };
+		6BC17C4A155E27E7000B3AA4 /* xcode_utils_Enum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xcode_utils_Enum.h; sourceTree = "<group>"; };
+		6BC17C4B155E27E7000B3AA4 /* xcode_utils_KeyBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xcode_utils_KeyBuilder.h; sourceTree = "<group>"; };
+		6BC17C4C155E27E7000B3AA4 /* xcode_utils_KeyBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xcode_utils_KeyBuilder.m; sourceTree = "<group>"; };
+		6BC17C4D155E27E7000B3AA4 /* xcode_AbstractDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xcode_AbstractDefinition.h; sourceTree = "<group>"; };
+		6BC17C4E155E27E7000B3AA4 /* xcode_AbstractDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xcode_AbstractDefinition.m; sourceTree = "<group>"; };
+		6BC17C4F155E27E7000B3AA4 /* xcode_ClassDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xcode_ClassDefinition.h; sourceTree = "<group>"; };
+		6BC17C50155E27E7000B3AA4 /* xcode_ClassDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xcode_ClassDefinition.m; sourceTree = "<group>"; };
+		6BC17C51155E27E7000B3AA4 /* xcode_FileOperationQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xcode_FileOperationQueue.h; sourceTree = "<group>"; };
+		6BC17C52155E27E7000B3AA4 /* xcode_FileOperationQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xcode_FileOperationQueue.m; sourceTree = "<group>"; };
+		6BC17C53155E27E7000B3AA4 /* xcode_FrameworkDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xcode_FrameworkDefinition.h; sourceTree = "<group>"; };
+		6BC17C54155E27E7000B3AA4 /* xcode_FrameworkDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xcode_FrameworkDefinition.m; sourceTree = "<group>"; };
+		6BC17C55155E27E7000B3AA4 /* xcode_Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xcode_Group.h; sourceTree = "<group>"; };
+		6BC17C56155E27E7000B3AA4 /* xcode_Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xcode_Group.m; sourceTree = "<group>"; };
+		6BC17C57155E27E7000B3AA4 /* xcode_KeyBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xcode_KeyBuilder.h; sourceTree = "<group>"; };
+		6BC17C58155E27E7000B3AA4 /* xcode_KeyBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xcode_KeyBuilder.m; sourceTree = "<group>"; };
+		6BC17C59155E27E7000B3AA4 /* xcode_Project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xcode_Project.h; sourceTree = "<group>"; };
+		6BC17C5A155E27E7000B3AA4 /* xcode_Project.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xcode_Project.m; sourceTree = "<group>"; };
+		6BC17C5B155E27E7000B3AA4 /* xcode_SourceFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xcode_SourceFile.h; sourceTree = "<group>"; };
+		6BC17C5C155E27E7000B3AA4 /* xcode_SourceFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xcode_SourceFile.m; sourceTree = "<group>"; };
+		6BC17C5D155E27E7000B3AA4 /* xcode_SourceFileDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xcode_SourceFileDefinition.h; sourceTree = "<group>"; };
+		6BC17C5E155E27E7000B3AA4 /* xcode_SourceFileDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xcode_SourceFileDefinition.m; sourceTree = "<group>"; };
+		6BC17C5F155E27E7000B3AA4 /* xcode_Target.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xcode_Target.h; sourceTree = "<group>"; };
+		6BC17C60155E27E7000B3AA4 /* xcode_Target.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xcode_Target.m; sourceTree = "<group>"; };
+		6BC17C61155E27E7000B3AA4 /* xcode_utils_Enum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xcode_utils_Enum.h; sourceTree = "<group>"; };
+		6BC17C62155E27E7000B3AA4 /* xcode_XibDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xcode_XibDefinition.h; sourceTree = "<group>"; };
+		6BC17C63155E27E7000B3AA4 /* xcode_XibDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xcode_XibDefinition.m; sourceTree = "<group>"; };
+		6BC17C64155E27E7000B3AA4 /* XcodeEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XcodeEditor.h; sourceTree = "<group>"; };
+		6BC17C65155E27E7000B3AA4 /* XcodeGroupMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XcodeGroupMember.h; sourceTree = "<group>"; };
+		6BC17C66155E27E7000B3AA4 /* XcodeMemberType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XcodeMemberType.h; sourceTree = "<group>"; };
+		6BC17C67155E27E7000B3AA4 /* XcodeMemberType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XcodeMemberType.m; sourceTree = "<group>"; };
+		6BC17C68155E27E7000B3AA4 /* XcodeSourceFileType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XcodeSourceFileType.h; sourceTree = "<group>"; };
+		6BC17C69155E27E7000B3AA4 /* XcodeSourceFileType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XcodeSourceFileType.m; sourceTree = "<group>"; };
+		6BC17CF7155E2A16000B3AA4 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		6BC4D7E314FBBE5500335BF3 /* Logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logging.h; sourceTree = "<group>"; };
 		6BC4D7E514FBBE5500335BF3 /* JSObjectFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSObjectFactory.h; sourceTree = "<group>"; };
 		6BC4D7E614FBBE5500335BF3 /* JSObjectFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSObjectFactory.m; sourceTree = "<group>"; };
@@ -440,12 +499,6 @@
 		6BC4D7F714FBBE5500335BF3 /* NSObject+Objection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Objection.h"; sourceTree = "<group>"; };
 		6BC4D7F814FBBE5500335BF3 /* NSObject+Objection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Objection.m"; sourceTree = "<group>"; };
 		6BC4D7F914FBBE5500335BF3 /* Objection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Objection.h; sourceTree = "<group>"; };
-		6BC4D7FB14FBBE5500335BF3 /* NSDataAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDataAdditions.h; sourceTree = "<group>"; };
-		6BC4D7FC14FBBE5500335BF3 /* NSDataAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDataAdditions.m; sourceTree = "<group>"; };
-		6BC4D7FD14FBBE5500335BF3 /* RXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMLElement.h; sourceTree = "<group>"; };
-		6BC4D7FE14FBBE5500335BF3 /* RXMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMLElement.m; sourceTree = "<group>"; };
-		6BC4D7FF14FBBE5500335BF3 /* TBXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBXML.h; sourceTree = "<group>"; };
-		6BC4D80014FBBE5500335BF3 /* TBXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBXML.m; sourceTree = "<group>"; };
 		6BCDDF2D154A60C1009EE515 /* model-object-explorer.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "model-object-explorer.icns"; sourceTree = "<group>"; };
 		6BCEC01814BBD88700538D1D /* expanz-xcodePlugin.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "expanz-xcodePlugin.xcplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BCEC02814BBD9D600538D1D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
@@ -496,7 +549,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BCDDF2B154A602E009EE515 /* XcodeEditor.framework in Frameworks */,
+				6BC17CF8155E2A16000B3AA4 /* libxml2.dylib in Frameworks */,
 				6B62CC1D14FC9EF100A0E098 /* Quartz.framework in Frameworks */,
 				6B62CC1E14FC9EF100A0E098 /* QuartzCore.framework in Frameworks */,
 				6B62CC1214FC9D5D00A0E098 /* libprofile_rt.dylib in Frameworks */,
@@ -513,7 +566,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B01A056154A1FF500122D48 /* XcodeEditor.framework in Frameworks */,
+				6BC17CF9155E2A1E000B3AA4 /* libxml2.dylib in Frameworks */,
 				6B72671B1503A929001281CE /* libGRMustache1.a in Frameworks */,
 				6BC4D87D14FBBF1D00335BF3 /* libLRResty.a in Frameworks */,
 				6BBD6C9814ECFC9C00451BA2 /* libz.dylib in Frameworks */,
@@ -537,12 +590,13 @@
 		6B105A041479CF9A002DEBCE /* External */ = {
 			isa = PBXGroup;
 			children = (
-				6BB1BBD6155295940012C252 /* ExpanzCore */,
+				6BC17BC1155E27E7000B3AA4 /* ExpanzCore */,
+				6BC17C45155E27E7000B3AA4 /* RaptureXML */,
+				6BC17C48155E27E7000B3AA4 /* XcodeEditor */,
 				6B9C3D731501CD78006A7F97 /* GRMustache */,
 				6B9C3D831501CD78006A7F97 /* libGRMustache1.a */,
 				6BC4D7E214FBBE5500335BF3 /* Flexible-iOS-Logging-1.0 */,
 				6BC4D7E414FBBE5500335BF3 /* objection */,
-				6BC4D7FA14FBBE5500335BF3 /* RaptureXML */,
 				6B40695014EBDB1F00AD1DEF /* libKiwi.a */,
 				6B40695114EBDB1F00AD1DEF /* libLRResty.a */,
 			);
@@ -616,235 +670,6 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		6BB1BBD6155295940012C252 /* ExpanzCore */ = {
-			isa = PBXGroup;
-			children = (
-				6BB1BBD7155295940012C252 /* expanz_CoreModule.h */,
-				6BB1BBD8155295940012C252 /* expanz_CoreModule.m */,
-				6BB1BBD9155295940012C252 /* expanz_SdkConfiguration.h */,
-				6BB1BBDA155295940012C252 /* expanz_SdkConfiguration.m */,
-				6BB1BBDB155295940012C252 /* expanzCore.h */,
-				6BB1BBDC155295940012C252 /* Model */,
-				6BB1BC1B155295940012C252 /* Services */,
-				6BB1BC52155295940012C252 /* Utils */,
-			);
-			path = ExpanzCore;
-			sourceTree = "<group>";
-		};
-		6BB1BBDC155295940012C252 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				6BB1BBDD155295940012C252 /* expanz_model_AbstractData.h */,
-				6BB1BBDE155295940012C252 /* expanz_model_AbstractData.m */,
-				6BB1BBDF155295940012C252 /* expanz_model_AbstractGridDataCell.h */,
-				6BB1BBE0155295940012C252 /* expanz_model_AbstractGridDataCell.m */,
-				6BB1BBE1155295940012C252 /* expanz_model_ActivityInstance.h */,
-				6BB1BBE2155295940012C252 /* expanz_model_ActivityInstance.m */,
-				6BB1BBE3155295940012C252 /* expanz_model_ActivityMenu.h */,
-				6BB1BBE4155295940012C252 /* expanz_model_ActivityMenu.m */,
-				6BB1BBE5155295940012C252 /* expanz_model_ActivitySchema.h */,
-				6BB1BBE6155295940012C252 /* expanz_model_ActivitySchema.m */,
-				6BB1BBE7155295940012C252 /* expanz_model_ActivityStyle.h */,
-				6BB1BBE8155295940012C252 /* expanz_model_ActivityStyle.m */,
-				6BB1BBE9155295940012C252 /* expanz_model_AppSite.h */,
-				6BB1BBEA155295940012C252 /* expanz_model_AppSite.m */,
-				6BB1BBEB155295940012C252 /* expanz_model_Column.h */,
-				6BB1BBEC155295940012C252 /* expanz_model_Column.m */,
-				6BB1BBED155295940012C252 /* expanz_model_DataBuilder.h */,
-				6BB1BBEE155295940012C252 /* expanz_model_DataBuilder.m */,
-				6BB1BBEF155295940012C252 /* expanz_model_Field.h */,
-				6BB1BBF0155295940012C252 /* expanz_model_Field.m */,
-				6BB1BBF1155295940012C252 /* expanz_model_FieldSchema.h */,
-				6BB1BBF2155295940012C252 /* expanz_model_FieldSchema.m */,
-				6BB1BBF3155295940012C252 /* expanz_model_File.h */,
-				6BB1BBF4155295940012C252 /* expanz_model_File.m */,
-				6BB1BBF5155295940012C252 /* expanz_model_FileResource.h */,
-				6BB1BBF6155295940012C252 /* expanz_model_FileResource.m */,
-				6BB1BBF7155295940012C252 /* expanz_model_Folder.h */,
-				6BB1BBF8155295940012C252 /* expanz_model_Folder.m */,
-				6BB1BBF9155295940012C252 /* expanz_model_GridData.h */,
-				6BB1BBFA155295940012C252 /* expanz_model_GridData.m */,
-				6BB1BBFB155295940012C252 /* expanz_model_ImageGridDataCell.h */,
-				6BB1BBFC155295940012C252 /* expanz_model_ImageGridDataCell.m */,
-				6BB1BBFD155295940012C252 /* expanz_model_Menu.h */,
-				6BB1BBFE155295940012C252 /* expanz_model_Menu.m */,
-				6BB1BBFF155295940012C252 /* expanz_model_MenuItem.h */,
-				6BB1BC00155295940012C252 /* expanz_model_MenuItem.m */,
-				6BB1BC01155295940012C252 /* expanz_model_Message.h */,
-				6BB1BC02155295940012C252 /* expanz_model_Message.m */,
-				6BB1BC03155295940012C252 /* expanz_model_MethodSchema.h */,
-				6BB1BC04155295940012C252 /* expanz_model_MethodSchema.m */,
-				6BB1BC05155295940012C252 /* expanz_model_ProcessArea.h */,
-				6BB1BC06155295940012C252 /* expanz_model_ProcessArea.m */,
-				6BB1BC07155295940012C252 /* expanz_model_Query.h */,
-				6BB1BC08155295940012C252 /* expanz_model_Query.m */,
-				6BB1BC09155295940012C252 /* expanz_model_ResourceCollection.h */,
-				6BB1BC0A155295940012C252 /* expanz_model_ResourceCollection.m */,
-				6BB1BC0B155295940012C252 /* expanz_model_Row.h */,
-				6BB1BC0C155295940012C252 /* expanz_model_Row.m */,
-				6BB1BC0D155295940012C252 /* expanz_model_SessionContext.h */,
-				6BB1BC0E155295940012C252 /* expanz_model_SessionContext.m */,
-				6BB1BC0F155295940012C252 /* expanz_model_SessionData.h */,
-				6BB1BC10155295940012C252 /* expanz_model_SessionData.m */,
-				6BB1BC11155295940012C252 /* expanz_model_SiteList.h */,
-				6BB1BC12155295940012C252 /* expanz_model_SiteList.m */,
-				6BB1BC13155295940012C252 /* expanz_model_TextGridDataCell.h */,
-				6BB1BC14155295940012C252 /* expanz_model_TextGridDataCell.m */,
-				6BB1BC15155295940012C252 /* expanz_model_TreeData.h */,
-				6BB1BC16155295940012C252 /* expanz_model_TreeData.m */,
-				6BB1BC17155295940012C252 /* expanz_model_UserRole.h */,
-				6BB1BC18155295940012C252 /* expanz_model_UserRole.m */,
-				6BB1BC19155295940012C252 /* NSString+ExpanzDataType.h */,
-				6BB1BC1A155295940012C252 /* NSString+ExpanzDataType.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		6BB1BC1B155295940012C252 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				6BB1BC1C155295940012C252 /* Activity */,
-				6BB1BC2F155295940012C252 /* expanz_service_AbstractServiceClient.h */,
-				6BB1BC30155295940012C252 /* expanz_service_AbstractServiceClient.m */,
-				6BB1BC31155295940012C252 /* ExpanzAbstractServiceClientDelegate.h */,
-				6BB1BC32155295940012C252 /* File */,
-				6BB1BC39155295940012C252 /* Login */,
-				6BB1BC42155295940012C252 /* SessionData */,
-				6BB1BC4B155295940012C252 /* Site */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		6BB1BC1C155295940012C252 /* Activity */ = {
-			isa = PBXGroup;
-			children = (
-				6BB1BC1D155295940012C252 /* expanz_service_DefaultActivityClient.h */,
-				6BB1BC1E155295940012C252 /* expanz_service_DefaultActivityClient.m */,
-				6BB1BC1F155295940012C252 /* ExpanzActivityClient.h */,
-				6BB1BC20155295940012C252 /* Payload */,
-			);
-			path = Activity;
-			sourceTree = "<group>";
-		};
-		6BB1BC20155295940012C252 /* Payload */ = {
-			isa = PBXGroup;
-			children = (
-				6BB1BC21155295940012C252 /* expanz_service_CreateActivityRequest.h */,
-				6BB1BC22155295940012C252 /* expanz_service_CreateActivityRequest.m */,
-				6BB1BC23155295940012C252 /* expanz_service_DataPublicationRequest.h */,
-				6BB1BC24155295940012C252 /* expanz_service_DataPublicationRequest.m */,
-				6BB1BC25155295940012C252 /* expanz_service_DeltaRequest.h */,
-				6BB1BC26155295940012C252 /* expanz_service_DeltaRequest.m */,
-				6BB1BC27155295940012C252 /* expanz_service_FileRequest.h */,
-				6BB1BC28155295940012C252 /* expanz_service_FileRequest.m */,
-				6BB1BC29155295940012C252 /* expanz_service_MethodInvocationRequest.h */,
-				6BB1BC2A155295940012C252 /* expanz_service_MethodInvocationRequest.m */,
-				6BB1BC2B155295940012C252 /* RXMLElement+ActivityInstance.h */,
-				6BB1BC2C155295940012C252 /* RXMLElement+ActivityInstance.m */,
-				6BB1BC2D155295940012C252 /* RXMLElement+ResourceCollection.h */,
-				6BB1BC2E155295940012C252 /* RXMLElement+ResourceCollection.m */,
-			);
-			path = Payload;
-			sourceTree = "<group>";
-		};
-		6BB1BC32155295940012C252 /* File */ = {
-			isa = PBXGroup;
-			children = (
-				6BB1BC33155295940012C252 /* expanz_service_DefaultDownloadClient.h */,
-				6BB1BC34155295940012C252 /* expanz_service_DefaultDownloadClient.m */,
-				6BB1BC35155295940012C252 /* ExpanzFileDownloadClient.h */,
-				6BB1BC36155295940012C252 /* Payload */,
-			);
-			path = File;
-			sourceTree = "<group>";
-		};
-		6BB1BC36155295940012C252 /* Payload */ = {
-			isa = PBXGroup;
-			children = (
-				6BB1BC37155295940012C252 /* expanz_service_FileDownloadRequest.h */,
-				6BB1BC38155295940012C252 /* expanz_service_FileDownloadRequest.m */,
-			);
-			path = Payload;
-			sourceTree = "<group>";
-		};
-		6BB1BC39155295940012C252 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				6BB1BC3A155295940012C252 /* expanz_service_DefaultLoginClient.h */,
-				6BB1BC3B155295940012C252 /* expanz_service_DefaultLoginClient.m */,
-				6BB1BC3C155295940012C252 /* ExpanzLoginClient.h */,
-				6BB1BC3D155295940012C252 /* Payload */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		6BB1BC3D155295940012C252 /* Payload */ = {
-			isa = PBXGroup;
-			children = (
-				6BB1BC3E155295940012C252 /* expanz_service_SessionRequest.h */,
-				6BB1BC3F155295940012C252 /* expanz_service_SessionRequest.m */,
-				6BB1BC40155295940012C252 /* RXMLElement+SessionContext.h */,
-				6BB1BC41155295940012C252 /* RXMLElement+SessionContext.m */,
-			);
-			path = Payload;
-			sourceTree = "<group>";
-		};
-		6BB1BC42155295940012C252 /* SessionData */ = {
-			isa = PBXGroup;
-			children = (
-				6BB1BC43155295940012C252 /* expanz_service_DefaultSessionDataClient.h */,
-				6BB1BC44155295940012C252 /* expanz_service_DefaultSessionDataClient.m */,
-				6BB1BC45155295940012C252 /* ExpanzSessionDataClient.h */,
-				6BB1BC46155295940012C252 /* Payload */,
-			);
-			path = SessionData;
-			sourceTree = "<group>";
-		};
-		6BB1BC46155295940012C252 /* Payload */ = {
-			isa = PBXGroup;
-			children = (
-				6BB1BC47155295940012C252 /* expanz_service_SessionDataRequest.h */,
-				6BB1BC48155295940012C252 /* expanz_service_SessionDataRequest.m */,
-				6BB1BC49155295940012C252 /* RXMLElement+SessionData.h */,
-				6BB1BC4A155295940012C252 /* RXMLElement+SessionData.m */,
-			);
-			path = Payload;
-			sourceTree = "<group>";
-		};
-		6BB1BC4B155295940012C252 /* Site */ = {
-			isa = PBXGroup;
-			children = (
-				6BB1BC4C155295940012C252 /* expanz_service_DefaultSiteDetailsClient.h */,
-				6BB1BC4D155295940012C252 /* expanz_service_DefaultSiteDetailsClient.m */,
-				6BB1BC4E155295940012C252 /* ExpanzSiteDetailsClient.h */,
-				6BB1BC4F155295940012C252 /* Payload */,
-			);
-			path = Site;
-			sourceTree = "<group>";
-		};
-		6BB1BC4F155295940012C252 /* Payload */ = {
-			isa = PBXGroup;
-			children = (
-				6BB1BC50155295940012C252 /* RXMLElement+SiteDetails.h */,
-				6BB1BC51155295940012C252 /* RXMLElement+SiteDetails.m */,
-			);
-			path = Payload;
-			sourceTree = "<group>";
-		};
-		6BB1BC52155295940012C252 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				6BB1BC53155295940012C252 /* expanz_utils_BundleResource.h */,
-				6BB1BC54155295940012C252 /* expanz_utils_BundleResource.m */,
-				6BB1BC55155295940012C252 /* NSString+Contains.h */,
-				6BB1BC56155295940012C252 /* NSString+Contains.m */,
-				6BB1BC57155295940012C252 /* NSString+ExpanzUtils.h */,
-				6BB1BC58155295940012C252 /* NSString+ExpanzUtils.m */,
-				6BB1BC59155295940012C252 /* xml_Serializable.h */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
 		6BB72DB414BEF9A9005A5961 /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
@@ -878,6 +703,7 @@
 		6BC10155147775A40055CF03 = {
 			isa = PBXGroup;
 			children = (
+				6BC17CF7155E2A16000B3AA4 /* libxml2.dylib */,
 				6BE4B285147E6B610059E44D /* Source */,
 				6BC10163147775A40055CF03 /* Frameworks */,
 				6B105A041479CF9A002DEBCE /* External */,
@@ -923,6 +749,291 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
+		6BC17BC1155E27E7000B3AA4 /* ExpanzCore */ = {
+			isa = PBXGroup;
+			children = (
+				6BC17BC2155E27E7000B3AA4 /* expanz_CoreModule.h */,
+				6BC17BC3155E27E7000B3AA4 /* expanz_CoreModule.m */,
+				6BC17BC4155E27E7000B3AA4 /* expanz_SdkConfiguration.h */,
+				6BC17BC5155E27E7000B3AA4 /* expanz_SdkConfiguration.m */,
+				6BC17BC6155E27E7000B3AA4 /* expanzCore.h */,
+				6BC17BC7155E27E7000B3AA4 /* Model */,
+				6BC17C06155E27E7000B3AA4 /* Services */,
+				6BC17C3D155E27E7000B3AA4 /* Utils */,
+			);
+			path = ExpanzCore;
+			sourceTree = "<group>";
+		};
+		6BC17BC7155E27E7000B3AA4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6BC17BC8155E27E7000B3AA4 /* expanz_model_AbstractData.h */,
+				6BC17BC9155E27E7000B3AA4 /* expanz_model_AbstractData.m */,
+				6BC17BCA155E27E7000B3AA4 /* expanz_model_AbstractGridDataCell.h */,
+				6BC17BCB155E27E7000B3AA4 /* expanz_model_AbstractGridDataCell.m */,
+				6BC17BCC155E27E7000B3AA4 /* expanz_model_ActivityInstance.h */,
+				6BC17BCD155E27E7000B3AA4 /* expanz_model_ActivityInstance.m */,
+				6BC17BCE155E27E7000B3AA4 /* expanz_model_ActivityMenu.h */,
+				6BC17BCF155E27E7000B3AA4 /* expanz_model_ActivityMenu.m */,
+				6BC17BD0155E27E7000B3AA4 /* expanz_model_ActivitySchema.h */,
+				6BC17BD1155E27E7000B3AA4 /* expanz_model_ActivitySchema.m */,
+				6BC17BD2155E27E7000B3AA4 /* expanz_model_ActivityStyle.h */,
+				6BC17BD3155E27E7000B3AA4 /* expanz_model_ActivityStyle.m */,
+				6BC17BD4155E27E7000B3AA4 /* expanz_model_AppSite.h */,
+				6BC17BD5155E27E7000B3AA4 /* expanz_model_AppSite.m */,
+				6BC17BD6155E27E7000B3AA4 /* expanz_model_Column.h */,
+				6BC17BD7155E27E7000B3AA4 /* expanz_model_Column.m */,
+				6BC17BD8155E27E7000B3AA4 /* expanz_model_DataBuilder.h */,
+				6BC17BD9155E27E7000B3AA4 /* expanz_model_DataBuilder.m */,
+				6BC17BDA155E27E7000B3AA4 /* expanz_model_Field.h */,
+				6BC17BDB155E27E7000B3AA4 /* expanz_model_Field.m */,
+				6BC17BDC155E27E7000B3AA4 /* expanz_model_FieldSchema.h */,
+				6BC17BDD155E27E7000B3AA4 /* expanz_model_FieldSchema.m */,
+				6BC17BDE155E27E7000B3AA4 /* expanz_model_File.h */,
+				6BC17BDF155E27E7000B3AA4 /* expanz_model_File.m */,
+				6BC17BE0155E27E7000B3AA4 /* expanz_model_FileResource.h */,
+				6BC17BE1155E27E7000B3AA4 /* expanz_model_FileResource.m */,
+				6BC17BE2155E27E7000B3AA4 /* expanz_model_Folder.h */,
+				6BC17BE3155E27E7000B3AA4 /* expanz_model_Folder.m */,
+				6BC17BE4155E27E7000B3AA4 /* expanz_model_GridData.h */,
+				6BC17BE5155E27E7000B3AA4 /* expanz_model_GridData.m */,
+				6BC17BE6155E27E7000B3AA4 /* expanz_model_ImageGridDataCell.h */,
+				6BC17BE7155E27E7000B3AA4 /* expanz_model_ImageGridDataCell.m */,
+				6BC17BE8155E27E7000B3AA4 /* expanz_model_Menu.h */,
+				6BC17BE9155E27E7000B3AA4 /* expanz_model_Menu.m */,
+				6BC17BEA155E27E7000B3AA4 /* expanz_model_MenuItem.h */,
+				6BC17BEB155E27E7000B3AA4 /* expanz_model_MenuItem.m */,
+				6BC17BEC155E27E7000B3AA4 /* expanz_model_Message.h */,
+				6BC17BED155E27E7000B3AA4 /* expanz_model_Message.m */,
+				6BC17BEE155E27E7000B3AA4 /* expanz_model_MethodSchema.h */,
+				6BC17BEF155E27E7000B3AA4 /* expanz_model_MethodSchema.m */,
+				6BC17BF0155E27E7000B3AA4 /* expanz_model_ProcessArea.h */,
+				6BC17BF1155E27E7000B3AA4 /* expanz_model_ProcessArea.m */,
+				6BC17BF2155E27E7000B3AA4 /* expanz_model_Query.h */,
+				6BC17BF3155E27E7000B3AA4 /* expanz_model_Query.m */,
+				6BC17BF4155E27E7000B3AA4 /* expanz_model_ResourceCollection.h */,
+				6BC17BF5155E27E7000B3AA4 /* expanz_model_ResourceCollection.m */,
+				6BC17BF6155E27E7000B3AA4 /* expanz_model_Row.h */,
+				6BC17BF7155E27E7000B3AA4 /* expanz_model_Row.m */,
+				6BC17BF8155E27E7000B3AA4 /* expanz_model_SessionContext.h */,
+				6BC17BF9155E27E7000B3AA4 /* expanz_model_SessionContext.m */,
+				6BC17BFA155E27E7000B3AA4 /* expanz_model_SessionData.h */,
+				6BC17BFB155E27E7000B3AA4 /* expanz_model_SessionData.m */,
+				6BC17BFC155E27E7000B3AA4 /* expanz_model_SiteList.h */,
+				6BC17BFD155E27E7000B3AA4 /* expanz_model_SiteList.m */,
+				6BC17BFE155E27E7000B3AA4 /* expanz_model_TextGridDataCell.h */,
+				6BC17BFF155E27E7000B3AA4 /* expanz_model_TextGridDataCell.m */,
+				6BC17C00155E27E7000B3AA4 /* expanz_model_TreeData.h */,
+				6BC17C01155E27E7000B3AA4 /* expanz_model_TreeData.m */,
+				6BC17C02155E27E7000B3AA4 /* expanz_model_UserRole.h */,
+				6BC17C03155E27E7000B3AA4 /* expanz_model_UserRole.m */,
+				6BC17C04155E27E7000B3AA4 /* NSString+ExpanzDataType.h */,
+				6BC17C05155E27E7000B3AA4 /* NSString+ExpanzDataType.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6BC17C06155E27E7000B3AA4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				6BC17C07155E27E7000B3AA4 /* Activity */,
+				6BC17C1A155E27E7000B3AA4 /* expanz_service_AbstractServiceClient.h */,
+				6BC17C1B155E27E7000B3AA4 /* expanz_service_AbstractServiceClient.m */,
+				6BC17C1C155E27E7000B3AA4 /* ExpanzAbstractServiceClientDelegate.h */,
+				6BC17C1D155E27E7000B3AA4 /* File */,
+				6BC17C24155E27E7000B3AA4 /* Login */,
+				6BC17C2D155E27E7000B3AA4 /* SessionData */,
+				6BC17C36155E27E7000B3AA4 /* Site */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		6BC17C07155E27E7000B3AA4 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				6BC17C08155E27E7000B3AA4 /* expanz_service_DefaultActivityClient.h */,
+				6BC17C09155E27E7000B3AA4 /* expanz_service_DefaultActivityClient.m */,
+				6BC17C0A155E27E7000B3AA4 /* ExpanzActivityClient.h */,
+				6BC17C0B155E27E7000B3AA4 /* Payload */,
+			);
+			path = Activity;
+			sourceTree = "<group>";
+		};
+		6BC17C0B155E27E7000B3AA4 /* Payload */ = {
+			isa = PBXGroup;
+			children = (
+				6BC17C0C155E27E7000B3AA4 /* expanz_service_CreateActivityRequest.h */,
+				6BC17C0D155E27E7000B3AA4 /* expanz_service_CreateActivityRequest.m */,
+				6BC17C0E155E27E7000B3AA4 /* expanz_service_DataPublicationRequest.h */,
+				6BC17C0F155E27E7000B3AA4 /* expanz_service_DataPublicationRequest.m */,
+				6BC17C10155E27E7000B3AA4 /* expanz_service_DeltaRequest.h */,
+				6BC17C11155E27E7000B3AA4 /* expanz_service_DeltaRequest.m */,
+				6BC17C12155E27E7000B3AA4 /* expanz_service_FileRequest.h */,
+				6BC17C13155E27E7000B3AA4 /* expanz_service_FileRequest.m */,
+				6BC17C14155E27E7000B3AA4 /* expanz_service_MethodInvocationRequest.h */,
+				6BC17C15155E27E7000B3AA4 /* expanz_service_MethodInvocationRequest.m */,
+				6BC17C16155E27E7000B3AA4 /* RXMLElement+ActivityInstance.h */,
+				6BC17C17155E27E7000B3AA4 /* RXMLElement+ActivityInstance.m */,
+				6BC17C18155E27E7000B3AA4 /* RXMLElement+ResourceCollection.h */,
+				6BC17C19155E27E7000B3AA4 /* RXMLElement+ResourceCollection.m */,
+			);
+			path = Payload;
+			sourceTree = "<group>";
+		};
+		6BC17C1D155E27E7000B3AA4 /* File */ = {
+			isa = PBXGroup;
+			children = (
+				6BC17C1E155E27E7000B3AA4 /* expanz_service_DefaultDownloadClient.h */,
+				6BC17C1F155E27E7000B3AA4 /* expanz_service_DefaultDownloadClient.m */,
+				6BC17C20155E27E7000B3AA4 /* ExpanzFileDownloadClient.h */,
+				6BC17C21155E27E7000B3AA4 /* Payload */,
+			);
+			path = File;
+			sourceTree = "<group>";
+		};
+		6BC17C21155E27E7000B3AA4 /* Payload */ = {
+			isa = PBXGroup;
+			children = (
+				6BC17C22155E27E7000B3AA4 /* expanz_service_FileDownloadRequest.h */,
+				6BC17C23155E27E7000B3AA4 /* expanz_service_FileDownloadRequest.m */,
+			);
+			path = Payload;
+			sourceTree = "<group>";
+		};
+		6BC17C24155E27E7000B3AA4 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				6BC17C25155E27E7000B3AA4 /* expanz_service_DefaultLoginClient.h */,
+				6BC17C26155E27E7000B3AA4 /* expanz_service_DefaultLoginClient.m */,
+				6BC17C27155E27E7000B3AA4 /* ExpanzLoginClient.h */,
+				6BC17C28155E27E7000B3AA4 /* Payload */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		6BC17C28155E27E7000B3AA4 /* Payload */ = {
+			isa = PBXGroup;
+			children = (
+				6BC17C29155E27E7000B3AA4 /* expanz_service_SessionRequest.h */,
+				6BC17C2A155E27E7000B3AA4 /* expanz_service_SessionRequest.m */,
+				6BC17C2B155E27E7000B3AA4 /* RXMLElement+SessionContext.h */,
+				6BC17C2C155E27E7000B3AA4 /* RXMLElement+SessionContext.m */,
+			);
+			path = Payload;
+			sourceTree = "<group>";
+		};
+		6BC17C2D155E27E7000B3AA4 /* SessionData */ = {
+			isa = PBXGroup;
+			children = (
+				6BC17C2E155E27E7000B3AA4 /* expanz_service_DefaultSessionDataClient.h */,
+				6BC17C2F155E27E7000B3AA4 /* expanz_service_DefaultSessionDataClient.m */,
+				6BC17C30155E27E7000B3AA4 /* ExpanzSessionDataClient.h */,
+				6BC17C31155E27E7000B3AA4 /* Payload */,
+			);
+			path = SessionData;
+			sourceTree = "<group>";
+		};
+		6BC17C31155E27E7000B3AA4 /* Payload */ = {
+			isa = PBXGroup;
+			children = (
+				6BC17C32155E27E7000B3AA4 /* expanz_service_SessionDataRequest.h */,
+				6BC17C33155E27E7000B3AA4 /* expanz_service_SessionDataRequest.m */,
+				6BC17C34155E27E7000B3AA4 /* RXMLElement+SessionData.h */,
+				6BC17C35155E27E7000B3AA4 /* RXMLElement+SessionData.m */,
+			);
+			path = Payload;
+			sourceTree = "<group>";
+		};
+		6BC17C36155E27E7000B3AA4 /* Site */ = {
+			isa = PBXGroup;
+			children = (
+				6BC17C37155E27E7000B3AA4 /* expanz_service_DefaultSiteDetailsClient.h */,
+				6BC17C38155E27E7000B3AA4 /* expanz_service_DefaultSiteDetailsClient.m */,
+				6BC17C39155E27E7000B3AA4 /* ExpanzSiteDetailsClient.h */,
+				6BC17C3A155E27E7000B3AA4 /* Payload */,
+			);
+			path = Site;
+			sourceTree = "<group>";
+		};
+		6BC17C3A155E27E7000B3AA4 /* Payload */ = {
+			isa = PBXGroup;
+			children = (
+				6BC17C3B155E27E7000B3AA4 /* RXMLElement+SiteDetails.h */,
+				6BC17C3C155E27E7000B3AA4 /* RXMLElement+SiteDetails.m */,
+			);
+			path = Payload;
+			sourceTree = "<group>";
+		};
+		6BC17C3D155E27E7000B3AA4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6BC17C3E155E27E7000B3AA4 /* expanz_utils_BundleResource.h */,
+				6BC17C3F155E27E7000B3AA4 /* expanz_utils_BundleResource.m */,
+				6BC17C40155E27E7000B3AA4 /* NSString+Contains.h */,
+				6BC17C41155E27E7000B3AA4 /* NSString+Contains.m */,
+				6BC17C42155E27E7000B3AA4 /* NSString+ExpanzUtils.h */,
+				6BC17C43155E27E7000B3AA4 /* NSString+ExpanzUtils.m */,
+				6BC17C44155E27E7000B3AA4 /* xml_Serializable.h */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		6BC17C45155E27E7000B3AA4 /* RaptureXML */ = {
+			isa = PBXGroup;
+			children = (
+				6BC17C46155E27E7000B3AA4 /* RXMLElement.h */,
+				6BC17C47155E27E7000B3AA4 /* RXMLElement.m */,
+			);
+			path = RaptureXML;
+			sourceTree = "<group>";
+		};
+		6BC17C48155E27E7000B3AA4 /* XcodeEditor */ = {
+			isa = PBXGroup;
+			children = (
+				6BC17C49155E27E7000B3AA4 /* Utils */,
+				6BC17C4D155E27E7000B3AA4 /* xcode_AbstractDefinition.h */,
+				6BC17C4E155E27E7000B3AA4 /* xcode_AbstractDefinition.m */,
+				6BC17C4F155E27E7000B3AA4 /* xcode_ClassDefinition.h */,
+				6BC17C50155E27E7000B3AA4 /* xcode_ClassDefinition.m */,
+				6BC17C51155E27E7000B3AA4 /* xcode_FileOperationQueue.h */,
+				6BC17C52155E27E7000B3AA4 /* xcode_FileOperationQueue.m */,
+				6BC17C53155E27E7000B3AA4 /* xcode_FrameworkDefinition.h */,
+				6BC17C54155E27E7000B3AA4 /* xcode_FrameworkDefinition.m */,
+				6BC17C55155E27E7000B3AA4 /* xcode_Group.h */,
+				6BC17C56155E27E7000B3AA4 /* xcode_Group.m */,
+				6BC17C57155E27E7000B3AA4 /* xcode_KeyBuilder.h */,
+				6BC17C58155E27E7000B3AA4 /* xcode_KeyBuilder.m */,
+				6BC17C59155E27E7000B3AA4 /* xcode_Project.h */,
+				6BC17C5A155E27E7000B3AA4 /* xcode_Project.m */,
+				6BC17C5B155E27E7000B3AA4 /* xcode_SourceFile.h */,
+				6BC17C5C155E27E7000B3AA4 /* xcode_SourceFile.m */,
+				6BC17C5D155E27E7000B3AA4 /* xcode_SourceFileDefinition.h */,
+				6BC17C5E155E27E7000B3AA4 /* xcode_SourceFileDefinition.m */,
+				6BC17C5F155E27E7000B3AA4 /* xcode_Target.h */,
+				6BC17C60155E27E7000B3AA4 /* xcode_Target.m */,
+				6BC17C61155E27E7000B3AA4 /* xcode_utils_Enum.h */,
+				6BC17C62155E27E7000B3AA4 /* xcode_XibDefinition.h */,
+				6BC17C63155E27E7000B3AA4 /* xcode_XibDefinition.m */,
+				6BC17C64155E27E7000B3AA4 /* XcodeEditor.h */,
+				6BC17C65155E27E7000B3AA4 /* XcodeGroupMember.h */,
+				6BC17C66155E27E7000B3AA4 /* XcodeMemberType.h */,
+				6BC17C67155E27E7000B3AA4 /* XcodeMemberType.m */,
+				6BC17C68155E27E7000B3AA4 /* XcodeSourceFileType.h */,
+				6BC17C69155E27E7000B3AA4 /* XcodeSourceFileType.m */,
+			);
+			path = XcodeEditor;
+			sourceTree = "<group>";
+		};
+		6BC17C49155E27E7000B3AA4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6BC17C4A155E27E7000B3AA4 /* xcode_utils_Enum.h */,
+				6BC17C4B155E27E7000B3AA4 /* xcode_utils_KeyBuilder.h */,
+				6BC17C4C155E27E7000B3AA4 /* xcode_utils_KeyBuilder.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		6BC4D7E214FBBE5500335BF3 /* Flexible-iOS-Logging-1.0 */ = {
 			isa = PBXGroup;
 			children = (
@@ -957,19 +1068,6 @@
 				6BC4D7F914FBBE5500335BF3 /* Objection.h */,
 			);
 			path = objection;
-			sourceTree = "<group>";
-		};
-		6BC4D7FA14FBBE5500335BF3 /* RaptureXML */ = {
-			isa = PBXGroup;
-			children = (
-				6BC4D7FB14FBBE5500335BF3 /* NSDataAdditions.h */,
-				6BC4D7FC14FBBE5500335BF3 /* NSDataAdditions.m */,
-				6BC4D7FD14FBBE5500335BF3 /* RXMLElement.h */,
-				6BC4D7FE14FBBE5500335BF3 /* RXMLElement.m */,
-				6BC4D7FF14FBBE5500335BF3 /* TBXML.h */,
-				6BC4D80014FBBE5500335BF3 /* TBXML.m */,
-			);
-			path = RaptureXML;
 			sourceTree = "<group>";
 		};
 		6BCEC02614BBD9D600538D1D /* Resources */ = {
@@ -1235,9 +1333,6 @@
 				6BC4D87214FBBE5500335BF3 /* JSObjectionProviderEntry.m in Sources */,
 				6BC4D87414FBBE5500335BF3 /* JSObjectionUtils.m in Sources */,
 				6BC4D87614FBBE5500335BF3 /* NSObject+Objection.m in Sources */,
-				6BC4D87814FBBE5500335BF3 /* NSDataAdditions.m in Sources */,
-				6BC4D87A14FBBE5500335BF3 /* RXMLElement.m in Sources */,
-				6BC4D87C14FBBE5500335BF3 /* TBXML.m in Sources */,
 				6BE4B2B4147E6D3C0059E508 /* expanz_codegen_ui_ActivitySelectionViewController.m in Sources */,
 				6BE4B2B4147E6D3C0059E50C /* AppDelegateSpec.m in Sources */,
 				6B62CC1714FC9EA600A0E098 /* AppDelegate.m in Sources */,
@@ -1250,61 +1345,76 @@
 				6BE4B2B4147E6D3C0059E521 /* ViewTemplateRendererSpec.m in Sources */,
 				6BE4B2B4147E6D3C0059E528 /* GRArrayIndexHelper.m in Sources */,
 				6BEDCD7A150703C600D9A25E /* expanz_codegen_model_GeneratedView.m in Sources */,
-				6BB1BC5B155295940012C252 /* expanz_CoreModule.m in Sources */,
-				6BB1BC5D155295940012C252 /* expanz_SdkConfiguration.m in Sources */,
-				6BB1BC5F155295940012C252 /* expanz_model_AbstractData.m in Sources */,
-				6BB1BC61155295940012C252 /* expanz_model_AbstractGridDataCell.m in Sources */,
-				6BB1BC63155295940012C252 /* expanz_model_ActivityInstance.m in Sources */,
-				6BB1BC65155295940012C252 /* expanz_model_ActivityMenu.m in Sources */,
-				6BB1BC67155295940012C252 /* expanz_model_ActivitySchema.m in Sources */,
-				6BB1BC69155295940012C252 /* expanz_model_ActivityStyle.m in Sources */,
-				6BB1BC6B155295940012C252 /* expanz_model_AppSite.m in Sources */,
-				6BB1BC6D155295940012C252 /* expanz_model_Column.m in Sources */,
-				6BB1BC6F155295940012C252 /* expanz_model_DataBuilder.m in Sources */,
-				6BB1BC71155295940012C252 /* expanz_model_Field.m in Sources */,
-				6BB1BC73155295940012C252 /* expanz_model_FieldSchema.m in Sources */,
-				6BB1BC75155295940012C252 /* expanz_model_File.m in Sources */,
-				6BB1BC77155295940012C252 /* expanz_model_FileResource.m in Sources */,
-				6BB1BC79155295940012C252 /* expanz_model_Folder.m in Sources */,
-				6BB1BC7B155295940012C252 /* expanz_model_GridData.m in Sources */,
-				6BB1BC7D155295940012C252 /* expanz_model_ImageGridDataCell.m in Sources */,
-				6BB1BC7F155295940012C252 /* expanz_model_Menu.m in Sources */,
-				6BB1BC81155295940012C252 /* expanz_model_MenuItem.m in Sources */,
-				6BB1BC83155295940012C252 /* expanz_model_Message.m in Sources */,
-				6BB1BC85155295940012C252 /* expanz_model_MethodSchema.m in Sources */,
-				6BB1BC87155295940012C252 /* expanz_model_ProcessArea.m in Sources */,
-				6BB1BC89155295940012C252 /* expanz_model_Query.m in Sources */,
-				6BB1BC8B155295940012C252 /* expanz_model_ResourceCollection.m in Sources */,
-				6BB1BC8D155295940012C252 /* expanz_model_Row.m in Sources */,
-				6BB1BC8F155295940012C252 /* expanz_model_SessionContext.m in Sources */,
-				6BB1BC91155295940012C252 /* expanz_model_SessionData.m in Sources */,
-				6BB1BC93155295940012C252 /* expanz_model_SiteList.m in Sources */,
-				6BB1BC95155295940012C252 /* expanz_model_TextGridDataCell.m in Sources */,
-				6BB1BC97155295940012C252 /* expanz_model_TreeData.m in Sources */,
-				6BB1BC99155295940012C252 /* expanz_model_UserRole.m in Sources */,
-				6BB1BC9B155295940012C252 /* NSString+ExpanzDataType.m in Sources */,
-				6BB1BC9D155295940012C252 /* expanz_service_DefaultActivityClient.m in Sources */,
-				6BB1BC9F155295940012C252 /* expanz_service_CreateActivityRequest.m in Sources */,
-				6BB1BCA1155295940012C252 /* expanz_service_DataPublicationRequest.m in Sources */,
-				6BB1BCA3155295940012C252 /* expanz_service_DeltaRequest.m in Sources */,
-				6BB1BCA5155295940012C252 /* expanz_service_FileRequest.m in Sources */,
-				6BB1BCA7155295940012C252 /* expanz_service_MethodInvocationRequest.m in Sources */,
-				6BB1BCA9155295940012C252 /* RXMLElement+ActivityInstance.m in Sources */,
-				6BB1BCAB155295940012C252 /* RXMLElement+ResourceCollection.m in Sources */,
-				6BB1BCAD155295940012C252 /* expanz_service_AbstractServiceClient.m in Sources */,
-				6BB1BCAF155295940012C252 /* expanz_service_DefaultDownloadClient.m in Sources */,
-				6BB1BCB1155295940012C252 /* expanz_service_FileDownloadRequest.m in Sources */,
-				6BB1BCB3155295940012C252 /* expanz_service_DefaultLoginClient.m in Sources */,
-				6BB1BCB5155295940012C252 /* expanz_service_SessionRequest.m in Sources */,
-				6BB1BCB7155295940012C252 /* RXMLElement+SessionContext.m in Sources */,
-				6BB1BCB9155295940012C252 /* expanz_service_DefaultSessionDataClient.m in Sources */,
-				6BB1BCBB155295940012C252 /* expanz_service_SessionDataRequest.m in Sources */,
-				6BB1BCBD155295940012C252 /* RXMLElement+SessionData.m in Sources */,
-				6BB1BCBF155295940012C252 /* expanz_service_DefaultSiteDetailsClient.m in Sources */,
-				6BB1BCC1155295940012C252 /* RXMLElement+SiteDetails.m in Sources */,
-				6BB1BCC3155295940012C252 /* expanz_utils_BundleResource.m in Sources */,
-				6BB1BCC5155295940012C252 /* NSString+Contains.m in Sources */,
-				6BB1BCC7155295940012C252 /* NSString+ExpanzUtils.m in Sources */,
+				6BC17C6B155E27E7000B3AA4 /* expanz_CoreModule.m in Sources */,
+				6BC17C6D155E27E7000B3AA4 /* expanz_SdkConfiguration.m in Sources */,
+				6BC17C6F155E27E7000B3AA4 /* expanz_model_AbstractData.m in Sources */,
+				6BC17C71155E27E7000B3AA4 /* expanz_model_AbstractGridDataCell.m in Sources */,
+				6BC17C73155E27E7000B3AA4 /* expanz_model_ActivityInstance.m in Sources */,
+				6BC17C75155E27E7000B3AA4 /* expanz_model_ActivityMenu.m in Sources */,
+				6BC17C77155E27E7000B3AA4 /* expanz_model_ActivitySchema.m in Sources */,
+				6BC17C79155E27E7000B3AA4 /* expanz_model_ActivityStyle.m in Sources */,
+				6BC17C7B155E27E7000B3AA4 /* expanz_model_AppSite.m in Sources */,
+				6BC17C7D155E27E7000B3AA4 /* expanz_model_Column.m in Sources */,
+				6BC17C7F155E27E7000B3AA4 /* expanz_model_DataBuilder.m in Sources */,
+				6BC17C81155E27E7000B3AA4 /* expanz_model_Field.m in Sources */,
+				6BC17C83155E27E7000B3AA4 /* expanz_model_FieldSchema.m in Sources */,
+				6BC17C85155E27E7000B3AA4 /* expanz_model_File.m in Sources */,
+				6BC17C87155E27E7000B3AA4 /* expanz_model_FileResource.m in Sources */,
+				6BC17C89155E27E7000B3AA4 /* expanz_model_Folder.m in Sources */,
+				6BC17C8B155E27E7000B3AA4 /* expanz_model_GridData.m in Sources */,
+				6BC17C8D155E27E7000B3AA4 /* expanz_model_ImageGridDataCell.m in Sources */,
+				6BC17C8F155E27E7000B3AA4 /* expanz_model_Menu.m in Sources */,
+				6BC17C91155E27E7000B3AA4 /* expanz_model_MenuItem.m in Sources */,
+				6BC17C93155E27E7000B3AA4 /* expanz_model_Message.m in Sources */,
+				6BC17C95155E27E7000B3AA4 /* expanz_model_MethodSchema.m in Sources */,
+				6BC17C97155E27E7000B3AA4 /* expanz_model_ProcessArea.m in Sources */,
+				6BC17C99155E27E7000B3AA4 /* expanz_model_Query.m in Sources */,
+				6BC17C9B155E27E7000B3AA4 /* expanz_model_ResourceCollection.m in Sources */,
+				6BC17C9D155E27E7000B3AA4 /* expanz_model_Row.m in Sources */,
+				6BC17C9F155E27E7000B3AA4 /* expanz_model_SessionContext.m in Sources */,
+				6BC17CA1155E27E7000B3AA4 /* expanz_model_SessionData.m in Sources */,
+				6BC17CA3155E27E7000B3AA4 /* expanz_model_SiteList.m in Sources */,
+				6BC17CA5155E27E7000B3AA4 /* expanz_model_TextGridDataCell.m in Sources */,
+				6BC17CA7155E27E7000B3AA4 /* expanz_model_TreeData.m in Sources */,
+				6BC17CA9155E27E7000B3AA4 /* expanz_model_UserRole.m in Sources */,
+				6BC17CAB155E27E7000B3AA4 /* NSString+ExpanzDataType.m in Sources */,
+				6BC17CAD155E27E7000B3AA4 /* expanz_service_DefaultActivityClient.m in Sources */,
+				6BC17CAF155E27E7000B3AA4 /* expanz_service_CreateActivityRequest.m in Sources */,
+				6BC17CB1155E27E7000B3AA4 /* expanz_service_DataPublicationRequest.m in Sources */,
+				6BC17CB3155E27E7000B3AA4 /* expanz_service_DeltaRequest.m in Sources */,
+				6BC17CB5155E27E7000B3AA4 /* expanz_service_FileRequest.m in Sources */,
+				6BC17CB7155E27E7000B3AA4 /* expanz_service_MethodInvocationRequest.m in Sources */,
+				6BC17CB9155E27E7000B3AA4 /* RXMLElement+ActivityInstance.m in Sources */,
+				6BC17CBB155E27E7000B3AA4 /* RXMLElement+ResourceCollection.m in Sources */,
+				6BC17CBD155E27E7000B3AA4 /* expanz_service_AbstractServiceClient.m in Sources */,
+				6BC17CBF155E27E7000B3AA4 /* expanz_service_DefaultDownloadClient.m in Sources */,
+				6BC17CC1155E27E7000B3AA4 /* expanz_service_FileDownloadRequest.m in Sources */,
+				6BC17CC3155E27E7000B3AA4 /* expanz_service_DefaultLoginClient.m in Sources */,
+				6BC17CC5155E27E7000B3AA4 /* expanz_service_SessionRequest.m in Sources */,
+				6BC17CC7155E27E7000B3AA4 /* RXMLElement+SessionContext.m in Sources */,
+				6BC17CC9155E27E7000B3AA4 /* expanz_service_DefaultSessionDataClient.m in Sources */,
+				6BC17CCB155E27E7000B3AA4 /* expanz_service_SessionDataRequest.m in Sources */,
+				6BC17CCD155E27E7000B3AA4 /* RXMLElement+SessionData.m in Sources */,
+				6BC17CCF155E27E7000B3AA4 /* expanz_service_DefaultSiteDetailsClient.m in Sources */,
+				6BC17CD1155E27E7000B3AA4 /* RXMLElement+SiteDetails.m in Sources */,
+				6BC17CD3155E27E7000B3AA4 /* expanz_utils_BundleResource.m in Sources */,
+				6BC17CD5155E27E7000B3AA4 /* NSString+Contains.m in Sources */,
+				6BC17CD7155E27E7000B3AA4 /* NSString+ExpanzUtils.m in Sources */,
+				6BC17CD9155E27E7000B3AA4 /* RXMLElement.m in Sources */,
+				6BC17CDB155E27E7000B3AA4 /* xcode_utils_KeyBuilder.m in Sources */,
+				6BC17CDD155E27E7000B3AA4 /* xcode_AbstractDefinition.m in Sources */,
+				6BC17CDF155E27E7000B3AA4 /* xcode_ClassDefinition.m in Sources */,
+				6BC17CE1155E27E7000B3AA4 /* xcode_FileOperationQueue.m in Sources */,
+				6BC17CE3155E27E7000B3AA4 /* xcode_FrameworkDefinition.m in Sources */,
+				6BC17CE5155E27E7000B3AA4 /* xcode_Group.m in Sources */,
+				6BC17CE7155E27E7000B3AA4 /* xcode_KeyBuilder.m in Sources */,
+				6BC17CE9155E27E7000B3AA4 /* xcode_Project.m in Sources */,
+				6BC17CEB155E27E7000B3AA4 /* xcode_SourceFile.m in Sources */,
+				6BC17CED155E27E7000B3AA4 /* xcode_SourceFileDefinition.m in Sources */,
+				6BC17CEF155E27E7000B3AA4 /* xcode_Target.m in Sources */,
+				6BC17CF1155E27E7000B3AA4 /* xcode_XibDefinition.m in Sources */,
+				6BC17CF3155E27E7000B3AA4 /* XcodeMemberType.m in Sources */,
+				6BC17CF5155E27E7000B3AA4 /* XcodeSourceFileType.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1328,69 +1438,81 @@
 				6BC4D87114FBBE5500335BF3 /* JSObjectionProviderEntry.m in Sources */,
 				6BC4D87314FBBE5500335BF3 /* JSObjectionUtils.m in Sources */,
 				6BC4D87514FBBE5500335BF3 /* NSObject+Objection.m in Sources */,
-				6BC4D87714FBBE5500335BF3 /* NSDataAdditions.m in Sources */,
-				6BC4D87914FBBE5500335BF3 /* RXMLElement.m in Sources */,
-				6BC4D87B14FBBE5500335BF3 /* TBXML.m in Sources */,
 				6BE4B2B4147E6D3C0059E507 /* expanz_codegen_ui_ActivitySelectionViewController.m in Sources */,
 				6BE4B2B4147E6D3C0059E50E /* expanz_codegen_model_UserSession.m in Sources */,
 				6BE4B2B4147E6D3C0059E516 /* expanz_codegen_model_ViewTemplateRenderer.m in Sources */,
 				6BE4B2B4147E6D3C0059E527 /* GRArrayIndexHelper.m in Sources */,
 				6BEDCD7A150703C600D9A25D /* expanz_codegen_model_GeneratedView.m in Sources */,
-				6BB1BC5A155295940012C252 /* expanz_CoreModule.m in Sources */,
-				6BB1BC5C155295940012C252 /* expanz_SdkConfiguration.m in Sources */,
-				6BB1BC5E155295940012C252 /* expanz_model_AbstractData.m in Sources */,
-				6BB1BC60155295940012C252 /* expanz_model_AbstractGridDataCell.m in Sources */,
-				6BB1BC62155295940012C252 /* expanz_model_ActivityInstance.m in Sources */,
-				6BB1BC64155295940012C252 /* expanz_model_ActivityMenu.m in Sources */,
-				6BB1BC66155295940012C252 /* expanz_model_ActivitySchema.m in Sources */,
-				6BB1BC68155295940012C252 /* expanz_model_ActivityStyle.m in Sources */,
-				6BB1BC6A155295940012C252 /* expanz_model_AppSite.m in Sources */,
-				6BB1BC6C155295940012C252 /* expanz_model_Column.m in Sources */,
-				6BB1BC6E155295940012C252 /* expanz_model_DataBuilder.m in Sources */,
-				6BB1BC70155295940012C252 /* expanz_model_Field.m in Sources */,
-				6BB1BC72155295940012C252 /* expanz_model_FieldSchema.m in Sources */,
-				6BB1BC74155295940012C252 /* expanz_model_File.m in Sources */,
-				6BB1BC76155295940012C252 /* expanz_model_FileResource.m in Sources */,
-				6BB1BC78155295940012C252 /* expanz_model_Folder.m in Sources */,
-				6BB1BC7A155295940012C252 /* expanz_model_GridData.m in Sources */,
-				6BB1BC7C155295940012C252 /* expanz_model_ImageGridDataCell.m in Sources */,
-				6BB1BC7E155295940012C252 /* expanz_model_Menu.m in Sources */,
-				6BB1BC80155295940012C252 /* expanz_model_MenuItem.m in Sources */,
-				6BB1BC82155295940012C252 /* expanz_model_Message.m in Sources */,
-				6BB1BC84155295940012C252 /* expanz_model_MethodSchema.m in Sources */,
-				6BB1BC86155295940012C252 /* expanz_model_ProcessArea.m in Sources */,
-				6BB1BC88155295940012C252 /* expanz_model_Query.m in Sources */,
-				6BB1BC8A155295940012C252 /* expanz_model_ResourceCollection.m in Sources */,
-				6BB1BC8C155295940012C252 /* expanz_model_Row.m in Sources */,
-				6BB1BC8E155295940012C252 /* expanz_model_SessionContext.m in Sources */,
-				6BB1BC90155295940012C252 /* expanz_model_SessionData.m in Sources */,
-				6BB1BC92155295940012C252 /* expanz_model_SiteList.m in Sources */,
-				6BB1BC94155295940012C252 /* expanz_model_TextGridDataCell.m in Sources */,
-				6BB1BC96155295940012C252 /* expanz_model_TreeData.m in Sources */,
-				6BB1BC98155295940012C252 /* expanz_model_UserRole.m in Sources */,
-				6BB1BC9A155295940012C252 /* NSString+ExpanzDataType.m in Sources */,
-				6BB1BC9C155295940012C252 /* expanz_service_DefaultActivityClient.m in Sources */,
-				6BB1BC9E155295940012C252 /* expanz_service_CreateActivityRequest.m in Sources */,
-				6BB1BCA0155295940012C252 /* expanz_service_DataPublicationRequest.m in Sources */,
-				6BB1BCA2155295940012C252 /* expanz_service_DeltaRequest.m in Sources */,
-				6BB1BCA4155295940012C252 /* expanz_service_FileRequest.m in Sources */,
-				6BB1BCA6155295940012C252 /* expanz_service_MethodInvocationRequest.m in Sources */,
-				6BB1BCA8155295940012C252 /* RXMLElement+ActivityInstance.m in Sources */,
-				6BB1BCAA155295940012C252 /* RXMLElement+ResourceCollection.m in Sources */,
-				6BB1BCAC155295940012C252 /* expanz_service_AbstractServiceClient.m in Sources */,
-				6BB1BCAE155295940012C252 /* expanz_service_DefaultDownloadClient.m in Sources */,
-				6BB1BCB0155295940012C252 /* expanz_service_FileDownloadRequest.m in Sources */,
-				6BB1BCB2155295940012C252 /* expanz_service_DefaultLoginClient.m in Sources */,
-				6BB1BCB4155295940012C252 /* expanz_service_SessionRequest.m in Sources */,
-				6BB1BCB6155295940012C252 /* RXMLElement+SessionContext.m in Sources */,
-				6BB1BCB8155295940012C252 /* expanz_service_DefaultSessionDataClient.m in Sources */,
-				6BB1BCBA155295940012C252 /* expanz_service_SessionDataRequest.m in Sources */,
-				6BB1BCBC155295940012C252 /* RXMLElement+SessionData.m in Sources */,
-				6BB1BCBE155295940012C252 /* expanz_service_DefaultSiteDetailsClient.m in Sources */,
-				6BB1BCC0155295940012C252 /* RXMLElement+SiteDetails.m in Sources */,
-				6BB1BCC2155295940012C252 /* expanz_utils_BundleResource.m in Sources */,
-				6BB1BCC4155295940012C252 /* NSString+Contains.m in Sources */,
-				6BB1BCC6155295940012C252 /* NSString+ExpanzUtils.m in Sources */,
+				6BC17C6A155E27E7000B3AA4 /* expanz_CoreModule.m in Sources */,
+				6BC17C6C155E27E7000B3AA4 /* expanz_SdkConfiguration.m in Sources */,
+				6BC17C6E155E27E7000B3AA4 /* expanz_model_AbstractData.m in Sources */,
+				6BC17C70155E27E7000B3AA4 /* expanz_model_AbstractGridDataCell.m in Sources */,
+				6BC17C72155E27E7000B3AA4 /* expanz_model_ActivityInstance.m in Sources */,
+				6BC17C74155E27E7000B3AA4 /* expanz_model_ActivityMenu.m in Sources */,
+				6BC17C76155E27E7000B3AA4 /* expanz_model_ActivitySchema.m in Sources */,
+				6BC17C78155E27E7000B3AA4 /* expanz_model_ActivityStyle.m in Sources */,
+				6BC17C7A155E27E7000B3AA4 /* expanz_model_AppSite.m in Sources */,
+				6BC17C7C155E27E7000B3AA4 /* expanz_model_Column.m in Sources */,
+				6BC17C7E155E27E7000B3AA4 /* expanz_model_DataBuilder.m in Sources */,
+				6BC17C80155E27E7000B3AA4 /* expanz_model_Field.m in Sources */,
+				6BC17C82155E27E7000B3AA4 /* expanz_model_FieldSchema.m in Sources */,
+				6BC17C84155E27E7000B3AA4 /* expanz_model_File.m in Sources */,
+				6BC17C86155E27E7000B3AA4 /* expanz_model_FileResource.m in Sources */,
+				6BC17C88155E27E7000B3AA4 /* expanz_model_Folder.m in Sources */,
+				6BC17C8A155E27E7000B3AA4 /* expanz_model_GridData.m in Sources */,
+				6BC17C8C155E27E7000B3AA4 /* expanz_model_ImageGridDataCell.m in Sources */,
+				6BC17C8E155E27E7000B3AA4 /* expanz_model_Menu.m in Sources */,
+				6BC17C90155E27E7000B3AA4 /* expanz_model_MenuItem.m in Sources */,
+				6BC17C92155E27E7000B3AA4 /* expanz_model_Message.m in Sources */,
+				6BC17C94155E27E7000B3AA4 /* expanz_model_MethodSchema.m in Sources */,
+				6BC17C96155E27E7000B3AA4 /* expanz_model_ProcessArea.m in Sources */,
+				6BC17C98155E27E7000B3AA4 /* expanz_model_Query.m in Sources */,
+				6BC17C9A155E27E7000B3AA4 /* expanz_model_ResourceCollection.m in Sources */,
+				6BC17C9C155E27E7000B3AA4 /* expanz_model_Row.m in Sources */,
+				6BC17C9E155E27E7000B3AA4 /* expanz_model_SessionContext.m in Sources */,
+				6BC17CA0155E27E7000B3AA4 /* expanz_model_SessionData.m in Sources */,
+				6BC17CA2155E27E7000B3AA4 /* expanz_model_SiteList.m in Sources */,
+				6BC17CA4155E27E7000B3AA4 /* expanz_model_TextGridDataCell.m in Sources */,
+				6BC17CA6155E27E7000B3AA4 /* expanz_model_TreeData.m in Sources */,
+				6BC17CA8155E27E7000B3AA4 /* expanz_model_UserRole.m in Sources */,
+				6BC17CAA155E27E7000B3AA4 /* NSString+ExpanzDataType.m in Sources */,
+				6BC17CAC155E27E7000B3AA4 /* expanz_service_DefaultActivityClient.m in Sources */,
+				6BC17CAE155E27E7000B3AA4 /* expanz_service_CreateActivityRequest.m in Sources */,
+				6BC17CB0155E27E7000B3AA4 /* expanz_service_DataPublicationRequest.m in Sources */,
+				6BC17CB2155E27E7000B3AA4 /* expanz_service_DeltaRequest.m in Sources */,
+				6BC17CB4155E27E7000B3AA4 /* expanz_service_FileRequest.m in Sources */,
+				6BC17CB6155E27E7000B3AA4 /* expanz_service_MethodInvocationRequest.m in Sources */,
+				6BC17CB8155E27E7000B3AA4 /* RXMLElement+ActivityInstance.m in Sources */,
+				6BC17CBA155E27E7000B3AA4 /* RXMLElement+ResourceCollection.m in Sources */,
+				6BC17CBC155E27E7000B3AA4 /* expanz_service_AbstractServiceClient.m in Sources */,
+				6BC17CBE155E27E7000B3AA4 /* expanz_service_DefaultDownloadClient.m in Sources */,
+				6BC17CC0155E27E7000B3AA4 /* expanz_service_FileDownloadRequest.m in Sources */,
+				6BC17CC2155E27E7000B3AA4 /* expanz_service_DefaultLoginClient.m in Sources */,
+				6BC17CC4155E27E7000B3AA4 /* expanz_service_SessionRequest.m in Sources */,
+				6BC17CC6155E27E7000B3AA4 /* RXMLElement+SessionContext.m in Sources */,
+				6BC17CC8155E27E7000B3AA4 /* expanz_service_DefaultSessionDataClient.m in Sources */,
+				6BC17CCA155E27E7000B3AA4 /* expanz_service_SessionDataRequest.m in Sources */,
+				6BC17CCC155E27E7000B3AA4 /* RXMLElement+SessionData.m in Sources */,
+				6BC17CCE155E27E7000B3AA4 /* expanz_service_DefaultSiteDetailsClient.m in Sources */,
+				6BC17CD0155E27E7000B3AA4 /* RXMLElement+SiteDetails.m in Sources */,
+				6BC17CD2155E27E7000B3AA4 /* expanz_utils_BundleResource.m in Sources */,
+				6BC17CD4155E27E7000B3AA4 /* NSString+Contains.m in Sources */,
+				6BC17CD6155E27E7000B3AA4 /* NSString+ExpanzUtils.m in Sources */,
+				6BC17CD8155E27E7000B3AA4 /* RXMLElement.m in Sources */,
+				6BC17CDA155E27E7000B3AA4 /* xcode_utils_KeyBuilder.m in Sources */,
+				6BC17CDC155E27E7000B3AA4 /* xcode_AbstractDefinition.m in Sources */,
+				6BC17CDE155E27E7000B3AA4 /* xcode_ClassDefinition.m in Sources */,
+				6BC17CE0155E27E7000B3AA4 /* xcode_FileOperationQueue.m in Sources */,
+				6BC17CE2155E27E7000B3AA4 /* xcode_FrameworkDefinition.m in Sources */,
+				6BC17CE4155E27E7000B3AA4 /* xcode_Group.m in Sources */,
+				6BC17CE6155E27E7000B3AA4 /* xcode_KeyBuilder.m in Sources */,
+				6BC17CE8155E27E7000B3AA4 /* xcode_Project.m in Sources */,
+				6BC17CEA155E27E7000B3AA4 /* xcode_SourceFile.m in Sources */,
+				6BC17CEC155E27E7000B3AA4 /* xcode_SourceFileDefinition.m in Sources */,
+				6BC17CEE155E27E7000B3AA4 /* xcode_Target.m in Sources */,
+				6BC17CF0155E27E7000B3AA4 /* xcode_XibDefinition.m in Sources */,
+				6BC17CF2155E27E7000B3AA4 /* XcodeMemberType.m in Sources */,
+				6BC17CF4155E27E7000B3AA4 /* XcodeSourceFileType.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1448,6 +1570,7 @@
 				HEADER_SEARCH_PATHS = (
 					"\"$(SRCROOT)/Dependencies/Libraries/Kiwi\"",
 					"\"$(SRCROOT)/Dependencies/Libraries/MGTemplateEngine\"",
+					"\"$(SDK_DIR)\"/usr/include/libxml2\"",
 				);
 				INFOPLIST_FILE = "Source/Tests/Tests-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
@@ -1488,6 +1611,7 @@
 				HEADER_SEARCH_PATHS = (
 					"\"$(SRCROOT)/Dependencies/Libraries/Kiwi\"",
 					"\"$(SRCROOT)/Dependencies/Libraries/MGTemplateEngine\"",
+					"\"$(SDK_DIR)\"/usr/include/libxml2\"",
 				);
 				INFOPLIST_FILE = "Source/Tests/Tests-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
@@ -1525,7 +1649,10 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Main/Resources/Prefix.pch;
-				HEADER_SEARCH_PATHS = "${SRCROOT}/Dependencies/Libraries";
+				HEADER_SEARCH_PATHS = (
+					"${SRCROOT}/Dependencies/Libraries",
+					"\"$(SDK_DIR)\"/usr/include/libxml2\"",
+				);
 				INFOPLIST_FILE = Source/Main/Resources/Info.plist;
 				INSTALL_PATH = /;
 				LIBRARY_SEARCH_PATHS = (
@@ -1557,7 +1684,10 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Main/Resources/Prefix.pch;
-				HEADER_SEARCH_PATHS = "${SRCROOT}/Dependencies/Libraries";
+				HEADER_SEARCH_PATHS = (
+					"${SRCROOT}/Dependencies/Libraries",
+					"\"$(SDK_DIR)\"/usr/include/libxml2\"",
+				);
 				INFOPLIST_FILE = Source/Main/Resources/Info.plist;
 				INSTALL_PATH = /;
 				LIBRARY_SEARCH_PATHS = (

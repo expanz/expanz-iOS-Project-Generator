@@ -15,7 +15,7 @@
 #import "expanz_model_ActivitySchema.h"
 #import "expanz_codegen_model_ViewTemplateRenderer.h"
 #import "expanz_codegen_model_GeneratedView.h"
-#import <XcodeEditor/XcodeEditor.h>
+#import "XcodeEditor.h"
 
 @interface expanz_codegen_ui_ActivitySelectionViewController (private)
 

@@ -70,7 +70,9 @@
 }
 
 - (void) addMessage:(expanz_model_Message*)message {
-    [_messages addObject:message];
+    if (message) {
+        [_messages addObject:message];
+    }
 }
 
 - (NSArray*) dataSets {
@@ -78,12 +80,14 @@
     return [_dataSets sortedArrayUsingDescriptors:[NSArray arrayWithObject:sorter]];
 }
 
-- (void) addData:(expanz_model_AbstractData*)data {
-    [_dataSets addObject:data];
+- (void) addData:(AbstractData*)data {
+    if (data) {
+        [_dataSets addObject:data];
+    }
 }
 
 - (expanz_model_AbstractData*) dataWithId:(NSString*)dataSetId {
-    for (GridData* dataSet in _dataSets) {
+    for (AbstractData* dataSet in _dataSets) {
         if ([dataSet.dataId isEqualToString:dataSetId]) {
             return dataSet;
         }

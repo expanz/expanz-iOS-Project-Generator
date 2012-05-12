@@ -15,6 +15,6 @@
 #pragma mark -
 #pragma mark Configuring Matchers
 
-- (void) equal:(id)anObject;
+- (void)equal:(id)anObject;
 
 @end

@@ -14,7 +14,7 @@
 #import "expanz_codegen_model_ViewTemplateRenderer.h"
 #import "expanz_codegen_model_GeneratedView.h"
 #import "expanz_model_ActivityStyle.h"
-#import <XcodeEditor/XcodeEditor.h>
+#import "XcodeEditor.h"
 
 
 SPEC_BEGIN(ActivityGeneratorSpec)
@@ -33,7 +33,7 @@ SPEC_BEGIN(ActivityGeneratorSpec)
                         initWithHeaderTemplate:headerTemplate implTemplate:implTemplate xibTemplate:xibTemplate];
 
                 NSString* actvityXml = [NSString stringWithTestResource:@"GetSchemaForActivityXResponse.xml"];
-                RXMLElement* element = [RXMLElement elementFromXMLString:actvityXml];
+                RXMLElement* element = [RXMLElement elementFromXMLString:actvityXml encoding:NSUTF8StringEncoding];
                 ActivitySchema* schema = [[element child:@"GetSchemaForActivityXResult.ESA.Activity"] asActivitySchema];
                 generatedView = [[GeneratedView alloc] initWithStyle:[ActivityStyle defaultStyle] schema:schema];
             });
@@ -68,9 +68,9 @@ SPEC_BEGIN(ActivityGeneratorSpec)
                         initWithHeaderTemplate:headerTemplate implTemplate:implTemplate xibTemplate:xibTemplate];
 
                 NSString* actvityXml = [NSString stringWithTestResource:@"GetSchemaForActivityXResponse.xml"];
-                RXMLElement* element = [RXMLElement elementFromXMLString:actvityXml];
+                RXMLElement* element = [RXMLElement elementFromXMLString:actvityXml encoding:NSUTF8StringEncoding];
                 ActivitySchema* schema = [[element child:@"GetSchemaForActivityXResult.ESA.Activity"] asActivitySchema];
-                [[element child:@"GetSchemaForActivityXResult.ESA.Queries"] iterate:@"*" with:^(RXMLElement* e) {
+                [[element child:@"GetSchemaForActivityXResult.ESA.Queries"] iterate:@"*" usingBlock:^(RXMLElement* e) {
                     [schema addQuery:[e asQuery]];
                 }];
                 generatedView = [[GeneratedView alloc] initWithStyle:[ActivityStyle browseStyle] schema:schema];

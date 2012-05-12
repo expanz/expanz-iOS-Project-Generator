@@ -37,7 +37,8 @@
 
                 if (response.status == 200) {
                     LogDebug(@"Response: %@, ", [response asString]);
-                    RXMLElement* element = [RXMLElement elementFromXMLString:[response asString]];
+                    RXMLElement* element =
+                            [RXMLElement elementFromXMLString:[response asString] encoding:NSUTF8StringEncoding];
                     [delegate requestDidFinishWithSessionContext:[element asSessionContext]];
                 }
                 else {
