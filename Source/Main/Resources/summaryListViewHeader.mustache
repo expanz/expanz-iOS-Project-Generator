@@ -13,7 +13,7 @@
 
 @interface {{controllerClassName}} : expanz_ui_ActivityInstanceViewController
 
-
+/* ==================================================== Queries ===================================================== */
 {{#schema.queries}}
 @property(nonatomic, weak) IBOutlet UITableView* {{queryId}}TableView;
 {{/schema.queries}}

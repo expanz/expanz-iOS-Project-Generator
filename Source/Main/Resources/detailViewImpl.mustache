@@ -13,15 +13,22 @@
 
 @implementation {{controllerClassName}}
 
+/* ===================================================== Fields ===================================================== */
 {{#schema.displayableFields}}
 @synthesize {{name}} = _{{name}};
 {{/schema.displayableFields}}
 
+/* ===================================================== Labels ===================================================== */
 {{#schema.displayableFields}}
 @synthesize {{name}}Label = _{{name}}Label;
 {{/schema.displayableFields}}
 
-/* ================================================================================================================== */
+/* ==================================================== Queries ===================================================== */
+{{#schema.queries}}
+@synthesize {{queryId}}TableView = _{{queryId}}TableView;
+{{/schema.queries}}
+
+/* ===================================================== Methods ==================================================== */
 {{#schema.methods}}
 - (IBAction) model{{name}} {
     [super sendMethodInvocation:@"{{name}}"];
