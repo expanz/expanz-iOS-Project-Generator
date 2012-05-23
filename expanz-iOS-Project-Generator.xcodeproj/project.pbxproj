@@ -1568,8 +1568,8 @@
 				GCC_PREFIX_HEADER = "Source/Tests/Tests-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/Dependencies/Libraries/LRResty\"",
 					"\"$(SRCROOT)/Dependencies/Libraries/Kiwi\"",
-					"\"$(SRCROOT)/Dependencies/Libraries/MGTemplateEngine\"",
 					"\"$(SDK_DIR)\"/usr/include/libxml2\"",
 				);
 				INFOPLIST_FILE = "Source/Tests/Tests-Info.plist";
@@ -1609,8 +1609,8 @@
 				GCC_PREFIX_HEADER = "Source/Tests/Tests-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/Dependencies/Libraries/LRResty\"",
 					"\"$(SRCROOT)/Dependencies/Libraries/Kiwi\"",
-					"\"$(SRCROOT)/Dependencies/Libraries/MGTemplateEngine\"",
 					"\"$(SDK_DIR)\"/usr/include/libxml2\"",
 				);
 				INFOPLIST_FILE = "Source/Tests/Tests-Info.plist";
@@ -1650,7 +1650,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Main/Resources/Prefix.pch;
 				HEADER_SEARCH_PATHS = (
-					"${SRCROOT}/Dependencies/Libraries",
+					"\"$(SRCROOT)/Dependencies/Libraries/LRResty\"",
 					"\"$(SDK_DIR)\"/usr/include/libxml2\"",
 				);
 				INFOPLIST_FILE = Source/Main/Resources/Info.plist;
@@ -1685,7 +1685,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Main/Resources/Prefix.pch;
 				HEADER_SEARCH_PATHS = (
-					"${SRCROOT}/Dependencies/Libraries",
+					"\"$(SRCROOT)/Dependencies/Libraries/LRResty\"",
 					"\"$(SDK_DIR)\"/usr/include/libxml2\"",
 				);
 				INFOPLIST_FILE = Source/Main/Resources/Info.plist;
