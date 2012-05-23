@@ -210,6 +210,7 @@
 		6BC8A072156D031E00FE32EC /* NSString+Contains.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC8A003156D031E00FE32EC /* NSString+Contains.m */; };
 		6BC8A073156D031E00FE32EC /* NSString+ExpanzUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC8A005156D031E00FE32EC /* NSString+ExpanzUtils.m */; };
 		6BC8A074156D031E00FE32EC /* NSString+ExpanzUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC8A005156D031E00FE32EC /* NSString+ExpanzUtils.m */; };
+		6BC8A075156D05C200FE32EC /* libLRResty.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B40695114EBDB1F00AD1DEF /* libLRResty.a */; };
 		6BCDDF2E154A60C1009EE515 /* model-object-explorer.icns in Resources */ = {isa = PBXBuildFile; fileRef = 6BCDDF2D154A60C1009EE515 /* model-object-explorer.icns */; };
 		6BCEC01914BBD88700538D1D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC10164147775A40055CF03 /* Cocoa.framework */; };
 		6BCEC03014BBD9D600538D1D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BCEC02914BBD9D600538D1D /* InfoPlist.strings */; };
@@ -552,6 +553,7 @@
 				6BC17CF8155E2A16000B3AA4 /* libxml2.dylib in Frameworks */,
 				6B62CC1D14FC9EF100A0E098 /* Quartz.framework in Frameworks */,
 				6B62CC1E14FC9EF100A0E098 /* QuartzCore.framework in Frameworks */,
+				6BC8A075156D05C200FE32EC /* libLRResty.a in Frameworks */,
 				6B62CC1214FC9D5D00A0E098 /* libprofile_rt.dylib in Frameworks */,
 				6B29561314F534F40040E5FF /* libKiwi.a in Frameworks */,
 				6BBD6C9714ECF28200451BA2 /* libz.dylib in Frameworks */,
