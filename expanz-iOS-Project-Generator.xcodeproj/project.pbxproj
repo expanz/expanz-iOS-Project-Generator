@@ -38,7 +38,6 @@
 		6B9FD27614BEF008006F8D04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9FD27514BEF008006F8D04 /* AppDelegate.m */; };
 		6BB4DA6814EB92F500DC153B /* ESA_Sales_Foobar_ViewController.header in Resources */ = {isa = PBXBuildFile; fileRef = 6B783BBC14AD8CF90087E522 /* ESA_Sales_Foobar_ViewController.header */; };
 		6BB4DA6914EB92FA00DC153B /* ESA_Sales_Foobar_ViewController.impl in Resources */ = {isa = PBXBuildFile; fileRef = 6B783BBD14AD8CF90087E522 /* ESA_Sales_Foobar_ViewController.impl */; };
-		6BB5EE5F14F49B1B00B5B193 /* LRResty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB5EE5E14F49B1B00B5B193 /* LRResty.framework */; };
 		6BB72DCD14BEF9A9005A5961 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BB72DB614BEF9A9005A5961 /* MainMenu.xib */; };
 		6BB72DD014BEF9A9005A5961 /* expanz_codegen_ui_MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB72DB914BEF9A9005A5961 /* expanz_codegen_ui_MainWindowController.m */; };
 		6BBD6C7914ECB73200451BA2 /* production_environment.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BBD6C7814ECB73200451BA2 /* production_environment.xml */; };
@@ -554,7 +553,6 @@
 				6B62CC1D14FC9EF100A0E098 /* Quartz.framework in Frameworks */,
 				6B62CC1E14FC9EF100A0E098 /* QuartzCore.framework in Frameworks */,
 				6B62CC1214FC9D5D00A0E098 /* libprofile_rt.dylib in Frameworks */,
-				6BB5EE5F14F49B1B00B5B193 /* LRResty.framework in Frameworks */,
 				6B29561314F534F40040E5FF /* libKiwi.a in Frameworks */,
 				6BBD6C9714ECF28200451BA2 /* libz.dylib in Frameworks */,
 				6B55223714EA723700494CF3 /* SenTestingKit.framework in Frameworks */,
