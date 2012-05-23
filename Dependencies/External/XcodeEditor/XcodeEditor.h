@@ -12,16 +12,16 @@
 
 //  Contributed by by Владислав Алексеев on 22.04.12 - thanks!
 
-#import <XcodeEditor/xcode_FrameworkDefinition.h>
-#import <XcodeEditor/XcodeSourceFileType.h>
-#import <XcodeEditor/XcodeMemberType.h>
-#import <XcodeEditor/XcodeGroupMember.h>
-#import <XcodeEditor/xcode_XibDefinition.h>
-#import <XcodeEditor/xcode_Target.h>
-#import <XcodeEditor/xcode_SourceFile.h>
-#import <XcodeEditor/xcode_Project.h>
+#import "xcode_FrameworkDefinition.h"
+#import "XcodeSourceFileType.h"
+#import "XcodeMemberType.h"
+#import "XcodeGroupMember.h"
+#import "xcode_XibDefinition.h"
+#import "xcode_Target.h"
+#import "xcode_SourceFile.h"
+#import "xcode_Project.h"
 #import "xcode_utils_KeyBuilder.h"
-#import <XcodeEditor/xcode_Group.h>
-#import <XcodeEditor/xcode_FileOperationQueue.h>
-#import <XcodeEditor/xcode_ClassDefinition.h>
-#import <XcodeEditor/xcode_SourceFileDefinition.h>
+#import "xcode_Group.h"
+#import "xcode_FileOperationQueue.h"
+#import "xcode_ClassDefinition.h"
+#import "xcode_SourceFileDefinition.h"

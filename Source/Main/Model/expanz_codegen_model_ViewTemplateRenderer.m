@@ -12,7 +12,6 @@
 #import "expanz_codegen_model_ViewTemplateRenderer.h"
 #import "GRMustacheTemplate.h"
 #import "expanz_codegen_model_GeneratedView.h"
-#import "XcodeEditor.h"
 
 @interface expanz_codegen_model_ViewTemplateRenderer (private)
 
