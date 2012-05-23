@@ -1562,7 +1562,6 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
-					"\"$(SRCROOT)/Dependencies/Frameworks\"",
 				);
 				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
@@ -1603,7 +1602,6 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
-					"\"$(SRCROOT)/Dependencies/Frameworks\"",
 				);
 				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
