@@ -19,7 +19,7 @@
 #import "expanz_codegen_ui_EventHandler.h"
 
 /* ================================================================================================================== */
-@interface expanz_codegen_ui_ExpanzSettingsViewController (private)
+@interface expanz_codegen_ui_ExpanzSettingsViewController (Private)
 
 - (NSString*) supportingFilesPath;
 
@@ -31,7 +31,6 @@
 @synthesize expanzBackendCombo = _expanzBackendCombo;
 @synthesize siteListTableView = _siteListTableView;
 @synthesize configFilesNeedLoading = _configFilesNeedLoading;
-
 
 
 /* ================================================== Initializers ================================================== */
@@ -72,17 +71,18 @@
     _siteList = nil;
     [_siteListTableView reloadData];
     NSString* configFilePath =
-        [[self supportingFilesPath] stringByAppendingPathComponent:[_expanzBackendCombo objectValueOfSelectedItem]];
+            [[self supportingFilesPath] stringByAppendingPathComponent:[_expanzBackendCombo objectValueOfSelectedItem]];
 
     LogDebug(@"Config file path: %@", configFilePath);
 
     SdkConfiguration* configuration = [[SdkConfiguration alloc]
-        initWithXmlString:[NSString stringWithContentsOfFile:configFilePath encoding:NSUTF8StringEncoding error:nil]];
+            initWithXmlString:[NSString stringWithContentsOfFile:configFilePath encoding:NSUTF8StringEncoding
+                                      error:nil]];
     [SdkConfiguration clearGlobalConfiguration];
     [SdkConfiguration setGlobalConfiguration:configuration];
 
     id<ExpanzSiteDetailsClient>
-        siteDetailsClient = [[JSObjection globalInjector] getObject:@protocol(ExpanzSiteDetailsClient)];
+            siteDetailsClient = [[JSObjection globalInjector] getObject:@protocol(ExpanzSiteDetailsClient)];
     [siteDetailsClient listAvailableSitesWithDelegate:self];
 }
 
@@ -93,6 +93,16 @@
     _siteList = siteList;
     [_siteListTableView reloadData];
 }
+
+- (void) requestDidFailWithError:(NSError*)error {
+    LogDebug(@"Error: %@", error);
+    NSAlert* alert = [[NSAlert alloc] init];
+    [alert addButtonWithTitle:@"OK"];
+    [alert setMessageText:@"An error occured. See logs for further details"];
+    [alert setAlertStyle:NSCriticalAlertStyle];
+    [alert beginSheetModalForWindow:self.view.window modalDelegate:self didEndSelector:nil contextInfo:nil];
+}
+
 
 /* ================================================================================================================== */
 #pragma mark Table view delegate & datasource
@@ -133,7 +143,7 @@
 - (NSString*) supportingFilesPath {
     NSString* projectFilePath = [[UserSession sharedUserSession] projectFilePath];
     return [[projectFilePath stringByAppendingPathComponent:[projectFilePath lastPathComponent]]
-        stringByAppendingPathComponent:@"Supporting Files"];
+            stringByAppendingPathComponent:@"Supporting Files"];
 }
 
 @end
